@@ -19,7 +19,8 @@ TestCase Setup  [Arguments]  ${browser}
     Run Keyword If  "${browser}"=="chrome"  Setup Chrome Browser
     ...  ELSE IF  "${browser}"=="ie"  Setup IE Browser
     ...  ELSE  Open Browser  ${baseURL}  ${browser}
-    Maximize Browser Window
+    # Maximize Browser Window
+    Set Window Size  1024  768
 
 Setup Chrome Browser
     ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
