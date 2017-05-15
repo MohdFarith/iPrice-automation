@@ -139,7 +139,7 @@ iPrice TH Homepage Categories Landing
     Wait Until Element Is Visible    ${TH_header_categories_phones_tablets_link}
     Wait Until Element Is Visible    ${TH_header_categories_gaming_link}
     Wait Until Element Is Visible    ${TH_header_categories_camera_photo_link}
-    # Wait Until Element Is Visible    ${TH_header_categories_tv_video_dvd_link}
+    Wait Until Element Is Visible    ${TH_header_categories_tv_video_dvd_link}
     # Wait Until Element Is Visible    ${TH_header_categories_appliances_link}
     # Wait Until Element Is Visible    ${TH_header_categories_automotive_link}
     Mouse Over    ${TH_header_categories_clothing_link}

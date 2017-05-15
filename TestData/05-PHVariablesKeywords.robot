@@ -140,8 +140,8 @@ iPrice PH Homepage Categories Landing
     Wait Until Element Is Visible    ${PH_header_categories_gaming_link}
     Wait Until Element Is Visible    ${PH_header_categories_camera_photo_link}
     Wait Until Element Is Visible    ${PH_header_categories_tv_video_dvd_link}
-    Wait Until Element Is Visible    ${PH_header_categories_appliances_link}
-    Wait Until Element Is Visible    ${PH_header_categories_automotive_link}
+    # Wait Until Element Is Visible    ${PH_header_categories_appliances_link}
+    # Wait Until Element Is Visible    ${PH_header_categories_automotive_link}
     Mouse Over    ${PH_header_categories_clothing_link}
     Wait Until Element Is Visible    ${PH_header_categories_clothing_men}
     Wait Until Element Is Visible    ${PH_header_categories_clothing_women}
