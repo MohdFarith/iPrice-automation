@@ -42,7 +42,7 @@ Get All Available Links In TH
 
     ${LinkItemsCount}  Get Length  ${LinkItems}
     ${filter_link1}  Create List
-    Set Suite Variable  ${filter_link2}
+    Set Suite Variable  ${filter_link1}
     ${filter_link2}  Create List
     Set Suite Variable  ${filter_link2}
 
