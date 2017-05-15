@@ -22,6 +22,7 @@ Test SEO Check Homepage In MY
     Access iPrice MY Homepage
     Get All Available Links In MY
     SEO Check Internal Link In MY
+    SEO Check Images ALT  6
 
 TestCase One MY
     [tags]  test  1_case
