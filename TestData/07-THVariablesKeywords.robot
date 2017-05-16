@@ -54,7 +54,7 @@ Get All Available Links In TH
     \  ...  ELSE  Append To List  ${filter_link1}  ${url}
 
     ${filter_link1_count}  Get Length  ${filter_link1}
-    Set Suite Variable  ${filter_link2_count}
+    Set Suite Variable  ${filter_link1_count}
     ${filter_link2_count}  Get Length  ${filter_link2}
     Set Suite Variable  ${filter_link2_count}
 
