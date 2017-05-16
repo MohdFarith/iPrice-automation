@@ -33,7 +33,7 @@ ${MY_header_categories_action_sport_link}  //div[@id='menu']//a[@href='https://i
 ${MY_header_categories_adventure_link}  //div[@id='menu']//a[@href='https://iprice.my/adventure/']//span[text()='Adventure']
 ${MY_header_categories_baby_clothing_link}  //div[@id='menu']//a[@href='https://iprice.my/baby-clothing/']//span[text()='Baby Clothing']
 ${MY_header_categories_baby_gear_link}  //div[@id='menu']//a[@href='https://iprice.my/baby-gear/']//span[text()='Baby Gear']
-${MY_header_categories_bath_body_link}  //div[@id='menu']//a[@href='https://iprice.my/bath-body/]//span[text()='Bath & Body']
+${MY_header_categories_bath_body_link}  //div[@id='menu']//a[@href='https://iprice.my/bath-body/']//span[text()='Bath & Body']
 
 ${MY_product_images}  //img[contains(@class,'lazy product-img')]
 
@@ -136,37 +136,37 @@ SEO Check Images ALT  [Arguments]  ${imageCount}
     \  Run Keyword If  "${altImages}"=="None"  Run Keyword And Continue On Failure  Fail  Image does not contains alt.
 
 Access iPrice MY Homepage
-    Go To    ${MY_homeURL}
-    Sleep    1
+    Go To  ${MY_homeURL}
+    Sleep  1
 
 iPrice MY Homepage Landing
-    Title Should Be    ${MY_homeTitle}
-    Wait Until Element Is Visible    ${MY_header_logo_link}
-    Wait Until Element Is Visible    ${MY_header_search_input}
-    Wait Until Element Is Visible    ${MY_header_popular_searches_text}
-    Wait Until Element Is Visible    ${MY_header_coupon_logo_link}
-    Wait Until Element Is Visible    ${MY_header_coupon_text}
+    Title Should Be  ${MY_homeTitle}
+    Wait Until Element Is Visible  ${MY_header_logo_link}
+    Wait Until Element Is Visible  ${MY_header_search_input}
+    Wait Until Element Is Visible  ${MY_header_popular_searches_text}
+    Wait Until Element Is Visible  ${MY_header_coupon_logo_link}
+    Wait Until Element Is Visible  ${MY_header_coupon_text}
 
 iPrice MY Homepage Categories Landing
-    Wait Until Element Is Visible    ${MY_header_categories_clothing_link}
-    Wait Until Element Is Visible    ${MY_header_categories_shoes_link}
-    Wait Until Element Is Visible    ${MY_header_categories_bags_link}
-    Wait Until Element Is Visible    ${MY_header_categories_watches_link}
-    Wait Until Element Is Visible    ${MY_header_categories_jewellery_link}
-    Wait Until Element Is Visible    ${MY_header_categories_computing_link}
-    Wait Until Element Is Visible    ${MY_header_categories_phones_tablets_link}
-    Wait Until Element Is Visible    ${MY_header_categories_gaming_link}
-    Wait Until Element Is Visible    ${MY_header_categories_camera_photo_link}
-    Wait Until Element Is Visible    ${MY_header_categories_tv_video_dvd_link}
-    Wait Until Page COntains Element    ${MY_header_categories_appliances_link}
-    Wait Until Page COntains Element    ${MY_header_categories_automotive_link}
-    Wait Until Page COntains Element  ${MY_header_categories_hobbies_link}
-    Wait Until Page COntains Element  ${MY_header_categories_audio_hifi_link}
-    Wait Until Page COntains Element  ${MY_header_categories_action_sport_link}
-    Wait Until Page COntains Element  ${MY_header_categories_adventure_link}
-    Wait Until Page COntains Element  ${MY_header_categories_baby_clothing_link}
-    Wait Until Page COntains Element  ${MY_header_categories_baby_gear_link}
-    Wait Until Page COntains Element  ${MY_header_categories_bath_body_link}
+    Wait Until Element Is Visible  ${MY_header_categories_clothing_link}
+    Wait Until Element Is Visible  ${MY_header_categories_shoes_link}
+    Wait Until Element Is Visible  ${MY_header_categories_bags_link}
+    Wait Until Element Is Visible  ${MY_header_categories_watches_link}
+    Wait Until Element Is Visible  ${MY_header_categories_jewellery_link}
+    Wait Until Element Is Visible  ${MY_header_categories_computing_link}
+    Wait Until Element Is Visible  ${MY_header_categories_phones_tablets_link}
+    Wait Until Element Is Visible  ${MY_header_categories_gaming_link}
+    Wait Until Element Is Visible  ${MY_header_categories_camera_photo_link}
+    Wait Until Element Is Visible  ${MY_header_categories_tv_video_dvd_link}
+    Wait Until Page Contains Element  ${MY_header_categories_appliances_link}
+    Wait Until Page Contains Element  ${MY_header_categories_automotive_link}
+    Wait Until Page Contains Element  ${MY_header_categories_hobbies_link}
+    Wait Until Page Contains Element  ${MY_header_categories_audio_hifi_link}
+    Wait Until Page Contains Element  ${MY_header_categories_action_sport_link}
+    Wait Until Page Contains Element  ${MY_header_categories_adventure_link}
+    Wait Until Page Contains Element  ${MY_header_categories_baby_clothing_link}
+    Wait Until Page Contains Element  ${MY_header_categories_baby_gear_link}
+    Wait Until Page Contains Element  ${MY_header_categories_bath_body_link}
     Mouse Over    ${MY_header_categories_clothing_link}
     Wait Until Element Is Visible    ${MY_header_categories_clothing_men}
     Wait Until Element Is Visible    ${MY_header_categories_clothing_women}
