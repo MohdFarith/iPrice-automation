@@ -27,6 +27,13 @@ ${MY_header_categories_camera_photo_link}  //div[@id='menu']//a[@href='https://i
 ${MY_header_categories_tv_video_dvd_link}  //div[@id='menu']//a[@href='https://iprice.my/tv-video-dvd/']//span[text()='TV, Video & DVD']
 ${MY_header_categories_appliances_link}  //div[@id='menu']//a[@href='https://iprice.my/appliances/']//span[text()='Appliances']
 ${MY_header_categories_automotive_link}  //div[@id='menu']//a[@href='https://iprice.my/automotive/']//span[text()='Automotive']
+${MY_header_categories_hobbies_link}  //div[@id='menu']//a[@href='https://iprice.my/hobbies/']//span[text()='Hobbies']
+${MY_header_categories_audio_hifi_link}  //div[@id='menu']//a[@href='https://iprice.my/audio-hi-fi/']//span[text()='Audio & Hi Fi']
+${MY_header_categories_action_sport_link}  //div[@id='menu']//a[@href='https://iprice.my/action-sports/']//span[text()='Action Sports']
+${MY_header_categories_adventure_link}  //div[@id='menu']//a[@href='https://iprice.my/adventure/']//span[text()='Adventure']
+${MY_header_categories_baby_clothing_link}  //div[@id='menu']//a[@href='https://iprice.my/baby-clothing/']//span[text()='Baby Clothing']
+${MY_header_categories_baby_gear_link}  //div[@id='menu']//a[@href='https://iprice.my/baby-gear/']//span[text()='Baby Gear']
+${MY_header_categories_bath_body_link}  //div[@id='menu']//a[@href='https://iprice.my/bath-body/]//span[text()='Bath & Body']
 
 ${MY_product_images}  //img[contains(@class,'lazy product-img')]
 
@@ -151,8 +158,15 @@ iPrice MY Homepage Categories Landing
     Wait Until Element Is Visible    ${MY_header_categories_gaming_link}
     Wait Until Element Is Visible    ${MY_header_categories_camera_photo_link}
     Wait Until Element Is Visible    ${MY_header_categories_tv_video_dvd_link}
-    # Wait Until Element Is Visible    ${MY_header_categories_appliances_link}
-    # Wait Until Element Is Visible    ${MY_header_categories_automotive_link}
+    Wait Until Page COntains Element    ${MY_header_categories_appliances_link}
+    Wait Until Page COntains Element    ${MY_header_categories_automotive_link}
+    Wait Until Page COntains Element  ${MY_header_categories_hobbies_link}
+    Wait Until Page COntains Element  ${MY_header_categories_audio_hifi_link}
+    Wait Until Page COntains Element  ${MY_header_categories_action_sport_link}
+    Wait Until Page COntains Element  ${MY_header_categories_adventure_link}
+    Wait Until Page COntains Element  ${MY_header_categories_baby_clothing_link}
+    Wait Until Page COntains Element  ${MY_header_categories_baby_gear_link}
+    Wait Until Page COntains Element  ${MY_header_categories_bath_body_link}
     Mouse Over    ${MY_header_categories_clothing_link}
     Wait Until Element Is Visible    ${MY_header_categories_clothing_men}
     Wait Until Element Is Visible    ${MY_header_categories_clothing_women}
