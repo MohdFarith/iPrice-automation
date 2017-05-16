@@ -22,6 +22,7 @@ Test SEO Check Homepage In ID
     Access iPrice ID Homepage
     Get All Available Links In ID
     SEO Check Internal Link In ID
+    SEO Check Images ALT  6
 
 TestCase One ID
     [tags]    test    1_case

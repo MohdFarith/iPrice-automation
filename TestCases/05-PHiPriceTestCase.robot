@@ -22,6 +22,7 @@ Test SEO Check Homepage In PH
     Access iPrice PH Homepage
     Get All Available Links In PH
     SEO Check Internal Link In PH
+    SEO Check Images ALT  6
 
 TestCase One PH
     [tags]    test    1_case

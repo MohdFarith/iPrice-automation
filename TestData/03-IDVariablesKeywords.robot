@@ -28,6 +28,8 @@ ${ID_header_categories_tv_video_dvd_link}  //div[@id='menu']//a[@href='https://i
 ${ID_header_categories_appliances_link}  //div[@id='menu']//a[@href='https://iprice.co.id/peralatan/']//span[text()='Peralatan']
 ${ID_header_categories_automotive_link}  //div[@id='menu']//a[@href='https://iprice.co.id/otomotif/']//span[text()='Otomotif']
 
+${ID_product_images}  //img[contains(@class,'lazy product-img')]
+
 ${ID_coupon_page_title}    Dapatkan Exclusive Promo, Sales & Vouchers di tahun 2017 | iPrice Indonesia
 
 *** Keywords ***
@@ -113,6 +115,13 @@ SEO Check Internal Link In ID
     \  Run Keyword If  "${status}"=="False"  Run Keyword And Continue On Failure  Fail  ${link} does not start with https.
     \  ${status2}  Run Keyword And Return Status  Should End With  ${link}  /
     \  Run Keyword If  "${status2}"=="False"  Run Keyword And Continue On Failure  Fail  ${link} does not end with trailing "/".
+
+SEO Check Images ALT  [Arguments]  ${imageCount}
+    ${match}  Get Matching Xpath Count  ${ID_product_images}
+    Run Keyword If  "${match}"!="${imageCount}"  Run Keyword And Continue On Failure  Fail  Images count wrong.
+    :FOR  ${INDEX}  IN RANGE  1  ${imageCount}
+    \  ${altImages}  Get Element Attribute  xpath=(${ID_product_images})[${INDEX}]@alt
+    \  Run Keyword If  "${altImages}"=="None"  Run Keyword And Continue On Failure  Fail  Image does not contains alt.
 
 Access iPrice ID Homepage
     Go To    ${ID_homeURL}

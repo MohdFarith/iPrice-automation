@@ -22,6 +22,7 @@ Test SEO Check Homepage In TH
     Access iPrice TH Homepage
     Get All Available Links In TH
     SEO Check Internal Link In TH
+    SEO Check Images ALT  6
 
 TestCase One TH
     [tags]    test    1_case

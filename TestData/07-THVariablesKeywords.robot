@@ -28,6 +28,8 @@ ${TH_header_categories_camera_photo_link}  //div[@id='menu']//a[@href='https://i
 # ${TH_header_categories_appliances_link}  //div[@id='menu']//a[@href='https://iprice.hk/appliances/']//span[text()='Appliances']
 # ${TH_header_categories_automotive_link}  //div[@id='menu']//a[@href='https://iprice.hk/automotive/']//span[text()='Automotive']
 
+${HK_product_images}  //img[contains(@class,'lazy product-img')]
+
 ${TH_coupon_page_title}    แจก ดีล คูปอง รหัสส่วนลด บัตรส่วนลด โปรโมชั่น  ที่ iprice ประเทศไทย
 
 *** Keywords ***
@@ -115,6 +117,13 @@ SEO Check Internal Link In TH
     \  Run Keyword If  "${status}"=="False"  Run Keyword And Continue On Failure  Fail  ${link} does not start with https.
     \  ${status2}  Run Keyword And Return Status  Should End With  ${link}  /
     \  Run Keyword If  "${status2}"=="False"  Run Keyword And Continue On Failure  Fail  ${link} does not end with trailing "/".
+
+SEO Check Images ALT  [Arguments]  ${imageCount}
+    ${match}  Get Matching Xpath Count  ${TH_product_images}
+    Run Keyword If  "${match}"!="${imageCount}"  Run Keyword And Continue On Failure  Fail  Images count wrong.
+    :FOR  ${INDEX}  IN RANGE  1  ${imageCount}
+    \  ${altImages}  Get Element Attribute  xpath=(${TH_product_images})[${INDEX}]@alt
+    \  Run Keyword If  "${altImages}"=="None"  Run Keyword And Continue On Failure  Fail  Image does not contains alt.
 
 Access iPrice TH Homepage
     Go To    ${TH_homeURL}

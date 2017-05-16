@@ -28,6 +28,8 @@ ${PH_header_categories_tv_video_dvd_link}  //div[@id='menu']//a[@href='https://i
 ${PH_header_categories_appliances_link}  //div[@id='menu']//a[@href='https://iprice.ph/appliances/']//span[text()='Appliances']
 ${PH_header_categories_automotive_link}  //div[@id='menu']//a[@href='https://iprice.ph/automotive/']//span[text()='Automotive']
 
+${PH_product_images}  //img[contains(@class,'lazy product-img')]
+
 ${PH_coupon_page_title}     Get Exclusive Sales, Vouchers & Promotions in 2017 | iPrice Philippines
 
 *** Keywords ***
@@ -115,6 +117,13 @@ SEO Check Internal Link In PH
     \  Run Keyword If  "${status}"=="False"  Run Keyword And Continue On Failure  Fail  ${link} does not start with https.
     \  ${status2}  Run Keyword And Return Status  Should End With  ${link}  /
     \  Run Keyword If  "${status2}"=="False"  Run Keyword And Continue On Failure  Fail  ${link} does not end with trailing "/".
+
+SEO Check Images ALT  [Arguments]  ${imageCount}
+    ${match}  Get Matching Xpath Count  ${PH_product_images}
+    Run Keyword If  "${match}"!="${imageCount}"  Run Keyword And Continue On Failure  Fail  Images count wrong.
+    :FOR  ${INDEX}  IN RANGE  1  ${imageCount}
+    \  ${altImages}  Get Element Attribute  xpath=(${PH_product_images})[${INDEX}]@alt
+    \  Run Keyword If  "${altImages}"=="None"  Run Keyword And Continue On Failure  Fail  Image does not contains alt.
 
 Access iPrice PH Homepage
     Go To    ${PH_homeURL}

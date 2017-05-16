@@ -22,6 +22,7 @@ Test SEO Check Homepage In HK
     Access iPrice HK Homepage
     Get All Available Links In HK
     SEO Check Internal Link In HK
+    SEO Check Images ALT  6
 
 TestCase One HK
     [tags]    test    1_case

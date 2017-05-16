@@ -22,6 +22,7 @@ Test SEO Check Homepage In SG
     Access iPrice SG Homepage
     Get All Available Links In SG
     SEO Check Internal Link In SG
+    SEO Check Images ALT  6
 
 TestCase One SG
     [tags]    test    1_case
