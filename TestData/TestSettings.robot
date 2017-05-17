@@ -21,6 +21,7 @@ TestCase Setup  [Arguments]  ${browser}
     ...  ELSE  Open Browser  ${baseURL}  ${browser}
     # Maximize Browser Window
     Set Window Size  1366  768
+    ${width}  ${height}  Get Window Size
 
 Setup Chrome Browser
     ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
