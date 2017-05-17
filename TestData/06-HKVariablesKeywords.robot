@@ -139,6 +139,8 @@ iPrice HK Homepage Landing
     Wait Until Element Is Visible    ${HK_header_coupon_text}
 
 iPrice HK Homepage Categories Landing
+    ${match}  Get Matching Xpath Count  //div[@id='menu']//li[@class='cursor-pointer list-item']//span
+    Run Keyword If  ${match}!=59  Run Keyword And Continue On Failure  Fail  Main categories count incorrect.
     Wait Until Element Is Visible    ${HK_header_categories_clothing_link}
     Wait Until Element Is Visible    ${HK_header_categories_shoes_link}
     Wait Until Element Is Visible    ${HK_header_categories_bags_link}
@@ -149,8 +151,8 @@ iPrice HK Homepage Categories Landing
     Wait Until Element Is Visible    ${HK_header_categories_gaming_link}
     Wait Until Element Is Visible    ${HK_header_categories_camera_photo_link}
     Wait Until Element Is Visible    ${HK_header_categories_tv_video_dvd_link}
-    # Wait Until Element Is Visible    ${HK_header_categories_appliances_link}
-    # Wait Until Element Is Visible    ${HK_header_categories_automotive_link}
+    Wait Until Element Is Visible    ${HK_header_categories_appliances_link}
+    Wait Until Element Is Visible    ${HK_header_categories_automotive_link}
     Mouse Over    ${HK_header_categories_clothing_link}
     Wait Until Element Is Visible    ${HK_header_categories_clothing_men}
     Wait Until Element Is Visible    ${HK_header_categories_clothing_women}

@@ -8,7 +8,7 @@ ${TH_homeTitle}    ipriceThailand - ค้นหา เช็กราคา ท
 ${TH_header_logo_link}    //div[@id='logo']//a[@href='https://ipricethailand.com/']
 ${TH_header_search_input}    //div[@id='search']//input[@placeholder='ค้นหาสินค้า,คูปองหรือแบรนด์...']
 ${TH_header_search_icon}    //div[@id='search']//i[@class='icon icon-search-blue']
-${TH_header_popular_searches_text}    //div[@id='popular-searches']//li[normalize-space(text())='คำค้นหายอดนิยม:']
+${TH_header_popular_searches_text}    //div[@id='popular-searches']//li[normalize-space(text())='\u200bคำค้นหายอดนิยม:']
 ${TH_header_coupon_logo_link}    //div[@id='news-button']//a[@href='https://ipricethailand.com/coupons/']
 ${TH_header_coupon_text}    //div[@id='news-button']//*[(contains(text(),'คูปอง &') and (normalize-space(text()='ข้อเสนอ')))]
 ${TH_header_categories_clothing_link}    //div[@id='menu']//a[@href='https://ipricethailand.com/เครองแตงกาย/']//span[text()='เครื่องแต่งกาย']
@@ -24,8 +24,8 @@ ${TH_header_categories_computing_link}  //div[@id='menu']//a[@href='https://ipri
 ${TH_header_categories_phones_tablets_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/โทรศพทและแทบเลต/']//span[text()='โทรศัพท์และแท็บเล็ต']
 ${TH_header_categories_gaming_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/เครองเลนเกมส/']//span[text()='เครื่องเล่นเกมส์']
 ${TH_header_categories_camera_photo_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/กลองถายรปและรปภาพ/']//span[text()='กล้องถ่ายรูปและรูปภาพ']
-# ${TH_header_categories_tv_video_dvd_link}  //div[@id='menu']//a[@href='https://iprice.hk/tv-video-dvd/']//span[text()='TV, Video & DVD']
-# ${TH_header_categories_appliances_link}  //div[@id='menu']//a[@href='https://iprice.hk/appliances/']//span[text()='Appliances']
+${TH_header_categories_tv_video_dvd_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ทว-วดโอ-และดวด/']//span[text()='ทีวี วีดีโอ และดีวีดี']
+# ${TH_header_categories_appliances_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/เครองใชไฟฟา/']//span[text()='เครื่องใช้ไฟฟ้า']
 # ${TH_header_categories_automotive_link}  //div[@id='menu']//a[@href='https://iprice.hk/automotive/']//span[text()='Automotive']
 
 ${HK_product_images}  //img[contains(@class,'lazy product-img')]
@@ -139,6 +139,8 @@ iPrice TH Homepage Landing
     Wait Until Element Is Visible    ${TH_header_coupon_text}
 
 iPrice TH Homepage Categories Landing
+    ${match}  Get Matching Xpath Count  //div[@id='menu']//li[@class='cursor-pointer list-item']//span
+    Run Keyword If  ${match}!=59  Run Keyword And Continue On Failure  Fail  Main categories count incorrect.
     Wait Until Element Is Visible    ${TH_header_categories_clothing_link}
     Wait Until Element Is Visible    ${TH_header_categories_shoes_link}
     Wait Until Element Is Visible    ${TH_header_categories_bags_link}
@@ -148,7 +150,7 @@ iPrice TH Homepage Categories Landing
     Wait Until Element Is Visible    ${TH_header_categories_phones_tablets_link}
     Wait Until Element Is Visible    ${TH_header_categories_gaming_link}
     Wait Until Element Is Visible    ${TH_header_categories_camera_photo_link}
-    # Wait Until Element Is Visible    ${TH_header_categories_tv_video_dvd_link}
+    Wait Until Element Is Visible    ${TH_header_categories_tv_video_dvd_link}
     # Wait Until Element Is Visible    ${TH_header_categories_appliances_link}
     # Wait Until Element Is Visible    ${TH_header_categories_automotive_link}
     Mouse Over    ${TH_header_categories_clothing_link}

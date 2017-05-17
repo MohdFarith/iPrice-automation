@@ -188,6 +188,8 @@ iPrice MY Homepage Landing
     Wait Until Element Is Visible  ${MY_header_coupon_text}
 
 iPrice MY Homepage Categories Landing
+    ${match}  Get Matching Xpath Count  //div[@id='menu']//li[@class='cursor-pointer list-item']//span
+    Run Keyword If  ${match}!=59  Run Keyword And Continue On Failure  Fail  Main categories count incorrect.
     Wait Until Element Is Visible  ${MY_header_categories_clothing_link}
     Wait Until Element Is Visible  ${MY_header_categories_shoes_link}
     Wait Until Element Is Visible  ${MY_header_categories_bags_link}
