@@ -3,20 +3,20 @@ Documentation    This file will only store variables and keywords for TH.
 
 *** Variables ***
 
-${TH_homeURL}    https://ipricethailand.com/
-${TH_homeTitle}    ipriceThailand - ค้นหา เช็กราคา ที่เดียวครบสุดคุ้ม
-${TH_header_logo_link}    //div[@id='logo']//a[@href='https://ipricethailand.com/']
-${TH_header_search_input}    //div[@id='search']//input[@placeholder='ค้นหาสินค้า,คูปองหรือแบรนด์...']
-${TH_header_search_icon}    //div[@id='search']//i[@class='icon icon-search-blue']
-${TH_header_popular_searches_text}    //div[@id='popular-searches']//li[normalize-space(text())='\u200bคำค้นหายอดนิยม:']
-${TH_header_coupon_logo_link}    //div[@id='news-button']//a[@href='https://ipricethailand.com/coupons/']
-${TH_header_coupon_text}    //div[@id='news-button']//*[(contains(text(),'คูปอง &') and (normalize-space(text()='ข้อเสนอ')))]
-${TH_header_categories_clothing_link}    //div[@id='menu']//a[@href='https://ipricethailand.com/เครองแตงกาย/']//span[text()='เครื่องแต่งกาย']
-${TH_header_categories_clothing_men}    //div[@id='menu']//a[contains(@href,'https://ipricethailand.com/เครองแตงกาย/ผชาย/') and text()='ผู้ชาย']
-${TH_header_categories_clothing_women}    //div[@id='menu']//a[contains(@href,'https://ipricethailand.com/เครองแตงกาย/ผหญง/') and text()='ผู้หญิง']
-${TH_header_categories_shoes_link}    //div[@id='menu']//a[@href='https://ipricethailand.com/รองเทา/']//span[text()='รองเท้า']
-${TH_header_categories_shoes_men}    //div[@id='menu']//a[contains(@href,'https://ipricethailand.com/รองเทา/ผชาย/') and text()='ผู้ชาย']
-${TH_header_categories_shoes_women}    //div[@id='menu']//a[contains(@href,'https://ipricethailand.com/รองเทา/ผหญง/') and text()='ผู้หญิง']
+${TH_homeURL}  https://ipricethailand.com/
+${TH_homeTitle}  ipriceThailand - ค้นหา เช็กราคา ที่เดียวครบสุดคุ้ม
+${TH_header_logo_link}  //div[@id='logo']//a[@href='https://ipricethailand.com/']
+${TH_header_search_input}  //div[@id='search']//input[@placeholder='ค้นหาสินค้า,คูปองหรือแบรนด์...']
+${TH_header_search_icon}  //div[@id='search']//i[@class='icon icon-search-blue']
+${TH_header_popular_searches_text}  //div[@id='popular-searches']//li[normalize-space(text())='\u200bคำค้นหายอดนิยม:']
+${TH_header_coupon_logo_link}  //div[@id='news-button']//a[@href='https://ipricethailand.com/coupons/']
+${TH_header_coupon_text}  //div[@id='news-button']//*[(contains(text(),'คูปอง &') and (normalize-space(text()='ข้อเสนอ')))]
+${TH_header_categories_clothing_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/เครองแตงกาย/']//span[text()='เครื่องแต่งกาย']
+${TH_header_categories_clothing_men}  //div[@id='menu']//a[contains(@href,'https://ipricethailand.com/เครองแตงกาย/ผชาย/') and text()='ผู้ชาย']
+${TH_header_categories_clothing_women}  //div[@id='menu']//a[contains(@href,'https://ipricethailand.com/เครองแตงกาย/ผหญง/') and text()='ผู้หญิง']
+${TH_header_categories_shoes_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/รองเทา/']//span[text()='รองเท้า']
+${TH_header_categories_shoes_men}  //div[@id='menu']//a[contains(@href,'https://ipricethailand.com/รองเทา/ผชาย/') and text()='ผู้ชาย']
+${TH_header_categories_shoes_women}  //div[@id='menu']//a[contains(@href,'https://ipricethailand.com/รองเทา/ผหญง/') and text()='ผู้หญิง']
 ${TH_header_categories_bags_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/กระเปา/']//span[text()='กระเป๋า']
 ${TH_header_categories_watches_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/นาฬกาขอมอ/']//span[text()='นาฬิกาข้อมือ']
 ${TH_header_categories_jewellery_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/เครองประดบ/']//span[text()='เครื่องประดับ']
@@ -30,7 +30,7 @@ ${TH_header_categories_tv_video_dvd_link}  //div[@id='menu']//a[@href='https://i
 
 ${HK_product_images}  //img[contains(@class,'lazy product-img')]
 
-${TH_coupon_page_title}    แจก ดีล คูปอง รหัสส่วนลด บัตรส่วนลด โปรโมชั่น  ที่ iprice ประเทศไทย
+${TH_coupon_page_title}  แจก ดีล คูปอง รหัสส่วนลด บัตรส่วนลด โปรโมชั่น  ที่ iprice ประเทศไทย
 
 *** Keywords ***
 
@@ -68,20 +68,6 @@ Check All Links Response In TH
     Run Keyword If  ${filter_link2_count}>0  Check On 3rd Part Site
 
 Check On 3rd Part Site
-    # Go To  http://www.urlitor.com/
-    # Title Should Be  Bulk HTTP Status & Redirect Checker | URLitor
-    # Wait Until Element Is Visible  //div[@class='container']//textarea[@id='message']
-
-    # :FOR  ${INDEX}  IN RANGE  0  ${filter_link2_count}
-    # \  ${link}  Get From List  ${filter_link2}  ${INDEX}
-    # \  Clear Element Text  //div[@class='container']//textarea[@id='message']
-    # \  Input Text  //div[@class='container']//textarea[@id='message']  ${link}
-    # \  Click Element  //div[@class='container']//button[text()='Submit']
-    # \  ${status}  Run Keyword And Return Status
-    # ...  Wait Until Page Contains Element  //div[@class='row']//td[@data-title='HTTP Status final']//span[text()='200']  timeout=30
-    # \  Run Keyword If  "${status}"=="False"
-    # ...  Run Keyword And Continue On Failure  Fail  Request to ${link} failed and not return 200.
-
     :FOR  ${INDEX}  IN RANGE  0  ${filter_link2_count}
     \  Create Session  iprice  https://ipricethailand.com/  disable_warnings=0
     \  Sleep  1
@@ -91,11 +77,10 @@ Check On 3rd Part Site
     \  ${resp}  RequestsLibrary.Get Request  iprice  ${link3}
     \  ${status}  Run Keyword And Return Status  Should Be Equal As Strings  ${resp.status_code}  200
     \  Run Keyword If  "${status}"=="False"  Run Keyword And Continue On Failure  Fail  Request to ${link} failed and not return 200.
-    # \  Should Be Equal As Strings  ${resp.status_code}  200
     \  Delete All Sessions
 
 SEO Check Internal Link In TH
-    ${internal_links}   Create List
+    ${internal_links}  Create List
     :FOR  ${INDEX}  IN RANGE  0  ${filter_link1_count}
     \  ${link}  Get From List  ${filter_link1}  ${INDEX}
     \  ${match}  Get Regexp Matches  ${link}  ipricethailand.com
@@ -103,7 +88,7 @@ SEO Check Internal Link In TH
     \  Run Keyword If  ${matchCount}>0  Append To List  ${internal_links}  ${link}
     ${internal_links_count}  Get Length  ${internal_links}
 
-    ${internal_links2}   Create List
+    ${internal_links2}  Create List
     :FOR  ${INDEX}  IN RANGE  0  ${internal_links_count}
     \  ${link}  Get From List  ${internal_links}  ${INDEX}
     \  ${match}  Get Regexp Matches  ${link}  /#
@@ -126,58 +111,58 @@ SEO Check Images ALT  [Arguments]  ${imageCount}
     \  Run Keyword If  "${altImages}"=="None"  Run Keyword And Continue On Failure  Fail  Image does not contains alt.
 
 Access iPrice TH Homepage
-    Go To    ${TH_homeURL}
-    Sleep    1
+    Go To  ${TH_homeURL}
+    Sleep  1
     iPrice TH Homepage Landing
 
 iPrice TH Homepage Landing
-    Title Should Be    ${TH_homeTitle}
-    Wait Until Element Is Visible    ${TH_header_logo_link}
-    Wait Until Element Is Visible    ${TH_header_search_input}
-    Run Keyword And Continue On Failure    Wait Until Element Is Visible    ${TH_header_popular_searches_text}
-    Wait Until Element Is Visible    ${TH_header_coupon_logo_link}
-    Wait Until Element Is Visible    ${TH_header_coupon_text}
+    Title Should Be  ${TH_homeTitle}
+    Wait Until Element Is Visible  ${TH_header_logo_link}
+    Wait Until Element Is Visible  ${TH_header_search_input}
+    Run Keyword And Continue On Failure  Wait Until Element Is Visible  ${TH_header_popular_searches_text}
+    Wait Until Element Is Visible  ${TH_header_coupon_logo_link}
+    Wait Until Element Is Visible  ${TH_header_coupon_text}
 
 iPrice TH Homepage Categories Landing
     ${match}  Get Matching Xpath Count  //div[@id='menu']//li[@class='cursor-pointer list-item']//span
     Run Keyword If  ${match}!=59  Run Keyword And Continue On Failure  Fail  Main categories count incorrect.
-    Wait Until Element Is Visible    ${TH_header_categories_clothing_link}
-    Wait Until Element Is Visible    ${TH_header_categories_shoes_link}
-    Wait Until Element Is Visible    ${TH_header_categories_bags_link}
-    Wait Until Element Is Visible    ${TH_header_categories_watches_link}
-    Wait Until Element Is Visible    ${TH_header_categories_jewellery_link}
-    Wait Until Element Is Visible    ${TH_header_categories_computing_link}
-    Wait Until Element Is Visible    ${TH_header_categories_phones_tablets_link}
-    Wait Until Element Is Visible    ${TH_header_categories_gaming_link}
-    Wait Until Element Is Visible    ${TH_header_categories_camera_photo_link}
-    Wait Until Element Is Visible    ${TH_header_categories_tv_video_dvd_link}
-    # Wait Until Element Is Visible    ${TH_header_categories_appliances_link}
-    # Wait Until Element Is Visible    ${TH_header_categories_automotive_link}
-    Mouse Over    ${TH_header_categories_clothing_link}
-    Wait Until Element Is Visible    ${TH_header_categories_clothing_men}
-    Wait Until Element Is Visible    ${TH_header_categories_clothing_women}
-    Mouse Over    ${TH_header_categories_shoes_link}
-    Wait Until Element Is Visible    ${TH_header_categories_shoes_men}
-    Wait Until Element Is Visible    ${TH_header_categories_shoes_women}
+    Wait Until Element Is Visible  ${TH_header_categories_clothing_link}
+    Wait Until Element Is Visible  ${TH_header_categories_shoes_link}
+    Wait Until Element Is Visible  ${TH_header_categories_bags_link}
+    Wait Until Element Is Visible  ${TH_header_categories_watches_link}
+    Wait Until Element Is Visible  ${TH_header_categories_jewellery_link}
+    Wait Until Element Is Visible  ${TH_header_categories_computing_link}
+    Wait Until Element Is Visible  ${TH_header_categories_phones_tablets_link}
+    Wait Until Element Is Visible  ${TH_header_categories_gaming_link}
+    Wait Until Element Is Visible  ${TH_header_categories_camera_photo_link}
+    Wait Until Element Is Visible  ${TH_header_categories_tv_video_dvd_link}
+    # Wait Until Element Is Visible  ${TH_header_categories_appliances_link}
+    # Wait Until Element Is Visible  ${TH_header_categories_automotive_link}
+    Mouse Over  ${TH_header_categories_clothing_link}
+    Wait Until Element Is Visible  ${TH_header_categories_clothing_men}
+    Wait Until Element Is Visible  ${TH_header_categories_clothing_women}
+    Mouse Over  ${TH_header_categories_shoes_link}
+    Wait Until Element Is Visible  ${TH_header_categories_shoes_men}
+    Wait Until Element Is Visible  ${TH_header_categories_shoes_women}
 
 iPrice TH Access Header Link
-    Click Element    ${TH_header_logo_link}
-    Sleep    1
+    Click Element  ${TH_header_logo_link}
+    Sleep  1
     iPrice TH Homepage Landing
 
-iPrice TH Search In Header    [Arguments]    ${itemNames}
-    Input Text    ${TH_header_search_input}    ${itemNames}
-    Click Element    ${TH_header_search_icon}
+iPrice TH Search In Header  [Arguments]  ${itemNames}
+    Input Text  ${TH_header_search_input}  ${itemNames}
+    Click Element  ${TH_header_search_icon}
     Sleep    1
 
-iPrice TH Search Page Landing    [Arguments]    ${itemNames}
-    Title Should Be    ค้นหา | iprice ประเทศไทย
-    Wait Until Element Is Visible    //div[@id='products-header']//h1[text()='${itemNames}']
+iPrice TH Search Page Landing  [Arguments]  ${itemNames}
+    Title Should Be  ค้นหา | iprice ประเทศไทย
+    Wait Until Element Is Visible  //div[@id='products-header']//h1[text()='${itemNames}']
 
 iPrice TH Access Coupons Link
-    Click Element    ${TH_header_coupon_logo_link}
-    Sleep    1
+    Click Element  ${TH_header_coupon_logo_link}
+    Sleep  1
     iPrice TH Coupons Page Landing
 
 iPrice TH Coupons Page Landing
-    Title Should Be    ${TH_coupon_page_title}
+    Title Should Be  ${TH_coupon_page_title}

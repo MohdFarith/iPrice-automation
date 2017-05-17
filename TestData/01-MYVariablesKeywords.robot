@@ -117,20 +117,6 @@ Check All Links Response In MY
     Run Keyword If  ${filter_link2_count}>0  Check On 3rd Part Site
 
 Check On 3rd Part Site
-    # Go To  http://www.urlitor.com/
-    # Title Should Be  Bulk HTTP Status & Redirect Checker | URLitor
-    # Wait Until Element Is Visible  //div[@class='container']//textarea[@id='message']
-
-    # :FOR  ${INDEX}  IN RANGE  0  ${filter_link2_count}
-    # \  ${link}  Get From List  ${filter_link2}  ${INDEX}
-    # \  Clear Element Text  //div[@class='container']//textarea[@id='message']
-    # \  Input Text  //div[@class='container']//textarea[@id='message']  ${link}
-    # \  Click Element  //div[@class='container']//button[text()='Submit']
-    # \  ${status}  Run Keyword And Return Status
-    # ...  Wait Until Page Contains Element  //div[@class='row']//td[@data-title='HTTP Status final']//span[text()='200']  timeout=30
-    # \  Run Keyword If  "${status}"=="False"
-    # ...  Run Keyword And Continue On Failure  Fail  Request to ${link} failed and not return 200.
-
     :FOR  ${INDEX}  IN RANGE  0  ${filter_link2_count}
     \  Create Session  iprice  https://iprice.my/  disable_warnings=0
     \  Sleep  1
@@ -141,11 +127,10 @@ Check On 3rd Part Site
     \  ${status}  Run Keyword And Return Status  Should Be Equal As Strings  ${resp.status_code}  200
     \  ${status}  Run Keyword And Return Status  Should Be Equal As Strings  ${resp.status_code}  200
     \  Run Keyword If  "${status}"=="False"  Run Keyword And Continue On Failure  Fail  Request to ${link} failed and not return 200.
-    # \  Should Be Equal As Strings  ${resp.status_code}  200
     \  Delete All Sessions
 
 SEO Check Internal Link In MY
-    ${internal_links}   Create List
+    ${internal_links}  Create List
     :FOR  ${INDEX}  IN RANGE  0  ${filter_link1_count}
     \  ${link}  Get From List  ${filter_link1}  ${INDEX}
     \  ${match}  Get Regexp Matches  ${link}  iprice.my
@@ -153,7 +138,7 @@ SEO Check Internal Link In MY
     \  Run Keyword If  ${matchCount}>0  Append To List  ${internal_links}  ${link}
     ${internal_links_count}  Get Length  ${internal_links}
 
-    ${internal_links2}   Create List
+    ${internal_links2}  Create List
     :FOR  ${INDEX}  IN RANGE  0  ${internal_links_count}
     \  ${link}  Get From List  ${internal_links}  ${INDEX}
     \  ${match}  Get Regexp Matches  ${link}  /#
@@ -200,8 +185,10 @@ iPrice MY Homepage Categories Landing
     Wait Until Element Is Visible  ${MY_header_categories_gaming_link}
     Wait Until Element Is Visible  ${MY_header_categories_camera_photo_link}
     Wait Until Element Is Visible  ${MY_header_categories_tv_video_dvd_link}
-    Wait Until Element Is Visible  ${MY_header_categories_appliances_link}
-    Wait Until Element Is Visible  ${MY_header_categories_automotive_link}
+    Wait Until Page Contains Element  ${MY_header_categories_appliances_link}
+    Element Should Not Be Visible  ${MY_header_categories_appliances_link}
+    Wait Until Page Contains Element  ${MY_header_categories_automotive_link}
+    Element Should Not Be Visible  ${MY_header_categories_automotive_link}
     Wait Until Page Contains Element  ${MY_header_categories_hobbies_link}
     Element Should Not Be Visible  ${MY_header_categories_hobbies_link}
     Wait Until Page Contains Element  ${MY_header_categories_audio_hifi_link}
@@ -304,23 +291,23 @@ iPrice MY Homepage Categories Landing
     Wait Until Element Is Visible    ${MY_header_categories_shoes_women}
 
 iPrice MY Access Header Link
-    Click Element    ${MY_header_logo_link}
-    Sleep    1
+    Click Element  ${MY_header_logo_link}
+    Sleep  1
     iPrice MY Homepage Landing
 
-iPrice MY Search In Header    [Arguments]    ${itemNames}
-    Input Text    ${MY_header_search_input}    ${itemNames}
-    Click Element    ${MY_header_search_icon}
-    Sleep    1
+iPrice MY Search In Header  [Arguments]  ${itemNames}
+    Input Text  ${MY_header_search_input}  ${itemNames}
+    Click Element  ${MY_header_search_icon}
+    Sleep  1
 
-iPrice MY Search Page Landing    [Arguments]    ${itemNames}
-    Title Should Be    ${itemNames} - Buy ${itemNames} online in Malaysia | iPrice
-    Wait Until Element Is Visible    //div[@id='products-header']//h1[text()='${itemNames}']
+iPrice MY Search Page Landing  [Arguments]  ${itemNames}
+    Title Should Be  ${itemNames} - Buy ${itemNames} online in Malaysia | iPrice
+    Wait Until Element Is Visible  //div[@id='products-header']//h1[text()='${itemNames}']
 
 iPrice MY Access Coupons Link
-    Click Element    ${MY_header_coupon_logo_link}
-    Sleep    1
+    Click Element  ${MY_header_coupon_logo_link}
+    Sleep  1
     iPrice MY Coupons Page Landing
 
 iPrice MY Coupons Page Landing
-    Title Should Be    ${MY_coupon_page_title}
+    Title Should Be  ${MY_coupon_page_title}
