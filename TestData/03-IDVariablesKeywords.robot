@@ -28,52 +28,52 @@ ${ID_header_categories_tv_video_dvd_link}  //div[@id='menu']//a[@href='https://i
 ${ID_header_categories_appliances_link}  //div[@id='menu']//a[@href='https://iprice.co.id/peralatan/']//span[text()='Peralatan']
 ${ID_header_categories_automotive_link}  //div[@id='menu']//a[@href='https://iprice.co.id/otomotif/']//span[text()='Otomotif']
 ${ID_header_categories_hobbies_link}  //div[@id='menu']//a[@href='https://iprice.co.id/hobi/']//span[text()='Hobi']
-${ID_header_categories_audio_hifi_link}  //div[@id='menu']//a[@href='https://iprice.ph/audio-hi-fi/']//span[text()='Audio & Hi Fi']
-${ID_header_categories_action_sport_link}  //div[@id='menu']//a[@href='https://iprice.ph/action-sports/']//span[text()='Action Sports']
-${ID_header_categories_adventure_link}  //div[@id='menu']//a[@href='https://iprice.ph/adventure/']//span[text()='Adventure']
-${ID_header_categories_baby_clothing_link}  //div[@id='menu']//a[@href='https://iprice.ph/baby-clothing/']//span[text()='Baby Clothing']
-${ID_header_categories_baby_gear_link}  //div[@id='menu']//a[@href='https://iprice.ph/baby-gear/']//span[text()='Baby Gear']
-${ID_header_categories_bath_body_link}  //div[@id='menu']//a[@href='https://iprice.ph/bath-body/']//span[text()='Bath & Body']
-${ID_header_categories_dental_care_link}  //div[@id='menu']//a[@href='https://iprice.ph/dental-care/']//span[text()='Dental Care']
-${ID_header_categories_diapering_link}  //div[@id='menu']//a[@href='https://iprice.ph/diapering/']//span[text()='Diapering']
-${ID_header_categories_eyecare_link}  //div[@id='menu']//a[@href='https://iprice.ph/eyecare/']//span[text()='Eyecare']
-${ID_header_categories_feeding_link}  //div[@id='menu']//a[@href='https://iprice.ph/feeding/']//span[text()='Feeding']
-${ID_header_categories_food_supplements_link}  //div[@id='menu']//a[@href='https://iprice.ph/food-supplements/']//span[text()='Food Supplements']
-${ID_header_categories_gifts_link}  //div[@id='menu']//a[@href='https://iprice.ph/gifts/']//span[text()='Gifts']
-${ID_header_categories_gym_link}  //div[@id='menu']//a[@href='https://iprice.ph/gym/']//span[text()='Gym']
-${ID_header_categories_hair_care_link}  //div[@id='menu']//a[@href='https://iprice.ph/hair-care/']//span[text()='Hair Care']
-${ID_header_categories_health_link}  //div[@id='menu']//a[@href='https://iprice.ph/health/']//span[text()='Health']
-${ID_header_categories_kids_clothing_link}  //div[@id='menu']//a[@href='https://iprice.ph/kids-clothing/']//span[text()='Kids Clothing']
-${ID_header_categories_makeup_link}  //div[@id='menu']//a[@href='https://iprice.ph/makeup/']//span[text()='Makeup']
-${ID_header_categories_maternity_care_link}  //div[@id='menu']//a[@href='https://iprice.ph/maternity-care/']//span[text()='Maternity Care']
-${ID_header_categories_medical_supplies_link}  //div[@id='menu']//a[@href='https://iprice.ph/medical-supplies/']//span[text()='Medical Supplies']
-${ID_header_categories_nursery_link}  //div[@id='menu']//a[@href='https://iprice.ph/nursery/']//span[text()='Nursery']
-${ID_header_categories_perfeum_link}  //div[@id='menu']//a[@href='https://iprice.ph/perfume/']//span[text()='Perfume']
-${ID_header_categories_racquet_sports_link}  //div[@id='menu']//a[@href='https://iprice.ph/racquet-sports/']//span[text()='Racquet Sports']
-${ID_header_categories_shaving_supplies_link}  //div[@id='menu']//a[@href='https://iprice.ph/shaving-supplies/']//span[text()='Shaving Supplies']
-${ID_header_categories_skin_care_link}  //div[@id='menu']//a[@href='https://iprice.ph/skin-care/']//span[text()='Skin Care']
-${ID_header_categories_supplements_link}  //div[@id='menu']//a[@href='https://iprice.ph/supplements/']//span[text()='Supplements']
-${ID_header_categories_team_sports_link}  //div[@id='menu']//a[@href='https://iprice.ph/team-sports/']//span[text()='Team Sports']
-${ID_header_categories_toys_link}  //div[@id='menu']//a[@href='https://iprice.ph/toys/']//span[text()='Toys']
-${ID_header_categories_water_sports_link}  //div[@id='menu']//a[@href='https://iprice.ph/water-sports/']//span[text()='Water Sports']
-${ID_header_categories_ear_care_link}  //div[@id='menu']//a[@href='https://iprice.ph/ear-care/']//span[text()='Ear Care']
-${ID_header_categories_bathroom_link}  //div[@id='menu']//a[@href='https://iprice.ph/bathroom/']//span[text()='Bathroom']
-${ID_header_categories_bedroom_link}  //div[@id='menu']//a[@href='https://iprice.ph/bedroom/']//span[text()='Bedroom']
-${ID_header_categories_hallway_entry_link}  //div[@id='menu']//a[@href='https://iprice.ph/hallway-entry/']//span[text()='Hallway & Entry']
-${ID_header_categories_home_decor_link}  //div[@id='menu']//a[@href='https://iprice.ph/home-decor/']//span[text()='Home Decor']
-${ID_header_categories_home_improvement_link}  //div[@id='menu']//a[@href='https://iprice.ph/home-improvement/']//span[text()='Home Improvement']
-${ID_header_categories_home_office_link}  //div[@id='menu']//a[@href='https://iprice.ph/home-office/']//span[text()='Home Office']
-${ID_header_categories_housekeepng_link}  //div[@id='menu']//a[@href='https://iprice.ph/housekeeping/']//span[text()='Housekeeping']
-${ID_header_categories_kitchen_dining_link}  //div[@id='menu']//a[@href='https://iprice.ph/kitchen-dining/']//span[text()='Kitchen & Dining']
-${ID_header_categories_lighting_link}  //div[@id='menu']//a[@href='https://iprice.ph/lighting/']//span[text()='Lighting']
-${ID_header_categories_living_room_link}  //div[@id='menu']//a[@href='https://iprice.ph/living-room/']//span[text()='Living Room']
-${ID_header_categories_outdoor_garden_link}  //div[@id='menu']//a[@href='https://iprice.ph/outdoor-garden/']//span[text()='Outdoor & Garden']
-${ID_header_categories_pets_suplies_link}  //div[@id='menu']//a[@href='https://iprice.ph/pets-supplies/']//span[text()='Pets Supplies']
-${ID_header_categories_security_link}  //div[@id='menu']//a[@href='https://iprice.ph/security/']//span[text()='Security']
-${ID_header_categories_stationery_link}  //div[@id='menu']//a[@href='https://iprice.ph/stationery/']//span[text()='Stationery']
-${ID_header_categories_gadgets_link}  //div[@id='menu']//a[@href='https://iprice.ph/gadgets/']//span[text()='Gadgets']
-${ID_header_categories_other_sports_link}  //div[@id='menu']//a[@href='https://iprice.ph/other-sports/']//span[text()='Other Sports']
-${ID_header_categories_upcoming_products_link}  //div[@id='menu']//a[@href='https://iprice.ph/upcoming-products/']//span[text()='Upcoming Products']
+${ID_header_categories_audio_hifi_link}  //div[@id='menu']//a[@href='https://iprice.co.id/audio-hi-fi/']//span[text()='Audio & Hi-Fi']
+${ID_header_categories_action_sport_link}  //div[@id='menu']//a[@href='https://iprice.co.id/olahraga-aksi/']//span[text()='Olahraga Aksi']
+${ID_header_categories_adventure_link}  //div[@id='menu']//a[@href='https://iprice.co.id/olahraga-rekreasi/']//span[text()='Olahraga Rekreasi']
+${ID_header_categories_baby_clothing_link}  //div[@id='menu']//a[@href='https://iprice.co.id/pakaian-bayi/']//span[text()='Pakaian Bayi']
+${ID_header_categories_baby_gear_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perlengkapan-bayi/']//span[text()='Perlengkapan Bayi']
+${ID_header_categories_bath_body_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perlengkapan-mandi-tubuh/']//span[text()='Perlengkapan Mandi & Tubuh']
+${ID_header_categories_dental_care_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perawatan-mulut/']//span[text()='Perawatan Mulut']
+${ID_header_categories_diapering_link}  //div[@id='menu']//a[@href='https://iprice.co.id/popok/']//span[text()='Popok']
+${ID_header_categories_eyecare_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perawatan-mata/']//span[text()='Perawatan Mata']
+${ID_header_categories_feeding_link}  //div[@id='menu']//a[@href='https://iprice.co.id/pemberian-makanan/']//span[text()='Pemberian Makanan']
+${ID_header_categories_food_supplements_link}  //div[@id='menu']//a[@href='https://iprice.co.id/suplemen-olahraga/']//span[text()='Suplemen Olahraga']
+${ID_header_categories_gifts_link}  //div[@id='menu']//a[@href='https://iprice.co.id/kado/']//span[text()='Kado']
+${ID_header_categories_gym_link}  //div[@id='menu']//a[@href='https://iprice.co.id/gym/']//span[text()='Gym']
+${ID_header_categories_hair_care_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perawatan-rambut/']//span[text()='Perawatan Rambut']
+${ID_header_categories_health_link}  //div[@id='menu']//a[@href='https://iprice.co.id/kesehatan/']//span[text()='Kesehatan']
+${ID_header_categories_kids_clothing_link}  //div[@id='menu']//a[@href='https://iprice.co.id/pakaian-anak/']//span[text()='Pakaian Anak']
+${ID_header_categories_makeup_link}  //div[@id='menu']//a[@href='https://iprice.co.id/makeup/']//span[text()='Makeup']
+${ID_header_categories_maternity_care_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perawatan-bersalin/']//span[text()='Perawatan Bersalin']
+${ID_header_categories_medical_supplies_link}  //div[@id='menu']//a[@href='https://iprice.co.id/alat-medis/']//span[text()='Alat Medis']
+${ID_header_categories_nursery_link}  //div[@id='menu']//a[@href='https://iprice.co.id/kamar/']//span[text()='Kamar']
+${ID_header_categories_perfeum_link}  //div[@id='menu']//a[@href='https://iprice.co.id/parfum/']//span[text()='Parfum']
+${ID_header_categories_racquet_sports_link}  //div[@id='menu']//a[@href='https://iprice.co.id/olahraga-raket/']//span[text()='Olahraga Raket']
+${ID_header_categories_shaving_supplies_link}  //div[@id='menu']//a[@href='https://iprice.co.id/peralatan-cukur/']//span[text()='Peralatan Cukur']
+${ID_header_categories_skin_care_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perawatan-kulit/']//span[text()='Perawatan Kulit']
+${ID_header_categories_supplements_link}  //div[@id='menu']//a[@href='https://iprice.co.id/suplemen-makanan/']//span[text()='Suplemen Makanan']
+${ID_header_categories_team_sports_link}  //div[@id='menu']//a[@href='https://iprice.co.id/olahraga-tim/']//span[text()='Olahraga Tim']
+${ID_header_categories_toys_link}  //div[@id='menu']//a[@href='https://iprice.co.id/mainan/']//span[text()='Mainan']
+${ID_header_categories_water_sports_link}  //div[@id='menu']//a[@href='https://iprice.co.id/olahraga-air/']//span[text()='Olahraga Air']
+${ID_header_categories_ear_care_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perawatan-telinga/']//span[text()='Perawatan Telinga']
+${ID_header_categories_bathroom_link}  //div[@id='menu']//a[@href='https://iprice.co.id/kamar-mandi/']//span[text()='Kamar Mandi']
+${ID_header_categories_bedroom_link}  //div[@id='menu']//a[@href='https://iprice.co.id/kamar-tidur/']//span[text()='Kamar Tidur']
+${ID_header_categories_hallway_entry_link}  //div[@id='menu']//a[@href='https://iprice.co.id/ruang-depan/']//span[text()='Ruang Depan']
+${ID_header_categories_home_decor_link}  //div[@id='menu']//a[@href='https://iprice.co.id/dekorasi-rumah/']//span[text()='Dekorasi Rumah']
+${ID_header_categories_home_improvement_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perbaikan-rumah/']//span[text()='Perbaikan Rumah']
+${ID_header_categories_home_office_link}  //div[@id='menu']//a[@href='https://iprice.co.id/ruang-kerja/']//span[text()='Ruang Kerja']
+${ID_header_categories_housekeepng_link}  //div[@id='menu']//a[@href='https://iprice.co.id/peralatan-pembersih/']//span[text()='Peralatan Pembersih']
+${ID_header_categories_kitchen_dining_link}  //div[@id='menu']//a[@href='https://iprice.co.id/dapur-ruang-makan/']//span[text()='Dapur & Ruang Makan']
+${ID_header_categories_lighting_link}  //div[@id='menu']//a[@href='https://iprice.co.id/penerangan/']//span[text()='Penerangan']
+${ID_header_categories_living_room_link}  //div[@id='menu']//a[@href='https://iprice.co.id/ruang-keluarga/']//span[text()='Ruang Keluarga']
+${ID_header_categories_outdoor_garden_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perlengkapan-taman/']//span[text()='Perlengkapan Taman']
+${ID_header_categories_pets_suplies_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perlengkapan-hewan-peliharaan/']//span[text()='Perlengkapan Hewan Peliharaan']
+${ID_header_categories_security_link}  //div[@id='menu']//a[@href='https://iprice.co.id/keamanan/']//span[text()='Keamanan']
+${ID_header_categories_stationery_link}  //div[@id='menu']//a[@href='https://iprice.co.id/stasioner/']//span[text()='Stasioner']
+${ID_header_categories_gadgets_link}  //div[@id='menu']//a[@href='https://iprice.co.id/gadget/']//span[text()='Gadget']
+${ID_header_categories_other_sports_link}  //div[@id='menu']//a[@href='https://iprice.co.id/olahraga-lainnya/']//span[text()='Olahraga Lainnya']
+${ID_header_categories_upcoming_products_link}  //div[@id='menu']//a[@href='https://iprice.co.id/produk-akan-datang/']//span[text()='Produk Akan Datang']
 
 ${ID_product_images}  //img[contains(@class,'lazy product-img')]
 
@@ -186,6 +186,100 @@ iPrice ID Homepage Categories Landing
     Element Should Not Be Visible  ${ID_header_categories_appliances_link}
     Wait Until Page Contains Element  ${ID_header_categories_automotive_link}
     Element Should Not Be Visible  ${ID_header_categories_automotive_link}
+    Wait Until Page Contains Element  ${ID_header_categories_hobbies_link}
+    Element Should Not Be Visible  ${ID_header_categories_hobbies_link}
+    Wait Until Page Contains Element  ${ID_header_categories_audio_hifi_link}
+    Element Should Not Be Visible  ${ID_header_categories_audio_hifi_link}
+    Wait Until Page Contains Element  ${ID_header_categories_action_sport_link}
+    Element Should Not Be Visible  ${ID_header_categories_action_sport_link}
+    Wait Until Page Contains Element  ${ID_header_categories_adventure_link}
+    Element Should Not Be Visible  ${ID_header_categories_adventure_link}
+    Wait Until Page Contains Element  ${ID_header_categories_baby_clothing_link}
+    Element Should Not Be Visible  ${ID_header_categories_baby_clothing_link}
+    Wait Until Page Contains Element  ${ID_header_categories_baby_gear_link}
+    Element Should Not Be Visible  ${ID_header_categories_baby_gear_link}
+    Wait Until Page Contains Element  ${ID_header_categories_bath_body_link}
+    Element Should Not Be Visible  ${ID_header_categories_bath_body_link}
+    Wait Until Page Contains Element  ${ID_header_categories_dental_care_link}
+    Element Should Not Be Visible  ${ID_header_categories_dental_care_link}
+    Wait Until Page Contains Element  ${ID_header_categories_diapering_link}
+    Element Should Not Be Visible  ${ID_header_categories_diapering_link}
+    Wait Until Page Contains Element  ${ID_header_categories_eyecare_link}
+    Element Should Not Be Visible  ${ID_header_categories_eyecare_link}
+    Wait Until Page Contains Element  ${ID_header_categories_feeding_link}
+    Element Should Not Be Visible  ${ID_header_categories_feeding_link}
+    Wait Until Page Contains Element  ${ID_header_categories_food_supplements_link}
+    Element Should Not Be Visible  ${ID_header_categories_food_supplements_link}
+    Wait Until Page Contains Element  ${ID_header_categories_gifts_link}
+    Element Should Not Be Visible  ${ID_header_categories_gifts_link}
+    Wait Until Page Contains Element  ${ID_header_categories_gym_link}
+    Element Should Not Be Visible  ${ID_header_categories_gym_link}
+    Wait Until Page Contains Element  ${ID_header_categories_hair_care_link}
+    Element Should Not Be Visible  ${ID_header_categories_hair_care_link}
+    Wait Until Page Contains Element  ${ID_header_categories_health_link}
+    Element Should Not Be Visible  ${ID_header_categories_health_link}
+    Wait Until Page Contains Element  ${ID_header_categories_kids_clothing_link}
+    Element Should Not Be Visible  ${ID_header_categories_kids_clothing_link}
+    Wait Until Page Contains Element  ${ID_header_categories_makeup_link}
+    Element Should Not Be Visible  ${ID_header_categories_makeup_link}
+    Wait Until Page Contains Element  ${ID_header_categories_maternity_care_link}
+    Element Should Not Be Visible  ${ID_header_categories_maternity_care_link}
+    Wait Until Page Contains Element  ${ID_header_categories_medical_supplies_link}
+    Element Should Not Be Visible  ${ID_header_categories_medical_supplies_link}
+    Wait Until Page Contains Element  ${ID_header_categories_nursery_link}
+    Element Should Not Be Visible  ${ID_header_categories_nursery_link}
+    Wait Until Page Contains Element  ${ID_header_categories_perfeum_link}
+    Element Should Not Be Visible  ${ID_header_categories_perfeum_link}
+    Wait Until Page Contains Element  ${ID_header_categories_racquet_sports_link}
+    Element Should Not Be Visible  ${ID_header_categories_racquet_sports_link}
+    Wait Until Page Contains Element  ${ID_header_categories_shaving_supplies_link}
+    Element Should Not Be Visible  ${ID_header_categories_shaving_supplies_link}
+    Wait Until Page Contains Element  ${ID_header_categories_skin_care_link}
+    Element Should Not Be Visible  ${ID_header_categories_skin_care_link}
+    Wait Until Page Contains Element  ${ID_header_categories_supplements_link}
+    Element Should Not Be Visible  ${ID_header_categories_supplements_link}
+    Wait Until Page Contains Element  ${ID_header_categories_team_sports_link}
+    Element Should Not Be Visible  ${ID_header_categories_team_sports_link}
+    Wait Until Page Contains Element  ${ID_header_categories_toys_link}
+    Element Should Not Be Visible  ${ID_header_categories_toys_link}
+    Wait Until Page Contains Element  ${ID_header_categories_water_sports_link}
+    Element Should Not Be Visible  ${ID_header_categories_water_sports_link}
+    Wait Until Page Contains Element  ${ID_header_categories_ear_care_link}
+    Element Should Not Be Visible  ${ID_header_categories_ear_care_link}
+    Wait Until Page Contains Element  ${ID_header_categories_bathroom_link}
+    Element Should Not Be Visible  ${ID_header_categories_bathroom_link}
+    Wait Until Page Contains Element  ${ID_header_categories_bedroom_link}
+    Element Should Not Be Visible  ${ID_header_categories_bedroom_link}
+    Wait Until Page Contains Element  ${ID_header_categories_hallway_entry_link}
+    Element Should Not Be Visible  ${ID_header_categories_hallway_entry_link}
+    Wait Until Page Contains Element  ${ID_header_categories_home_decor_link}
+    Element Should Not Be Visible  ${ID_header_categories_home_decor_link}
+    Wait Until Page Contains Element  ${ID_header_categories_home_improvement_link}
+    Element Should Not Be Visible  ${ID_header_categories_home_improvement_link}
+    Wait Until Page Contains Element  ${ID_header_categories_home_office_link}
+    Element Should Not Be Visible  ${ID_header_categories_home_office_link}
+    Wait Until Page Contains Element  ${ID_header_categories_housekeepng_link}
+    Element Should Not Be Visible  ${ID_header_categories_housekeepng_link}
+    Wait Until Page Contains Element  ${ID_header_categories_kitchen_dining_link}
+    Element Should Not Be Visible  ${ID_header_categories_kitchen_dining_link}
+    Wait Until Page Contains Element  ${ID_header_categories_lighting_link}
+    Element Should Not Be Visible  ${ID_header_categories_lighting_link}
+    Wait Until Page Contains Element  ${ID_header_categories_living_room_link}
+    Element Should Not Be Visible  ${ID_header_categories_living_room_link}
+    Wait Until Page Contains Element  ${ID_header_categories_outdoor_garden_link}
+    Element Should Not Be Visible  ${ID_header_categories_outdoor_garden_link}
+    Wait Until Page Contains Element  ${ID_header_categories_pets_suplies_link}
+    Element Should Not Be Visible  ${ID_header_categories_pets_suplies_link}
+    Wait Until Page Contains Element  ${ID_header_categories_security_link}
+    Element Should Not Be Visible  ${ID_header_categories_security_link}
+    Wait Until Page Contains Element  ${ID_header_categories_stationery_link}
+    Element Should Not Be Visible  ${ID_header_categories_stationery_link}
+    Wait Until Page Contains Element  ${ID_header_categories_gadgets_link}
+    Element Should Not Be Visible  ${ID_header_categories_gadgets_link}
+    Wait Until Page Contains Element  ${ID_header_categories_other_sports_link}
+    Element Should Not Be Visible  ${ID_header_categories_other_sports_link}
+    Wait Until Page Contains Element  ${ID_header_categories_upcoming_products_link}
+    Element Should Not Be Visible  ${ID_header_categories_upcoming_products_link}
     Mouse Over  ${ID_header_categories_clothing_link}
     Wait Until Element Is Visible  ${ID_header_categories_clothing_men}
     Wait Until Element Is Visible  ${ID_header_categories_clothing_women}

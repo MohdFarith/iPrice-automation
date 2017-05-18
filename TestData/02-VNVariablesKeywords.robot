@@ -33,7 +33,7 @@ ${VN_header_categories_action_sport_link}  //div[@id='menu']//a[@href='https://i
 ${VN_header_categories_adventure_link}  //div[@id='menu']//a[@href='https://iprice.vn/the-thao-da-ngoai/']//span[text()='Thể thao dã ngoại']
 ${VN_header_categories_baby_clothing_link}  //div[@id='menu']//a[@href='https://iprice.vn/quan-ao-tre-so-sinh/']//span[text()='Quần áo trẻ sơ sinh']
 ${VN_header_categories_baby_gear_link}  //div[@id='menu']//a[@href='https://iprice.vn/san-pham-vat-dung-cho-be/']//span[text()='Sản phẩm vật dụng cho bé']
-${VN_header_categories_bath_body_link}  //div[@id='menu']//a[@href='https://iprice.vn/https://iprice.vn/san-pham-tam-cham-soc-co-the/']//span[text()='Sản phẩm tắm & chăm sóc cơ thể']
+${VN_header_categories_bath_body_link}  //div[@id='menu']//a[@href='https://iprice.vn/san-pham-tam-cham-soc-co-the/']//span[text()='Sản phẩm tắm & chăm sóc cơ thể']
 ${VN_header_categories_dental_care_link}  //div[@id='menu']//a[@href='https://iprice.vn/cham-soc-rang-mieng/']//span[text()='Chăm Sóc Răng Miệng']
 ${VN_header_categories_diapering_link}  //div[@id='menu']//a[@href='https://iprice.vn/ve-sinh-cho-be/']//span[text()='Vệ sinh cho bé']
 ${VN_header_categories_eyecare_link}  //div[@id='menu']//a[@href='https://iprice.vn/cham-soc-mat/']//span[text()='Chăm sóc mắt']
@@ -57,19 +57,19 @@ ${VN_header_categories_team_sports_link}  //div[@id='menu']//a[@href='https://ip
 ${VN_header_categories_toys_link}  //div[@id='menu']//a[@href='https://iprice.vn/do-choi/']//span[text()='Đồ chơi']
 ${VN_header_categories_water_sports_link}  //div[@id='menu']//a[@href='https://iprice.vn/the-thao-duoi-nuoc/']//span[text()='Thể thao dưới nước']
 ${VN_header_categories_ear_care_link}  //div[@id='menu']//a[@href='https://iprice.vn/cham-soc-tai/']//span[text()='Chăm sóc tai']
-# ${VN_header_categories_bathroom_link}  //div[@id='menu']//a[@href='https://iprice.my/bathroom/']//span[text()='Bathroom']
-# ${VN_header_categories_bedroom_link}  //div[@id='menu']//a[@href='https://iprice.my/bedroom/']//span[text()='Bedroom']
-# ${VN_header_categories_hallway_entry_link}  //div[@id='menu']//a[@href='https://iprice.my/hallway-entry/']//span[text()='Hallway & Entry']
-# ${VN_header_categories_home_decor_link}  //div[@id='menu']//a[@href='https://iprice.my/home-decor/']//span[text()='Home Decor']
-# ${VN_header_categories_home_improvement_link}  //div[@id='menu']//a[@href='https://iprice.my/home-improvement/']//span[text()='Home Improvement']
-# ${VN_header_categories_home_office_link}  //div[@id='menu']//a[@href='https://iprice.my/home-office/']//span[text()='Home Office']
-# ${VN_header_categories_housekeepng_link}  //div[@id='menu']//a[@href='https://iprice.my/housekeeping/']//span[text()='Housekeeping']
+${VN_header_categories_bathroom_link}  //div[@id='menu']//a[@href='https://iprice.vn/phong-tam/']//span[text()='Phòng tắm']
+${VN_header_categories_bedroom_link}  //div[@id='menu']//a[@href='https://iprice.vn/phong-ngu/']//span[text()='Phòng ngủ']
+${VN_header_categories_hallway_entry_link}  //div[@id='menu']//a[@href='https://iprice.vn/noi-that-tien-sanh/']//span[text()='Nội thất tiền sảnh']
+${VN_header_categories_home_decor_link}  //div[@id='menu']//a[@href='https://iprice.vn/trang-tri-noi-that/']//span[text()='Trang trí nội thất']
+${VN_header_categories_home_improvement_link}  //div[@id='menu']//a[@href='https://iprice.vn/tan-trang-nha-cua/']//span[text()='Tân trang nhà cửa']
+${VN_header_categories_home_office_link}  //div[@id='menu']//a[@href='https://iprice.vn/phong-lam-viec/']//span[text()='Phòng làm việc']
+${VN_header_categories_housekeepng_link}  //div[@id='menu']//a[@href='https://iprice.vn/dung-cu-thiet-bi-gia-dinh/']//span[text()='Dụng cụ & Thiết bị gia đình']
 ${VN_header_categories_kitchen_dining_link}  //div[@id='menu']//a[@href='https://iprice.vn/bep-an/']//span[text()='Bếp ăn']
 ${VN_header_categories_lighting_link}  //div[@id='menu']//a[@href='https://iprice.vn/den/']//span[text()='Đèn']
-# ${VN_header_categories_living_room_link}  //div[@id='menu']//a[@href='https://iprice.my/living-room/']//span[text()='Living Room']
-# ${VN_header_categories_outdoor_garden_link}  //div[@id='menu']//a[@href='https://iprice.my/outdoor-garden/']//span[text()='Outdoor & Garden']
+${VN_header_categories_living_room_link}  //div[@id='menu']//a[@href='https://iprice.vn/phong-khach/']//span[text()='Phòng khách']
+${VN_header_categories_outdoor_garden_link}  //div[@id='menu']//a[@href='https://iprice.vn/ngoai-that-san-vuon/']//span[text()='Ngoại thất-Sân vườn']
 ${VN_header_categories_pets_suplies_link}  //div[@id='menu']//a[@href='https://iprice.vn/vat-nuoi/']//span[text()='Vật nuôi']
-# ${VN_header_categories_security_link}  //div[@id='menu']//a[@href='https://iprice.my/security/']//span[text()='Security']
+${VN_header_categories_security_link}  //div[@id='menu']//a[@href='https://iprice.vn/thiet-bi-an-ninh/']//span[text()='Thiết bị an ninh']
 ${VN_header_categories_stationery_link}  //div[@id='menu']//a[@href='https://iprice.vn/van-phong-pham/']//span[text()='Văn phòng phẩm']
 ${VN_header_categories_gadgets_link}  //div[@id='menu']//a[@href='https://iprice.vn/thiet-bi-so/']//span[text()='Thiết bị số']
 ${VN_header_categories_other_sports_link}  //div[@id='menu']//a[@href='https://iprice.vn/the-thao-khac/']//span[text()='Thể thao khác']
@@ -187,6 +187,100 @@ iPrice VN Homepage Categories Landing
     Element Should Not Be Visible  ${VN_header_categories_appliances_link}
     Wait Until Page Contains Element  ${VN_header_categories_automotive_link}
     Element Should Not Be Visible  ${VN_header_categories_automotive_link}
+    Wait Until Page Contains Element  ${VN_header_categories_hobbies_link}
+    Element Should Not Be Visible  ${VN_header_categories_hobbies_link}
+    Wait Until Page Contains Element  ${VN_header_categories_audio_hifi_link}
+    Element Should Not Be Visible  ${VN_header_categories_audio_hifi_link}
+    Wait Until Page Contains Element  ${VN_header_categories_action_sport_link}
+    Element Should Not Be Visible  ${VN_header_categories_action_sport_link}
+    Wait Until Page Contains Element  ${VN_header_categories_adventure_link}
+    Element Should Not Be Visible  ${VN_header_categories_adventure_link}
+    Wait Until Page Contains Element  ${VN_header_categories_baby_clothing_link}
+    Element Should Not Be Visible  ${VN_header_categories_baby_clothing_link}
+    Wait Until Page Contains Element  ${VN_header_categories_baby_gear_link}
+    Element Should Not Be Visible  ${VN_header_categories_baby_gear_link}
+    Wait Until Page Contains Element  ${VN_header_categories_bath_body_link}
+    Element Should Not Be Visible  ${VN_header_categories_bath_body_link}
+    Wait Until Page Contains Element  ${VN_header_categories_dental_care_link}
+    Element Should Not Be Visible  ${VN_header_categories_dental_care_link}
+    Wait Until Page Contains Element  ${VN_header_categories_diapering_link}
+    Element Should Not Be Visible  ${VN_header_categories_diapering_link}
+    Wait Until Page Contains Element  ${VN_header_categories_eyecare_link}
+    Element Should Not Be Visible  ${VN_header_categories_eyecare_link}
+    Wait Until Page Contains Element  ${VN_header_categories_feeding_link}
+    Element Should Not Be Visible  ${VN_header_categories_feeding_link}
+    Wait Until Page Contains Element  ${VN_header_categories_food_supplements_link}
+    Element Should Not Be Visible  ${VN_header_categories_food_supplements_link}
+    Wait Until Page Contains Element  ${VN_header_categories_gifts_link}
+    Element Should Not Be Visible  ${VN_header_categories_gifts_link}
+    Wait Until Page Contains Element  ${VN_header_categories_gym_link}
+    Element Should Not Be Visible  ${VN_header_categories_gym_link}
+    Wait Until Page Contains Element  ${VN_header_categories_hair_care_link}
+    Element Should Not Be Visible  ${VN_header_categories_hair_care_link}
+    Wait Until Page Contains Element  ${VN_header_categories_health_link}
+    Element Should Not Be Visible  ${VN_header_categories_health_link}
+    Wait Until Page Contains Element  ${VN_header_categories_kids_clothing_link}
+    Element Should Not Be Visible  ${VN_header_categories_kids_clothing_link}
+    Wait Until Page Contains Element  ${VN_header_categories_makeup_link}
+    Element Should Not Be Visible  ${VN_header_categories_makeup_link}
+    Wait Until Page Contains Element  ${VN_header_categories_maternity_care_link}
+    Element Should Not Be Visible  ${VN_header_categories_maternity_care_link}
+    Wait Until Page Contains Element  ${VN_header_categories_medical_supplies_link}
+    Element Should Not Be Visible  ${VN_header_categories_medical_supplies_link}
+    Wait Until Page Contains Element  ${VN_header_categories_nursery_link}
+    Element Should Not Be Visible  ${VN_header_categories_nursery_link}
+    Wait Until Page Contains Element  ${VN_header_categories_perfeum_link}
+    Element Should Not Be Visible  ${VN_header_categories_perfeum_link}
+    Wait Until Page Contains Element  ${VN_header_categories_racquet_sports_link}
+    Element Should Not Be Visible  ${VN_header_categories_racquet_sports_link}
+    Wait Until Page Contains Element  ${VN_header_categories_shaving_supplies_link}
+    Element Should Not Be Visible  ${VN_header_categories_shaving_supplies_link}
+    Wait Until Page Contains Element  ${VN_header_categories_skin_care_link}
+    Element Should Not Be Visible  ${VN_header_categories_skin_care_link}
+    Wait Until Page Contains Element  ${VN_header_categories_supplements_link}
+    Element Should Not Be Visible  ${VN_header_categories_supplements_link}
+    Wait Until Page Contains Element  ${VN_header_categories_team_sports_link}
+    Element Should Not Be Visible  ${VN_header_categories_team_sports_link}
+    Wait Until Page Contains Element  ${VN_header_categories_toys_link}
+    Element Should Not Be Visible  ${VN_header_categories_toys_link}
+    Wait Until Page Contains Element  ${VN_header_categories_water_sports_link}
+    Element Should Not Be Visible  ${VN_header_categories_water_sports_link}
+    Wait Until Page Contains Element  ${VN_header_categories_ear_care_link}
+    Element Should Not Be Visible  ${VN_header_categories_ear_care_link}
+    Wait Until Page Contains Element  ${VN_header_categories_bathroom_link}
+    Element Should Not Be Visible  ${VN_header_categories_bathroom_link}
+    Wait Until Page Contains Element  ${VN_header_categories_bedroom_link}
+    Element Should Not Be Visible  ${VN_header_categories_bedroom_link}
+    Wait Until Page Contains Element  ${VN_header_categories_hallway_entry_link}
+    Element Should Not Be Visible  ${VN_header_categories_hallway_entry_link}
+    Wait Until Page Contains Element  ${VN_header_categories_home_decor_link}
+    Element Should Not Be Visible  ${VN_header_categories_home_decor_link}
+    Wait Until Page Contains Element  ${VN_header_categories_home_improvement_link}
+    Element Should Not Be Visible  ${VN_header_categories_home_improvement_link}
+    Wait Until Page Contains Element  ${VN_header_categories_home_office_link}
+    Element Should Not Be Visible  ${VN_header_categories_home_office_link}
+    Wait Until Page Contains Element  ${VN_header_categories_housekeepng_link}
+    Element Should Not Be Visible  ${VN_header_categories_housekeepng_link}
+    Wait Until Page Contains Element  ${VN_header_categories_kitchen_dining_link}
+    Element Should Not Be Visible  ${VN_header_categories_kitchen_dining_link}
+    Wait Until Page Contains Element  ${VN_header_categories_lighting_link}
+    Element Should Not Be Visible  ${VN_header_categories_lighting_link}
+    Wait Until Page Contains Element  ${VN_header_categories_living_room_link}
+    Element Should Not Be Visible  ${VN_header_categories_living_room_link}
+    Wait Until Page Contains Element  ${VN_header_categories_outdoor_garden_link}
+    Element Should Not Be Visible  ${VN_header_categories_outdoor_garden_link}
+    Wait Until Page Contains Element  ${VN_header_categories_pets_suplies_link}
+    Element Should Not Be Visible  ${VN_header_categories_pets_suplies_link}
+    Wait Until Page Contains Element  ${VN_header_categories_security_link}
+    Element Should Not Be Visible  ${VN_header_categories_security_link}
+    Wait Until Page Contains Element  ${VN_header_categories_stationery_link}
+    Element Should Not Be Visible  ${VN_header_categories_stationery_link}
+    Wait Until Page Contains Element  ${VN_header_categories_gadgets_link}
+    Element Should Not Be Visible  ${VN_header_categories_gadgets_link}
+    Wait Until Page Contains Element  ${VN_header_categories_other_sports_link}
+    Element Should Not Be Visible  ${VN_header_categories_other_sports_link}
+    Wait Until Page Contains Element  ${VN_header_categories_upcoming_products_link}
+    Element Should Not Be Visible  ${VN_header_categories_upcoming_products_link}
     Mouse Over  ${VN_header_categories_clothing_link}
     Wait Until Element Is Visible  ${VN_header_categories_clothing_men}
     Wait Until Element Is Visible  ${VN_header_categories_clothing_women}

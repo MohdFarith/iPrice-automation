@@ -27,6 +27,53 @@ ${HK_header_categories_camera_photo_link}  //div[@id='menu']//a[@href='https://i
 ${HK_header_categories_tv_video_dvd_link}  //div[@id='menu']//a[@href='https://iprice.hk/tv-video-dvd/']//span[text()='TV, Video & DVD']
 ${HK_header_categories_appliances_link}  //div[@id='menu']//a[@href='https://iprice.hk/appliances/']//span[text()='Appliances']
 ${HK_header_categories_automotive_link}  //div[@id='menu']//a[@href='https://iprice.hk/automotive/']//span[text()='Automotive']
+${HK_header_categories_hobbies_link}  //div[@id='menu']//a[@href='https://iprice.hk/hobbies/']//span[text()='Hobbies']
+${HK_header_categories_audio_hifi_link}  //div[@id='menu']//a[@href='https://iprice.hk/audio-hi-fi/']//span[text()='Audio & Hi Fi']
+${HK_header_categories_action_sport_link}  //div[@id='menu']//a[@href='https://iprice.hk/action-sports/']//span[text()='Action Sports']
+${HK_header_categories_adventure_link}  //div[@id='menu']//a[@href='https://iprice.hk/adventure/']//span[text()='Adventure']
+${HK_header_categories_baby_clothing_link}  //div[@id='menu']//a[@href='https://iprice.hk/baby-clothing/']//span[text()='Baby Clothing']
+${HK_header_categories_baby_gear_link}  //div[@id='menu']//a[@href='https://iprice.hk/baby-gear/']//span[text()='Baby Gear']
+${HK_header_categories_bath_body_link}  //div[@id='menu']//a[@href='https://iprice.hk/bath-body/']//span[text()='Bath & Body']
+${HK_header_categories_dental_care_link}  //div[@id='menu']//a[@href='https://iprice.hk/dental-care/']//span[text()='Dental Care']
+${HK_header_categories_diapering_link}  //div[@id='menu']//a[@href='https://iprice.hk/diapering/']//span[text()='Diapering']
+${HK_header_categories_eyecare_link}  //div[@id='menu']//a[@href='https://iprice.hk/eyecare/']//span[text()='Eyecare']
+${HK_header_categories_feeding_link}  //div[@id='menu']//a[@href='https://iprice.hk/feeding/']//span[text()='Feeding']
+${HK_header_categories_food_supplements_link}  //div[@id='menu']//a[@href='https://iprice.hk/food-supplements/']//span[text()='Food Supplements']
+${HK_header_categories_gifts_link}  //div[@id='menu']//a[@href='https://iprice.hk/gifts/']//span[text()='Gifts']
+${HK_header_categories_gym_link}  //div[@id='menu']//a[@href='https://iprice.hk/gym/']//span[text()='Gym']
+${HK_header_categories_hair_care_link}  //div[@id='menu']//a[@href='https://iprice.hk/hair-care/']//span[text()='Hair Care']
+${HK_header_categories_health_link}  //div[@id='menu']//a[@href='https://iprice.hk/health/']//span[text()='Health']
+${HK_header_categories_kids_clothing_link}  //div[@id='menu']//a[@href='https://iprice.hk/kids-clothing/']//span[text()='Kids Clothing']
+${HK_header_categories_makeup_link}  //div[@id='menu']//a[@href='https://iprice.hk/makeup/']//span[text()='Makeup']
+${HK_header_categories_maternity_care_link}  //div[@id='menu']//a[@href='https://iprice.hk/maternity-care/']//span[text()='Maternity Care']
+${HK_header_categories_medical_supplies_link}  //div[@id='menu']//a[@href='https://iprice.hk/medical-supplies/']//span[text()='Medical Supplies']
+${HK_header_categories_nursery_link}  //div[@id='menu']//a[@href='https://iprice.hk/nursery/']//span[text()='Nursery']
+${HK_header_categories_perfeum_link}  //div[@id='menu']//a[@href='https://iprice.hk/perfume/']//span[text()='Perfume']
+${HK_header_categories_racquet_sports_link}  //div[@id='menu']//a[@href='https://iprice.hk/racquet-sports/']//span[text()='Racquet Sports']
+${HK_header_categories_shaving_supplies_link}  //div[@id='menu']//a[@href='https://iprice.hk/shaving-supplies/']//span[text()='Shaving Supplies']
+${HK_header_categories_skin_care_link}  //div[@id='menu']//a[@href='https://iprice.hk/skin-care/']//span[text()='Skin Care']
+${HK_header_categories_supplements_link}  //div[@id='menu']//a[@href='https://iprice.hk/supplements/']//span[text()='Supplements']
+${HK_header_categories_team_sports_link}  //div[@id='menu']//a[@href='https://iprice.hk/team-sports/']//span[text()='Team Sports']
+${HK_header_categories_toys_link}  //div[@id='menu']//a[@href='https://iprice.hk/toys/']//span[text()='Toys']
+${HK_header_categories_water_sports_link}  //div[@id='menu']//a[@href='https://iprice.hk/water-sports/']//span[text()='Water Sports']
+${HK_header_categories_ear_care_link}  //div[@id='menu']//a[@href='https://iprice.hk/ear-care/']//span[text()='Ear Care']
+${HK_header_categories_bathroom_link}  //div[@id='menu']//a[@href='https://iprice.hk/bathroom/']//span[text()='Bathroom']
+${HK_header_categories_bedroom_link}  //div[@id='menu']//a[@href='https://iprice.hk/bedroom/']//span[text()='Bedroom']
+${HK_header_categories_hallway_entry_link}  //div[@id='menu']//a[@href='https://iprice.hk/hallway-entry/']//span[text()='Hallway & Entry']
+${HK_header_categories_home_decor_link}  //div[@id='menu']//a[@href='https://iprice.hk/home-decor/']//span[text()='Home Decor']
+${HK_header_categories_home_improvement_link}  //div[@id='menu']//a[@href='https://iprice.hk/home-improvement/']//span[text()='Home Improvement']
+${HK_header_categories_home_office_link}  //div[@id='menu']//a[@href='https://iprice.hk/home-office/']//span[text()='Home Office']
+${HK_header_categories_housekeepng_link}  //div[@id='menu']//a[@href='https://iprice.hk/housekeeping/']//span[text()='Housekeeping']
+${HK_header_categories_kitchen_dining_link}  //div[@id='menu']//a[@href='https://iprice.hk/kitchen-dining/']//span[text()='Kitchen & Dining']
+${HK_header_categories_lighting_link}  //div[@id='menu']//a[@href='https://iprice.hk/lighting/']//span[text()='Lighting']
+${HK_header_categories_living_room_link}  //div[@id='menu']//a[@href='https://iprice.hk/living-room/']//span[text()='Living Room']
+${HK_header_categories_outdoor_garden_link}  //div[@id='menu']//a[@href='https://iprice.hk/outdoor-garden/']//span[text()='Outdoor & Garden']
+${HK_header_categories_pets_suplies_link}  //div[@id='menu']//a[@href='https://iprice.hk/pets-supplies/']//span[text()='Pets Supplies']
+${HK_header_categories_security_link}  //div[@id='menu']//a[@href='https://iprice.hk/security/']//span[text()='Security']
+${HK_header_categories_stationery_link}  //div[@id='menu']//a[@href='https://iprice.hk/stationery/']//span[text()='Stationery']
+${HK_header_categories_gadgets_link}  //div[@id='menu']//a[@href='https://iprice.hk/gadgets/']//span[text()='Gadgets']
+${HK_header_categories_other_sports_link}  //div[@id='menu']//a[@href='https://iprice.hk/other-sports/']//span[text()='Other Sports']
+${HK_header_categories_upcoming_products_link}  //div[@id='menu']//a[@href='https://iprice.hk/upcoming-products/']//span[text()='Upcoming Products']
 
 ${HK_product_images}  //img[contains(@class,'lazy product-img')]
 
@@ -136,8 +183,104 @@ iPrice HK Homepage Categories Landing
     Wait Until Element Is Visible  ${HK_header_categories_gaming_link}
     Wait Until Element Is Visible  ${HK_header_categories_camera_photo_link}
     Wait Until Element Is Visible  ${HK_header_categories_tv_video_dvd_link}
-    Wait Until Element Is Visible  ${HK_header_categories_appliances_link}
-    Wait Until Element Is Visible  ${HK_header_categories_automotive_link}
+    Wait Until Page Contains Element  ${HK_header_categories_appliances_link}
+    Element Should Not Be Visible  ${HK_header_categories_appliances_link}
+    Wait Until Page Contains Element  ${HK_header_categories_automotive_link}
+    Element Should Not Be Visible  ${HK_header_categories_automotive_link}
+    Wait Until Page Contains Element  ${HK_header_categories_hobbies_link}
+    Element Should Not Be Visible  ${HK_header_categories_hobbies_link}
+    Wait Until Page Contains Element  ${HK_header_categories_audio_hifi_link}
+    Element Should Not Be Visible  ${HK_header_categories_audio_hifi_link}
+    Wait Until Page Contains Element  ${HK_header_categories_action_sport_link}
+    Element Should Not Be Visible  ${HK_header_categories_action_sport_link}
+    Wait Until Page Contains Element  ${HK_header_categories_adventure_link}
+    Element Should Not Be Visible  ${HK_header_categories_adventure_link}
+    Wait Until Page Contains Element  ${HK_header_categories_baby_clothing_link}
+    Element Should Not Be Visible  ${HK_header_categories_baby_clothing_link}
+    Wait Until Page Contains Element  ${HK_header_categories_baby_gear_link}
+    Element Should Not Be Visible  ${HK_header_categories_baby_gear_link}
+    Wait Until Page Contains Element  ${HK_header_categories_bath_body_link}
+    Element Should Not Be Visible  ${HK_header_categories_bath_body_link}
+    Wait Until Page Contains Element  ${HK_header_categories_dental_care_link}
+    Element Should Not Be Visible  ${HK_header_categories_dental_care_link}
+    Wait Until Page Contains Element  ${HK_header_categories_diapering_link}
+    Element Should Not Be Visible  ${HK_header_categories_diapering_link}
+    Wait Until Page Contains Element  ${HK_header_categories_eyecare_link}
+    Element Should Not Be Visible  ${HK_header_categories_eyecare_link}
+    Wait Until Page Contains Element  ${HK_header_categories_feeding_link}
+    Element Should Not Be Visible  ${HK_header_categories_feeding_link}
+    Wait Until Page Contains Element  ${HK_header_categories_food_supplements_link}
+    Element Should Not Be Visible  ${HK_header_categories_food_supplements_link}
+    Wait Until Page Contains Element  ${HK_header_categories_gifts_link}
+    Element Should Not Be Visible  ${HK_header_categories_gifts_link}
+    Wait Until Page Contains Element  ${HK_header_categories_gym_link}
+    Element Should Not Be Visible  ${HK_header_categories_gym_link}
+    Wait Until Page Contains Element  ${HK_header_categories_hair_care_link}
+    Element Should Not Be Visible  ${HK_header_categories_hair_care_link}
+    Wait Until Page Contains Element  ${HK_header_categories_health_link}
+    Element Should Not Be Visible  ${HK_header_categories_health_link}
+    Wait Until Page Contains Element  ${HK_header_categories_kids_clothing_link}
+    Element Should Not Be Visible  ${HK_header_categories_kids_clothing_link}
+    Wait Until Page Contains Element  ${HK_header_categories_makeup_link}
+    Element Should Not Be Visible  ${HK_header_categories_makeup_link}
+    Wait Until Page Contains Element  ${HK_header_categories_maternity_care_link}
+    Element Should Not Be Visible  ${HK_header_categories_maternity_care_link}
+    Wait Until Page Contains Element  ${HK_header_categories_medical_supplies_link}
+    Element Should Not Be Visible  ${HK_header_categories_medical_supplies_link}
+    Wait Until Page Contains Element  ${HK_header_categories_nursery_link}
+    Element Should Not Be Visible  ${HK_header_categories_nursery_link}
+    Wait Until Page Contains Element  ${HK_header_categories_perfeum_link}
+    Element Should Not Be Visible  ${HK_header_categories_perfeum_link}
+    Wait Until Page Contains Element  ${HK_header_categories_racquet_sports_link}
+    Element Should Not Be Visible  ${HK_header_categories_racquet_sports_link}
+    Wait Until Page Contains Element  ${HK_header_categories_shaving_supplies_link}
+    Element Should Not Be Visible  ${HK_header_categories_shaving_supplies_link}
+    Wait Until Page Contains Element  ${HK_header_categories_skin_care_link}
+    Element Should Not Be Visible  ${HK_header_categories_skin_care_link}
+    Wait Until Page Contains Element  ${HK_header_categories_supplements_link}
+    Element Should Not Be Visible  ${HK_header_categories_supplements_link}
+    Wait Until Page Contains Element  ${HK_header_categories_team_sports_link}
+    Element Should Not Be Visible  ${HK_header_categories_team_sports_link}
+    Wait Until Page Contains Element  ${HK_header_categories_toys_link}
+    Element Should Not Be Visible  ${HK_header_categories_toys_link}
+    Wait Until Page Contains Element  ${HK_header_categories_water_sports_link}
+    Element Should Not Be Visible  ${HK_header_categories_water_sports_link}
+    Wait Until Page Contains Element  ${HK_header_categories_ear_care_link}
+    Element Should Not Be Visible  ${HK_header_categories_ear_care_link}
+    Wait Until Page Contains Element  ${HK_header_categories_bathroom_link}
+    Element Should Not Be Visible  ${HK_header_categories_bathroom_link}
+    Wait Until Page Contains Element  ${HK_header_categories_bedroom_link}
+    Element Should Not Be Visible  ${HK_header_categories_bedroom_link}
+    Wait Until Page Contains Element  ${HK_header_categories_hallway_entry_link}
+    Element Should Not Be Visible  ${HK_header_categories_hallway_entry_link}
+    Wait Until Page Contains Element  ${HK_header_categories_home_decor_link}
+    Element Should Not Be Visible  ${HK_header_categories_home_decor_link}
+    Wait Until Page Contains Element  ${HK_header_categories_home_improvement_link}
+    Element Should Not Be Visible  ${HK_header_categories_home_improvement_link}
+    Wait Until Page Contains Element  ${HK_header_categories_home_office_link}
+    Element Should Not Be Visible  ${HK_header_categories_home_office_link}
+    Wait Until Page Contains Element  ${HK_header_categories_housekeepng_link}
+    Element Should Not Be Visible  ${HK_header_categories_housekeepng_link}
+    Wait Until Page Contains Element  ${HK_header_categories_kitchen_dining_link}
+    Element Should Not Be Visible  ${HK_header_categories_kitchen_dining_link}
+    Wait Until Page Contains Element  ${HK_header_categories_lighting_link}
+    Element Should Not Be Visible  ${HK_header_categories_lighting_link}
+    Wait Until Page Contains Element  ${HK_header_categories_living_room_link}
+    Element Should Not Be Visible  ${HK_header_categories_living_room_link}
+    Wait Until Page Contains Element  ${HK_header_categories_outdoor_garden_link}
+    Element Should Not Be Visible  ${HK_header_categories_outdoor_garden_link}
+    Wait Until Page Contains Element  ${HK_header_categories_pets_suplies_link}
+    Element Should Not Be Visible  ${HK_header_categories_pets_suplies_link}
+    Wait Until Page Contains Element  ${HK_header_categories_security_link}
+    Element Should Not Be Visible  ${HK_header_categories_security_link}
+    Wait Until Page Contains Element  ${HK_header_categories_stationery_link}
+    Element Should Not Be Visible  ${HK_header_categories_stationery_link}
+    Wait Until Page Contains Element  ${HK_header_categories_gadgets_link}
+    Element Should Not Be Visible  ${HK_header_categories_gadgets_link}
+    Wait Until Page Contains Element  ${HK_header_categories_other_sports_link}
+    Element Should Not Be Visible  ${HK_header_categories_other_sports_link}
+    Wait Until Page Contains Element  ${HK_header_categories_upcoming_products_link}
+    Element Should Not Be Visible  ${HK_header_categories_upcoming_products_link}
     Mouse Over  ${HK_header_categories_clothing_link}
     Wait Until Element Is Visible  ${HK_header_categories_clothing_men}
     Wait Until Element Is Visible  ${HK_header_categories_clothing_women}
