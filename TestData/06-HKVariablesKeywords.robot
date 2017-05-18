@@ -3,7 +3,7 @@ Documentation    This file will only store variables and keywords for HK..
 
 *** Variables ***
 
-${HK_homeURL}  https://iprice.hk/
+${HK_homeURL}  https://iprice.hk/?nocache=1
 ${HK_homeTitle}  Online Shopping, Coupons & Discount Codes at iprice Hong Kong
 ${HK_header_logo_link}  //div[@id='logo']//a[@href='https://iprice.hk/']
 ${HK_header_search_input}  //div[@id='search']//input[@placeholder='Search for products, coupons or brands...']

@@ -3,7 +3,7 @@ Documentation    This file will only store variables and keywords for ID.
 
 *** Variables ***
 
-${ID_homeURL}  https://iprice.co.id/
+${ID_homeURL}  https://iprice.co.id/?nocache=1
 ${ID_homeTitle}  Belanja Online, Kode Kupon & Diskon di iprice Indonesia
 ${ID_header_logo_link}  //div[@id='logo']//a[@href='https://iprice.co.id/']
 ${ID_header_search_input}  //div[@id='search']//input[@placeholder='Cari produk, kupon atau brand...']

@@ -3,7 +3,7 @@ Documentation  This file will only store variables and keywords for MY.
 
 *** Variables ***
 
-${MY_homeURL}  https://iprice.my/
+${MY_homeURL}  https://iprice.my/?nocache=1
 ${MY_homeTitle}  Online Shopping, Coupons & Discount Codes at iprice Malaysia
 ${MY_header_logo_link}  //div[@id='logo']//a[@href='https://iprice.my/']
 ${MY_header_search_input}  //div[@id='search']//input[@placeholder='Search for products, coupons or brands...']

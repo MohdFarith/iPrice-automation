@@ -3,7 +3,7 @@ Documentation    This file will only store variables and keywords for PH.
 
 *** Variables ***
 
-${PH_homeURL}  https://iprice.ph/
+${PH_homeURL}  https://iprice.ph/?nocache=1
 ${PH_homeTitle}  Online Shopping, Coupons & Discount Codes at iprice Philippines
 ${PH_header_logo_link}  //div[@id='logo']//a[@href='https://iprice.ph/']
 ${PH_header_search_input}  //div[@id='search']//input[@placeholder='Search for products, coupons or brands...']
