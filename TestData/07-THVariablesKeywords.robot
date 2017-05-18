@@ -3,7 +3,7 @@ Documentation    This file will only store variables and keywords for TH.
 
 *** Variables ***
 
-${TH_homeURL}  https://ipricethailand.com/?nocache=1
+${TH_homeURL}  https://ipricethailand.com/
 ${TH_homeTitle}  ipriceThailand - ค้นหา เช็กราคา ที่เดียวครบสุดคุ้ม
 ${TH_header_logo_link}  //div[@id='logo']//a[@href='https://ipricethailand.com/']
 ${TH_header_search_input}  //div[@id='search']//input[@placeholder='ค้นหาสินค้า,คูปองหรือแบรนด์...']

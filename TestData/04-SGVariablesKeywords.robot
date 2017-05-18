@@ -3,7 +3,7 @@ Documentation    This file will only store variables and keywords for SG.
 
 *** Variables ***
 
-${SG_homeURL}  https://iprice.sg/?nocache=1
+${SG_homeURL}  https://iprice.sg/
 ${SG_homeTitle}  Online Shopping, Coupons & Discount Codes at iprice Singapore
 ${SG_header_logo_link}  //div[@id='logo']//a[@href='https://iprice.sg/']
 ${SG_header_search_input}  //div[@id='search']//input[@placeholder='Search for products, coupons or brands...']

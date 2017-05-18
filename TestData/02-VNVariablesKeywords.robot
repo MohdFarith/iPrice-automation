@@ -3,7 +3,7 @@ Documentation    This file will only store variables and keywords fro VN.
 
 *** Variables ***
 
-${VN_homeURL}  https://iprice.vn/?nocache=1
+${VN_homeURL}  https://iprice.vn/
 ${VN_homeTitle}  Shopping trực tuyến, Mã coupon & khuyến mãi tại iprice Việt Nam
 ${VN_header_logo_link}  //div[@id='logo']//a[@href='https://iprice.vn/']
 ${VN_header_search_input}  //div[@id='search']//input[@placeholder='Tìm kiếm sản phẩm, coupon hoặc thương hiệu...']
