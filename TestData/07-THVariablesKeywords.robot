@@ -26,8 +26,8 @@ ${TH_header_categories_gaming_link}  //div[@id='menu']//a[@href='https://ipricet
 ${TH_header_categories_camera_photo_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/กลองถายรปและรปภาพ/']//span[text()='กล้องถ่ายรูปและรูปภาพ']
 ${TH_header_categories_tv_video_dvd_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ทว-วดโอ-และดวด/']//span[text()='ทีวี วีดีโอ และดีวีดี']
 ${TH_header_categories_appliances_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/เครองใชไฟฟา/']//span[text()='เครื่องใช้ไฟฟ้า']
-${TH_header_categories_automotive_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ยานยนต/']//span[text()='ยานยนต']
-${TH_header_categories_hobbies_link}  //div[@id='menu']//a[@href='href="https://ipricethailand.com/งานอดเรก/"']//span[text()='งานอดิเรก']
+${TH_header_categories_automotive_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ยานยนต/']//span[text()='ยานยนต์']
+${TH_header_categories_hobbies_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/งานอดเรก/']//span[text()='งานอดิเรก']
 ${TH_header_categories_audio_hifi_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/เครองเสยงและ-hi-fi/']//span[text()='เครื่องเสียงและ Hi Fi']
 ${TH_header_categories_action_sport_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/กฬาเอกซตรม/']//span[text()='กีฬาเอ็กซ์ตรีม']
 ${TH_header_categories_adventure_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/การผจญภย/']//span[text()='การผจญภัย']
@@ -43,25 +43,25 @@ ${TH_header_categories_gifts_link}  //div[@id='menu']//a[@href='https://ipriceth
 ${TH_header_categories_gym_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ฟตเนส/']//span[text()='ฟิตเนส']
 ${TH_header_categories_hair_care_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ผลตภณฑดแลเสนผม/']//span[text()='ผลิตภัณฑ์ดูแลเส้นผม']
 ${TH_header_categories_health_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/สขภาพ/']//span[text()='สุขภาพ']
-${TH_header_categories_kids_clothing_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/เครองแตงกายสำหรบเดกทารก/']//span[text()='เครื่องแต่งกายสำหรับเด็ก']
+${TH_header_categories_kids_clothing_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/เครองแตงกายสำหรบเดก/']//span[text()='เครื่องแต่งกายสำหรับเด็ก']
 ${TH_header_categories_makeup_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/เครองสำอาง/']//span[text()='เครื่องสำอาง']
-${TH_header_categories_maternity_care_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ผลตภณฑสำหรบคณแม/']//span[text()='ผลิตภัณฑ์สำหรับคุณแม']
-${TH_header_categories_medical_supplies_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ผลตภณฑสำหรบคณแม/']//span[text()='เวชภัณฑ์']
-${TH_header_categories_nursery_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ผลตภณฑสำหรบคณแม/']//span[text()='เนอสเซอรี่']
+${TH_header_categories_maternity_care_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ผลตภณฑสำหรบคณแม/']//span[text()='ผลิตภัณฑ์สำหรับคุณแม่']
+${TH_header_categories_medical_supplies_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/เวชภณฑ/']//span[text()='เวชภัณฑ์']
+${TH_header_categories_nursery_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/เนอสเซอร/']//span[text()='เนอสเซอรี่']
 ${TH_header_categories_perfeum_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/นำหอม/']//span[text()='น้ำหอม']
 ${TH_header_categories_racquet_sports_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/กฬาประเภทแรกเกต/']//span[text()='กีฬาประเภทแร็กเกต']
 ${TH_header_categories_shaving_supplies_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ผลตภณฑกำจดขน/']//span[text()='ผลิตภัณฑ์กำจัดขน']
 ${TH_header_categories_skin_care_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ผลตภณฑดแลผว/']//span[text()='ผลิตภัณฑ์ดูแลผิว']
-${TH_header_categories_supplements_link}  //div[@id='menu']//a[@href='href="https://ipricethailand.com/อาหารเสรม/"']//span[text()='อาหารเสริม']
+${TH_header_categories_supplements_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/อาหารเสรม/']//span[text()='อาหารเสริม']
 ${TH_header_categories_team_sports_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/กฬาประเภททม/']//span[text()='กีฬาประเภททีม']
 ${TH_header_categories_toys_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ของเลน/']//span[text()='ของเล่น']
 ${TH_header_categories_water_sports_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/กฬาทางนำ/']//span[text()='กีฬาทางน้ำ']
-${TH_header_categories_ear_care_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ผลตภณฑดแลสขภาพห/']//span[text()='ผลิตภัณฑ์ดูแลสุขภาพห']
+${TH_header_categories_ear_care_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ผลตภณฑดแลสขภาพห/']//span[text()='ผลิตภัณฑ์ดูแลสุขภาพหู']
 ${TH_header_categories_bathroom_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/หองนำ/']//span[text()='ห้องน้ำ']
 ${TH_header_categories_bedroom_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/หองนอน/']//span[text()='ห้องนอน']
 ${TH_header_categories_hallway_entry_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/หองโถงและทางเขา/']//span[text()='ห้องโถงและทางเข้า']
 ${TH_header_categories_home_decor_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ของตกแตงบาน/']//span[text()='ของตกแต่งบ้าน']
-${TH_header_categories_home_improvement_link}  //div[@id='menu']//a[@href='อุปกรณ์ดูแลรักษาและซ่อมแซมบ้าน']//span[text()='Home Improvement']
+${TH_header_categories_home_improvement_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/อปกรณดแลรกษาและซอมแซมบาน/']//span[text()='อุปกรณ์ดูแลรักษาและซ่อมแซมบ้าน']
 ${TH_header_categories_home_office_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/อปกรณสำนกงาน/']//span[text()='อุปกรณ์สำนักงาน']
 ${TH_header_categories_housekeepng_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/อปกรณทำความสะอาดบาน/']//span[text()='อุปกรณ์ทำความสะอาดบ้าน']
 ${TH_header_categories_kitchen_dining_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/หองครวและหองรบประทานอาหาร/']//span[text()='ห้องครัวและห้องรับประทานอาหาร']
@@ -73,7 +73,7 @@ ${TH_header_categories_security_link}  //div[@id='menu']//a[@href='https://ipric
 ${TH_header_categories_stationery_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/เครองเขยน/']//span[text()='เครื่องเขียน']
 ${TH_header_categories_gadgets_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/แกดเจต/']//span[text()='แก็ดเจ็ต']
 ${TH_header_categories_other_sports_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/กฬาอนๆ/']//span[text()='กีฬาอื่นๆ']
-${TH_header_categories_upcoming_products_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ผลตภณฑมาใหม/']//span[text()='Upcoming Products']
+${TH_header_categories_upcoming_products_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ผลตภณฑมาใหม/']//span[text()='ผลิตภัณฑ์มาใหม่']
 
 ${TH_product_images}  //img[contains(@class,'lazy product-img')]
 
@@ -182,9 +182,106 @@ iPrice TH Homepage Categories Landing
     Wait Until Element Is Visible  ${TH_header_categories_phones_tablets_link}
     Wait Until Element Is Visible  ${TH_header_categories_gaming_link}
     Wait Until Element Is Visible  ${TH_header_categories_camera_photo_link}
-    Wait Until Element Is Visible  ${TH_header_categories_tv_video_dvd_link}
-    # Wait Until Element Is Visible  ${TH_header_categories_appliances_link}
-    # Wait Until Element Is Visible  ${TH_header_categories_automotive_link}
+    Wait Until Page Contains Element  ${TH_header_categories_tv_video_dvd_link}
+    Element Should Not Be Visible  ${TH_header_categories_tv_video_dvd_link}
+    Wait Until Page Contains Element  ${TH_header_categories_appliances_link}
+    Element Should Not Be Visible  ${TH_header_categories_appliances_link}
+    Wait Until Page Contains Element  ${TH_header_categories_automotive_link}
+    Element Should Not Be Visible  ${TH_header_categories_automotive_link}
+    Wait Until Page Contains Element  ${TH_header_categories_hobbies_link}
+    Element Should Not Be Visible  ${TH_header_categories_hobbies_link}
+    Wait Until Page Contains Element  ${TH_header_categories_audio_hifi_link}
+    Element Should Not Be Visible  ${TH_header_categories_audio_hifi_link}
+    Wait Until Page Contains Element  ${TH_header_categories_action_sport_link}
+    Element Should Not Be Visible  ${TH_header_categories_action_sport_link}
+    Wait Until Page Contains Element  ${TH_header_categories_adventure_link}
+    Element Should Not Be Visible  ${TH_header_categories_adventure_link}
+    Wait Until Page Contains Element  ${TH_header_categories_baby_clothing_link}
+    Element Should Not Be Visible  ${TH_header_categories_baby_clothing_link}
+    Wait Until Page Contains Element  ${TH_header_categories_baby_gear_link}
+    Element Should Not Be Visible  ${TH_header_categories_baby_gear_link}
+    Wait Until Page Contains Element  ${TH_header_categories_bath_body_link}
+    Element Should Not Be Visible  ${TH_header_categories_bath_body_link}
+    Wait Until Page Contains Element  ${TH_header_categories_dental_care_link}
+    Element Should Not Be Visible  ${TH_header_categories_dental_care_link}
+    Wait Until Page Contains Element  ${TH_header_categories_diapering_link}
+    Element Should Not Be Visible  ${TH_header_categories_diapering_link}
+    Wait Until Page Contains Element  ${TH_header_categories_eyecare_link}
+    Element Should Not Be Visible  ${TH_header_categories_eyecare_link}
+    Wait Until Page Contains Element  ${TH_header_categories_feeding_link}
+    Element Should Not Be Visible  ${TH_header_categories_feeding_link}
+    Wait Until Page Contains Element  ${TH_header_categories_food_supplements_link}
+    Element Should Not Be Visible  ${TH_header_categories_food_supplements_link}
+    Wait Until Page Contains Element  ${TH_header_categories_gifts_link}
+    Element Should Not Be Visible  ${TH_header_categories_gifts_link}
+    Wait Until Page Contains Element  ${TH_header_categories_gym_link}
+    Element Should Not Be Visible  ${TH_header_categories_gym_link}
+    Wait Until Page Contains Element  ${TH_header_categories_hair_care_link}
+    Element Should Not Be Visible  ${TH_header_categories_hair_care_link}
+    Wait Until Page Contains Element  ${TH_header_categories_health_link}
+    Element Should Not Be Visible  ${TH_header_categories_health_link}
+    Wait Until Page Contains Element  ${TH_header_categories_kids_clothing_link}
+    Element Should Not Be Visible  ${TH_header_categories_kids_clothing_link}
+    Wait Until Page Contains Element  ${TH_header_categories_makeup_link}
+    Element Should Not Be Visible  ${TH_header_categories_makeup_link}
+    Wait Until Page Contains Element  ${TH_header_categories_maternity_care_link}
+    Element Should Not Be Visible  ${TH_header_categories_maternity_care_link}
+    Wait Until Page Contains Element  ${TH_header_categories_medical_supplies_link}
+    Element Should Not Be Visible  ${TH_header_categories_medical_supplies_link}
+    Wait Until Page Contains Element  ${TH_header_categories_nursery_link}
+    Element Should Not Be Visible  ${TH_header_categories_nursery_link}
+    Wait Until Page Contains Element  ${TH_header_categories_perfeum_link}
+    Element Should Not Be Visible  ${TH_header_categories_perfeum_link}
+    Wait Until Page Contains Element  ${TH_header_categories_racquet_sports_link}
+    Element Should Not Be Visible  ${TH_header_categories_racquet_sports_link}
+    Wait Until Page Contains Element  ${TH_header_categories_shaving_supplies_link}
+    Element Should Not Be Visible  ${TH_header_categories_shaving_supplies_link}
+    Wait Until Page Contains Element  ${TH_header_categories_skin_care_link}
+    Element Should Not Be Visible  ${TH_header_categories_skin_care_link}
+    Wait Until Page Contains Element  ${TH_header_categories_supplements_link}
+    Element Should Not Be Visible  ${TH_header_categories_supplements_link}
+    Wait Until Page Contains Element  ${TH_header_categories_team_sports_link}
+    Element Should Not Be Visible  ${TH_header_categories_team_sports_link}
+    Wait Until Page Contains Element  ${TH_header_categories_toys_link}
+    Element Should Not Be Visible  ${TH_header_categories_toys_link}
+    Wait Until Page Contains Element  ${TH_header_categories_water_sports_link}
+    Element Should Not Be Visible  ${TH_header_categories_water_sports_link}
+    Wait Until Page Contains Element  ${TH_header_categories_ear_care_link}
+    Element Should Not Be Visible  ${TH_header_categories_ear_care_link}
+    Wait Until Page Contains Element  ${TH_header_categories_bathroom_link}
+    Element Should Not Be Visible  ${TH_header_categories_bathroom_link}
+    Wait Until Page Contains Element  ${TH_header_categories_bedroom_link}
+    Element Should Not Be Visible  ${TH_header_categories_bedroom_link}
+    Wait Until Page Contains Element  ${TH_header_categories_hallway_entry_link}
+    Element Should Not Be Visible  ${TH_header_categories_hallway_entry_link}
+    Wait Until Page Contains Element  ${TH_header_categories_home_decor_link}
+    Element Should Not Be Visible  ${TH_header_categories_home_decor_link}
+    Wait Until Page Contains Element  ${TH_header_categories_home_improvement_link}
+    Element Should Not Be Visible  ${TH_header_categories_home_improvement_link}
+    Wait Until Page Contains Element  ${TH_header_categories_home_office_link}
+    Element Should Not Be Visible  ${TH_header_categories_home_office_link}
+    Wait Until Page Contains Element  ${TH_header_categories_housekeepng_link}
+    Element Should Not Be Visible  ${TH_header_categories_housekeepng_link}
+    Wait Until Page Contains Element  ${TH_header_categories_kitchen_dining_link}
+    Element Should Not Be Visible  ${TH_header_categories_kitchen_dining_link}
+    Wait Until Page Contains Element  ${TH_header_categories_lighting_link}
+    Element Should Not Be Visible  ${TH_header_categories_lighting_link}
+    Wait Until Page Contains Element  ${TH_header_categories_living_room_link}
+    Element Should Not Be Visible  ${TH_header_categories_living_room_link}
+    Wait Until Page Contains Element  ${TH_header_categories_outdoor_garden_link}
+    Element Should Not Be Visible  ${TH_header_categories_outdoor_garden_link}
+    Wait Until Page Contains Element  ${TH_header_categories_pets_suplies_link}
+    Element Should Not Be Visible  ${TH_header_categories_pets_suplies_link}
+    Wait Until Page Contains Element  ${TH_header_categories_security_link}
+    Element Should Not Be Visible  ${TH_header_categories_security_link}
+    Wait Until Page Contains Element  ${TH_header_categories_stationery_link}
+    Element Should Not Be Visible  ${TH_header_categories_stationery_link}
+    Wait Until Page Contains Element  ${TH_header_categories_gadgets_link}
+    Element Should Not Be Visible  ${TH_header_categories_gadgets_link}
+    # Wait Until Page Contains Element  ${TH_header_categories_other_sports_link}
+    # Element Should Not Be Visible  ${TH_header_categories_other_sports_link}
+    Wait Until Page Contains Element  ${TH_header_categories_upcoming_products_link}
+    Element Should Not Be Visible  ${TH_header_categories_upcoming_products_link}
     Mouse Over  ${TH_header_categories_clothing_link}
     Wait Until Element Is Visible  ${TH_header_categories_clothing_men}
     Wait Until Element Is Visible  ${TH_header_categories_clothing_women}
