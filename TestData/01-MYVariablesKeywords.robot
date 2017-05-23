@@ -3,8 +3,14 @@ Documentation  This file will only store variables and keywords for MY.
 
 *** Variables ***
 
-${MY_homeURL}  https://iprice.my/
+${MY_homeURL}  https://iprice.my/?nocache=1
 ${MY_homeTitle}  Online Shopping, Coupons & Discount Codes at iprice Malaysia
+# ${MY_header_meta_decription}  //meta[@name='description']
+# ${MY_header_meta_validate}  //meta[@name='description']
+# ${MY_header_meta_validate}  //meta[@name='msvalidate.01']
+# ${MY_header_meta_decription}
+# ${MY_header_meta_decription}
+${MY_header_H1_text}  //h1[text()='Search, Compare & Save']
 ${MY_header_logo_link}  //div[@id='logo']//a[@href='https://iprice.my/']
 ${MY_header_search_input}  //div[@id='search']//input[@placeholder='Search for products, coupons or brands...']
 ${MY_header_search_icon}  //div[@id='search']//i[@class='icon icon-search-blue']
@@ -56,6 +62,7 @@ ${MY_header_categories_supplements_link}  //div[@id='menu']//a[@href='https://ip
 ${MY_header_categories_team_sports_link}  //div[@id='menu']//a[@href='https://iprice.my/team-sports/']//span[text()='Team Sports']
 ${MY_header_categories_toys_link}  //div[@id='menu']//a[@href='https://iprice.my/toys/']//span[text()='Toys']
 ${MY_header_categories_water_sports_link}  //div[@id='menu']//a[@href='https://iprice.my/water-sports/']//span[text()='Water Sports']
+${MY_header_categories_groceries_link}  //div[@id='menu']//a[@href='https://iprice.my/groceries/']//span[text()='Groceries']
 ${MY_header_categories_ear_care_link}  //div[@id='menu']//a[@href='https://iprice.my/ear-care/']//span[text()='Ear Care']
 ${MY_header_categories_bathroom_link}  //div[@id='menu']//a[@href='https://iprice.my/bathroom/']//span[text()='Bathroom']
 ${MY_header_categories_bedroom_link}  //div[@id='menu']//a[@href='https://iprice.my/bedroom/']//span[text()='Bedroom']
@@ -141,7 +148,7 @@ SEO Check Internal Link In MY
     ${internal_links2}  Create List
     :FOR  ${INDEX}  IN RANGE  0  ${internal_links_count}
     \  ${link}  Get From List  ${internal_links}  ${INDEX}
-    \  ${match}  Get Regexp Matches  ${link}  /#
+    \  ${match}  Get Regexp Matches  ${link}  /?nocache=1#
     \  ${matchCount}  Get Length  ${match}
     \  Run Keyword If  ${matchCount}==0  Append To List  ${internal_links2}  ${link}
     ${internal_links2_count}  Get Length  ${internal_links2}
@@ -153,12 +160,17 @@ SEO Check Internal Link In MY
     \  ${status2}  Run Keyword And Return Status  Should End With  ${link}  /
     \  Run Keyword If  "${status2}"=="False"  Run Keyword And Continue On Failure  Fail  ${link} does not end with trailing "/".
 
-SEO Check Images ALT  [Arguments]  ${imageCount}
+SEO Check Images ALT In MY  [Arguments]  ${imageCount}
     ${match}  Get Matching Xpath Count  ${MY_product_images}
     Run Keyword If  "${match}"!="${imageCount}"  Run Keyword And Continue On Failure  Fail  Images count wrong.
     :FOR  ${INDEX}  IN RANGE  1  ${imageCount}
     \  ${altImages}  Get Element Attribute  xpath=(${MY_product_images})[${INDEX}]@alt
     \  Run Keyword If  "${altImages}"=="None"  Run Keyword And Continue On Failure  Fail  Image does not contains alt.
+
+# SEO Check Title, H1, Meta Desc, OG
+#     Title Should Be    ${MY_homeTitle}
+#     Wait Until Element Is Visible  ${MY_H1_text}
+#     Page Should Contains Element
 
 Access iPrice MY Homepage
     Go To  ${MY_homeURL}
@@ -174,7 +186,7 @@ iPrice MY Homepage Landing
 
 iPrice MY Homepage Categories Landing
     ${match}  Get Matching Xpath Count  //div[@id='menu']//li[@class='cursor-pointer list-item']//span
-    Run Keyword If  ${match}!=59  Run Keyword And Continue On Failure  Fail  Main categories count incorrect.
+    Run Keyword If  ${match}!=60  Run Keyword And Continue On Failure  Fail  Main categories count incorrect.
     Wait Until Element Is Visible  ${MY_header_categories_clothing_link}
     Wait Until Element Is Visible  ${MY_header_categories_shoes_link}
     Wait Until Element Is Visible  ${MY_header_categories_bags_link}
@@ -247,6 +259,8 @@ iPrice MY Homepage Categories Landing
     Element Should Not Be Visible  ${MY_header_categories_toys_link}
     Wait Until Page Contains Element  ${MY_header_categories_water_sports_link}
     Element Should Not Be Visible  ${MY_header_categories_water_sports_link}
+    Wait Until Page Contains Element  ${MY_header_categories_groceries_link}
+    Element Should Not Be Visible  ${MY_header_categories_groceries_link}
     Wait Until Page Contains Element  ${MY_header_categories_ear_care_link}
     Element Should Not Be Visible  ${MY_header_categories_ear_care_link}
     Wait Until Page Contains Element  ${MY_header_categories_bathroom_link}

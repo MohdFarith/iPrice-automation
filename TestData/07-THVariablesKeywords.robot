@@ -3,7 +3,7 @@ Documentation    This file will only store variables and keywords for TH.
 
 *** Variables ***
 
-${TH_homeURL}  https://ipricethailand.com/
+${TH_homeURL}  https://ipricethailand.com/?nocache=1
 ${TH_homeTitle}  ipriceThailand - ค้นหา เช็กราคา ที่เดียวครบสุดคุ้ม
 ${TH_header_logo_link}  //div[@id='logo']//a[@href='https://ipricethailand.com/']
 ${TH_header_search_input}  //div[@id='search']//input[@placeholder='ค้นหาสินค้า,คูปองหรือแบรนด์...']
@@ -56,6 +56,7 @@ ${TH_header_categories_supplements_link}  //div[@id='menu']//a[@href='https://ip
 ${TH_header_categories_team_sports_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/กฬาประเภททม/']//span[text()='กีฬาประเภททีม']
 ${TH_header_categories_toys_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ของเลน/']//span[text()='ของเล่น']
 ${TH_header_categories_water_sports_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/กฬาทางนำ/']//span[text()='กีฬาทางน้ำ']
+${TH_header_categories_groceries_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ของชำ/']//span[text()='ของชำ']
 ${TH_header_categories_ear_care_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/ผลตภณฑดแลสขภาพห/']//span[text()='ผลิตภัณฑ์ดูแลสุขภาพหู']
 ${TH_header_categories_bathroom_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/หองนำ/']//span[text()='ห้องน้ำ']
 ${TH_header_categories_bedroom_link}  //div[@id='menu']//a[@href='https://ipricethailand.com/หองนอน/']//span[text()='ห้องนอน']
@@ -138,7 +139,7 @@ SEO Check Internal Link In TH
     ${internal_links2}  Create List
     :FOR  ${INDEX}  IN RANGE  0  ${internal_links_count}
     \  ${link}  Get From List  ${internal_links}  ${INDEX}
-    \  ${match}  Get Regexp Matches  ${link}  /#
+    \  ${match}  Get Regexp Matches  ${link}  /?nocache=1#
     \  ${matchCount}  Get Length  ${match}
     \  Run Keyword If  ${matchCount}==0  Append To List  ${internal_links2}  ${link}
     ${internal_links2_count}  Get Length  ${internal_links2}
@@ -172,7 +173,7 @@ iPrice TH Homepage Landing
 
 iPrice TH Homepage Categories Landing
     ${match}  Get Matching Xpath Count  //div[@id='menu']//li[@class='cursor-pointer list-item']//span
-    Run Keyword If  ${match}!=59  Run Keyword And Continue On Failure  Fail  Main categories count incorrect.
+    Run Keyword If  ${match}!=60  Run Keyword And Continue On Failure  Fail  Main categories count incorrect.
     Wait Until Element Is Visible  ${TH_header_categories_clothing_link}
     Wait Until Element Is Visible  ${TH_header_categories_shoes_link}
     Wait Until Element Is Visible  ${TH_header_categories_bags_link}
@@ -246,6 +247,8 @@ iPrice TH Homepage Categories Landing
     Element Should Not Be Visible  ${TH_header_categories_toys_link}
     Wait Until Page Contains Element  ${TH_header_categories_water_sports_link}
     Element Should Not Be Visible  ${TH_header_categories_water_sports_link}
+    Wait Until Page Contains Element  ${TH_header_categories_groceries_link}
+    Element Should Not Be Visible  ${TH_header_categories_groceries_link}
     Wait Until Page Contains Element  ${TH_header_categories_ear_care_link}
     Element Should Not Be Visible  ${TH_header_categories_ear_care_link}
     Wait Until Page Contains Element  ${TH_header_categories_bathroom_link}

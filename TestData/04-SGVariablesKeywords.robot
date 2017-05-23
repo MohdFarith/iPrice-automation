@@ -3,7 +3,7 @@ Documentation    This file will only store variables and keywords for SG.
 
 *** Variables ***
 
-${SG_homeURL}  https://iprice.sg/
+${SG_homeURL}  https://iprice.sg/?nocache=1#
 ${SG_homeTitle}  Online Shopping, Coupons & Discount Codes at iprice Singapore
 ${SG_header_logo_link}  //div[@id='logo']//a[@href='https://iprice.sg/']
 ${SG_header_search_input}  //div[@id='search']//input[@placeholder='Search for products, coupons or brands...']
@@ -56,6 +56,7 @@ ${SG_header_categories_supplements_link}  //div[@id='menu']//a[@href='https://ip
 ${SG_header_categories_team_sports_link}  //div[@id='menu']//a[@href='https://iprice.sg/team-sports/']//span[text()='Team Sports']
 ${SG_header_categories_toys_link}  //div[@id='menu']//a[@href='https://iprice.sg/toys/']//span[text()='Toys']
 ${SG_header_categories_water_sports_link}  //div[@id='menu']//a[@href='https://iprice.sg/water-sports/']//span[text()='Water Sports']
+${SG_header_categories_groceries_link}  //div[@id='menu']//a[@href='https://iprice.sg/groceries/']//span[text()='Groceries']
 ${SG_header_categories_ear_care_link}  //div[@id='menu']//a[@href='https://iprice.sg/ear-care/']//span[text()='Ear Care']
 ${SG_header_categories_bathroom_link}  //div[@id='menu']//a[@href='https://iprice.sg/bathroom/']//span[text()='Bathroom']
 ${SG_header_categories_bedroom_link}  //div[@id='menu']//a[@href='https://iprice.sg/bedroom/']//span[text()='Bedroom']
@@ -138,7 +139,7 @@ SEO Check Internal Link In SG
     ${internal_links2}  Create List
     :FOR  ${INDEX}  IN RANGE  0  ${internal_links_count}
     \  ${link}  Get From List  ${internal_links}  ${INDEX}
-    \  ${match}  Get Regexp Matches  ${link}  /#
+    \  ${match}  Get Regexp Matches  ${link}  /?nocache=1#
     \  ${matchCount}  Get Length  ${match}
     \  Run Keyword If  ${matchCount}==0  Append To List  ${internal_links2}  ${link}
     ${internal_links2_count}  Get Length  ${internal_links2}
@@ -172,7 +173,7 @@ iPrice SG Homepage Landing
 
 iPrice SG Homepage Categories Landing
     ${match}  Get Matching Xpath Count  //div[@id='menu']//li[@class='cursor-pointer list-item']//span
-    Run Keyword If  ${match}!=59  Run Keyword And Continue On Failure  Fail  Main categories count incorrect.
+    Run Keyword If  ${match}!=60  Run Keyword And Continue On Failure  Fail  Main categories count incorrect.
     Wait Until Element Is Visible  ${SG_header_categories_clothing_link}
     Wait Until Element Is Visible  ${SG_header_categories_shoes_link}
     Wait Until Element Is Visible  ${SG_header_categories_bags_link}
@@ -245,6 +246,8 @@ iPrice SG Homepage Categories Landing
     Element Should Not Be Visible  ${SG_header_categories_toys_link}
     Wait Until Page Contains Element  ${SG_header_categories_water_sports_link}
     Element Should Not Be Visible  ${SG_header_categories_water_sports_link}
+    Wait Until Page Contains Element  ${SG_header_categories_groceries_link}
+    Element Should Not Be Visible  ${SG_header_categories_groceries_link}
     Wait Until Page Contains Element  ${SG_header_categories_ear_care_link}
     Element Should Not Be Visible  ${SG_header_categories_ear_care_link}
     Wait Until Page Contains Element  ${SG_header_categories_bathroom_link}

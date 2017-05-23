@@ -3,7 +3,7 @@ Documentation    This file will only store variables and keywords for ID.
 
 *** Variables ***
 
-${ID_homeURL}  https://iprice.co.id/
+${ID_homeURL}  https://iprice.co.id/?nocache=1
 ${ID_homeTitle}  Belanja Online, Kode Kupon & Diskon di iprice Indonesia
 ${ID_header_logo_link}  //div[@id='logo']//a[@href='https://iprice.co.id/']
 ${ID_header_search_input}  //div[@id='search']//input[@placeholder='Cari produk, kupon atau brand...']
@@ -56,6 +56,7 @@ ${ID_header_categories_supplements_link}  //div[@id='menu']//a[@href='https://ip
 ${ID_header_categories_team_sports_link}  //div[@id='menu']//a[@href='https://iprice.co.id/olahraga-tim/']//span[text()='Olahraga Tim']
 ${ID_header_categories_toys_link}  //div[@id='menu']//a[@href='https://iprice.co.id/mainan/']//span[text()='Mainan']
 ${ID_header_categories_water_sports_link}  //div[@id='menu']//a[@href='https://iprice.co.id/olahraga-air/']//span[text()='Olahraga Air']
+${ID_header_categories_groceries_link}  //div[@id='menu']//a[@href='https://iprice.co.id/makanan-minuman/']//span[text()='Makanan & Minuman']
 ${ID_header_categories_ear_care_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perawatan-telinga/']//span[text()='Perawatan Telinga']
 ${ID_header_categories_bathroom_link}  //div[@id='menu']//a[@href='https://iprice.co.id/kamar-mandi/']//span[text()='Kamar Mandi']
 ${ID_header_categories_bedroom_link}  //div[@id='menu']//a[@href='https://iprice.co.id/kamar-tidur/']//span[text()='Kamar Tidur']
@@ -137,7 +138,7 @@ SEO Check Internal Link In ID
     ${internal_links2}  Create List
     :FOR  ${INDEX}  IN RANGE  0  ${internal_links_count}
     \  ${link}  Get From List  ${internal_links}  ${INDEX}
-    \  ${match}  Get Regexp Matches  ${link}  /#
+    \  ${match}  Get Regexp Matches  ${link}  /?nocache=1#
     \  ${matchCount}  Get Length  ${match}
     \  Run Keyword If  ${matchCount}==0  Append To List  ${internal_links2}  ${link}
     ${internal_links2_count}  Get Length  ${internal_links2}
@@ -171,7 +172,7 @@ iPrice ID Homepage Landing
 
 iPrice ID Homepage Categories Landing
     ${match}  Get Matching Xpath Count  //div[@id='menu']//li[@class='cursor-pointer list-item']//span
-    Run Keyword If  ${match}!=59  Run Keyword And Continue On Failure  Fail  Main categories count incorrect.
+    Run Keyword If  ${match}!=60  Run Keyword And Continue On Failure  Fail  Main categories count incorrect.
     Wait Until Element Is Visible  ${ID_header_categories_clothing_link}
     Wait Until Element Is Visible  ${ID_header_categories_shoes_link}
     Wait Until Element Is Visible  ${ID_header_categories_bags_link}
@@ -244,6 +245,8 @@ iPrice ID Homepage Categories Landing
     Element Should Not Be Visible  ${ID_header_categories_toys_link}
     Wait Until Page Contains Element  ${ID_header_categories_water_sports_link}
     Element Should Not Be Visible  ${ID_header_categories_water_sports_link}
+    Wait Until Page Contains Element  ${ID_header_categories_groceries_link}
+    Element Should Not Be Visible  ${ID_header_categories_groceries_link}
     Wait Until Page Contains Element  ${ID_header_categories_ear_care_link}
     Element Should Not Be Visible  ${ID_header_categories_ear_care_link}
     Wait Until Page Contains Element  ${ID_header_categories_bathroom_link}

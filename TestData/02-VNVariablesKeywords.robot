@@ -3,7 +3,7 @@ Documentation    This file will only store variables and keywords fro VN.
 
 *** Variables ***
 
-${VN_homeURL}  https://iprice.vn/
+${VN_homeURL}  https://iprice.vn/?nocache=1
 ${VN_homeTitle}  Shopping trực tuyến, Mã coupon & khuyến mãi tại iprice Việt Nam
 ${VN_header_logo_link}  //div[@id='logo']//a[@href='https://iprice.vn/']
 ${VN_header_search_input}  //div[@id='search']//input[@placeholder='Tìm kiếm sản phẩm, coupon hoặc thương hiệu...']
@@ -56,6 +56,7 @@ ${VN_header_categories_supplements_link}  //div[@id='menu']//a[@href='https://ip
 ${VN_header_categories_team_sports_link}  //div[@id='menu']//a[@href='https://iprice.vn/the-thao-dong-doi/']//span[text()='Thể thao đồng đội']
 ${VN_header_categories_toys_link}  //div[@id='menu']//a[@href='https://iprice.vn/do-choi/']//span[text()='Đồ chơi']
 ${VN_header_categories_water_sports_link}  //div[@id='menu']//a[@href='https://iprice.vn/the-thao-duoi-nuoc/']//span[text()='Thể thao dưới nước']
+${VN_header_categories_groceries_link}  //div[@id='menu']//a[@href='https://iprice.vn/hang-tap-hoa/']//span[text()='Hàng tạp hóa']
 ${VN_header_categories_ear_care_link}  //div[@id='menu']//a[@href='https://iprice.vn/cham-soc-tai/']//span[text()='Chăm sóc tai']
 ${VN_header_categories_bathroom_link}  //div[@id='menu']//a[@href='https://iprice.vn/phong-tam/']//span[text()='Phòng tắm']
 ${VN_header_categories_bedroom_link}  //div[@id='menu']//a[@href='https://iprice.vn/phong-ngu/']//span[text()='Phòng ngủ']
@@ -138,7 +139,7 @@ SEO Check Internal Link In VN
     ${internal_links2}  Create List
     :FOR  ${INDEX}  IN RANGE  0  ${internal_links_count}
     \  ${link}  Get From List  ${internal_links}  ${INDEX}
-    \  ${match}  Get Regexp Matches  ${link}  /#
+    \  ${match}  Get Regexp Matches  ${link}  /?nocache=1#
     \  ${matchCount}  Get Length  ${match}
     \  Run Keyword If  ${matchCount}==0  Append To List  ${internal_links2}  ${link}
     ${internal_links2_count}  Get Length  ${internal_links2}
@@ -172,7 +173,7 @@ iPrice VN Homepage Landing
 
 iPrice VN Homepage Categories Landing
     ${match}  Get Matching Xpath Count  //div[@id='menu']//li[@class='cursor-pointer list-item']//span
-    Run Keyword If  ${match}!=59  Run Keyword And Continue On Failure  Fail  Main categories count incorrect.
+    Run Keyword If  ${match}!=60  Run Keyword And Continue On Failure  Fail  Main categories count incorrect.
     Wait Until Element Is Visible  ${VN_header_categories_clothing_link}
     Wait Until Element Is Visible  ${VN_header_categories_shoes_link}
     Wait Until Element Is Visible  ${VN_header_categories_bags_link}
@@ -245,6 +246,8 @@ iPrice VN Homepage Categories Landing
     Element Should Not Be Visible  ${VN_header_categories_toys_link}
     Wait Until Page Contains Element  ${VN_header_categories_water_sports_link}
     Element Should Not Be Visible  ${VN_header_categories_water_sports_link}
+    Wait Until Page Contains Element  ${VN_header_categories_groceries_link}
+    Element Should Not Be Visible  ${VN_header_categories_groceries_link}
     Wait Until Page Contains Element  ${VN_header_categories_ear_care_link}
     Element Should Not Be Visible  ${VN_header_categories_ear_care_link}
     Wait Until Page Contains Element  ${VN_header_categories_bathroom_link}
