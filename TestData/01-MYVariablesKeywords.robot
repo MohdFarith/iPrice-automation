@@ -117,10 +117,10 @@ Get All Available Links In MY
     Set Suite Variable  ${filter_link2_count}
 
 Check All Links Response In MY
-    :FOR  ${INDEX}  IN RANGE  0  ${filter_link1_count}
-    \  ${link}  Get From List  ${filter_link1}  ${INDEX}
-    \  ${status}  Run Keyword And Return Status   HttpLibrary.HTTP.Get  ${link}
-    \  Run Keyword If  "${status}"=="False"  Run Keyword And Continue On Failure  Fail  Request to ${link} failed and not return 200.
+    # :FOR  ${INDEX}  IN RANGE  0  ${filter_link1_count}
+    # \  ${link}  Get From List  ${filter_link1}  ${INDEX}
+    # \  ${status}  Run Keyword And Return Status   HttpLibrary.HTTP.Get  ${link}
+    # \  Run Keyword If  "${status}"=="False"  Run Keyword And Continue On Failure  Fail  Request to ${link} failed and not return 200.
     Run Keyword If  ${filter_link2_count}>0  Check On 3rd Part Site
 
 Check On 3rd Part Site
@@ -156,10 +156,11 @@ SEO Check Internal Link In MY
 
     :FOR  ${INDEX}  IN RANGE  0  ${internal_links2_count}
     \  ${link}  Get From List  ${internal_links2}  ${INDEX}
-    \  ${status}  Run Keyword And Return Status  Should Start With  ${link}  https
-    \  Run Keyword If  "${status}"=="False"  Run Keyword And Continue On Failure  Fail  ${link} does not start with https.
-    \  ${status2}  Run Keyword And Return Status  Should End With  ${link}  /
-    \  Run Keyword If  "${status2}"=="False"  Run Keyword And Continue On Failure  Fail  ${link} does not end with trailing "/".
+    \  ${link2}  Replace String  ${link}  ?nocache=1  ${empty}
+    \  ${status}  Run Keyword And Return Status  Should Start With  ${link2}  https
+    \  Run Keyword If  "${status}"=="False"  Run Keyword And Continue On Failure  Fail  ${link2} does not start with https.
+    \  ${status2}  Run Keyword And Return Status  Should End With  ${link2}  /
+    \  Run Keyword If  "${status2}"=="False"  Run Keyword And Continue On Failure  Fail  ${link2} does not end with trailing "/".
 
 SEO Check Images ALT In MY  [Arguments]  ${imageCount}
     ${match}  Get Matching Xpath Count  ${MY_product_images}

@@ -148,10 +148,11 @@ SEO Check Internal Link In SG
 
     :FOR  ${INDEX}  IN RANGE  0  ${internal_links2_count}
     \  ${link}  Get From List  ${internal_links2}  ${INDEX}
-    \  ${status}  Run Keyword And Return Status  Should Start With  ${link}  https
-    \  Run Keyword If  "${status}"=="False"  Run Keyword And Continue On Failure  Fail  ${link} does not start with https.
-    \  ${status2}  Run Keyword And Return Status  Should End With  ${link}  /
-    \  Run Keyword If  "${status2}"=="False"  Run Keyword And Continue On Failure  Fail  ${link} does not end with trailing "/".
+    \  ${link2}  Replace String  ${link}  ?nocache=1  ${empty}
+    \  ${status}  Run Keyword And Return Status  Should Start With  ${link2}  https
+    \  Run Keyword If  "${status}"=="False"  Run Keyword And Continue On Failure  Fail  ${link2} does not start with https.
+    \  ${status2}  Run Keyword And Return Status  Should End With  ${link2}  /
+    \  Run Keyword If  "${status2}"=="False"  Run Keyword And Continue On Failure  Fail  ${link2} does not end with trailing "/".
 
 SEO Check Images ALT  [Arguments]  ${imageCount}
     ${match}  Get Matching Xpath Count  ${SG_product_images}
