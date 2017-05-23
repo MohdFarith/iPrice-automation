@@ -122,7 +122,8 @@ Check On 3rd Part Site
     \  ${link}  Get From List  ${filter_link2}  ${INDEX}
     \  ${link2}  Replace String  ${link}  https://iprice.ph/  ${empty}
     \  ${link3}  Replace String  ${link2}  ${space}  ${empty}
-    \  ${resp}  RequestsLibrary.Get Request  iprice  ${link3}
+    \  ${link4}  Replace String  ${link3}  %3Fnocache%3D1  ${empty}
+    \  ${resp}  RequestsLibrary.Get Request  iprice  ${link4}
     \  ${status}  Run Keyword And Return Status  Should Be Equal As Strings  ${resp.status_code}  200
     \  Run Keyword If  "${status}"=="False"  Run Keyword And Continue On Failure  Fail  Request to ${link} failed and not return 200.
     \  Delete All Sessions
