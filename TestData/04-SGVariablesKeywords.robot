@@ -123,9 +123,10 @@ Check On 3rd Part Site
     \  ${link2}  Replace String  ${link}  https://iprice.sg/  ${empty}
     \  ${link3}  Replace String  ${link2}  ${space}  ${empty}
     \  ${link4}  Replace String  ${link3}  %3Fnocache%3D1  ${empty}
-    \  ${resp}  RequestsLibrary.Get Request  iprice  ${link4}
+    \  ${link5}  Replace String  ${link4}  ${space}  ${empty}
+    \  ${resp}  RequestsLibrary.Get Request  iprice  ${link5}
     \  ${status}  Run Keyword And Return Status  Should Be Equal As Strings  ${resp.status_code}  200
-    \  Run Keyword If  "${status}"=="False"  Run Keyword And Continue On Failure  Fail  Request to ${link} failed and not return 200.
+    \  Run Keyword If  "${status}"=="False"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.my/${link5} failed and not return 200.
     \  Delete All Sessions
 
 SEO Check Internal Link In SG
