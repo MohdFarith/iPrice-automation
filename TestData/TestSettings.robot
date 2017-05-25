@@ -6,6 +6,7 @@ Library  Collections
 Library  HttpLibrary.HTTP
 Library  String
 Library  RequestsLibrary
+Library  XvfbRobot
 
 *** Variables ***
 
@@ -16,6 +17,7 @@ ${baseURL}  about:blank
 
 TestCase Setup  [Arguments]  ${browser}
     Set Selenium Speed  ${DELAY}
+    Start Virtual Display  1024  768
     Run Keyword If  "${browser}"=="chrome"  Setup Chrome Browser
     ...  ELSE IF  "${browser}"=="ie"  Setup IE Browser
     ...  ELSE  Open Browser  ${baseURL}  ${browser}
