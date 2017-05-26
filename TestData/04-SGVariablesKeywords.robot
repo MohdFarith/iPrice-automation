@@ -187,10 +187,10 @@ iPrice SG Homepage Categories Landing
     Wait Until Element Is Visible  ${SG_header_categories_gaming_link}
     Wait Until Element Is Visible  ${SG_header_categories_camera_photo_link}
     Wait Until Element Is Visible  ${SG_header_categories_tv_video_dvd_link}
-    Wait Until Page Contains Element  ${SG_header_categories_appliances_link}
-    Element Should Not Be Visible  ${SG_header_categories_appliances_link}
-    Wait Until Page Contains Element  ${SG_header_categories_automotive_link}
-    Element Should Not Be Visible  ${SG_header_categories_automotive_link}
+    Wait Until Element Is Visible  ${SG_header_categories_appliances_link}
+    # Element Should Not Be Visible  ${SG_header_categories_appliances_link}
+    Wait Until Element Is Visible  ${SG_header_categories_automotive_link}
+    # Element Should Not Be Visible  ${SG_header_categories_automotive_link}
     Wait Until Page Contains Element  ${SG_header_categories_hobbies_link}
     Element Should Not Be Visible  ${SG_header_categories_hobbies_link}
     Wait Until Page Contains Element  ${SG_header_categories_audio_hifi_link}
