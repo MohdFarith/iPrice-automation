@@ -22,7 +22,7 @@ TestCase Setup  [Arguments]  ${browser}
     ...  ELSE IF  "${browser}"=="ie"  Setup IE Browser
     ...  ELSE  Open Browser  ${baseURL}  ${browser}
     # Maximize Browser Window
-    Set Window Size  1024  768
+    Set Window Size  1366  768
     # ${width}  ${height}  Get Window Size
 
 Setup Chrome Browser
