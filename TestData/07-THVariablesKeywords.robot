@@ -78,7 +78,7 @@ ${TH_header_categories_upcoming_products_link}  //div[@id='menu']//a[@href='http
 
 ${TH_product_images}  //img[contains(@class,'lazy product-img')]
 
-${TH_coupon_page_title}  แจก ดีล คูปอง รหัสส่วนลด บัตรส่วนลด โปรโมชั่น  ที่ iprice ประเทศไทย
+${TH_coupon_page_title}  แจก ดีล คูปอง รหัสส่วนลด บัตรส่วนลด โปรโมชั่น ของปี พ.ศ. 2560 ที่ iprice ประเทศไทย
 
 *** Keywords ***
 
@@ -316,3 +316,14 @@ iPrice TH Access Coupons Link
 
 iPrice TH Coupons Page Landing
     Title Should Be  ${TH_coupon_page_title}
+    Wait Until Element Is Visible  ${TH_header_logo_link}
+    Wait Until Element Is Visible  ${TH_header_search_input}
+    Wait Until Element Is Visible  ${TH_header_popular_searches_text}
+    Wait Until Element Is Visible  ${TH_header_coupon_logo_link}
+    Wait Until Element Is Visible  ${TH_header_coupon_text}
+    iPrice TH Homepage Categories Landing
+    ${date}  Get Current Date
+    ${dateList}  Split String  ${date}  separator=-
+    ${year}  Get From List  ${dateList}  0
+    ${TH_year}  Evaluate  ${year}+543
+    Wait Until Element Is Visible  //div[@id='content']//h1[text()="โปรโมชั่น, ลดราคา และ วอชเชอร์ ที่ดีที่สุดของปี พ.ศ. ${TH_year} ประเทศไทย "]

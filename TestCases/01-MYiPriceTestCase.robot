@@ -23,11 +23,13 @@ Test SEO Check Homepage In MY
     Get All Available Links In MY
     SEO Check Internal Link In MY
     SEO Check Images ALT In MY  6
+    iPrice MY Access Coupons Link
 
 TestCase One MY
     [tags]  test  1_case
     Access iPrice MY Homepage
     iPrice MY Homepage Landing
+    Capture Page Screenshot
     iPrice MY Homepage Categories Landing
     iPrice MY Access Header Link
     iPrice MY Search In Header  iphone 3gs

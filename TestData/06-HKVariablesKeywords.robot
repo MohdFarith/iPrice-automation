@@ -315,3 +315,13 @@ iPrice HK Access Coupons Link
 
 iPrice HK Coupons Page Landing
     Title Should Be  ${HK_coupon_page_title}
+    Wait Until Element Is Visible  ${HK_header_logo_link}
+    Wait Until Element Is Visible  ${HK_header_search_input}
+    Wait Until Element Is Visible  ${HK_header_popular_searches_text}
+    Wait Until Element Is Visible  ${HK_header_coupon_logo_link}
+    Wait Until Element Is Visible  ${HK_header_coupon_text}
+    iPrice HK Homepage Categories Landing
+    ${date}  Get Current Date
+    ${dateList}  Split String  ${date}  separator=-
+    ${year}  Get From List  ${dateList}  0
+    Wait Until Element Is Visible  //div[@id='content']//h1[text()="Exclusive Sales, Coupons & Promotions in Hong Kong ${year} "]

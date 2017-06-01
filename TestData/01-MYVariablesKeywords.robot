@@ -327,3 +327,13 @@ iPrice MY Access Coupons Link
 
 iPrice MY Coupons Page Landing
     Title Should Be  ${MY_coupon_page_title}
+    Wait Until Element Is Visible  ${MY_header_logo_link}
+    Wait Until Element Is Visible  ${MY_header_search_input}
+    Wait Until Element Is Visible  ${MY_header_popular_searches_text}
+    Wait Until Element Is Visible  ${MY_header_coupon_logo_link}
+    Wait Until Element Is Visible  ${MY_header_coupon_text}
+    iPrice MY Homepage Categories Landing
+    ${date}  Get Current Date
+    ${dateList}  Split String  ${date}  separator=-
+    ${year}  Get From List  ${dateList}  0
+    Wait Until Element Is Visible  //div[@id='content']//h1[text()="Exclusive Sales, Promotions & Coupons in Malaysia ${year}"]

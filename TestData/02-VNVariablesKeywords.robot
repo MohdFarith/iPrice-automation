@@ -315,3 +315,13 @@ iPrice VN Access Coupons Link
 
 iPrice VN Coupons Page Landing
     Title Should Be  ${VN_coupon_page_title}
+    Wait Until Element Is Visible  ${VN_header_logo_link}
+    Wait Until Element Is Visible  ${VN_header_search_input}
+    Wait Until Element Is Visible  ${VN_header_popular_searches_text}
+    Wait Until Element Is Visible  ${VN_header_coupon_logo_link}
+    Wait Until Element Is Visible  ${VN_header_coupon_text}
+    iPrice VN Homepage Categories Landing
+    ${date}  Get Current Date
+    ${dateList}  Split String  ${date}  separator=-
+    ${year}  Get From List  ${dateList}  0
+    Wait Until Element Is Visible  //div[@id='content']//h1[text()="Sale, voucher và khuyến mãi tốt nhất 2017 tại Việt Nam ${year}"]

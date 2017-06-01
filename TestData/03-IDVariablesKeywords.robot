@@ -191,8 +191,9 @@ iPrice ID Homepage Categories Landing
     # Element Should Not Be Visible  ${ID_header_categories_appliances_link}
     Wait Until Element Is Visible  ${ID_header_categories_automotive_link}
     # Element Should Not Be Visible  ${ID_header_categories_automotive_link}
-    Wait Until Page Contains Element  ${ID_header_categories_hobbies_link}
-    Element Should Not Be Visible  ${ID_header_categories_hobbies_link}
+    # Wait Until Page Contains Element  ${ID_header_categories_hobbies_link}
+    # Element Should Not Be Visible  ${ID_header_categories_hobbies_link}
+    Wait Until Element Is Visible  ${ID_header_categories_hobbies_link}
     Wait Until Page Contains Element  ${ID_header_categories_audio_hifi_link}
     Element Should Not Be Visible  ${ID_header_categories_audio_hifi_link}
     Wait Until Page Contains Element  ${ID_header_categories_action_sport_link}
@@ -315,3 +316,13 @@ iPrice ID Access Coupons Link
 
 iPrice ID Coupons Page Landing
     Run Keyword And Continue On Failure  Title Should Be  ${ID_coupon_page_title}
+    Wait Until Element Is Visible  ${ID_header_logo_link}
+    Wait Until Element Is Visible  ${ID_header_search_input}
+    Wait Until Element Is Visible  ${ID_header_popular_searches_text}
+    Wait Until Element Is Visible  ${ID_header_coupon_logo_link}
+    Wait Until Element Is Visible  ${ID_header_coupon_text}
+    iPrice ID Homepage Categories Landing
+    ${date}  Get Current Date
+    ${dateList}  Split String  ${date}  separator=-
+    ${year}  Get From List  ${dateList}  0
+    Wait Until Element Is Visible  //div[@id='content']//h1[text()="Exclusive Promo, Sales & Vouchers\u00a0Terbaru di Indonesia ${year} "]

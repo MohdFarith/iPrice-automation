@@ -315,3 +315,13 @@ iPrice PH Access Coupons Link
 
 iPrice PH Coupons Page Landing
     Title Should Be  ${PH_coupon_page_title}
+    Wait Until Element Is Visible  ${PH_header_logo_link}
+    Wait Until Element Is Visible  ${PH_header_search_input}
+    Wait Until Element Is Visible  ${PH_header_popular_searches_text}
+    Wait Until Element Is Visible  ${PH_header_coupon_logo_link}
+    Wait Until Element Is Visible  ${PH_header_coupon_text}
+    iPrice PH Homepage Categories Landing
+    ${date}  Get Current Date
+    ${dateList}  Split String  ${date}  separator=-
+    ${year}  Get From List  ${dateList}  0
+    Wait Until Element Is Visible  //div[@id='content']//h1[text()="Exclusive Sales, Vouchers & Promotions in Philippines ${year}"]

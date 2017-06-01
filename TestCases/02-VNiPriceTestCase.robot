@@ -23,6 +23,7 @@ Test SEO Check Homepage In VN
     Get All Available Links In VN
     SEO Check Internal Link In VN
     SEO Check Images ALT  6
+    iPrice VN Access Coupons Link
 
 TestCase One VN
     [tags]    test    1_case
