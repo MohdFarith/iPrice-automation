@@ -29,7 +29,6 @@ TestCase One MY
     [tags]  test  1_case
     Access iPrice MY Homepage
     iPrice MY Homepage Landing
-    Capture Page Screenshot
     iPrice MY Homepage Categories Landing
     iPrice MY Access Header Link
     iPrice MY Search In Header  iphone 3gs
