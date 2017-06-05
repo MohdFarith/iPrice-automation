@@ -27,9 +27,18 @@ TestCase Setup  [Arguments]  ${browser}
     # Maximize Browser Window
 
 Setup Chrome Browser
+    # ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
+    # Call Method  ${options}  add_argument  disable-infobars
+    # Create WebDriver  Chrome  chrome_options=${options}
+
+    # Open Browser  about:blank  Chrome  remote_url=http://localhost:4444/wd/hub
+    # Set Window Size  1366  768
+
     ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
     Call Method  ${options}  add_argument  disable-infobars
-    Create WebDriver  Chrome  chrome_options=${options}
+    ${options}  Call Method  ${options}  to_capabilities
+    ${executor}  Evaluate  str("http://localhost:4444/wd/hub")
+    Create Webdriver  Remote  command_executor=${executor}  desired_capabilities=${options}
     Set Window Size  1366  768
 
 Setup IE Browser
