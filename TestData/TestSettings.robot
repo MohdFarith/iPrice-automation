@@ -14,6 +14,7 @@ Library  DateTime
 ${delay}  1
 ${baseURL}  about:blank
 ${platform}  linux
+${remote_url}  None
 
 *** Keywords ***
 
@@ -25,26 +26,30 @@ TestCase Setup  [Arguments]  ${browser}
     ...  ELSE IF  "${browser}"=="chromeMobile"  Setup Chrome Emulation
     ...  ELSE  Open Browser  ${baseURL}  ${browser}
     # Maximize Browser Window
+    # ${width}  ${height}  Get Window Size
+    Set Window Size  1366  720
 
 Setup Chrome Browser
-    # ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
-    # Call Method  ${options}  add_argument  disable-infobars
-    # Create WebDriver  Chrome  chrome_options=${options}
+    Run Keyword If  "${remote_url}"=="None"  Run In Local
+    ...  ELSE  Run In Remote
+
+Run In Local
+    ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
+    Call Method  ${options}  add_argument  disable-infobars
+    Create WebDriver  Chrome  chrome_options=${options}
 
     # Open Browser  about:blank  Chrome  remote_url=http://localhost:4444/wd/hub
-    # Set Window Size  1366  768
 
+Run In Remote
     ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
     Call Method  ${options}  add_argument  disable-infobars
     ${options}  Call Method  ${options}  to_capabilities
     ${executor}  Evaluate  str("http://localhost:4444/wd/hub")
     Create Webdriver  Remote  command_executor=${executor}  desired_capabilities=${options}
-    Set Window Size  1366  768
 
 Setup IE Browser
     Open Browser  ${baseURL}  IE
     Set Selenium Implicit Wait  30
-    Set Window Size  1366  768
 
 Setup Chrome Emulation
     ${mobile emulation}  Create Dictionary  deviceName=Apple iPhone 6
