@@ -2,8 +2,9 @@
 Documentation   A test suite with various tests for iPrice HK.
 
 #Import
-Resource    ../TestData/TestSettings.robot
-Resource    ../TestData/06-HKVariablesKeywords.robot
+Resource    ../TestSettings/TestSettings.robot
+Resource    ../TestVariables/06-HKTestVariables.robot
+Resource    ../TestKeywords/06-HKTestKeywords.robot
 
 #Setup/Tear Down
 Test Setup    TestCase Setup    ${browser}
@@ -20,19 +21,23 @@ Test URL HK
 Test SEO Check Homepage In HK
     [tags]  seo
     Access iPrice HK Homepage
+    iPrice HK Header Section Validation
     Get All Available Links In HK
     SEO Check Internal Link In HK
     SEO Check Images ALT  6
     iPrice HK Access Coupons Link
+    iPrice HK Header Section Validation
+    iPrice HK Coupons Page Landing
+    iPrice HK Coupons Access All Store
+    iPrice HK Coupons Store Access A Store  Adidas
 
 TestCase One HK
     [tags]    test    1_case
     Access iPrice HK Homepage
-    iPrice HK Homepage Landing
-    iPrice HK Homepage Categories Landing
-    iPrice HK Access Header Link
-    iPrice HK Search In Header    iphone 3gs
-    iPrice HK Search Page Landing    iphone 3gs
-    iPrice HK Access Header Link
-    iPrice HK Access Coupons Link
-    iPrice HK Access Header Link
+    iPrice HK Header Section Validation
+    iPrice HK Access Header Logo Link
+    iPrice HK Do A Search In Header  iphone 3gs
+    iPrice HK Access Header Logo Link
+    iPrice HK Do A Search In Header  dell
+    iPrice HK Access Header Logo Link
+    iPrice HK Header Section Validation

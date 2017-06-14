@@ -1,84 +1,7 @@
 *** Settings ***
-Documentation    This file will only store variables and keywords for PH.
+Documentation    This file will only store keywords for PH.
 
 *** Variables ***
-
-${PH_homeURL}  https://iprice.ph/?nocache=1
-${PH_homeTitle}  Online Shopping, Coupons & Discount Codes at iprice Philippines
-${PH_header_logo_link}  //div[@id='logo']//a[@href='https://iprice.ph/']
-${PH_header_search_input}  //div[@id='search']//input[@placeholder='Search for products, coupons or brands...']
-${PH_header_search_icon}  //div[@id='search']//i[@class='icon icon-search-blue']
-${PH_header_popular_searches_text}  //div[@id='popular-searches']//li[normalize-space(text())='Popular Searches:']
-${PH_header_coupon_logo_link}  //div[@id='news-button']//a[@href='https://iprice.ph/coupons/']
-${PH_header_coupon_text}  //div[@id='news-button']//button[normalize-space(text())='Coupons & Offers']
-${PH_header_categories_clothing_link}  //div[@id='menu']//a[@href='https://iprice.ph/clothing/']//span[text()='Clothing']
-${PH_header_categories_clothing_men}  //div[@id='menu']//a[contains(@href,'https://iprice.ph/clothing/men/') and text()='Men']
-${PH_header_categories_clothing_women}  //div[@id='menu']//a[contains(@href,'https://iprice.ph/clothing/women/') and text()='Women']
-${PH_header_categories_shoes_link}  //div[@id='menu']//a[@href='https://iprice.ph/shoes/']//span[text()='Shoes']
-${PH_header_categories_shoes_men}  //div[@id='menu']//a[contains(@href,'https://iprice.ph/shoes/men/') and text()='Men']
-${PH_header_categories_shoes_women}  //div[@id='menu']//a[contains(@href,'https://iprice.ph/shoes/women/') and text()='Women']
-${PH_header_categories_bags_link}  //div[@id='menu']//a[@href='https://iprice.ph/bags/']//span[text()='Bags']
-${PH_header_categories_watches_link}  //div[@id='menu']//a[@href='https://iprice.ph/watches/']//span[text()='Watches']
-${PH_header_categories_jewellery_link}  //div[@id='menu']//a[@href='https://iprice.ph/jewellery/']//span[text()='Jewellery']
-${PH_header_categories_computing_link}  //div[@id='menu']//a[@href='https://iprice.ph/computing/']//span[text()='Computing']
-${PH_header_categories_phones_tablets_link}  //div[@id='menu']//a[@href='https://iprice.ph/phones-tablets/']//span[text()='Phones & Tablets']
-${PH_header_categories_gaming_link}  //div[@id='menu']//a[@href='https://iprice.ph/gaming/']//span[text()='Gaming']
-${PH_header_categories_camera_photo_link}  //div[@id='menu']//a[@href='https://iprice.ph/camera-photo/']//span[text()='Camera & Photo']
-${PH_header_categories_tv_video_dvd_link}  //div[@id='menu']//a[@href='https://iprice.ph/tv-video-dvd/']//span[text()='TV, Video & DVD']
-${PH_header_categories_appliances_link}  //div[@id='menu']//a[@href='https://iprice.ph/appliances/']//span[text()='Appliances']
-${PH_header_categories_automotive_link}  //div[@id='menu']//a[@href='https://iprice.ph/automotive/']//span[text()='Automotive']
-${PH_header_categories_hobbies_link}  //div[@id='menu']//a[@href='https://iprice.ph/hobbies/']//span[text()='Hobbies']
-${PH_header_categories_audio_hifi_link}  //div[@id='menu']//a[@href='https://iprice.ph/audio-hi-fi/']//span[text()='Audio & Hi Fi']
-${PH_header_categories_action_sport_link}  //div[@id='menu']//a[@href='https://iprice.ph/action-sports/']//span[text()='Action Sports']
-${PH_header_categories_adventure_link}  //div[@id='menu']//a[@href='https://iprice.ph/adventure/']//span[text()='Adventure']
-${PH_header_categories_baby_clothing_link}  //div[@id='menu']//a[@href='https://iprice.ph/baby-clothing/']//span[text()='Baby Clothing']
-${PH_header_categories_baby_gear_link}  //div[@id='menu']//a[@href='https://iprice.ph/baby-gear/']//span[text()='Baby Gear']
-${PH_header_categories_bath_body_link}  //div[@id='menu']//a[@href='https://iprice.ph/bath-body/']//span[text()='Bath & Body']
-${PH_header_categories_dental_care_link}  //div[@id='menu']//a[@href='https://iprice.ph/dental-care/']//span[text()='Dental Care']
-${PH_header_categories_diapering_link}  //div[@id='menu']//a[@href='https://iprice.ph/diapering/']//span[text()='Diapering']
-${PH_header_categories_eyecare_link}  //div[@id='menu']//a[@href='https://iprice.ph/eyecare/']//span[text()='Eyecare']
-${PH_header_categories_feeding_link}  //div[@id='menu']//a[@href='https://iprice.ph/feeding/']//span[text()='Feeding']
-${PH_header_categories_food_supplements_link}  //div[@id='menu']//a[@href='https://iprice.ph/food-supplements/']//span[text()='Food Supplements']
-${PH_header_categories_gifts_link}  //div[@id='menu']//a[@href='https://iprice.ph/gifts/']//span[text()='Gifts']
-${PH_header_categories_gym_link}  //div[@id='menu']//a[@href='https://iprice.ph/gym/']//span[text()='Gym']
-${PH_header_categories_hair_care_link}  //div[@id='menu']//a[@href='https://iprice.ph/hair-care/']//span[text()='Hair Care']
-${PH_header_categories_health_link}  //div[@id='menu']//a[@href='https://iprice.ph/health/']//span[text()='Health']
-${PH_header_categories_kids_clothing_link}  //div[@id='menu']//a[@href='https://iprice.ph/kids-clothing/']//span[text()='Kids Clothing']
-${PH_header_categories_makeup_link}  //div[@id='menu']//a[@href='https://iprice.ph/makeup/']//span[text()='Makeup']
-${PH_header_categories_maternity_care_link}  //div[@id='menu']//a[@href='https://iprice.ph/maternity-care/']//span[text()='Maternity Care']
-${PH_header_categories_medical_supplies_link}  //div[@id='menu']//a[@href='https://iprice.ph/medical-supplies/']//span[text()='Medical Supplies']
-${PH_header_categories_nursery_link}  //div[@id='menu']//a[@href='https://iprice.ph/nursery/']//span[text()='Nursery']
-${PH_header_categories_perfeum_link}  //div[@id='menu']//a[@href='https://iprice.ph/perfume/']//span[text()='Perfume']
-${PH_header_categories_racquet_sports_link}  //div[@id='menu']//a[@href='https://iprice.ph/racquet-sports/']//span[text()='Racquet Sports']
-${PH_header_categories_shaving_supplies_link}  //div[@id='menu']//a[@href='https://iprice.ph/shaving-supplies/']//span[text()='Shaving Supplies']
-${PH_header_categories_skin_care_link}  //div[@id='menu']//a[@href='https://iprice.ph/skin-care/']//span[text()='Skin Care']
-${PH_header_categories_supplements_link}  //div[@id='menu']//a[@href='https://iprice.ph/supplements/']//span[text()='Supplements']
-${PH_header_categories_team_sports_link}  //div[@id='menu']//a[@href='https://iprice.ph/team-sports/']//span[text()='Team Sports']
-${PH_header_categories_toys_link}  //div[@id='menu']//a[@href='https://iprice.ph/toys/']//span[text()='Toys']
-${PH_header_categories_water_sports_link}  //div[@id='menu']//a[@href='https://iprice.ph/water-sports/']//span[text()='Water Sports']
-${PH_header_categories_groceries_link}  //div[@id='menu']//a[@href='https://iprice.ph/groceries/']//span[text()='Groceries']
-${PH_header_categories_ear_care_link}  //div[@id='menu']//a[@href='https://iprice.ph/ear-care/']//span[text()='Ear Care']
-${PH_header_categories_bathroom_link}  //div[@id='menu']//a[@href='https://iprice.ph/bathroom/']//span[text()='Bathroom']
-${PH_header_categories_bedroom_link}  //div[@id='menu']//a[@href='https://iprice.ph/bedroom/']//span[text()='Bedroom']
-${PH_header_categories_hallway_entry_link}  //div[@id='menu']//a[@href='https://iprice.ph/hallway-entry/']//span[text()='Hallway & Entry']
-${PH_header_categories_home_decor_link}  //div[@id='menu']//a[@href='https://iprice.ph/home-decor/']//span[text()='Home Decor']
-${PH_header_categories_home_improvement_link}  //div[@id='menu']//a[@href='https://iprice.ph/home-improvement/']//span[text()='Home Improvement']
-${PH_header_categories_home_office_link}  //div[@id='menu']//a[@href='https://iprice.ph/home-office/']//span[text()='Home Office']
-${PH_header_categories_housekeepng_link}  //div[@id='menu']//a[@href='https://iprice.ph/housekeeping/']//span[text()='Housekeeping']
-${PH_header_categories_kitchen_dining_link}  //div[@id='menu']//a[@href='https://iprice.ph/kitchen-dining/']//span[text()='Kitchen & Dining']
-${PH_header_categories_lighting_link}  //div[@id='menu']//a[@href='https://iprice.ph/lighting/']//span[text()='Lighting']
-${PH_header_categories_living_room_link}  //div[@id='menu']//a[@href='https://iprice.ph/living-room/']//span[text()='Living Room']
-${PH_header_categories_outdoor_garden_link}  //div[@id='menu']//a[@href='https://iprice.ph/outdoor-garden/']//span[text()='Outdoor & Garden']
-${PH_header_categories_pets_suplies_link}  //div[@id='menu']//a[@href='https://iprice.ph/pets-supplies/']//span[text()='Pets Supplies']
-${PH_header_categories_security_link}  //div[@id='menu']//a[@href='https://iprice.ph/security/']//span[text()='Security']
-${PH_header_categories_stationery_link}  //div[@id='menu']//a[@href='https://iprice.ph/stationery/']//span[text()='Stationery']
-${PH_header_categories_gadgets_link}  //div[@id='menu']//a[@href='https://iprice.ph/gadgets/']//span[text()='Gadgets']
-${PH_header_categories_other_sports_link}  //div[@id='menu']//a[@href='https://iprice.ph/other-sports/']//span[text()='Other Sports']
-${PH_header_categories_upcoming_products_link}  //div[@id='menu']//a[@href='https://iprice.ph/upcoming-products/']//span[text()='Upcoming Products']
-
-${PH_product_images}  //img[contains(@class,'lazy product-img')]
-
-${PH_coupon_page_title}  Get Exclusive Sales, Vouchers & Promotions in 2017 | iPrice Philippines
 
 *** Keywords ***
 
@@ -113,9 +36,9 @@ Check All Links Response In PH
     \  ${link}  Get From List  ${filter_link1}  ${INDEX}
     \  ${status}  Run Keyword And Return Status   HttpLibrary.HTTP.Get  ${link}
     \  Run Keyword If  "${status}"=="False"  Run Keyword And Continue On Failure  Fail  Request to ${link} failed and not return 200.
-    Run Keyword If  ${filter_link2_count}>0  Check On 3rd Part Site
+    Run Keyword If  ${filter_link2_count}>0  Check Redirection URL
 
-Check On 3rd Part Site
+Check Redirection URL
     :FOR  ${INDEX}  IN RANGE  0  ${filter_link2_count}
     \  Create Session  iprice  https://iprice.ph/  disable_warnings=0
     \  Sleep  1
@@ -164,15 +87,31 @@ SEO Check Images ALT  [Arguments]  ${imageCount}
 Access iPrice PH Homepage
     Go To  ${PH_homeURL}
     Sleep  1
-    iPrice PH Homepage Landing
-
-iPrice PH Homepage Landing
     Title Should Be    ${PH_homeTitle}
-    Wait Until Element Is Visible  ${PH_header_logo_link}
-    Wait Until Element Is Visible  ${PH_header_search_input}
-    Wait Until Element Is Visible  ${PH_header_popular_searches_text}
-    Wait Until Element Is Visible  ${PH_header_coupon_logo_link}
-    Wait Until Element Is Visible  ${PH_header_coupon_text}
+
+iPrice PH Header Section Validation
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_logo}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_logo_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_search_input}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_search_icon}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_popular_searches_text}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_coupon_logo_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_coupon_text}
+    ${match}  Get Matching Xpath Count  //div[@id='menu']//li[@class='cursor-pointer list-item']//span
+    Run Keyword If  ${match}!=60  Run Keyword And Continue On Failure  Fail  Main categories count incorrect.
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_categories_clothing_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_categories_shoes_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_categories_bags_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_categories_watches_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_categories_jewellery_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_categories_computing_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_categories_phones_tablets_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_categories_gaming_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_categories_camera_photo_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_categories_tv_video_dvd_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_categories_appliances_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_categories_automotive_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_categories_+_categories_link}
 
 iPrice PH Homepage Categories Landing
     ${match}  Get Matching Xpath Count  //div[@id='menu']//li[@class='cursor-pointer list-item']//span
@@ -188,9 +127,7 @@ iPrice PH Homepage Categories Landing
     Wait Until Element Is Visible  ${PH_header_categories_camera_photo_link}
     Wait Until Element Is Visible  ${PH_header_categories_tv_video_dvd_link}
     Wait Until Element Is Visible  ${PH_header_categories_appliances_link}
-    # Element Should Not Be Visible  ${PH_header_categories_appliances_link}
     Wait Until Element Is Visible  ${PH_header_categories_automotive_link}
-    # Element Should Not Be Visible  ${PH_header_categories_automotive_link}
     Wait Until Page Contains Element  ${PH_header_categories_hobbies_link}
     Element Should Not Be Visible  ${PH_header_categories_hobbies_link}
     Wait Until Page Contains Element  ${PH_header_categories_audio_hifi_link}
@@ -294,34 +231,36 @@ iPrice PH Homepage Categories Landing
     Wait Until Element Is Visible  ${PH_header_categories_shoes_men}
     Wait Until Element Is Visible  ${PH_header_categories_shoes_women}
 
-iPrice PH Access Header Link
+iPrice PH Access Header Logo Link
     Click Element  ${PH_header_logo_link}
     Sleep  1
-    iPrice PH Homepage Landing
+    iPrice PH Header Section Validation
 
-iPrice PH Search In Header  [Arguments]  ${itemNames}
+iPrice PH Do A Search In Header  [Arguments]  ${itemNames}
     Input Text  ${PH_header_search_input}  ${itemNames}
     Click Element  ${PH_header_search_icon}
     Sleep  1
-
-iPrice PH Search Page Landing  [Arguments]  ${itemNames}
     Title Should Be  ${itemNames} - Buy ${itemNames} online in Philippines | iPrice
     Wait Until Element Is Visible  //div[@id='products-header']//h1[text()='${itemNames}']
 
 iPrice PH Access Coupons Link
     Click Element  ${PH_header_coupon_logo_link}
     Sleep  1
-    iPrice PH Coupons Page Landing
+    Title Should Be  ${PH_coupon_page_title}
 
 iPrice PH Coupons Page Landing
-    Title Should Be  ${PH_coupon_page_title}
-    Wait Until Element Is Visible  ${PH_header_logo_link}
-    Wait Until Element Is Visible  ${PH_header_search_input}
-    Wait Until Element Is Visible  ${PH_header_popular_searches_text}
-    Wait Until Element Is Visible  ${PH_header_coupon_logo_link}
-    Wait Until Element Is Visible  ${PH_header_coupon_text}
-    iPrice PH Homepage Categories Landing
     ${date}  Get Current Date
     ${dateList}  Split String  ${date}  separator=-
     ${year}  Get From List  ${dateList}  0
     Wait Until Element Is Visible  //div[@id='content']//h1[text()="Exclusive Sales, Vouchers & Promotions in Philippines ${year}"]
+
+iPrice PH Coupons Access All Store
+    Mouse Over  ${PH_coupon_see_all_store_link}
+    Click Element  ${PH_coupon_see_all_store_link}
+    Sleep  1
+    Title Should Be  ${PH_coupon_stores_title}
+
+iPrice PH Coupons Store Access A Store  [Arguments]  ${store_name}
+    Mouse Over  //div[@class='coupons-stores']//div[@class='coupon-store-item']//a[text()=' ${store_name} ']
+    Click Element  //div[@class='coupons-stores']//div[@class='coupon-store-item']//a[text()=' ${store_name} ']
+    Wait Until Element Is Visible  //div[@id='coupon-header']//h1[text()='Lazada Vouchers & Promo Codes in Philippines']

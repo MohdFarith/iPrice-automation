@@ -1,84 +1,7 @@
 *** Settings ***
-Documentation    This file will only store variables and keywords for ID.
+Documentation    This file will only store keywords for ID.
 
 *** Variables ***
-
-${ID_homeURL}  https://iprice.co.id/?nocache=1
-${ID_homeTitle}  Belanja Online, Kode Kupon & Diskon di iprice Indonesia
-${ID_header_logo_link}  //div[@id='logo']//a[@href='https://iprice.co.id/']
-${ID_header_search_input}  //div[@id='search']//input[@placeholder='Cari produk, kupon atau brand...']
-${ID_header_search_icon}  //div[@id='search']//i[@class='icon icon-search-blue']
-${ID_header_popular_searches_text}  //div[@id='popular-searches']//li[normalize-space(text())='Pencarian Terpopuler:']
-${ID_header_coupon_logo_link}  //div[@id='news-button']//a[@href='https://iprice.co.id/coupons/']
-${ID_header_coupon_text}  //div[@id='news-button']//button[normalize-space(text())='Kupon & Penawaran']
-${ID_header_categories_clothing_link}  //div[@id='menu']//a[@href='https://iprice.co.id/pakaian/']//span[text()='Pakaian']
-${ID_header_categories_clothing_men}  //div[@id='menu']//a[contains(@href,'https://iprice.co.id/pakaian/pria/') and text()='Pria']
-${ID_header_categories_clothing_women}  //div[@id='menu']//a[contains(@href,'https://iprice.co.id/pakaian/wanita/') and text()='Wanita']
-${ID_header_categories_shoes_link}  //div[@id='menu']//a[@href='https://iprice.co.id/sepatu/']//span[text()='Sepatu']
-${ID_header_categories_shoes_men}  //div[@id='menu']//a[contains(@href,'https://iprice.co.id/sepatu/pria/') and text()='Pria']
-${ID_header_categories_shoes_women}  //div[@id='menu']//a[contains(@href,'https://iprice.co.id/sepatu/wanita/') and text()='Wanita']
-${ID_header_categories_bags_link}  //div[@id='menu']//a[@href='https://iprice.co.id/tas/']//span[text()='Tas']
-${ID_header_categories_watches_link}  //div[@id='menu']//a[@href='https://iprice.co.id/jam-tangan/']//span[text()='Jam Tangan']
-${ID_header_categories_jewellery_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perhiasan/']//span[text()='Perhiasan']
-${ID_header_categories_computing_link}  //div[@id='menu']//a[@href='https://iprice.co.id/komputer/']//span[text()='Komputer']
-${ID_header_categories_phones_tablets_link}  //div[@id='menu']//a[@href='https://iprice.co.id/ponsel-tablet/']//span[text()='Ponsel & Tablet']
-${ID_header_categories_gaming_link}  //div[@id='menu']//a[@href='https://iprice.co.id/video-game/']//span[text()='Video Game']
-${ID_header_categories_camera_photo_link}  //div[@id='menu']//a[@href='https://iprice.co.id/kamera-foto/']//span[text()='Kamera & Foto']
-${ID_header_categories_tv_video_dvd_link}  //div[@id='menu']//a[@href='https://iprice.co.id/tv-video-dvd/']//span[text()='TV, Video & DVD']
-${ID_header_categories_appliances_link}  //div[@id='menu']//a[@href='https://iprice.co.id/peralatan/']//span[text()='Peralatan']
-${ID_header_categories_automotive_link}  //div[@id='menu']//a[@href='https://iprice.co.id/otomotif/']//span[text()='Otomotif']
-${ID_header_categories_hobbies_link}  //div[@id='menu']//a[@href='https://iprice.co.id/hobi/']//span[text()='Hobi']
-${ID_header_categories_audio_hifi_link}  //div[@id='menu']//a[@href='https://iprice.co.id/audio-hi-fi/']//span[text()='Audio & Hi-Fi']
-${ID_header_categories_action_sport_link}  //div[@id='menu']//a[@href='https://iprice.co.id/olahraga-aksi/']//span[text()='Olahraga Aksi']
-${ID_header_categories_adventure_link}  //div[@id='menu']//a[@href='https://iprice.co.id/olahraga-rekreasi/']//span[text()='Olahraga Rekreasi']
-${ID_header_categories_baby_clothing_link}  //div[@id='menu']//a[@href='https://iprice.co.id/pakaian-bayi/']//span[text()='Pakaian Bayi']
-${ID_header_categories_baby_gear_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perlengkapan-bayi/']//span[text()='Perlengkapan Bayi']
-${ID_header_categories_bath_body_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perlengkapan-mandi-tubuh/']//span[text()='Perlengkapan Mandi & Tubuh']
-${ID_header_categories_dental_care_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perawatan-mulut/']//span[text()='Perawatan Mulut']
-${ID_header_categories_diapering_link}  //div[@id='menu']//a[@href='https://iprice.co.id/popok/']//span[text()='Popok']
-${ID_header_categories_eyecare_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perawatan-mata/']//span[text()='Perawatan Mata']
-${ID_header_categories_feeding_link}  //div[@id='menu']//a[@href='https://iprice.co.id/pemberian-makanan/']//span[text()='Pemberian Makanan']
-${ID_header_categories_food_supplements_link}  //div[@id='menu']//a[@href='https://iprice.co.id/suplemen-olahraga/']//span[text()='Suplemen Olahraga']
-${ID_header_categories_gifts_link}  //div[@id='menu']//a[@href='https://iprice.co.id/kado/']//span[text()='Kado']
-${ID_header_categories_gym_link}  //div[@id='menu']//a[@href='https://iprice.co.id/gym/']//span[text()='Gym']
-${ID_header_categories_hair_care_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perawatan-rambut/']//span[text()='Perawatan Rambut']
-${ID_header_categories_health_link}  //div[@id='menu']//a[@href='https://iprice.co.id/kesehatan/']//span[text()='Kesehatan']
-${ID_header_categories_kids_clothing_link}  //div[@id='menu']//a[@href='https://iprice.co.id/pakaian-anak/']//span[text()='Pakaian Anak']
-${ID_header_categories_makeup_link}  //div[@id='menu']//a[@href='https://iprice.co.id/makeup/']//span[text()='Makeup']
-${ID_header_categories_maternity_care_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perawatan-bersalin/']//span[text()='Perawatan Bersalin']
-${ID_header_categories_medical_supplies_link}  //div[@id='menu']//a[@href='https://iprice.co.id/alat-medis/']//span[text()='Alat Medis']
-${ID_header_categories_nursery_link}  //div[@id='menu']//a[@href='https://iprice.co.id/kamar/']//span[text()='Kamar']
-${ID_header_categories_perfeum_link}  //div[@id='menu']//a[@href='https://iprice.co.id/parfum/']//span[text()='Parfum']
-${ID_header_categories_racquet_sports_link}  //div[@id='menu']//a[@href='https://iprice.co.id/olahraga-raket/']//span[text()='Olahraga Raket']
-${ID_header_categories_shaving_supplies_link}  //div[@id='menu']//a[@href='https://iprice.co.id/peralatan-cukur/']//span[text()='Peralatan Cukur']
-${ID_header_categories_skin_care_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perawatan-kulit/']//span[text()='Perawatan Kulit']
-${ID_header_categories_supplements_link}  //div[@id='menu']//a[@href='https://iprice.co.id/suplemen-makanan/']//span[text()='Suplemen Makanan']
-${ID_header_categories_team_sports_link}  //div[@id='menu']//a[@href='https://iprice.co.id/olahraga-tim/']//span[text()='Olahraga Tim']
-${ID_header_categories_toys_link}  //div[@id='menu']//a[@href='https://iprice.co.id/mainan/']//span[text()='Mainan']
-${ID_header_categories_water_sports_link}  //div[@id='menu']//a[@href='https://iprice.co.id/olahraga-air/']//span[text()='Olahraga Air']
-${ID_header_categories_groceries_link}  //div[@id='menu']//a[@href='https://iprice.co.id/makanan-minuman/']//span[text()='Makanan & Minuman']
-${ID_header_categories_ear_care_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perawatan-telinga/']//span[text()='Perawatan Telinga']
-${ID_header_categories_bathroom_link}  //div[@id='menu']//a[@href='https://iprice.co.id/kamar-mandi/']//span[text()='Kamar Mandi']
-${ID_header_categories_bedroom_link}  //div[@id='menu']//a[@href='https://iprice.co.id/kamar-tidur/']//span[text()='Kamar Tidur']
-${ID_header_categories_hallway_entry_link}  //div[@id='menu']//a[@href='https://iprice.co.id/ruang-depan/']//span[text()='Ruang Depan']
-${ID_header_categories_home_decor_link}  //div[@id='menu']//a[@href='https://iprice.co.id/dekorasi-rumah/']//span[text()='Dekorasi Rumah']
-${ID_header_categories_home_improvement_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perbaikan-rumah/']//span[text()='Perbaikan Rumah']
-${ID_header_categories_home_office_link}  //div[@id='menu']//a[@href='https://iprice.co.id/ruang-kerja/']//span[text()='Ruang Kerja']
-${ID_header_categories_housekeepng_link}  //div[@id='menu']//a[@href='https://iprice.co.id/peralatan-pembersih/']//span[text()='Peralatan Pembersih']
-${ID_header_categories_kitchen_dining_link}  //div[@id='menu']//a[@href='https://iprice.co.id/dapur-ruang-makan/']//span[text()='Dapur & Ruang Makan']
-${ID_header_categories_lighting_link}  //div[@id='menu']//a[@href='https://iprice.co.id/penerangan/']//span[text()='Penerangan']
-${ID_header_categories_living_room_link}  //div[@id='menu']//a[@href='https://iprice.co.id/ruang-keluarga/']//span[text()='Ruang Keluarga']
-${ID_header_categories_outdoor_garden_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perlengkapan-taman/']//span[text()='Perlengkapan Taman']
-${ID_header_categories_pets_suplies_link}  //div[@id='menu']//a[@href='https://iprice.co.id/perlengkapan-hewan-peliharaan/']//span[text()='Perlengkapan Hewan Peliharaan']
-${ID_header_categories_security_link}  //div[@id='menu']//a[@href='https://iprice.co.id/keamanan/']//span[text()='Keamanan']
-${ID_header_categories_stationery_link}  //div[@id='menu']//a[@href='https://iprice.co.id/stasioner/']//span[text()='Stasioner']
-${ID_header_categories_gadgets_link}  //div[@id='menu']//a[@href='https://iprice.co.id/gadget/']//span[text()='Gadget']
-${ID_header_categories_other_sports_link}  //div[@id='menu']//a[@href='https://iprice.co.id/olahraga-lainnya/']//span[text()='Olahraga Lainnya']
-${ID_header_categories_upcoming_products_link}  //div[@id='menu']//a[@href='https://iprice.co.id/produk-akan-datang/']//span[text()='Produk Akan Datang']
-
-${ID_product_images}  //img[contains(@class,'lazy product-img')]
-
-${ID_coupon_page_title}    Dapatkan Exclusive Promo, Sales & Vouchers\u00a0di tahun 2017 | iPrice Indonesia
 
 *** Keywords ***
 
@@ -113,9 +36,9 @@ Check All Links Response In ID
     \  ${link}  Get From List  ${filter_link1}  ${INDEX}
     \  ${status}  Run Keyword And Return Status   HttpLibrary.HTTP.Get  ${link}
     \  Run Keyword If  "${status}"=="False"  Run Keyword And Continue On Failure  Fail  Request to ${link} failed and not return 200.
-    Run Keyword If  ${filter_link2_count}>0  Check On 3rd Part Site
+    Run Keyword If  ${filter_link2_count}>0  Check Redirection URL
 
-Check On 3rd Part Site
+Check Redirection URL
     :FOR  ${INDEX}  IN RANGE  0  ${filter_link2_count}
     \  Create Session  iprice  https://iprice.co.id/  disable_warnings=0
     \  Sleep  1
@@ -166,13 +89,29 @@ Access iPrice ID Homepage
     Sleep  1
     Title Should Be  ${ID_homeTitle}
 
-iPrice ID Homepage Landing
-    Title Should Be  ${ID_homeTitle}
-    Wait Until Element Is Visible  ${ID_header_logo_link}
-    Wait Until Element Is Visible  ${ID_header_search_input}
-    Wait Until Element Is Visible  ${ID_header_popular_searches_text}
-    Wait Until Element Is Visible  ${ID_header_coupon_logo_link}
-    Wait Until Element Is Visible  ${ID_header_coupon_text}
+iPrice ID Header Section Validation
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_logo}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_logo_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_search_input}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_search_icon}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_popular_searches_text}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_coupon_logo_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_coupon_text}
+    ${match}  Get Matching Xpath Count  //div[@id='menu']//li[@class='cursor-pointer list-item']//span
+    Run Keyword If  ${match}!=60  Run Keyword And Continue On Failure  Fail  Main categories count incorrect.
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_categories_clothing_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_categories_shoes_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_categories_bags_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_categories_watches_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_categories_jewellery_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_categories_computing_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_categories_phones_tablets_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_categories_gaming_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_categories_camera_photo_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_categories_tv_video_dvd_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_categories_appliances_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_categories_automotive_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_categories_+_categories_link}
 
 iPrice ID Homepage Categories Landing
     ${match}  Get Matching Xpath Count  //div[@id='menu']//li[@class='cursor-pointer list-item']//span
@@ -188,11 +127,7 @@ iPrice ID Homepage Categories Landing
     Wait Until Element Is Visible  ${ID_header_categories_camera_photo_link}
     Wait Until Element Is Visible  ${ID_header_categories_tv_video_dvd_link}
     Wait Until Element Is Visible  ${ID_header_categories_appliances_link}
-    # Element Should Not Be Visible  ${ID_header_categories_appliances_link}
     Wait Until Element Is Visible  ${ID_header_categories_automotive_link}
-    # Element Should Not Be Visible  ${ID_header_categories_automotive_link}
-    # Wait Until Page Contains Element  ${ID_header_categories_hobbies_link}
-    # Element Should Not Be Visible  ${ID_header_categories_hobbies_link}
     Wait Until Element Is Visible  ${ID_header_categories_hobbies_link}
     Wait Until Page Contains Element  ${ID_header_categories_audio_hifi_link}
     Element Should Not Be Visible  ${ID_header_categories_audio_hifi_link}
@@ -295,17 +230,15 @@ iPrice ID Homepage Categories Landing
     Wait Until Element Is Visible  ${ID_header_categories_shoes_men}
     Wait Until Element Is Visible  ${ID_header_categories_shoes_women}
 
-iPrice ID Access Header Link
+iPrice ID Access Header Logo Link
     Click Element  ${ID_header_logo_link}
     Sleep  1
-    iPrice ID Homepage Landing
+    iPrice ID Header Section Validation
 
-iPrice ID Search In Header    [Arguments]    ${itemNames}
+iPrice ID Do A Search In Header  [Arguments]    ${itemNames}
     Input Text  ${ID_header_search_input}  ${itemNames}
     Click Element  ${ID_header_search_icon}
     Sleep  1
-
-iPrice ID Search Page Landing    [Arguments]    ${itemNames}
     Title Should Be  Toko | iprice Indonesia
     Wait Until Element Is Visible  //div[@id='products-header']//h1[text()='${itemNames}']
 

@@ -2,8 +2,9 @@
 Documentation   A test suite with various tests for iPrice PH.
 
 #Import
-Resource    ../TestData/TestSettings.robot
-Resource    ../TestData/05-PHVariablesKeywords.robot
+Resource    ../TestSettings/TestSettings.robot
+Resource    ../TestVariables/05-PHTestVariables.robot
+Resource    ../TestKeywords/05-PHTestKeywords.robot
 
 #Setup/Tear Down
 Test Setup    TestCase Setup    ${browser}
@@ -20,19 +21,23 @@ Test URL PH
 Test SEO Check Homepage In PH
     [tags]  seo
     Access iPrice PH Homepage
+    iPrice PH Header Section Validation
     Get All Available Links In PH
     SEO Check Internal Link In PH
     SEO Check Images ALT  6
     iPrice PH Access Coupons Link
+    iPrice PH Header Section Validation
+    iPrice PH Coupons Page Landing
+    iPrice PH Coupons Access All Store
+    iPrice PH Coupons Store Access A Store  Lazada
 
 TestCase One PH
     [tags]    test    1_case
     Access iPrice PH Homepage
-    iPrice PH Homepage Landing
-    iPrice PH Homepage Categories Landing
-    iPrice PH Access Header Link
-    iPrice PH Search In Header    iphone 3gs
-    iPrice PH Search Page Landing    iphone 3gs
-    iPrice PH Access Header Link
-    iPrice PH Access Coupons Link
-    iPrice PH Access Header Link
+    iPrice PH Header Section Validation
+    iPrice PH Access Header Logo Link
+    iPrice PH Do A Search In Header  iphone 3gs
+    iPrice PH Access Header Logo Link
+    iPrice PH Do A Search In Header  dell
+    iPrice PH Access Header Logo Link
+    iPrice PH Header Section Validation

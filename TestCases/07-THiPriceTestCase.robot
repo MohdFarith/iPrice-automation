@@ -2,8 +2,9 @@
 Documentation   A test suite with various tests for iPrice TH.
 
 #Import
-Resource    ../TestData/TestSettings.robot
-Resource    ../TestData/07-THVariablesKeywords.robot
+Resource    ../TestSettings/TestSettings.robot
+Resource    ../TestVariables/07-THTestVariables.robot
+Resource    ../TestKeywords/07-THTestKeywords.robot
 
 #Setup/Tear Down
 Test Setup    TestCase Setup    ${browser}
@@ -20,19 +21,23 @@ Test URL TH
 Test SEO Check Homepage In TH
     [tags]  seo
     Access iPrice TH Homepage
+    iPrice TH Header Section Validation
     Get All Available Links In TH
     SEO Check Internal Link In TH
     SEO Check Images ALT  6
     iPrice TH Access Coupons Link
+    iPrice TH Header Section Validation
+    iPrice TH Coupons Page Landing
+    iPrice TH Coupons Access All Store
+    iPrice TH Coupons Store Access A Store  Lazada
 
 TestCase One TH
     [tags]    test    1_case
     Access iPrice TH Homepage
-    iPrice TH Homepage Landing
-    iPrice TH Homepage Categories Landing
-    iPrice TH Access Header Link
-    iPrice TH Search In Header    iphone 3gs
-    iPrice TH Search Page Landing    iphone 3gs
-    iPrice TH Access Header Link
-    iPrice TH Access Coupons Link
-    iPrice TH Access Header Link
+    iPrice TH Header Section Validation
+    iPrice TH Access Header Logo Link
+    iPrice TH Do A Search In Header  iphone 3gs
+    iPrice TH Access Header Logo Link
+    iPrice TH Do A Search In Header  dell
+    iPrice TH Access Header Logo Link
+    iPrice TH Header Section Validation

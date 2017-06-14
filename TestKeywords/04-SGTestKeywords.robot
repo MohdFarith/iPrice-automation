@@ -1,84 +1,7 @@
 *** Settings ***
-Documentation    This file will only store variables and keywords for SG.
+Documentation    This file will only store keywords for SG.
 
 *** Variables ***
-
-${SG_homeURL}  https://iprice.sg/?nocache=1#
-${SG_homeTitle}  Online Shopping, Coupons & Discount Codes at iprice Singapore
-${SG_header_logo_link}  //div[@id='logo']//a[@href='https://iprice.sg/']
-${SG_header_search_input}  //div[@id='search']//input[@placeholder='Search for products, coupons or brands...']
-${SG_header_search_icon}  //div[@id='search']//i[@class='icon icon-search-blue']
-${SG_header_popular_searches_text}  //div[@id='popular-searches']//li[normalize-space(text())='Popular Searches:']
-${SG_header_coupon_logo_link}  //div[@id='news-button']//a[@href='https://iprice.sg/coupons/']
-${SG_header_coupon_text}  //div[@id='news-button']//button[normalize-space(text())='Coupons & Offers']
-${SG_header_categories_clothing_link}  //div[@id='menu']//a[@href='https://iprice.sg/clothing/']//span[text()='Clothing']
-${SG_header_categories_clothing_men}  //div[@id='menu']//a[contains(@href,'https://iprice.sg/clothing/men/') and text()='Men']
-${SG_header_categories_clothing_women}  //div[@id='menu']//a[contains(@href,'https://iprice.sg/clothing/women/') and text()='Women']
-${SG_header_categories_shoes_link}  //div[@id='menu']//a[@href='https://iprice.sg/shoes/']//span[text()='Shoes']
-${SG_header_categories_shoes_men}  //div[@id='menu']//a[contains(@href,'https://iprice.sg/shoes/men/') and text()='Men']
-${SG_header_categories_shoes_women}  //div[@id='menu']//a[contains(@href,'https://iprice.sg/shoes/women/') and text()='Women']
-${SG_header_categories_bags_link}  //div[@id='menu']//a[@href='https://iprice.sg/bags/']//span[text()='Bags']
-${SG_header_categories_watches_link}  //div[@id='menu']//a[@href='https://iprice.sg/watches/']//span[text()='Watches']
-${SG_header_categories_jewellery_link}  //div[@id='menu']//a[@href='https://iprice.sg/jewellery/']//span[text()='Jewellery']
-${SG_header_categories_computing_link}  //div[@id='menu']//a[@href='https://iprice.sg/computing/']//span[text()='Computing']
-${SG_header_categories_phones_tablets_link}  //div[@id='menu']//a[@href='https://iprice.sg/phones-tablets/']//span[text()='Phones & Tablets']
-${SG_header_categories_gaming_link}  //div[@id='menu']//a[@href='https://iprice.sg/gaming/']//span[text()='Gaming']
-${SG_header_categories_camera_photo_link}  //div[@id='menu']//a[@href='https://iprice.sg/camera-photo/']//span[text()='Camera & Photo']
-${SG_header_categories_tv_video_dvd_link}  //div[@id='menu']//a[@href='https://iprice.sg/tv-video-dvd/']//span[text()='TV, Video & DVD']
-${SG_header_categories_appliances_link}  //div[@id='menu']//a[@href='https://iprice.sg/appliances/']//span[text()='Appliances']
-${SG_header_categories_automotive_link}  //div[@id='menu']//a[@href='https://iprice.sg/automotive/']//span[text()='Automotive']
-${SG_header_categories_hobbies_link}  //div[@id='menu']//a[@href='https://iprice.sg/hobbies/']//span[text()='Hobbies']
-${SG_header_categories_audio_hifi_link}  //div[@id='menu']//a[@href='https://iprice.sg/audio-hi-fi/']//span[text()='Audio & Hi Fi']
-${SG_header_categories_action_sport_link}  //div[@id='menu']//a[@href='https://iprice.sg/action-sports/']//span[text()='Action Sports']
-${SG_header_categories_adventure_link}  //div[@id='menu']//a[@href='https://iprice.sg/adventure/']//span[text()='Adventure']
-${SG_header_categories_baby_clothing_link}  //div[@id='menu']//a[@href='https://iprice.sg/baby-clothing/']//span[text()='Baby Clothing']
-${SG_header_categories_baby_gear_link}  //div[@id='menu']//a[@href='https://iprice.sg/baby-gear/']//span[text()='Baby Gear']
-${SG_header_categories_bath_body_link}  //div[@id='menu']//a[@href='https://iprice.sg/bath-body/']//span[text()='Bath & Body']
-${SG_header_categories_dental_care_link}  //div[@id='menu']//a[@href='https://iprice.sg/dental-care/']//span[text()='Dental Care']
-${SG_header_categories_diapering_link}  //div[@id='menu']//a[@href='https://iprice.sg/diapering/']//span[text()='Diapering']
-${SG_header_categories_eyecare_link}  //div[@id='menu']//a[@href='https://iprice.sg/eyecare/']//span[text()='Eyecare']
-${SG_header_categories_feeding_link}  //div[@id='menu']//a[@href='https://iprice.sg/feeding/']//span[text()='Feeding']
-${SG_header_categories_food_supplements_link}  //div[@id='menu']//a[@href='https://iprice.sg/food-supplements/']//span[text()='Food Supplements']
-${SG_header_categories_gifts_link}  //div[@id='menu']//a[@href='https://iprice.sg/gifts/']//span[text()='Gifts']
-${SG_header_categories_gym_link}  //div[@id='menu']//a[@href='https://iprice.sg/gym/']//span[text()='Gym']
-${SG_header_categories_hair_care_link}  //div[@id='menu']//a[@href='https://iprice.sg/hair-care/']//span[text()='Hair Care']
-${SG_header_categories_health_link}  //div[@id='menu']//a[@href='https://iprice.sg/health/']//span[text()='Health']
-${SG_header_categories_kids_clothing_link}  //div[@id='menu']//a[@href='https://iprice.sg/kids-clothing/']//span[text()='Kids Clothing']
-${SG_header_categories_makeup_link}  //div[@id='menu']//a[@href='https://iprice.sg/makeup/']//span[text()='Makeup']
-${SG_header_categories_maternity_care_link}  //div[@id='menu']//a[@href='https://iprice.sg/maternity-care/']//span[text()='Maternity Care']
-${SG_header_categories_medical_supplies_link}  //div[@id='menu']//a[@href='https://iprice.sg/medical-supplies/']//span[text()='Medical Supplies']
-${SG_header_categories_nursery_link}  //div[@id='menu']//a[@href='https://iprice.sg/nursery/']//span[text()='Nursery']
-${SG_header_categories_perfeum_link}  //div[@id='menu']//a[@href='https://iprice.sg/perfume/']//span[text()='Perfume']
-${SG_header_categories_racquet_sports_link}  //div[@id='menu']//a[@href='https://iprice.sg/racquet-sports/']//span[text()='Racquet Sports']
-${SG_header_categories_shaving_supplies_link}  //div[@id='menu']//a[@href='https://iprice.sg/shaving-supplies/']//span[text()='Shaving Supplies']
-${SG_header_categories_skin_care_link}  //div[@id='menu']//a[@href='https://iprice.sg/skin-care/']//span[text()='Skin Care']
-${SG_header_categories_supplements_link}  //div[@id='menu']//a[@href='https://iprice.sg/supplements/']//span[text()='Supplements']
-${SG_header_categories_team_sports_link}  //div[@id='menu']//a[@href='https://iprice.sg/team-sports/']//span[text()='Team Sports']
-${SG_header_categories_toys_link}  //div[@id='menu']//a[@href='https://iprice.sg/toys/']//span[text()='Toys']
-${SG_header_categories_water_sports_link}  //div[@id='menu']//a[@href='https://iprice.sg/water-sports/']//span[text()='Water Sports']
-${SG_header_categories_groceries_link}  //div[@id='menu']//a[@href='https://iprice.sg/groceries/']//span[text()='Groceries']
-${SG_header_categories_ear_care_link}  //div[@id='menu']//a[@href='https://iprice.sg/ear-care/']//span[text()='Ear Care']
-${SG_header_categories_bathroom_link}  //div[@id='menu']//a[@href='https://iprice.sg/bathroom/']//span[text()='Bathroom']
-${SG_header_categories_bedroom_link}  //div[@id='menu']//a[@href='https://iprice.sg/bedroom/']//span[text()='Bedroom']
-${SG_header_categories_hallway_entry_link}  //div[@id='menu']//a[@href='https://iprice.sg/hallway-entry/']//span[text()='Hallway & Entry']
-${SG_header_categories_home_decor_link}  //div[@id='menu']//a[@href='https://iprice.sg/home-decor/']//span[text()='Home Decor']
-${SG_header_categories_home_improvement_link}  //div[@id='menu']//a[@href='https://iprice.sg/home-improvement/']//span[text()='Home Improvement']
-${SG_header_categories_home_office_link}  //div[@id='menu']//a[@href='https://iprice.sg/home-office/']//span[text()='Home Office']
-${SG_header_categories_housekeepng_link}  //div[@id='menu']//a[@href='https://iprice.sg/housekeeping/']//span[text()='Housekeeping']
-${SG_header_categories_kitchen_dining_link}  //div[@id='menu']//a[@href='https://iprice.sg/kitchen-dining/']//span[text()='Kitchen & Dining']
-${SG_header_categories_lighting_link}  //div[@id='menu']//a[@href='https://iprice.sg/lighting/']//span[text()='Lighting']
-${SG_header_categories_living_room_link}  //div[@id='menu']//a[@href='https://iprice.sg/living-room/']//span[text()='Living Room']
-${SG_header_categories_outdoor_garden_link}  //div[@id='menu']//a[@href='https://iprice.sg/outdoor-garden/']//span[text()='Outdoor & Garden']
-${SG_header_categories_pets_suplies_link}  //div[@id='menu']//a[@href='https://iprice.sg/pets-supplies/']//span[text()='Pets Supplies']
-${SG_header_categories_security_link}  //div[@id='menu']//a[@href='https://iprice.sg/security/']//span[text()='Security']
-${SG_header_categories_stationery_link}  //div[@id='menu']//a[@href='https://iprice.sg/stationery/']//span[text()='Stationery']
-${SG_header_categories_gadgets_link}  //div[@id='menu']//a[@href='https://iprice.sg/gadgets/']//span[text()='Gadgets']
-${SG_header_categories_other_sports_link}  //div[@id='menu']//a[@href='https://iprice.sg/other-sports/']//span[text()='Other Sports']
-${SG_header_categories_upcoming_products_link}  //div[@id='menu']//a[@href='https://iprice.sg/upcoming-products/']//span[text()='Upcoming Products']
-
-${SG_product_images}  //img[contains(@class,'lazy product-img')]
-
-${SG_coupon_page_title}   Get Exclusive Sales, Promotions & Vouchers in 2017 | iPrice Singapore
 
 *** Keywords ***
 
@@ -113,9 +36,9 @@ Check All Links Response In SG
     \  ${link}  Get From List  ${filter_link1}  ${INDEX}
     \  ${status}  Run Keyword And Return Status   HttpLibrary.HTTP.Get  ${link}
     \  Run Keyword If  "${status}"=="False"  Run Keyword And Continue On Failure  Fail  Request to ${link} failed and not return 200.
-    Run Keyword If  ${filter_link2_count}>0  Check On 3rd Part Site
+    Run Keyword If  ${filter_link2_count}>0  Check Redirection URL
 
-Check On 3rd Part Site
+Check Redirection URL
     :FOR  ${INDEX}  IN RANGE  0  ${filter_link2_count}
     \  Create Session  iprice  https://iprice.sg/  disable_warnings=0
     \  Sleep  1
@@ -164,15 +87,31 @@ SEO Check Images ALT  [Arguments]  ${imageCount}
 Access iPrice SG Homepage
     Go To  ${SG_homeURL}
     Sleep  1
-    iPrice SG Homepage Landing
-
-iPrice SG Homepage Landing
     Title Should Be  ${SG_homeTitle}
-    Wait Until Element Is Visible  ${SG_header_logo_link}
-    Wait Until Element Is Visible  ${SG_header_search_input}
-    Wait Until Element Is Visible  ${SG_header_popular_searches_text}
-    Wait Until Element Is Visible  ${SG_header_coupon_logo_link}
-    Wait Until Element Is Visible  ${SG_header_coupon_text}
+
+iPrice SG Header Section Validation
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_logo}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_logo_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_search_input}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_search_icon}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_popular_searches_text}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_coupon_logo_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_coupon_text}
+    ${match}  Get Matching Xpath Count  //div[@id='menu']//li[@class='cursor-pointer list-item']//span
+    Run Keyword If  ${match}!=60  Run Keyword And Continue On Failure  Fail  Main categories count incorrect.
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_categories_clothing_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_categories_shoes_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_categories_bags_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_categories_watches_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_categories_jewellery_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_categories_computing_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_categories_phones_tablets_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_categories_gaming_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_categories_camera_photo_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_categories_tv_video_dvd_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_categories_appliances_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_categories_automotive_link}
+    Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_categories_+_categories_link}
 
 iPrice SG Homepage Categories Landing
     ${match}  Get Matching Xpath Count  //div[@id='menu']//li[@class='cursor-pointer list-item']//span
@@ -294,34 +233,36 @@ iPrice SG Homepage Categories Landing
     Wait Until Element Is Visible  ${SG_header_categories_shoes_men}
     Wait Until Element Is Visible  ${SG_header_categories_shoes_women}
 
-iPrice SG Access Header Link
+iPrice SG Access Header Logo Link
     Click Element  ${SG_header_logo_link}
     Sleep  1
-    iPrice SG Homepage Landing
+    iPrice SG Header Section Validation
 
-iPrice SG Search In Header  [Arguments]  ${itemNames}
+iPrice SG Do A Search In Header  [Arguments]  ${itemNames}
     Input Text  ${SG_header_search_input}    ${itemNames}
     Click Element  ${SG_header_search_icon}
     Sleep  1
-
-iPrice SG Search Page Landing  [Arguments]  ${itemNames}
     Title Should Be  Search | iprice Singapore
     Wait Until Element Is Visible  //div[@id='products-header']//h1[text()='${itemNames}']
 
 iPrice SG Access Coupons Link
     Click Element  ${SG_header_coupon_logo_link}
     Sleep  1
-    iPrice SG Coupons Page Landing
+    Title Should Be  ${SG_coupon_page_title}
 
 iPrice SG Coupons Page Landing
-    Title Should Be  ${SG_coupon_page_title}
-    Wait Until Element Is Visible  ${SG_header_logo_link}
-    Wait Until Element Is Visible  ${SG_header_search_input}
-    Wait Until Element Is Visible  ${SG_header_popular_searches_text}
-    Wait Until Element Is Visible  ${SG_header_coupon_logo_link}
-    Wait Until Element Is Visible  ${SG_header_coupon_text}
-    iPrice SG Homepage Categories Landing
     ${date}  Get Current Date
     ${dateList}  Split String  ${date}  separator=-
     ${year}  Get From List  ${dateList}  0
     Wait Until Element Is Visible  //div[@id='content']//h1[text()="Exclusive Sales, Promotions & Vouchers in Singapore ${year}"]
+
+iPrice SG Coupons Access All Store
+    Mouse Over  ${SG_coupon_see_all_store_link}
+    Click Element  ${SG_coupon_see_all_store_link}
+    Sleep  1
+    Title Should Be  ${SG_coupon_stores_title}
+
+iPrice SG Coupons Store Access A Store  [Arguments]  ${store_name}
+    Mouse Over  //div[@class='coupons-stores']//div[@class='coupon-store-item']//a[text()=' ${store_name} ']
+    Click Element  //div[@class='coupons-stores']//div[@class='coupon-store-item']//a[text()=' ${store_name} ']
+    Wait Until Element Is Visible  //div[@id='coupon-header']//h1[text()='Lazada Promo Codes and Discount Codes in Singapore']
