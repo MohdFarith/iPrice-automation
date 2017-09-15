@@ -27,7 +27,7 @@ TestCase Setup  [Arguments]  ${browser}
     ...  ELSE  Open Browser  ${baseURL}  ${browser}
     # Maximize Browser Window
     # ${width}  ${height}  Get Window Size
-    Set Window Size  1366  720
+    Set Window Size  1366  768
 
 Setup Chrome Browser
     Run Keyword If  "${remote_url}"=="None"  Run In Local
