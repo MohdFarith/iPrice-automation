@@ -10,7 +10,7 @@ Resource  ../TestKeywords/TestKeywords-COOD.robot
 Resource  ../TestKeywords/TestKeywords-SearchResult.robot
 
 #Setup/Tear Down
-Test Setup  TestCase Setup    ${browser}
+Test Setup  TestCase Setup
 Test Teardown  Close Browser
 
 *** Test Cases ***
