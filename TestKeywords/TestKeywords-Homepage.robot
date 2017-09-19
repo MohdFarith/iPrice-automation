@@ -56,17 +56,18 @@ iPrice Header Courtesy Validation  [Arguments]  ${country}
     ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_header_courtesy_trends}
     ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_header_courtesy_trends}
 
-iPrice Header Logo Validation  [Arguments]  ${country}
-    Element Should Be Visible  ${header_logo}
-    Run Keyword If  "${country}"=="MY"  Page Should Contain Element  ${MY_header_logo_link}
-    ...  ELSE IF  "${country}"=="VN"  Page Should Contain Element  ${VN_header_logo_link}
-    ...  ELSE IF  "${country}"=="ID"  Page Should Contain Element  ${ID_header_logo_link}
-    ...  ELSE IF  "${country}"=="SG"  Page Should Contain Element  ${SG_header_logo_link}
-    ...  ELSE IF  "${country}"=="PH"  Page Should Contain Element  ${PH_header_logo_link}
-    ...  ELSE IF  "${country}"=="HK"  Page Should Contain Element  ${HK_header_logo_link}
-    ...  ELSE IF  "${country}"=="TH"  Page Should Contain Element  ${TH_header_logo_link}
-
-iPrice Header Search Bar Validation  [Arguments]  ${country}
+iPrice Header Validation  [Arguments]  ${country}
+    Run Keyword If  "${country}"=="MY"  Element Should Be Visible  ${MY_header_logo_link}
+    ...  ELSE IF  "${country}"=="VN"  Element Should Be Visible  ${VN_header_logo_link}
+    ...  ELSE IF  "${country}"=="ID"  Element Should Be Visible  ${ID_header_logo_link}
+    ...  ELSE IF  "${country}"=="SG"  Element Should Be Visible  ${SG_header_logo_link}
+    ...  ELSE IF  "${country}"=="PH"  Element Should Be Visible  ${PH_header_logo_link}
+    ...  ELSE IF  "${country}"=="HK"  Element Should Be Visible  ${HK_header_logo_link}
+    ...  ELSE IF  "${country}"=="TH"  Element Should Be Visible  ${TH_header_logo_link}
+    Run Keyword If  "${country}"=="MY" or "${country}"=="SG" or "${country}"=="PH" or "${country}"=="HK"  Element Should Be Visible  ${EN_header_search_compare_save}
+    ...  ELSE IF  "${country}"=="VN"  Element Should Be Visible  ${VN_header_search_compare_save}
+    ...  ELSE IF  "${country}"=="ID"  Element Should Be Visible  ${ID_header_search_compare_save}
+    ...  ELSE IF  "${country}"=="TH"  Element Should Be Visible  ${TH_header_search_compare_save}
     Run Keyword If  "${country}"=="MY"  Element Should Be Visible  ${MY_header_search_input}
     ...  ELSE IF  "${country}"=="VN"  Element Should Be Visible  ${VN_header_search_input}
     ...  ELSE IF  "${country}"=="ID"  Element Should Be Visible  ${ID_header_search_input}
@@ -75,40 +76,65 @@ iPrice Header Search Bar Validation  [Arguments]  ${country}
     ...  ELSE IF  "${country}"=="HK"  Element Should Be Visible  ${HK_header_search_input}
     ...  ELSE IF  "${country}"=="TH"  Element Should Be Visible  ${TH_header_search_input}
     Element Should Be Visible  ${header_search_icon}
-    Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_header_popular_searches_text}
-    ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_header_popular_searches_text}
-    ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_popular_searches_text}
-    ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_popular_searches_text}
-    ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_popular_searches_text}
-    ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_header_popular_searches_text}
-    ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_header_popular_searches_text}
 
-iPrice Header Coupons And Offer Validation  [Arguments]  ${country}
-    Run Keyword If  "${country}"=="MY"  Element Should Be Visible  ${MY_header_coupon_logo_link_and_text}
-    ...  ELSE IF  "${country}"=="VN"  Element Should Be Visible  ${VN_header_coupon_logo_link_and_text}
-    ...  ELSE IF  "${country}"=="ID"  Element Should Be Visible  ${ID_header_coupon_logo_link_and_text}
-    ...  ELSE IF  "${country}"=="SG"  Element Should Be Visible  ${SG_header_coupon_logo_link_and_text}
-    ...  ELSE IF  "${country}"=="PH"  Element Should Be Visible  ${PH_header_coupon_logo_link_and_text}
-    ...  ELSE IF  "${country}"=="HK"  Element Should Be Visible  ${HK_header_coupon_logo_link_and_text}
-    ...  ELSE IF  "${country}"=="TH"  Element Should Be Visible  ${TH_header_coupon_logo_link_and_text}
+# iPrice Header Logo Validation  [Arguments]  ${country}
+#     Run Keyword If  "${country}"=="MY"  Element Should Be Visible  ${MY_header_logo_link}
+#     ...  ELSE IF  "${country}"=="VN"  Element Should Be Visible  ${VN_header_logo_link}
+#     ...  ELSE IF  "${country}"=="ID"  Element Should Be Visible  ${ID_header_logo_link}
+#     ...  ELSE IF  "${country}"=="SG"  Element Should Be Visible  ${SG_header_logo_link}
+#     ...  ELSE IF  "${country}"=="PH"  Element Should Be Visible  ${PH_header_logo_link}
+#     ...  ELSE IF  "${country}"=="HK"  Element Should Be Visible  ${HK_header_logo_link}
+#     ...  ELSE IF  "${country}"=="TH"  Element Should Be Visible  ${TH_header_logo_link}
 
-iPrice Header Main Categories Validation  [Arguments]  ${country}
-    # ${match}  Get Matching Xpath Count  //div[@id='menu']//li[@class='cursor-pointer list-item']//span
-    # Run Keyword If  ${match}!=60  Run Keyword And Continue On Failure  Fail  Main categories count incorrect.
-    Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_header_categories_clothing_link_text}
-    ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_header_categories_clothing_link_text}
-    ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_categories_clothing_link_text}
-    ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_categories_clothing_link_text}
-    ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_categories_clothing_link_text}
-    ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_header_categories_clothing_link_text}
-    ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_header_categories_clothing_link_text}
-    Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_header_categories_shoes_link_text}
-    ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_header_categories_shoes_link_text}
-    ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_categories_shoes_link_text}
-    ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_categories_shoes_link_text}
-    ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_categories_shoes_link_text}
-    ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_header_categories_shoes_link_text}
-    ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_header_categories_shoes_link_text}
+# iPrice Header Search Bar Validation  [Arguments]  ${country}
+#     Run Keyword If  "${country}"=="MY"  Element Should Be Visible  ${MY_header_search_input}
+#     ...  ELSE IF  "${country}"=="VN"  Element Should Be Visible  ${VN_header_search_input}
+#     ...  ELSE IF  "${country}"=="ID"  Element Should Be Visible  ${ID_header_search_input}
+#     ...  ELSE IF  "${country}"=="SG"  Element Should Be Visible  ${SG_header_search_input}
+#     ...  ELSE IF  "${country}"=="PH"  Element Should Be Visible  ${PH_header_search_input}
+#     ...  ELSE IF  "${country}"=="HK"  Element Should Be Visible  ${HK_header_search_input}
+#     ...  ELSE IF  "${country}"=="TH"  Element Should Be Visible  ${TH_header_search_input}
+#     Element Should Be Visible  ${header_search_icon}
+    # Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_header_popular_searches_text}
+    # ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_header_popular_searches_text}
+    # ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_popular_searches_text}
+    # ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_popular_searches_text}
+    # ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_popular_searches_text}
+    # ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_header_popular_searches_text}
+    # ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_header_popular_searches_text}
+
+# iPrice Header Coupons And Offer Validation  [Arguments]  ${country}
+#     Run Keyword If  "${country}"=="MY"  Element Should Be Visible  ${MY_header_coupon_logo_link_and_text}
+#     ...  ELSE IF  "${country}"=="VN"  Element Should Be Visible  ${VN_header_coupon_logo_link_and_text}
+#     ...  ELSE IF  "${country}"=="ID"  Element Should Be Visible  ${ID_header_coupon_logo_link_and_text}
+#     ...  ELSE IF  "${country}"=="SG"  Element Should Be Visible  ${SG_header_coupon_logo_link_and_text}
+#     ...  ELSE IF  "${country}"=="PH"  Element Should Be Visible  ${PH_header_coupon_logo_link_and_text}
+#     ...  ELSE IF  "${country}"=="HK"  Element Should Be Visible  ${HK_header_coupon_logo_link_and_text}
+#     ...  ELSE IF  "${country}"=="TH"  Element Should Be Visible  ${TH_header_coupon_logo_link_and_text}
+
+iPrice Products Header Main Categories Validation  [Arguments]  ${country}
+    Run Keyword If  "${country}"=="MY" or "${country}"=="SG" or "${country}"=="PH" or "${country}"=="HK"  Element Should Be Visible  ${EN_products_header_categories_electronics}
+    ...  ELSE IF  "${country}"=="VN"  Element Should Be Visible  ${EN_products_header_categories_electronics}
+    ...  ELSE IF  "${country}"=="ID"  Element Should Be Visible  ${EN_products_header_categories_electronics}
+    ...  ELSE IF  "${country}"=="TH"  Element Should Be Visible  ${EN_products_header_categories_electronics}
+
+# iPrice Header Main Categories Validation  [Arguments]  ${country}
+#     # ${match}  Get Matching Xpath Count  //div[@id='menu']//li[@class='cursor-pointer list-item']//span
+#     # Run Keyword If  ${match}!=60  Run Keyword And Continue On Failure  Fail  Main categories count incorrect.
+#     Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_header_categories_clothing_link_text}
+#     ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_header_categories_clothing_link_text}
+#     ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_categories_clothing_link_text}
+#     ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_categories_clothing_link_text}
+#     ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_categories_clothing_link_text}
+#     ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_header_categories_clothing_link_text}
+#     ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_header_categories_clothing_link_text}
+#     Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_header_categories_shoes_link_text}
+#     ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_header_categories_shoes_link_text}
+#     ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_categories_shoes_link_text}
+#     ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_categories_shoes_link_text}
+#     ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_categories_shoes_link_text}
+#     ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_header_categories_shoes_link_text}
+#     ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_header_categories_shoes_link_text}
 
 iPrice Access Header Logo Link  [Arguments]  ${country}
     Run Keyword If  "${country}"=="MY"  Click Element  ${MY_header_logo_link}
@@ -236,6 +262,20 @@ iPrice Dismiss Sign Up Modal
     \  Run Keyword If  ${match}>0  Exit For Loop
     \  Sleep  1
 
+iPrice Homepage Recommended Products Validation  [Arguments]  ${country}
+    Run Keyword If  "${country}"=="MY" or "${country}"=="SG" or "${country}"=="PH" or "${country}"=="HK"  Mouse Over  ${EN_recommended_products_header}
+    ...  ELSE IF  "${country}"=="VN"  Mouse Over  ${VN_recommended_products_header}
+    ...  ELSE IF  "${country}"=="ID"  Mouse Over  ${ID_recommended_products_header}
+    ...  ELSE IF  "${country}"=="TH"  Mouse Over  ${TH_recommended_products_header}
+    ${count}  Get Matching Xpath Count  ${recommended_product_list}
+    Run Keyword If  "${count}"!="6"  Run Keyword And Continue On Failure  Fail  Recommended products count not 6.
+    ${loop_count}  Evaluate  ${count}+1
+    :FOR  ${INDEX}  IN RANGE  1  ${loop_count}
+    \  Run Keyword If  "${country}"=="MY" or "${country}"=="SG" or "${country}"=="PH" or "${country}"=="HK"  Element Should Be Visible  //div[@id='top-comparable-products']//div[@class='product-unit hover-popup offer'][${INDEX}]//div[text()=' Compare Prices ']
+    \  ...  ELSE IF  "${country}"=="VN"  Element Should Be Visible  //div[@id='top-comparable-products']//div[@class='product-unit hover-popup offer'][${INDEX}]//div[text()=' So sánh giá ']
+    \  ...  ELSE IF  "${country}"=="ID"  Element Should Be Visible  //div[@id='top-comparable-products']//div[@class='product-unit hover-popup offer'][${INDEX}]//div[text()=' Bandingkan Harga ']
+    \  ...  ELSE IF  "${country}"=="TH"  Element Should Be Visible  //div[@id='top-comparable-products']//div[@class='product-unit hover-popup offer'][${INDEX}]//div[text()=' เปรียบเทียบราคา ']
+
 iPrice Homepage Footer Validation  [Arguments]  ${country}
     Run Keyword If  "${country}"=="MY" or "${country}"=="SG" or "${country}"=="PH" or "${country}"=="HK"  Mouse Over  ${EN_homepage_footer_international_header}
     ...  ELSE IF  "${country}"=="VN"  Mouse Over  ${VN_homepage_footer_international_header}
@@ -287,7 +327,7 @@ iPrice Homepage Footer Validation  [Arguments]  ${country}
     Element Should Be Visible  ${all_footer_social_google+_text}
 
 MY International URL Validation
-    Element Should Not Be Visible  ${EN_homepage_footer_international_malaysia_link}
+    # Element Should Not Be Visible  ${EN_homepage_footer_international_malaysia_link}
     Element Should Be Visible  ${EN_homepage_footer_international_singapore_link}
     Element Should Be Visible  ${EN_homepage_footer_international_indonesia_link}
     Element Should Be Visible  ${EN_homepage_footer_international_philippines_link}
@@ -313,7 +353,7 @@ ID International URL Validation
 
 SG International URL Validation
     Element Should Be Visible  ${EN_homepage_footer_international_malaysia_link}
-    Element Should Not Be Visible  ${EN_homepage_footer_international_singapore_link}
+    # Element Should Not Be Visible  ${EN_homepage_footer_international_singapore_link}
     Element Should Be Visible  ${EN_homepage_footer_international_indonesia_link}
     Element Should Be Visible  ${EN_homepage_footer_international_philippines_link}
     Element Should Be Visible  ${EN_homepage_footer_international_hong_kong_link}
@@ -324,7 +364,7 @@ PH International URL Validation
     Element Should Be Visible  ${EN_homepage_footer_international_malaysia_link}
     Element Should Be Visible  ${EN_homepage_footer_international_singapore_link}
     Element Should Be Visible  ${EN_homepage_footer_international_indonesia_link}
-    Element Should Not Be Visible  ${EN_homepage_footer_international_philippines_link}
+    # Element Should Not Be Visible  ${EN_homepage_footer_international_philippines_link}
     Element Should Be Visible  ${EN_homepage_footer_international_hong_kong_link}
     Element Should Be Visible  ${EN_homepage_footer_international_thailand_link}
     Element Should Be Visible  ${EN_homepage_footer_international_vietnam_link}
@@ -334,7 +374,7 @@ HK International URL Validation
     Element Should Be Visible  ${EN_homepage_footer_international_singapore_link}
     Element Should Be Visible  ${EN_homepage_footer_international_indonesia_link}
     Element Should Be Visible  ${EN_homepage_footer_international_philippines_link}
-    Element Should Not Be Visible  ${EN_homepage_footer_international_hong_kong_link}
+    # Element Should Not Be Visible  ${EN_homepage_footer_international_hong_kong_link}
     Element Should Be Visible  ${EN_homepage_footer_international_thailand_link}
     Element Should Be Visible  ${EN_homepage_footer_international_vietnam_link}
 

@@ -10,7 +10,7 @@ Resource  ../TestKeywords/TestKeywords-Coupon.robot
 Resource  ../TestKeywords/TestKeywords-SearchResult.robot
 
 #Setup/Tear Down
-Test Setup  TestCase Setup    ${browser}
+Test Setup  TestCase Setup
 Test Teardown  Close Browser
 
 *** Test Cases ***
@@ -34,15 +34,14 @@ Test Search For A Product In TH
     [tags]  test  case3
     Access iPrice Homepage  TH
     iPrice Header Courtesy Validation  TH
-    iPrice Header Logo Validation  TH
-    iPrice Header Search Bar Validation  TH
-    iPrice Header Coupons And Offer Validation  TH
+    iPrice Header Validation  TH
     iPrice Dismiss Sign Up Modal
-    iPrice Header Main Categories Validation  TH
+    iPrice Products Header Main Categories Validation  TH
     iPrice Search, Compare & Save Section Validation  TH
     iPrice Search, Compare & Save Section Electronic Gaming Validation  TH
     iPrice Search, Compare & Save Section Fashion Beauty Validation  TH
     iPrice Search, Compare & Save Section Coupons Offers Validation  TH
+    iPrice Homepage Recommended Products Validation  TH
     iPrice Homepage Footer Validation  TH
     iPrice Access Header Logo Link  TH
     iPrice Search For Something  TH  iphone 3gs
@@ -54,15 +53,14 @@ Test Search For A Brand In TH
     [tags]  test  case4
     Access iPrice Homepage  TH
     iPrice Header Courtesy Validation  TH
-    iPrice Header Logo Validation  TH
-    iPrice Header Search Bar Validation  TH
-    iPrice Header Coupons And Offer Validation  TH
+    iPrice Header Validation  TH
     iPrice Dismiss Sign Up Modal
-    iPrice Header Main Categories Validation  TH
+    iPrice Products Header Main Categories Validation  TH
     iPrice Search, Compare & Save Section Validation  TH
     iPrice Search, Compare & Save Section Electronic Gaming Validation  TH
     iPrice Search, Compare & Save Section Fashion Beauty Validation  TH
     iPrice Search, Compare & Save Section Coupons Offers Validation  TH
+    iPrice Homepage Recommended Products Validation  TH
     iPrice Homepage Footer Validation  TH
     iPrice Access Header Logo Link  TH
     iPrice Search And Select From Suggestion  TH  Apple

@@ -39,15 +39,14 @@ Test Search For A Product In MY
     [tags]  test  case3
     Access iPrice Homepage  MY
     iPrice Header Courtesy Validation  MY
-    iPrice Header Logo Validation  MY
-    iPrice Header Search Bar Validation  MY
-    iPrice Header Coupons And Offer Validation  MY
+    iPrice Header Validation    MY
     iPrice Dismiss Sign Up Modal
-    iPrice Header Main Categories Validation  MY
+    iPrice Products Header Main Categories Validation  MY
     iPrice Search, Compare & Save Section Validation  MY
     iPrice Search, Compare & Save Section Electronic Gaming Validation  MY
     iPrice Search, Compare & Save Section Fashion Beauty Validation  MY
     iPrice Search, Compare & Save Section Coupons Offers Validation  MY
+    iPrice Homepage Recommended Products Validation  MY
     iPrice Homepage Footer Validation  MY
     iPrice Access Header Logo Link  MY
     iPrice Search For Something  MY  iphone 3gs
@@ -59,15 +58,14 @@ Test Search For A Brand In MY
     [tags]  test  case4
     Access iPrice Homepage  MY
     iPrice Header Courtesy Validation  MY
-    iPrice Header Logo Validation  MY
-    iPrice Header Search Bar Validation  MY
-    iPrice Header Coupons And Offer Validation  MY
+    iPrice Header Validation  MY
     iPrice Dismiss Sign Up Modal
-    iPrice Header Main Categories Validation  MY
+    iPrice Products Header Main Categories Validationn  MY
     iPrice Search, Compare & Save Section Validation  MY
     iPrice Search, Compare & Save Section Electronic Gaming Validation  MY
     iPrice Search, Compare & Save Section Fashion Beauty Validation  MY
     iPrice Search, Compare & Save Section Coupons Offers Validation  MY
+    iPrice Homepage Recommended Products Validation  MY
     iPrice Homepage Footer Validation  MY
     iPrice Access Header Logo Link  MY
     iPrice Search And Select From Suggestion  MY  Apple

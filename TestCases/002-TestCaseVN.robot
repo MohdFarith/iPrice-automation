@@ -9,7 +9,7 @@ Resource  ../TestKeywords/TestKeywords-Homepage.robot
 Resource  ../TestKeywords/TestKeywords-SearchResult.robot
 
 #Setup/Tear Down
-Test Setup  TestCase Setup    ${browser}
+Test Setup  TestCase Setup
 Test Teardown  Close Browser
 
 *** Test Cases ***
@@ -33,15 +33,14 @@ Test Search For A Product In VN
     [tags]  test  case3
     Access iPrice Homepage  VN
     iPrice Header Courtesy Validation  VN
-    iPrice Header Logo Validation  VN
-    iPrice Header Search Bar Validation  VN
-    iPrice Header Coupons And Offer Validation  VN
+    iPrice Header Validation  VN
     iPrice Dismiss Sign Up Modal
-    iPrice Header Main Categories Validation  VN
+    iPrice Products Header Main Categories Validation  VN
     iPrice Search, Compare & Save Section Validation  VN
     iPrice Search, Compare & Save Section Electronic Gaming Validation  VN
     iPrice Search, Compare & Save Section Fashion Beauty Validation  VN
     iPrice Search, Compare & Save Section Coupons Offers Validation  VN
+    iPrice Homepage Recommended Products Validation  VN
     iPrice Homepage Footer Validation  VN
     iPrice Access Header Logo Link  VN
     iPrice Search For Something  VN  iphone 3gs
@@ -53,15 +52,14 @@ Test Search For A Brand In VN
     [tags]  test  case4
     Access iPrice Homepage  VN
     iPrice Header Courtesy Validation  VN
-    iPrice Header Logo Validation  VN
-    iPrice Header Search Bar Validation  VN
-    iPrice Header Coupons And Offer Validation  VN
+    iPrice Header Validation  VN
     iPrice Dismiss Sign Up Modal
-    iPrice Header Main Categories Validation  VN
+    iPrice Products Header Main Categories Validation  VN
     iPrice Search, Compare & Save Section Validation  VN
     iPrice Search, Compare & Save Section Electronic Gaming Validation  VN
     iPrice Search, Compare & Save Section Fashion Beauty Validation  VN
     iPrice Search, Compare & Save Section Coupons Offers Validation  VN
+    iPrice Homepage Recommended Products Validation  VN
     iPrice Homepage Footer Validation  VN
     iPrice Access Header Logo Link  VN
     iPrice Search And Select From Suggestion  MY  Apple

@@ -85,7 +85,7 @@ Run Chrome In Remote
     ${headlessValue}  Run Keyword If  "${headless}"=="Yes"  Set Variable  --headless
     ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
     Call Method  ${options}  add_argument  disable-infobars
-    Run Keyword If  "${headlessValue}"=="--headless"  Call Method  ${options}  add_argument--headless"
+    Run Keyword If  "${headlessValue}"=="--headless"  Call Method  ${options}  add_argument  ${headlessValue}
     Call Method  ${options}  add_argument  --disable-gpu
     ${options}  Call Method  ${options}  to_capabilities
     ${executor}  Evaluate  str("http://${remote_url}:4444/wd/hub")

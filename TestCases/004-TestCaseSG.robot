@@ -9,7 +9,7 @@ Resource  ../TestKeywords/TestKeywords-Homepage.robot
 Resource  ../TestKeywords/TestKeywords-SearchResult.robot
 
 #Setup/Tear Down
-Test Setup  TestCase Setup    ${browser}
+Test Setup  TestCase Setup
 Test Teardown  Close Browser
 
 *** Test Cases ***
@@ -33,15 +33,14 @@ Test Search For A Product In SG
     [tags]  test  case3
     Access iPrice Homepage  SG
     iPrice Header Courtesy Validation  SG
-    iPrice Header Logo Validation  SG
-    iPrice Header Search Bar Validation  SG
-    iPrice Header Coupons And Offer Validation  SG
+    iPrice Header Validation  SG
     iPrice Dismiss Sign Up Modal
-    iPrice Header Main Categories Validation  SG
+    iPrice Products Header Main Categories Validation  SG
     iPrice Search, Compare & Save Section Validation  SG
     iPrice Search, Compare & Save Section Electronic Gaming Validation  SG
     iPrice Search, Compare & Save Section Fashion Beauty Validation  SG
     iPrice Search, Compare & Save Section Coupons Offers Validation  SG
+    iPrice Homepage Recommended Products Validation  SG
     iPrice Homepage Footer Validation  SG
     iPrice Access Header Logo Link  SG
     iPrice Search For Something  SG  iphone 3gs
@@ -53,15 +52,14 @@ Test Search For A Brand In SG
     [tags]  test  case4
     Access iPrice Homepage  SG
     iPrice Header Courtesy Validation  SG
-    iPrice Header Logo Validation  SG
-    iPrice Header Search Bar Validation  SG
-    iPrice Header Coupons And Offer Validation  SG
+    iPrice Header Validation  SG
     iPrice Dismiss Sign Up Modal
-    iPrice Header Main Categories Validation  SG
+    iPrice Products Header Main Categories Validation  SG
     iPrice Search, Compare & Save Section Validation  SG
     iPrice Search, Compare & Save Section Electronic Gaming Validation  SG
     iPrice Search, Compare & Save Section Fashion Beauty Validation  SG
     iPrice Search, Compare & Save Section Coupons Offers Validation  SG
+    iPrice Homepage Recommended Products Validation  SG
     iPrice Homepage Footer Validation  SG
     iPrice Access Header Logo Link  SG
     iPrice Search And Select From Suggestion  SG  Apple
