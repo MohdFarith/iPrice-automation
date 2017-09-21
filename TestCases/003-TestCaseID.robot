@@ -41,14 +41,14 @@ Test Search For A Product In ID
     iPrice Header Courtesy Validation  ID
     iPrice Header Validation  ID
     iPrice Dismiss Sign Up Modal
-    iPrice Products Header Main Categories Validation  ID
-    iPrice Search, Compare & Save Section Validation  ID
-    iPrice Search, Compare & Save Section Electronic Gaming Validation  ID
-    iPrice Search, Compare & Save Section Fashion Beauty Validation  ID
-    iPrice Search, Compare & Save Section Coupons Offers Validation  ID
-    iPrice Homepage Recommended Products Validation  ID
-    iPrice Homepage Footer Validation  ID
-    iPrice Access Header Logo Link  ID
+    # iPrice Products Header Main Categories Validation  ID
+    # iPrice Search, Compare & Save Section Validation  ID
+    # iPrice Search, Compare & Save Section Electronic Gaming Validation  ID
+    # iPrice Search, Compare & Save Section Fashion Beauty Validation  ID
+    # iPrice Search, Compare & Save Section Coupons Offers Validation  ID
+    # iPrice Homepage Recommended Products Validation  ID
+    # iPrice Homepage Footer Validation  ID
+    # iPrice Access Header Logo Link  ID
     iPrice Search For Something  ID  iphone 3gs
     iPrice Header Courtesy Validation  ID
     iPrice Product Search Result Page Validation  ID  iphone 3gs
@@ -60,14 +60,14 @@ Test Search For A Brand In ID
     iPrice Header Courtesy Validation  ID
     iPrice Header Validation  ID
     iPrice Dismiss Sign Up Modal
-    iPrice Products Header Main Categories Validation  ID
-    iPrice Search, Compare & Save Section Validation  ID
-    iPrice Search, Compare & Save Section Electronic Gaming Validation  ID
-    iPrice Search, Compare & Save Section Fashion Beauty Validation  ID
-    iPrice Search, Compare & Save Section Coupons Offers Validation  ID
-    iPrice Homepage Recommended Products Validation  ID
-    iPrice Homepage Footer Validation  ID
-    iPrice Access Header Logo Link  ID
+    # iPrice Products Header Main Categories Validation  ID
+    # iPrice Search, Compare & Save Section Validation  ID
+    # iPrice Search, Compare & Save Section Electronic Gaming Validation  ID
+    # iPrice Search, Compare & Save Section Fashion Beauty Validation  ID
+    # iPrice Search, Compare & Save Section Coupons Offers Validation  ID
+    # iPrice Homepage Recommended Products Validation  ID
+    # iPrice Homepage Footer Validation  ID
+    # iPrice Access Header Logo Link  ID
     iPrice Search And Select From Suggestion  ID  Apple
     iPrice Header Courtesy Validation  ID
     iPrice Brand Search Result Page Validation  ID  Apple

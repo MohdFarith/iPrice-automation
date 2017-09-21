@@ -35,14 +35,14 @@ Test Search For A Product In HK
     iPrice Header Courtesy Validation  HK
     iPrice Header Validation  HK
     iPrice Dismiss Sign Up Modal
-    iPrice Products Header Main Categories Validation  HK
-    iPrice Search, Compare & Save Section Validation  HK
-    iPrice Search, Compare & Save Section Electronic Gaming Validation  HK
-    iPrice Search, Compare & Save Section Fashion Beauty Validation  HK
-    iPrice Search, Compare & Save Section Coupons Offers Validation  HK
-    iPrice Homepage Recommended Products Validation  HK
-    iPrice Homepage Footer Validation  HK
-    iPrice Access Header Logo Link  HK
+    # iPrice Products Header Main Categories Validation  HK
+    # iPrice Search, Compare & Save Section Validation  HK
+    # iPrice Search, Compare & Save Section Electronic Gaming Validation  HK
+    # iPrice Search, Compare & Save Section Fashion Beauty Validation  HK
+    # iPrice Search, Compare & Save Section Coupons Offers Validation  HK
+    # iPrice Homepage Recommended Products Validation  HK
+    # iPrice Homepage Footer Validation  HK
+    # iPrice Access Header Logo Link  HK
     iPrice Search For Something  HK  iphone 3gs
     iPrice Header Courtesy Validation  HK
     iPrice Product Search Result Page Validation  HK  iphone 3gs
@@ -54,14 +54,14 @@ Test Search For A Brand In HK
     iPrice Header Courtesy Validation  HK
     iPrice Header Validation  HK
     iPrice Dismiss Sign Up Modal
-    iPrice Products Header Main Categories Validation  HK
-    iPrice Search, Compare & Save Section Validation  HK
-    iPrice Search, Compare & Save Section Electronic Gaming Validation  HK
-    iPrice Search, Compare & Save Section Fashion Beauty Validation  HK
-    iPrice Search, Compare & Save Section Coupons Offers Validation  HK
-    iPrice Homepage Recommended Products Validation  HK
-    iPrice Homepage Footer Validation  HK
-    iPrice Access Header Logo Link  HK
+    # iPrice Products Header Main Categories Validation  HK
+    # iPrice Search, Compare & Save Section Validation  HK
+    # iPrice Search, Compare & Save Section Electronic Gaming Validation  HK
+    # iPrice Search, Compare & Save Section Fashion Beauty Validation  HK
+    # iPrice Search, Compare & Save Section Coupons Offers Validation  HK
+    # iPrice Homepage Recommended Products Validation  HK
+    # iPrice Homepage Footer Validation  HK
+    # iPrice Access Header Logo Link  HK
     iPrice Search And Select From Suggestion  HK  Apple
     iPrice Header Courtesy Validation  HK
     iPrice Brand Search Result Page Validation  HK  Apple

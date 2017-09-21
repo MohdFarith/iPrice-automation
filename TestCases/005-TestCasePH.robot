@@ -35,14 +35,14 @@ Test Search For A Product In PH
     iPrice Header Courtesy Validation  PH
     iPrice Header Validation  PH
     iPrice Dismiss Sign Up Modal
-    iPrice Products Header Main Categories Validation  PH
-    iPrice Search, Compare & Save Section Validation  PH
-    iPrice Search, Compare & Save Section Electronic Gaming Validation  PH
-    iPrice Search, Compare & Save Section Fashion Beauty Validation  PH
-    iPrice Search, Compare & Save Section Coupons Offers Validation  PH
-    iPrice Homepage Recommended Products Validation  PH
-    iPrice Homepage Footer Validation  PH
-    iPrice Access Header Logo Link  PH
+    # iPrice Products Header Main Categories Validation  PH
+    # iPrice Search, Compare & Save Section Validation  PH
+    # iPrice Search, Compare & Save Section Electronic Gaming Validation  PH
+    # iPrice Search, Compare & Save Section Fashion Beauty Validation  PH
+    # iPrice Search, Compare & Save Section Coupons Offers Validation  PH
+    # iPrice Homepage Recommended Products Validation  PH
+    # iPrice Homepage Footer Validation  PH
+    # iPrice Access Header Logo Link  PH
     iPrice Search For Something  PH  iphone 3gs
     iPrice Header Courtesy Validation  PH
     iPrice Product Search Result Page Validation  PH  iphone 3gs
@@ -54,14 +54,14 @@ Test Search For A Brand In PH
     iPrice Header Courtesy Validation  PH
     iPrice Header Validation  PH
     iPrice Dismiss Sign Up Modal
-    iPrice Products Header Main Categories Validation  PH
-    iPrice Search, Compare & Save Section Validation  PH
-    iPrice Search, Compare & Save Section Electronic Gaming Validation  PH
-    iPrice Search, Compare & Save Section Fashion Beauty Validation  PH
-    iPrice Search, Compare & Save Section Coupons Offers Validation  PH
-    iPrice Homepage Recommended Products Validation  PH
-    iPrice Homepage Footer Validation  PH
-    iPrice Access Header Logo Link  PH
+    # iPrice Products Header Main Categories Validation  PH
+    # iPrice Search, Compare & Save Section Validation  PH
+    # iPrice Search, Compare & Save Section Electronic Gaming Validation  PH
+    # iPrice Search, Compare & Save Section Fashion Beauty Validation  PH
+    # iPrice Search, Compare & Save Section Coupons Offers Validation  PH
+    # iPrice Homepage Recommended Products Validation  PH
+    # iPrice Homepage Footer Validation  PH
+    # iPrice Access Header Logo Link  PH
     iPrice Search And Select From Suggestion  PH  Apple
     iPrice Header Courtesy Validation  PH
     iPrice Brand Search Result Page Validation  PH  Apple

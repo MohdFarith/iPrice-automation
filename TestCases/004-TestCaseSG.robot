@@ -35,14 +35,14 @@ Test Search For A Product In SG
     iPrice Header Courtesy Validation  SG
     iPrice Header Validation  SG
     iPrice Dismiss Sign Up Modal
-    iPrice Products Header Main Categories Validation  SG
-    iPrice Search, Compare & Save Section Validation  SG
-    iPrice Search, Compare & Save Section Electronic Gaming Validation  SG
-    iPrice Search, Compare & Save Section Fashion Beauty Validation  SG
-    iPrice Search, Compare & Save Section Coupons Offers Validation  SG
-    iPrice Homepage Recommended Products Validation  SG
-    iPrice Homepage Footer Validation  SG
-    iPrice Access Header Logo Link  SG
+    # iPrice Products Header Main Categories Validation  SG
+    # iPrice Search, Compare & Save Section Validation  SG
+    # iPrice Search, Compare & Save Section Electronic Gaming Validation  SG
+    # iPrice Search, Compare & Save Section Fashion Beauty Validation  SG
+    # iPrice Search, Compare & Save Section Coupons Offers Validation  SG
+    # iPrice Homepage Recommended Products Validation  SG
+    # iPrice Homepage Footer Validation  SG
+    # iPrice Access Header Logo Link  SG
     iPrice Search For Something  SG  iphone 3gs
     iPrice Header Courtesy Validation  SG
     iPrice Product Search Result Page Validation  SG  iphone 3gs
@@ -54,14 +54,14 @@ Test Search For A Brand In SG
     iPrice Header Courtesy Validation  SG
     iPrice Header Validation  SG
     iPrice Dismiss Sign Up Modal
-    iPrice Products Header Main Categories Validation  SG
-    iPrice Search, Compare & Save Section Validation  SG
-    iPrice Search, Compare & Save Section Electronic Gaming Validation  SG
-    iPrice Search, Compare & Save Section Fashion Beauty Validation  SG
-    iPrice Search, Compare & Save Section Coupons Offers Validation  SG
-    iPrice Homepage Recommended Products Validation  SG
-    iPrice Homepage Footer Validation  SG
-    iPrice Access Header Logo Link  SG
+    # iPrice Products Header Main Categories Validation  SG
+    # iPrice Search, Compare & Save Section Validation  SG
+    # iPrice Search, Compare & Save Section Electronic Gaming Validation  SG
+    # iPrice Search, Compare & Save Section Fashion Beauty Validation  SG
+    # iPrice Search, Compare & Save Section Coupons Offers Validation  SG
+    # iPrice Homepage Recommended Products Validation  SG
+    # iPrice Homepage Footer Validation  SG
+    # iPrice Access Header Logo Link  SG
     iPrice Search And Select From Suggestion  SG  Apple
     iPrice Header Courtesy Validation  SG
     iPrice Brand Search Result Page Validation  SG  Apple

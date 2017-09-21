@@ -27,6 +27,7 @@ TestCase Setup
     ...  ELSE IF  "${browser}"=="safari"  Setup Safari Browser
     ...  ELSE IF  "${browser}"=="chromemobile"  Setup Chrome Mobile Browser
     ...  ELSE IF  "${browser}"=="chrome"  Setup Chrome Browser
+    ...  ELSE IF  "${browser}"=="edge"  Setup Edge Browser
     # Maximize Browser Window
     Set Window Size  1366  768
 
@@ -90,3 +91,7 @@ Run Chrome In Remote
     ${options}  Call Method  ${options}  to_capabilities
     ${executor}  Evaluate  str("http://${remote_url}:4444/wd/hub")
     Create Webdriver  Remote  command_executor=${executor}  desired_capabilities=${options}
+
+Setup Edge Browser
+    Run Keyword If  "${remote_url}"=="None"  Open Browser  ${baseURL}  edge
+    ...  ELSE  Open Browser  ${baseURL}  edge  remote_url=http://${remote_url}:4444/wd/hub

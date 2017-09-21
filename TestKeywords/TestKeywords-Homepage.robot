@@ -476,5 +476,5 @@ iPrice Search And Select From Suggestion  [Arguments]  ${country}  ${searchValue
     ...  ELSE IF  "${country}"=="HK"  Input Text  ${HK_header_search_input}  ${searchValue}
     ...  ELSE IF  "${country}"=="TH"  Input Text  ${TH_header_search_input}  ${searchValue}
     Sleep  2
-    Wait Until Element Is Visible  //div[@id='search-suggestions']//li[text()='${searchValue}']  timeout=30
-    Click Element  //div[@id='search-suggestions']//li[text()='${searchValue}']
+    Wait Until Element Is Visible  //div[@id='search-suggestions']//span[text()='${searchValue}']  timeout=30
+    Click Element  //div[@id='search-suggestions']//span[text()='${searchValue}']

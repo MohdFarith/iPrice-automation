@@ -35,14 +35,14 @@ Test Search For A Product In VN
     iPrice Header Courtesy Validation  VN
     iPrice Header Validation  VN
     iPrice Dismiss Sign Up Modal
-    iPrice Products Header Main Categories Validation  VN
-    iPrice Search, Compare & Save Section Validation  VN
-    iPrice Search, Compare & Save Section Electronic Gaming Validation  VN
-    iPrice Search, Compare & Save Section Fashion Beauty Validation  VN
-    iPrice Search, Compare & Save Section Coupons Offers Validation  VN
-    iPrice Homepage Recommended Products Validation  VN
-    iPrice Homepage Footer Validation  VN
-    iPrice Access Header Logo Link  VN
+    # iPrice Products Header Main Categories Validation  VN
+    # iPrice Search, Compare & Save Section Validation  VN
+    # iPrice Search, Compare & Save Section Electronic Gaming Validation  VN
+    # iPrice Search, Compare & Save Section Fashion Beauty Validation  VN
+    # iPrice Search, Compare & Save Section Coupons Offers Validation  VN
+    # iPrice Homepage Recommended Products Validation  VN
+    # iPrice Homepage Footer Validation  VN
+    # iPrice Access Header Logo Link  VN
     iPrice Search For Something  VN  iphone 3gs
     iPrice Header Courtesy Validation  VN
     iPrice Product Search Result Page Validation  VN  iphone 3gs
@@ -54,14 +54,14 @@ Test Search For A Brand In VN
     iPrice Header Courtesy Validation  VN
     iPrice Header Validation  VN
     iPrice Dismiss Sign Up Modal
-    iPrice Products Header Main Categories Validation  VN
-    iPrice Search, Compare & Save Section Validation  VN
-    iPrice Search, Compare & Save Section Electronic Gaming Validation  VN
-    iPrice Search, Compare & Save Section Fashion Beauty Validation  VN
-    iPrice Search, Compare & Save Section Coupons Offers Validation  VN
-    iPrice Homepage Recommended Products Validation  VN
-    iPrice Homepage Footer Validation  VN
-    iPrice Access Header Logo Link  VN
+    # iPrice Products Header Main Categories Validation  VN
+    # iPrice Search, Compare & Save Section Validation  VN
+    # iPrice Search, Compare & Save Section Electronic Gaming Validation  VN
+    # iPrice Search, Compare & Save Section Fashion Beauty Validation  VN
+    # iPrice Search, Compare & Save Section Coupons Offers Validation  VN
+    # iPrice Homepage Recommended Products Validation  VN
+    # iPrice Homepage Footer Validation  VN
+    # iPrice Access Header Logo Link  VN
     iPrice Search And Select From Suggestion  MY  Apple
     iPrice Header Courtesy Validation  MY
     iPrice Brand Search Result Page Validation  MY  Apple

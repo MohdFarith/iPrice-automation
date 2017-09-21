@@ -35,15 +35,15 @@ Test Search For A Product In TH
     Access iPrice Homepage  TH
     iPrice Header Courtesy Validation  TH
     iPrice Header Validation  TH
-    iPrice Dismiss Sign Up Modal
-    iPrice Products Header Main Categories Validation  TH
-    iPrice Search, Compare & Save Section Validation  TH
-    iPrice Search, Compare & Save Section Electronic Gaming Validation  TH
-    iPrice Search, Compare & Save Section Fashion Beauty Validation  TH
-    iPrice Search, Compare & Save Section Coupons Offers Validation  TH
-    iPrice Homepage Recommended Products Validation  TH
-    iPrice Homepage Footer Validation  TH
-    iPrice Access Header Logo Link  TH
+    # iPrice Dismiss Sign Up Modal
+    # iPrice Products Header Main Categories Validation  TH
+    # iPrice Search, Compare & Save Section Validation  TH
+    # iPrice Search, Compare & Save Section Electronic Gaming Validation  TH
+    # iPrice Search, Compare & Save Section Fashion Beauty Validation  TH
+    # iPrice Search, Compare & Save Section Coupons Offers Validation  TH
+    # iPrice Homepage Recommended Products Validation  TH
+    # iPrice Homepage Footer Validation  TH
+    # iPrice Access Header Logo Link  TH
     iPrice Search For Something  TH  iphone 3gs
     iPrice Header Courtesy Validation  TH
     iPrice Product Search Result Page Validation  TH  iphone 3gs
@@ -55,13 +55,13 @@ Test Search For A Brand In TH
     iPrice Header Courtesy Validation  TH
     iPrice Header Validation  TH
     iPrice Dismiss Sign Up Modal
-    iPrice Products Header Main Categories Validation  TH
-    iPrice Search, Compare & Save Section Validation  TH
-    iPrice Search, Compare & Save Section Electronic Gaming Validation  TH
-    iPrice Search, Compare & Save Section Fashion Beauty Validation  TH
-    iPrice Search, Compare & Save Section Coupons Offers Validation  TH
-    iPrice Homepage Recommended Products Validation  TH
-    iPrice Homepage Footer Validation  TH
+    # iPrice Products Header Main Categories Validation  TH
+    # iPrice Search, Compare & Save Section Validation  TH
+    # iPrice Search, Compare & Save Section Electronic Gaming Validation  TH
+    # iPrice Search, Compare & Save Section Fashion Beauty Validation  TH
+    # iPrice Search, Compare & Save Section Coupons Offers Validation  TH
+    # iPrice Homepage Recommended Products Validation  TH
+    # iPrice Homepage Footer Validation  TH
     iPrice Access Header Logo Link  TH
     iPrice Search And Select From Suggestion  TH  Apple
     iPrice Header Courtesy Validation  TH
