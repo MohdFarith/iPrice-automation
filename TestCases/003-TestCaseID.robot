@@ -27,8 +27,6 @@ Test SEO Check Homepage In ID
     Get All Available Links
     SEO Check Internal Link  ID
     SEO Check Images ALT  6
-    iPrice Homepage Access Coupons Link  ID
-    iPrice Coupon Page Validation  ID
 
 Test COOD ID
     [tags]  test  cood

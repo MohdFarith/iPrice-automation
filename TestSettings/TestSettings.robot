@@ -25,8 +25,8 @@ TestCase Setup
     Run Keyword If  "${browser}"=="firefox"  Setup Firefox Browser
     ...  ELSE IF  "${browser}"=="ie"  Setup IE Browser
     ...  ELSE IF  "${browser}"=="safari"  Setup Safari Browser
-    ...  ELSE IF  "${browser}"=="chromemobile"  Setup Chrome Mobile Browser
     ...  ELSE IF  "${browser}"=="chrome"  Setup Chrome Browser
+    ...  ELSE IF  "${browser}"=="chromemobile"  Setup Chrome Mobile Browser
     ...  ELSE IF  "${browser}"=="edge"  Setup Edge Browser
     # Maximize Browser Window
     Set Window Size  1366  768
@@ -79,7 +79,7 @@ Run Chrome In Local
     Call Method  ${options}  add_argument  disable-infobars
     Run Keyword If  "${headlessValue}"=="--headless"  Call Method  ${options}  add_argument  ${headlessValue}
     Call Method  ${options}  add_argument  --disable-gpu
-    ${options}  Call Method  ${options}  to_capabilities
+    # ${options}  Call Method  ${options}  to_capabilities
     Create WebDriver  Chrome  chrome_options=${options}
 
 Run Chrome In Remote

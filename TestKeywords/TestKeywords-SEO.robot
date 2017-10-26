@@ -31,6 +31,8 @@ Get All Available Links
     Set Suite Variable  ${filter_link1_count}
     ${filter_link2_count}  Get Length  ${filter_link2}
     Set Suite Variable  ${filter_link2_count}
+    Log  ${filter_link1}
+    Log  ${filter_link2}
 
 Check All Links Response  [Arguments]  ${country}
     :FOR  ${INDEX}  IN RANGE  0  ${filter_link1_count}
@@ -57,18 +59,18 @@ Check Redirection URL  [Arguments]  ${country}
     \  ...  ELSE IF  "${country}"=="PH"  Replace String  ${link}  ${PH_homeURL}  ${empty}
     \  ...  ELSE IF  "${country}"=="HK"  Replace String  ${link}  ${HK_homeURL}  ${empty}
     \  ...  ELSE IF  "${country}"=="TH"  Replace String  ${link}  ${TH_homeURL}  ${empty}
-    \  ${link3}  Replace String  ${link2}  ${space}  ${empty}
-    \  ${link4}  Replace String  ${link3}  %3Fnocache%3D1  ${empty}
-    \  ${link5}  Replace String  ${link4}  ${space}  ${empty}
-    \  ${resp}  RequestsLibrary.Get Request  iprice  ${link5}  allow_redirects=True
+    \  ${link2}  Replace String  ${link}  ${space}  ${empty}
+    \  ${link3}  Replace String  ${link2}  %3Fnocache%3D1  ${empty}
+    \  ${link4}  Replace String  ${link3}  ${space}  ${empty}
+    \  ${resp}  RequestsLibrary.Get Request  iprice  ${link4}  allow_redirects=True
     \  ${status}  Run Keyword And Return Status  Should Be Equal As Strings  ${resp.status_code}  200
-    \  Run Keyword If  "${status}"=="False" and "${country}"=="MY"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.my/${link5} failed and not return 200.
-    \  ...  ELSE IF  "${status}"=="False" and "${country}"=="VN"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.vn/${link5} failed and not return 200.
-    \  ...  ELSE IF  "${status}"=="False" and "${country}"=="ID"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.co.id/${link5} failed and not return 200.
-    \  ...  ELSE IF  "${status}"=="False" and "${country}"=="SG"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.sg/${link5} failed and not return 200.
-    \  ...  ELSE IF  "${status}"=="False" and "${country}"=="PH"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.ph/${link5} failed and not return 200.
-    \  ...  ELSE IF  "${status}"=="False" and "${country}"=="HK"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.hk/${link5} failed and not return 200.
-    \  ...  ELSE IF  "${status}"=="False" and "${country}"=="TH"  Run Keyword And Continue On Failure  Fail  Request to https://ipricethailand.com/${link5} failed and not return 200.
+    \  Run Keyword If  "${status}"=="False" and "${country}"=="MY"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.my/${link4} failed and not return 200.
+    \  ...  ELSE IF  "${status}"=="False" and "${country}"=="VN"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.vn/${link4} failed and not return 200.
+    \  ...  ELSE IF  "${status}"=="False" and "${country}"=="ID"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.co.id/${link4} failed and not return 200.
+    \  ...  ELSE IF  "${status}"=="False" and "${country}"=="SG"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.sg/${link4} failed and not return 200.
+    \  ...  ELSE IF  "${status}"=="False" and "${country}"=="PH"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.ph/${link4} failed and not return 200.
+    \  ...  ELSE IF  "${status}"=="False" and "${country}"=="HK"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.hk/${link4} failed and not return 200.
+    \  ...  ELSE IF  "${status}"=="False" and "${country}"=="TH"  Run Keyword And Continue On Failure  Fail  Request to https://ipricethailand.com/${link4} failed and not return 200.
     \  Delete All Sessions
 
 SEO Check Internal Link  [Arguments]  ${country}
