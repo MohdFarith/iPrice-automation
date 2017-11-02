@@ -8,6 +8,7 @@ Library  String
 Library  RequestsLibrary
 # Library  XvfbRobot
 Library  DateTime
+Library  XML
 
 *** Variables ***
 
