@@ -13,57 +13,73 @@ Open Excel File  [Arguments]  ${filename}
     Open Excel  ${filename}
     Sleep  1
 
-Get URL From Excel File  [Arguments]  ${country}
-    ${url_list}  Create List
-    Set Suite Variable  ${url_list}
-    Run Keyword If  "${country}"=="id"  Get URL For ID
-    ...  ELSE IF  "${country}"=="my"  Get URL For MY
-    ...  ELSE IF  "${country}"=="ph"  Get URL For PH
-    Log  ${url_list}
+Get URL From Excel File
+    ${rowCount}  Get Row Count  Sheet1
+    @{IDlink}  Create List
+    @{MYlink}  Create List
+    @{PHlink}  Create List
+    :For  ${INDEX}  IN RANGE  1  ${rowCount}
+    \  ${rowValue}  Get Row Values  Sheet1  ${index}
+    \  ${rowLink}  Get From List  ${rowValue}  0
+    \  ${rowLinkValue}  Get From List  ${rowLink}  1
+    \  ${status1}  Run Keyword And Return Status  Should Start With  ${rowLinkValue}  https://iprice.co.id
+    \  ${status2}  Run Keyword And Return Status  Should Start With  ${rowLinkValue}  https://iprice.my
+    \  ${status3}  Run Keyword And Return Status  Should Start With  ${rowLinkValue}  https://iprice.ph
+    \  Run Keyword If  "${status1}" == "True"  Get URL For ID  ${rowLinkValue}  ${IDlink}
+    \  ...  ELSE IF  "${status2}" == "True"  Get URL For MY  ${rowLinkValue}  ${MYlink}
+    \  ...  ELSE IF  "${status3}" == "True"  Get URL For PH  ${rowLinkValue}  ${PHlink}
+    Set Suite Variable  ${IDlink}
+    Set Suite Variable  ${MYlink}
+    Set Suite Variable  ${PHlink}
 
-Get URL For ID
-    :For  ${index}  In Range  2  404
-    \  ${url1}  Read Cell Data By Name  Sheet1  A${index}
-    \  ${url2}  Split String  ${url1}  /
-    \  ${url3}  Get From List  ${url2}  -2
-    \  Append to List  ${url_list}  ${url3}
+Get URL For ID  [Arguments]  ${rowLinkValue}  ${IDlink}
+    ${url}  Split String  ${rowLinkValue}  /
+    ${shortURL}  Get From List  ${url}  -2
+    Append To List  ${IDlink}  ${shortURL}
 
-Get URL For MY
-    :For  ${index}  In Range  404  738
-    \  ${url1}  Read Cell Data By Name  Sheet1  A${index}
-    \  ${url2}  Split String  ${url1}  /
-    \  ${url3}  Get From List  ${url2}  -2
-    \  Append to List  ${url_list}  ${url3}
+Get URL For MY  [Arguments]  ${rowLinkValue}  ${MYlink}
+    ${url}  Split String  ${rowLinkValue}  /
+    ${shortURL}  Get From List  ${url}  -2
+    Append To List  ${MYlink}  ${shortURL}
 
-Get URL For PH
-    :For  ${index}  In Range  738  999
-    \  ${url1}  Read Cell Data By Name  Sheet1  A${index}
-    \  ${url2}  Split String  ${url1}  /
-    \  ${url3}  Get From List  ${url2}  -2
-    \  Append to List  ${url_list}  ${url3}
+Get URL For PH  [Arguments]  ${rowLinkValue}  ${PHlink}
+    ${url}  Split String  ${rowLinkValue}  /
+    ${shortURL}  Get From List  ${url}  -2
+    Append To List  ${PHlink}  ${shortURL}
 
-Get SKU From Excel File  [Arguments]  ${country}
-    ${sku_list}  Create List
-    Set Suite Variable  ${sku_list}
-    Run Keyword If  "${country}"=="id"  Get SKU For ID
-    ...  ELSE IF  "${country}"=="my"  Get SKU For MY
-    ...  ELSE IF  "${country}"=="ph"  Get SKU For PH
-    Log  ${sku_list}
+Get SKU From Excel File
+    ${rowCount}  Get Row Count  Sheet1
+    @{IDSKU}  Create List
+    @{MYSKU}  Create List
+    @{PHSKU}  Create List
+    :For  ${INDEX}  IN RANGE  1  ${rowCount}
+    \  ${rowValue}  Get Row Values  Sheet1  ${index}
+    \  ${rowLink}  Get From List  ${rowValue}  0
+    \  ${rowLinkValue}  Get From List  ${rowLink}  1
+    \  ${status1}  Run Keyword And Return Status  Should Start With  ${rowLinkValue}  https://iprice.co.id
+    \  ${status2}  Run Keyword And Return Status  Should Start With  ${rowLinkValue}  https://iprice.my
+    \  ${status3}  Run Keyword And Return Status  Should Start With  ${rowLinkValue}  https://iprice.ph
+    \  Run Keyword If  "${status1}" == "True"  Get SKU For ID  ${rowValue}  ${IDSKU}
+    \  ...  ELSE IF  "${status2}" == "True"  Get SKU For MY  ${rowValue}  ${MYSKU}
+    \  ...  ELSE IF  "${status3}" == "True"  Get SKU For PH  ${rowValue}  ${PHSKU}
+    Set Suite Variable  ${IDSKU}
+    Set Suite Variable  ${MYSKU}
+    Set Suite Variable  ${PHSKU}
 
-Get SKU For ID
-    :For  ${index}  In Range  2  404
-    \  ${sku}  Read Cell Data By Name  Sheet1  C${index}
-    \  Append to List  ${sku_list}  ${sku}
+Get SKU For ID  [Arguments]  ${rowValue}  ${IDSKU}
+    ${rowSKU}  Get From List  ${rowValue}  2
+    ${rowSKUValue}  Get From List  ${rowSKU}  1
+    Append To List  ${IDSKU}  ${rowSKUValue}
 
-Get SKU For MY
-    :For  ${index}  In Range  404  738
-    \  ${sku}  Read Cell Data By Name  Sheet1  C${index}
-    \  Append to List  ${sku_list}  ${sku}
+Get SKU For MY  [Arguments]  ${rowValue}  ${MYSKU}
+    ${rowSKU}  Get From List  ${rowValue}  2
+    ${rowSKUValue}  Get From List  ${rowSKU}  1
+    Append To List  ${MYSKU}  ${rowSKUValue}
 
-Get SKU For PH
-    :For  ${index}  In Range  738  999
-    \  ${sku}  Read Cell Data By Name  Sheet1  C${index}
-    \  Append to List  ${sku_list}  ${sku}
+Get SKU For PH  [Arguments]  ${rowValue}  ${PHSKU}
+    ${rowSKU}  Get From List  ${rowValue}  2
+    ${rowSKUValue}  Get From List  ${rowSKU}  1
+    Append To List  ${PHSKU}  ${rowSKUValue}
 
 Create New Request Session  [Arguments]  ${sessionName}  ${url}  ${keyName}  ${keyValue}
     ${header}  Create Dictionary  ${keyName}  ${keyValue}
@@ -73,11 +89,21 @@ Delete All Request Session
     Delete All Sessions
 
 Get Expert Rating Response  [Arguments]  ${get_type}  ${country}
-    ${list_length}  Run Keyword If  "${get_type}"=="url"  Get Length  ${url_list}
-    ...  ELSE IF  "${get_type}"=="sku"  Get Length  ${sku_list}
+    # ${list_length}  Run Keyword If  "${get_type}"=="url"  Get Length  ${url_list}
+    # ...  ELSE IF  "${get_type}"=="sku"  Get Length  ${sku_list}
+    ${list_length}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get Length  ${IDlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get Length  ${MYlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get Length  ${PHlink}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get Length  ${IDSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get Length  ${MYSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get Length  ${PHSKU}
     :For  ${index}  In Range  0  ${list_length}
-    \  ${list_value}  Run Keyword If  "${get_type}"=="url"  Get From List  ${url_list}  ${index}
-    \  ...  ELSE IF  "${get_type}"=="sku"  Get From List  ${sku_list}  ${index}
+    \  ${list_value}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get From List  ${IDlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get From List  ${MYlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get From List  ${PHlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get From List  ${IDSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get From List  ${MYSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get From List  ${PHSKU}  ${INDEX}
     \  ${resp}  Run Keyword If  "${get_type}"=="url"  Get Request  iprice  /v1/expert-rating?product_url=${list_value}&cc=${country}
     \  ...  ELSE IF  "${get_type}"=="sku"  Get Request  iprice  /v1/expert-rating?product_id=${list_value}&cc=${country}
     \  Run Keyword If  "${resp.status_code}"=="404"  Expert Rating Response 404 Error  ${list_value}
@@ -121,11 +147,19 @@ Retry Expert Rating Response Without Identifier  [Arguments]  ${country}
     \  Run Keyword If  "${resp.status_code}"=="400"  Exit For Loop
 
 Get Expert Rating Response Without Country  [Arguments]  ${get_type}  ${country}
-    ${list_length}  Run Keyword If  "${get_type}"=="url"  Get Length  ${url_list}
-    ...  ELSE IF  "${get_type}"=="sku"  Get Length  ${sku_list}
+    ${list_length}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get Length  ${IDlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get Length  ${MYlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get Length  ${PHlink}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get Length  ${IDSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get Length  ${MYSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get Length  ${PHSKU}
     :For  ${index}  In Range  0  ${list_length}
-    \  ${list_value}  Run Keyword If  "${get_type}"=="url"  Get From List  ${url_list}  ${index}
-    \  ...  ELSE IF  "${get_type}"=="sku"  Get From List  ${sku_list}  ${index}
+    \  ${list_value}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get From List  ${IDlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get From List  ${MYlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get From List  ${PHlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get From List  ${IDSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get From List  ${MYSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get From List  ${PHSKU}  ${INDEX}
     \  ${resp}  Run Keyword If  "${get_type}"=="url"  Get Request  iprice  /v1/expert-rating?product_url=${list_value}
     \  ...  ELSE IF  "${get_type}"=="sku"  Get Request  iprice  /v1/expert-rating?product_id=${list_value}
     \  Run Keyword If  "${resp.status_code}"=="400"  Correct Expert Rating Response Without Country  ${resp}
@@ -144,11 +178,19 @@ Retry Expert Rating Response Without Country  [Arguments]  ${list_value}  ${get_
     \  Run Keyword If  "${resp.status_code}"=="400"  Exit For Loop
 
 Get Expert Reviews Response  [Arguments]  ${get_type}  ${country}
-    ${list_length}  Run Keyword If  "${get_type}"=="url"  Get Length  ${url_list}
-    ...  ELSE IF  "${get_type}"=="sku"  Get Length  ${sku_list}
+    ${list_length}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get Length  ${IDlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get Length  ${MYlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get Length  ${PHlink}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get Length  ${IDSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get Length  ${MYSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get Length  ${PHSKU}
     :For  ${index}  In Range  0  ${list_length}
-    \  ${list_value}  Run Keyword If  "${get_type}"=="url"  Get From List  ${url_list}  ${index}
-    \  ...  ELSE IF  "${get_type}"=="sku"  Get From List  ${sku_list}  ${index}
+    \  ${list_value}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get From List  ${IDlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get From List  ${MYlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get From List  ${PHlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get From List  ${IDSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get From List  ${MYSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get From List  ${PHSKU}  ${INDEX}
     \  ${resp}  Run Keyword If  "${get_type}"=="url"  Get Request  iprice  /v1/expert-reviews?product_url=${list_value}&cc=${country}
     \  ...  ELSE IF  "${get_type}"=="sku"  Get Request  iprice  /v1/expert-reviews?product_id=${list_value}&cc=${country}
     \  Run Keyword If  "${resp.status_code}"=="404"  Expert Reviews Response 404 Error  ${list_value}  ${resp}
@@ -180,11 +222,19 @@ Expert Reviews Response 200  [Arguments]  ${resp}
     Run Keyword If  ${review}<0  Run Keyword And Continue On Failure  Fail  Rating not returned.
 
 Get Expert Reviews Response With Max Review  [Arguments]  ${get_type}  ${country}  ${maxReview}
-    ${list_length}  Run Keyword If  "${get_type}"=="url"  Get Length  ${url_list}
-    ...  ELSE IF  "${get_type}"=="sku"  Get Length  ${sku_list}
+    ${list_length}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get Length  ${IDlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get Length  ${MYlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get Length  ${PHlink}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get Length  ${IDSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get Length  ${MYSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get Length  ${PHSKU}
     :For  ${index}  In Range  0  ${list_length}
-    \  ${list_value}  Run Keyword If  "${get_type}"=="url"  Get From List  ${url_list}  ${index}
-    \  ...  ELSE IF  "${get_type}"=="sku"  Get From List  ${sku_list}  ${index}
+    \  ${list_value}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get From List  ${IDlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get From List  ${MYlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get From List  ${PHlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get From List  ${IDSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get From List  ${MYSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get From List  ${PHSKU}  ${INDEX}
     \  ${resp}  Run Keyword If  "${get_type}"=="url"  Get Request  iprice  /v1/expert-reviews?product_url=${list_value}&cc=${country}&max_reviews=${maxReview}
     \  ...  ELSE IF  "${get_type}"=="sku"  Get Request  iprice  /v1/expert-reviews?product_id=${list_value}&cc=${country}&max_reviews=${maxReview}
     \  Run Keyword If  "${resp.status_code}"=="404"  Expert Reviews With Max Review Response 404 Error  ${list_value}  ${resp}
@@ -217,11 +267,19 @@ Expert Reviews With Max Review Response 200  [Arguments]  ${resp}  ${maxReview}
     Run Keyword If  ${review}>${maxReview}  Run Keyword And Continue On Failure  Fail  Max review exceed expectation.
 
 Get Expert Reviews Response With Only Local  [Arguments]  ${get_type}  ${country}
-    ${list_length}  Run Keyword If  "${get_type}"=="url"  Get Length  ${url_list}
-    ...  ELSE IF  "${get_type}"=="sku"  Get Length  ${sku_list}
+    ${list_length}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get Length  ${IDlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get Length  ${MYlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get Length  ${PHlink}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get Length  ${IDSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get Length  ${MYSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get Length  ${PHSKU}
     :For  ${index}  In Range  0  ${list_length}
-    \  ${list_value}  Run Keyword If  "${get_type}"=="url"  Get From List  ${url_list}  ${index}
-    \  ...  ELSE IF  "${get_type}"=="sku"  Get From List  ${sku_list}  ${index}
+    \  ${list_value}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get From List  ${IDlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get From List  ${MYlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get From List  ${PHlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get From List  ${IDSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get From List  ${MYSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get From List  ${PHSKU}  ${INDEX}
     \  ${resp}  Run Keyword If  "${get_type}"=="url"  Get Request  iprice  /v1/expert-reviews?product_url=${list_value}&cc=${country}&only_local=true
     \  ...  ELSE IF  "${get_type}"=="sku"  Get Request  iprice  /v1/expert-reviews?product_id=${list_value}&cc=${country}&only_local=true
     \  Run Keyword If  "${resp.status_code}"=="404"  Expert Reviews With Only Local Response 404 Error  ${list_value}  ${resp}
@@ -255,11 +313,19 @@ Expert Reviews With Only Local Response 200  [Arguments]  ${resp}  ${country}
     \  Run Keyword If  "${locale}"!="${country}"  Run Keyword And Continue On Failure  Fail  Locale returned not local.
 
 Get Expert Reviews Response With Max Review And Local Only  [Arguments]  ${get_type}  ${country}  ${maxReview}
-    ${list_length}  Run Keyword If  "${get_type}"=="url"  Get Length  ${url_list}
-    ...  ELSE IF  "${get_type}"=="sku"  Get Length  ${sku_list}
+    ${list_length}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get Length  ${IDlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get Length  ${MYlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get Length  ${PHlink}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get Length  ${IDSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get Length  ${MYSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get Length  ${PHSKU}
     :For  ${index}  In Range  0  ${list_length}
-    \  ${list_value}  Run Keyword If  "${get_type}"=="url"  Get From List  ${url_list}  ${index}
-    \  ...  ELSE IF  "${get_type}"=="sku"  Get From List  ${sku_list}  ${index}
+    \  ${list_value}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get From List  ${IDlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get From List  ${MYlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get From List  ${PHlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get From List  ${IDSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get From List  ${MYSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get From List  ${PHSKU}  ${INDEX}
     \  ${resp}  Run Keyword If  "${get_type}"=="url"  Get Request  iprice  /v1/expert-reviews?product_url=${list_value}&cc=${country}&max_reviews=${maxReview}&only_local=true
     \  ...  ELSE IF  "${get_type}"=="sku"  Get Request  iprice  /v1/expert-reviews?product_id=${list_value}&cc=${country}&max_reviews=${maxReview}&only_local=true
     \  Run Keyword If  "${resp.status_code}"=="404"  Expert Reviews With Max Review And Only Local Response 404 Error  ${list_value}  ${resp}
@@ -309,11 +375,19 @@ Retry Expert Reviews Response With Max Review And Local Only Without Identifier 
     \  Run Keyword If  "${resp.status_code}"=="400"  Exit For Loop
 
 Get Expert Reviews Response With Max Review And Local Only Without Country  [Arguments]  ${get_type}  ${country}  ${maxReview}
-    ${list_length}  Run Keyword If  "${get_type}"=="url"  Get Length  ${url_list}
-    ...  ELSE IF  "${get_type}"=="sku"  Get Length  ${sku_list}
+    ${list_length}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get Length  ${IDlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get Length  ${MYlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get Length  ${PHlink}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get Length  ${IDSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get Length  ${MYSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get Length  ${PHSKU}
     :For  ${index}  In Range  0  ${list_length}
-    \  ${list_value}  Run Keyword If  "${get_type}"=="url"  Get From List  ${url_list}  ${index}
-    \  ...  ELSE IF  "${get_type}"=="sku"  Get From List  ${sku_list}  ${index}
+    \  ${list_value}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get From List  ${IDlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get From List  ${MYlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get From List  ${PHlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get From List  ${IDSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get From List  ${MYSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get From List  ${PHSKU}  ${INDEX}
     \  ${resp}  Run Keyword If  "${get_type}"=="url"  Get Request  iprice  /v1/expert-rating?product_url=${list_value}&max_reviews=${maxReview}&only_local=true
     \  ...  ELSE IF  "${get_type}"=="sku"  Get Request  iprice  /v1/expert-rating?product_id=${list_value}&max_reviews=${maxReview}&only_local=true
     \  Run Keyword If  "${resp.status_code}"=="400"  Correct Expert Reviews Response With Max Review And Local Only Without Country  ${resp}
@@ -332,11 +406,19 @@ Retry Expert Reviews Response With Max Review And Local Only Without Country  [A
     \  Run Keyword If  "${resp.status_code}"=="400"  Exit For Loop
 
 Get Price List Response  [Arguments]  ${get_type}  ${country}
-    ${list_length}  Run Keyword If  "${get_type}"=="url"  Get Length  ${url_list}
-    ...  ELSE IF  "${get_type}"=="sku"  Get Length  ${sku_list}
+    ${list_length}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get Length  ${IDlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get Length  ${MYlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get Length  ${PHlink}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get Length  ${IDSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get Length  ${MYSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get Length  ${PHSKU}
     :For  ${index}  In Range  0  ${list_length}
-    \  ${list_value}  Run Keyword If  "${get_type}"=="url"  Get From List  ${url_list}  ${index}
-    \  ...  ELSE IF  "${get_type}"=="sku"  Get From List  ${sku_list}  ${index}
+    \  ${list_value}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get From List  ${IDlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get From List  ${MYlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get From List  ${PHlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get From List  ${IDSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get From List  ${MYSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get From List  ${PHSKU}  ${INDEX}
     \  ${resp}  Run Keyword If  "${get_type}"=="url"  Get Request  iprice  /v1/price-list?product_url=${list_value}&cc=${country}
     \  ...  ELSE IF  "${get_type}"=="sku"  Get Request  iprice  /v1/price-list?product_id=${list_value}&cc=${country}
     \  Run Keyword If  "${resp.status_code}"=="404"  Price List Response 404 Error  ${list_value}
@@ -367,11 +449,19 @@ Price List Response 200  [Arguments]  ${resp}
     \  Run Keyword If  ${price1}<0 and ${price2}<0  Run Keyword And Continue On Failure  Fail  Price less than 0.
 
 Get Price List Response With Max Merchant  [Arguments]  ${get_type}  ${country}  ${maxMerchant}
-    ${list_length}  Run Keyword If  "${get_type}"=="url"  Get Length  ${url_list}
-    ...  ELSE IF  "${get_type}"=="sku"  Get Length  ${sku_list}
+    ${list_length}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get Length  ${IDlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get Length  ${MYlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get Length  ${PHlink}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get Length  ${IDSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get Length  ${MYSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get Length  ${PHSKU}
     :For  ${index}  In Range  0  ${list_length}
-    \  ${list_value}  Run Keyword If  "${get_type}"=="url"  Get From List  ${url_list}  ${index}
-    \  ...  ELSE IF  "${get_type}"=="sku"  Get From List  ${sku_list}  ${index}
+    \  ${list_value}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get From List  ${IDlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get From List  ${MYlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get From List  ${PHlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get From List  ${IDSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get From List  ${MYSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get From List  ${PHSKU}  ${INDEX}
     \  ${resp}  Run Keyword If  "${get_type}"=="url"  Get Request  iprice  /v1/price-list?product_url=${list_value}&cc=${country}&max_merchants=${maxMerchant}
     \  ...  ELSE IF  "${get_type}"=="sku"  Get Request  iprice  /v1/price-list?product_id=${list_value}&cc=${country}&max_merchants=${maxMerchant}
     \  Run Keyword If  "${resp.status_code}"=="404"  Price List With Max Merchant Response 404 Error  ${list_value}  ${resp}
@@ -404,11 +494,19 @@ Price List With Max Merchant Response 200  [Arguments]  ${resp}  ${maxMerchant}
     Run Keyword If  ${stores}>${maxMerchant}  Run Keyword And Continue On Failure  Fail  Max review exceed expectation.
 
 Get Price List Response With Pref Merchant  [Arguments]  ${get_type}  ${country}
-    ${list_length}  Run Keyword If  "${get_type}"=="url"  Get Length  ${url_list}
-    ...  ELSE IF  "${get_type}"=="sku"  Get Length  ${sku_list}
+    ${list_length}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get Length  ${IDlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get Length  ${MYlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get Length  ${PHlink}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get Length  ${IDSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get Length  ${MYSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get Length  ${PHSKU}
     :For  ${index}  In Range  0  ${list_length}
-    \  ${list_value}  Run Keyword If  "${get_type}"=="url"  Get From List  ${url_list}  ${index}
-    \  ...  ELSE IF  "${get_type}"=="sku"  Get From List  ${sku_list}  ${index}
+    \  ${list_value}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get From List  ${IDlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get From List  ${MYlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get From List  ${PHlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get From List  ${IDSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get From List  ${MYSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get From List  ${PHSKU}  ${INDEX}
     \  ${resp}  Run Keyword If  "${get_type}"=="url"  Get Request  iprice  /v1/price-list?product_url=${list_value}&cc=${country}&pref_merchant=true
     \  ...  ELSE IF  "${get_type}"=="sku"  Get Request  iprice  /v1/price-list?product_id=${list_value}&cc=${country}&pref_merchant=true
     \  Run Keyword If  "${resp.status_code}"=="404"  Price List With Pref Merchant Response 404 Error  ${list_value}  ${resp}
@@ -441,11 +539,21 @@ Price List With Pref Merchant Response 200  [Arguments]  ${resp}
     Run Keyword If  ${stores}<0  Run Keyword And Continue On Failure  Fail  No pref merchant returned.
 
 Get Price List Response With RRP And Pref Merchant  [Arguments]  ${get_type}  ${country}
-    ${list_length}  Run Keyword If  "${get_type}"=="url"  Get Length  ${url_list}
-    ...  ELSE IF  "${get_type}"=="sku"  Get Length  ${sku_list}
+    # ${list_length}  Run Keyword If  "${get_type}"=="url"  Get Length  ${url_list}
+    # ...  ELSE IF  "${get_type}"=="sku"  Get Length  ${sku_list}
+    ${list_length}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get Length  ${IDlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get Length  ${MYlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get Length  ${PHlink}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get Length  ${IDSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get Length  ${MYSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get Length  ${PHSKU}
     :For  ${index}  In Range  0  ${list_length}
-    \  ${list_value}  Run Keyword If  "${get_type}"=="url"  Get From List  ${url_list}  ${index}
-    \  ...  ELSE IF  "${get_type}"=="sku"  Get From List  ${sku_list}  ${index}
+    \  ${list_value}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get From List  ${IDlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get From List  ${MYlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get From List  ${PHlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get From List  ${IDSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get From List  ${MYSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get From List  ${PHSKU}  ${INDEX}
     \  ${resp}  Run Keyword If  "${get_type}"=="url"  Get Request  iprice  /v1/price-list?product_url=${list_value}&cc=${country}&pref_merchant=true&rrp=true
     \  ...  ELSE IF  "${get_type}"=="sku"  Get Request  iprice  /v1/price-list?product_id=${list_value}&cc=${country}&pref_merchant=true&rrp=true
     \  Run Keyword If  "${resp.status_code}"=="404"  Price List With RRP And Pref Merchant Response 404 Error  ${list_value}  ${resp}
@@ -478,11 +586,19 @@ Price List With RRP And Pref Merchant Response 200  [Arguments]  ${resp}
     Run Keyword If  ${stores}<0  Run Keyword And Continue On Failure  Fail  No rrp and pref merchant returned.
 
 Get Price List With Aff Custom Response  [Arguments]  ${get_type}  ${country}  ${affCustom}
-    ${list_length}  Run Keyword If  "${get_type}"=="url"  Get Length  ${url_list}
-    ...  ELSE IF  "${get_type}"=="sku"  Get Length  ${sku_list}
+    ${list_length}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get Length  ${IDlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get Length  ${MYlink}
+    ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get Length  ${PHlink}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get Length  ${IDSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get Length  ${MYSKU}
+    ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get Length  ${PHSKU}
     :For  ${index}  In Range  0  ${list_length}
-    \  ${list_value}  Run Keyword If  "${get_type}"=="url"  Get From List  ${url_list}  ${index}
-    \  ...  ELSE IF  "${get_type}"=="sku"  Get From List  ${sku_list}  ${index}
+    \  ${list_value}  Run Keyword If  "${get_type}" == "url" and "${country}" == "id"  Get From List  ${IDlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "my"  Get From List  ${MYlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "url" and "${country}" == "ph"  Get From List  ${PHlink}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "id"  Get From List  ${IDSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "my"  Get From List  ${MYSKU}  ${INDEX}
+    \  ...  ELSE IF  "${get_type}" == "sku" and "${country}" == "ph"  Get From List  ${PHSKU}  ${INDEX}
     \  ${resp}  Run Keyword If  "${get_type}"=="url"  Get Request  iprice  /v1/price-list?product_url=${list_value}&cc=${country}&aff_custom=${affCustom}
     \  ...  ELSE IF  "${get_type}"=="sku"  Get Request  iprice  /v1/price-list?product_id=${list_value}&cc=${country}&aff_custom=${affCustom}
     \  Run Keyword If  "${resp.status_code}"=="404"  Price List With Aff Custom Response 404 Error  ${list_value}

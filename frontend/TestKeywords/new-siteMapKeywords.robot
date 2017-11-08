@@ -9,13 +9,13 @@ ${sessionName}  iprice
 *** Keywords ***
 
 Create New Request Session  [Arguments]  ${country}
-    Run Keyword If  "${country}"=="my"  Create Session  ${sessionName}  https://iprice.my  disable_warnings=1
-    ...  ELSE IF  "${country}"=="id"  Create Session  ${sessionName}  https://iprice.co.id  disable_warnings=1
-    ...  ELSE IF  "${country}"=="vn"  Create Session  ${sessionName}  https://iprice.vn  disable_warnings=1
-    ...  ELSE IF  "${country}"=="th"  Create Session  ${sessionName}  https://ipricethailand.com  disable_warnings=1
-    ...  ELSE IF  "${country}"=="sg"  Create Session  ${sessionName}  https://iprice.sg  disable_warnings=1
-    ...  ELSE IF  "${country}"=="ph"  Create Session  ${sessionName}  https://iprice.ph  disable_warnings=1
-    ...  ELSE IF  "${country}"=="hk"  Create Session  ${sessionName}  https://iprice.hk  disable_warnings=1
+    Run Keyword If  "${country}"=="MY"  Create Session  ${sessionName}  https://iprice.my  disable_warnings=1
+    ...  ELSE IF  "${country}"=="ID"  Create Session  ${sessionName}  https://iprice.co.id  disable_warnings=1
+    ...  ELSE IF  "${country}"=="VN"  Create Session  ${sessionName}  https://iprice.vn  disable_warnings=1
+    ...  ELSE IF  "${country}"=="TH"  Create Session  ${sessionName}  https://ipricethailand.com  disable_warnings=1
+    ...  ELSE IF  "${country}"=="SG"  Create Session  ${sessionName}  https://iprice.sg  disable_warnings=1
+    ...  ELSE IF  "${country}"=="PH"  Create Session  ${sessionName}  https://iprice.ph  disable_warnings=1
+    ...  ELSE IF  "${country}"=="HK"  Create Session  ${sessionName}  https://iprice.hk  disable_warnings=1
 
 Get Request Response Content
     ${resp}  Get Request  ${sessionName}  /sitemap_index.xml
@@ -32,13 +32,13 @@ Get All Main Links
 
 Get All Main Links Request  [Arguments]  ${country}
     :For  ${ELEMENT}  IN  @{linkList}
-    \  ${link}  Run Keyword If  "${country}"=="my"  Replace String  ${ELEMENT}  https://iprice.my  ${empty}
-    \  ...  ELSE IF  "${country}"=="id"  Replace String  ${ELEMENT}  https://iprice.co.id  ${empty}
-    \  ...  ELSE IF  "${country}"=="vn"  Replace String  ${ELEMENT}  https://iprice.vn  ${empty}
-    \  ...  ELSE IF  "${country}"=="th"  Replace String  ${ELEMENT}  https://ipricethailand.com  ${empty}
-    \  ...  ELSE IF  "${country}"=="sg"  Replace String  ${ELEMENT}  https://iprice.sg  ${empty}
-    \  ...  ELSE IF  "${country}"=="ph"  Replace String  ${ELEMENT}  https://iprice.ph  ${empty}
-    \  ...  ELSE IF  "${country}"=="hk"  Replace String  ${ELEMENT}  https://iprice.hk  ${empty}
+    \  ${link}  Run Keyword If  "${country}"=="MY"  Replace String  ${ELEMENT}  https://iprice.my  ${empty}
+    \  ...  ELSE IF  "${country}"=="ID"  Replace String  ${ELEMENT}  https://iprice.co.id  ${empty}
+    \  ...  ELSE IF  "${country}"=="VN"  Replace String  ${ELEMENT}  https://iprice.vn  ${empty}
+    \  ...  ELSE IF  "${country}"=="TH"  Replace String  ${ELEMENT}  https://ipricethailand.com  ${empty}
+    \  ...  ELSE IF  "${country}"=="SG"  Replace String  ${ELEMENT}  https://iprice.sg  ${empty}
+    \  ...  ELSE IF  "${country}"=="PH"  Replace String  ${ELEMENT}  https://iprice.ph  ${empty}
+    \  ...  ELSE IF  "${country}"=="HK"  Replace String  ${ELEMENT}  https://iprice.hk  ${empty}
     \  ${resp}  Get Request  ${sessionName}  ${link}
     \   Run Keyword If  "${resp.status_code}" != "200"  Fail  Failed to access ${ELEMENT}.
 
@@ -51,13 +51,13 @@ Get All Main Price Comparison Link
 
 Get All Price Comparison Links  [Arguments]  ${country}
     :For  ${ELEMENT}  IN  @{priceComparisonList}
-    \  ${link}  Run Keyword If  "${country}"=="my"  Replace String  ${ELEMENT}  https://iprice.my  ${empty}
-    \  ...  ELSE IF  "${country}"=="id"  Replace String  ${ELEMENT}  https://iprice.co.id  ${empty}
-    \  ...  ELSE IF  "${country}"=="vn"  Replace String  ${ELEMENT}  https://iprice.vn  ${empty}
-    \  ...  ELSE IF  "${country}"=="th"  Replace String  ${ELEMENT}  https://ipricethailand.com  ${empty}
-    \  ...  ELSE IF  "${country}"=="sg"  Replace String  ${ELEMENT}  https://iprice.sg  ${empty}
-    \  ...  ELSE IF  "${country}"=="ph"  Replace String  ${ELEMENT}  https://iprice.ph  ${empty}
-    \  ...  ELSE IF  "${country}"=="hk"  Replace String  ${ELEMENT}  https://iprice.hk  ${empty}
+    \  ${link}  Run Keyword If  "${country}"=="MY"  Replace String  ${ELEMENT}  https://iprice.my  ${empty}
+    \  ...  ELSE IF  "${country}"=="ID"  Replace String  ${ELEMENT}  https://iprice.co.id  ${empty}
+    \  ...  ELSE IF  "${country}"=="VN"  Replace String  ${ELEMENT}  https://iprice.vn  ${empty}
+    \  ...  ELSE IF  "${country}"=="TH"  Replace String  ${ELEMENT}  https://ipricethailand.com  ${empty}
+    \  ...  ELSE IF  "${country}"=="SG"  Replace String  ${ELEMENT}  https://iprice.sg  ${empty}
+    \  ...  ELSE IF  "${country}"=="PH"  Replace String  ${ELEMENT}  https://iprice.ph  ${empty}
+    \  ...  ELSE IF  "${country}"=="HK"  Replace String  ${ELEMENT}  https://iprice.hk  ${empty}
     \  ${resp}  Get Request  ${sessionName}  ${link}
     \  Run Keyword If  "${resp.status_code}" != "200"  Price Comparison Failed  ${ELEMENT}
     \  ...  ELSE IF  "${resp.status_code}" == "200"  Price Comparison Success  ${resp.content}

@@ -33,28 +33,35 @@ iPrice Homepage Access Coupons Link  [Arguments]  ${country}
     ...  ELSE IF  "${country}"=="TH"  Click Element  ${TH_header_coupon_logo_link_and_text}
     Sleep  2
 
-iPrice Header Courtesy Validation  [Arguments]  ${country}
-    Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_header_courtesy_products}
-    ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_header_courtesy_products}
-    ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_courtesy_products}
-    ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_courtesy_products}
-    ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_courtesy_products}
-    ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_header_courtesy_products}
-    ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_header_courtesy_products}
-    Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_header_courtesy_coupons}
-    ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_header_courtesy_coupons}
-    ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_courtesy_coupons}
-    ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_courtesy_coupons}
-    ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_courtesy_coupons}
-    ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_header_courtesy_coupons}
-    ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_header_courtesy_coupons}
-    Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_header_courtesy_trends}
-    ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_header_courtesy_trends}
-    ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_header_courtesy_trends}
-    ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_header_courtesy_trends}
-    ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_header_courtesy_trends}
-    ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_header_courtesy_trends}
-    ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_header_courtesy_trends}
+iPrice Courtesy Validation  [Arguments]  ${country}
+    Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_courtesy_products}
+    ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_courtesy_products}
+    ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_courtesy_products}
+    ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_courtesy_products}
+    ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_courtesy_products}
+    ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_courtesy_products}
+    ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_courtesy_products}
+    Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_courtesy_products_highlight}
+    ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_courtesy_products_highlight}
+    ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_courtesy_products_highlight}
+    ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_courtesy_products_highlight}
+    ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_courtesy_products_highlight}
+    ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_courtesy_products_highlight}
+    ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_courtesy_products_highlight}
+    Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_courtesy_coupons}
+    ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_courtesy_coupons}
+    ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_courtesy_coupons}
+    ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_courtesy_coupons}
+    ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_courtesy_coupons}
+    ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_courtesy_coupons}
+    ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_courtesy_coupons}
+    Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_courtesy_trends}
+    ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_courtesy_trends}
+    ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_courtesy_trends}
+    ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_courtesy_trends}
+    ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_courtesy_trends}
+    ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_courtesy_trends}
+    ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_courtesy_trends}
 
 iPrice Header Validation  [Arguments]  ${country}
     Run Keyword If  "${country}"=="MY"  Element Should Be Visible  ${MY_header_logo_link}
