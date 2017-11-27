@@ -1,16 +1,16 @@
 *** Settings ***
 
-Documentation  This file will only store variables for h0mepage.
+Documentation  This file will only store variables for homepage.
 
 *** Variables ***
 
-${MY_homeURL}  https://iprice.my/?nocache=1
-${VN_homeURL}  https://iprice.vn/?nocache=1
-${ID_homeURL}  https://iprice.co.id/?nocache=1
-${SG_homeURL}  https://iprice.sg/?nocache=1
-${PH_homeURL}  https://iprice.ph/?nocache=1
-${HK_homeURL}  https://iprice.hk/?nocache=1
-${TH_homeURL}  https://ipricethailand.com/?nocache=1
+${MY_homeURL}  https://iprice.my/
+${VN_homeURL}  https://iprice.vn/
+${ID_homeURL}  https://iprice.co.id/
+${SG_homeURL}  https://iprice.sg/
+${PH_homeURL}  https://iprice.ph/
+${HK_homeURL}  https://iprice.hk/
+${TH_homeURL}  https://ipricethailand.com/
 
 ${MY_homeTitle}  Online Shopping, Coupons & Discount Codes at iPrice Malaysia
 ${ID_homeTitle}  Belanja Online, Kode Kupon & Diskon di iPrice Indonesia
@@ -105,6 +105,28 @@ ${EN_products_mega_menu_fashion}  //div[@id='mega-menu']//strong[normalize-space
 ${VN_products_mega_menu_fashion}  //div[@id='mega-menu']//strong[normalize-space()='Thời trang']
 ${ID_products_mega_menu_fashion}  //div[@id='mega-menu']//strong[normalize-space()='Fashion']
 ${TH_products_mega_menu_fashion}  //div[@id='mega-menu']//strong[normalize-space()='แฟชั่น']
+${EN_products_mega_menu_sports_outdoors}  //div[@id='mega-menu']//strong[normalize-space()='Sports & Outdoors']
+${VN_products_mega_menu_sports_outdoors}  //div[@id='mega-menu']//strong[normalize-space()='Thể thao & Dã ngoại']
+${ID_products_mega_menu_sports_outdoors}  //div[@id='mega-menu']//strong[normalize-space()='Outdoor']
+${TH_products_mega_menu_sports_outdoors}  //div[@id='mega-menu']//strong[normalize-space()='กีฬาและกิจกรรมกลางแจ้ง']
+${EN_products_mega_menu_home_living}  //div[@id='mega-menu']//strong[normalize-space()='Home & Living']
+${VN_products_mega_menu_home_living}  //div[@id='mega-menu']//strong[normalize-space()='Đồ gia dụng']
+${ID_products_mega_menu_home_living}  //div[@id='mega-menu']//strong[normalize-space()='Rumah Tangga']
+${TH_products_mega_menu_home_living}  //div[@id='mega-menu']//strong[normalize-space()='บ้านและการตกแต่ง']
+${EN_products_mega_menu_kids_toys}  //div[@id='mega-menu']//strong[normalize-space()='Kids & Toys']
+${VN_products_mega_menu_kids_toys}  //div[@id='mega-menu']//strong[normalize-space()='Đồ trẻ em']
+${ID_products_mega_menu_kids_toys}  //div[@id='mega-menu']//strong[normalize-space()='Mainan & Anak']
+${TH_products_mega_menu_kids_toys}  //div[@id='mega-menu']//strong[normalize-space()='แม่และเด็ก']
+${EN_products_mega_menu_health_beauty}  //div[@id='mega-menu']//strong[normalize-space()='Health & Beauty']
+${VN_products_mega_menu_health_beauty}  //div[@id='mega-menu']//strong[normalize-space()='Sức khỏe & Làm đẹp']
+${ID_products_mega_menu_health_beauty}  //div[@id='mega-menu']//strong[normalize-space()='Kesehatan']
+${TH_products_mega_menu_health_beauty}  //div[@id='mega-menu']//strong[normalize-space()='สุขภาพและความงาม']
+${EN_products_mega_menu_automotive}  //div[@id='mega-menu']//strong[normalize-space()='Automotive']
+${VN_products_mega_menu_automotive}  //div[@id='mega-menu']//strong[normalize-space()='Ô tô, xe máy']
+${ID_products_mega_menu_automotive}  //div[@id='mega-menu']//strong[normalize-space()='Otomotif']
+${TH_products_mega_menu_automotive}  //div[@id='mega-menu']//strong[normalize-space()='ยานยนต์']
+
+${products_banner}  //div[@id="carousel-banners"]
 
 ${homepage_bottom_product_images}  //img[contains(@class,'lazy product-img')]
 
@@ -404,5 +426,3 @@ ${COOD_rappler_id_popular_coupons_header}  //div[@id='coupon-overview']//h1[text
 ${COOD_rappler_id_latest_coupons_header}  //div[@id='coupon-overview']//h1[text()='Kupon Terbaru']
 ${COOD_rappler_id_content_area}  //div[@id='coupon-overview']//div[@class='content-text']
 ${COOD_rappler_id_footer_area}  //div[@id='footer-wrapper']
-
-

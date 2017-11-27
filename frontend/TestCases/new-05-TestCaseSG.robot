@@ -7,6 +7,7 @@ Resource  ../TestSettings/TestSettings.robot
 Resource  ../TestVariables/TestVariables-Homepage.robot
 Resource  ../TestKeywords/new-siteMapKeywords.robot
 Resource  ../TestKeywords/new-homePageKeywords.robot
+Resource  ../TestKeywords/new-couponsKeywords.robot
 
 #Setup/Tear Down
 Test Setup  TestCase Setup
@@ -24,13 +25,24 @@ Test Main Site Map Response SG
 
 Test Homepage Links Response SG
     [tags]  sg  case2
-    Access iPrice Homepage  SG
+    Access iPrice Homepage  sg
     Get All Available Links In Homepage
-    Check All Links Response In Homepage  SG
+    Check All Links Response In Homepage  sg
 
 Test Homepage UI SG
     [tags]  sg  case3
-    Access iPrice Homepage  SG
-    iPrice Homepage Courtesy Validation  SG
-    iPrice Header Validation  SG
-    iPrice Products Mega Menu Validation  SG
+    Access iPrice Homepage  sg
+    iPrice Homepage Courtesy Validation  sg
+    iPrice Header Validation  sg
+    iPrice Products Mega Menu Validation  sg
+    iPrice Search, Compare & Save Section Validation  sg
+    iPrice Search, Compare & Save Section Electronic Gaming Validation  sg
+    iPrice Search, Compare & Save Section Fashion Beauty Validation  sg
+    iPrice Search, Compare & Save Section Coupons Offers Validation  sg
+    iPrice Homepage Recommended Products Validation  sg
+    iPrice Homepage Footer Validation  sg
+
+Test Coupons Page UI SG
+    [tags]  sg  case4
+    Access Coupons Page  sg
+    iPrice Coupon Page Courtesy Validation  sg

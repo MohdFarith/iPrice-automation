@@ -1,25 +1,25 @@
 *** Settings ***
-Documentation  This file will only store keywords for SEO.
+Documentation  This file will only store keywords for homepage.
 *** Variables ***
 
 *** Keywords ***
 
 Access iPrice Homepage  [Arguments]  ${country}
-    Run Keyword If  "${country}"=="MY"  Go To  ${MY_homeURL}
-    ...  ELSE IF  "${country}"=="VN"  Go To  ${VN_homeURL}
-    ...  ELSE IF  "${country}"=="ID"  Go To  ${ID_homeURL}
-    ...  ELSE IF  "${country}"=="SG"  Go To  ${SG_homeURL}
-    ...  ELSE IF  "${country}"=="PH"  Go To  ${PH_homeURL}
-    ...  ELSE IF  "${country}"=="HK"  Go To  ${HK_homeURL}
-    ...  ELSE IF  "${country}"=="TH"  Go To  ${TH_homeURL}
+    Run Keyword If  "${country}"=="my"  Go To  ${MY_homeURL}
+    ...  ELSE IF  "${country}"=="vn"  Go To  ${VN_homeURL}
+    ...  ELSE IF  "${country}"=="id"  Go To  ${ID_homeURL}
+    ...  ELSE IF  "${country}"=="sg"  Go To  ${SG_homeURL}
+    ...  ELSE IF  "${country}"=="ph"  Go To  ${PH_homeURL}
+    ...  ELSE IF  "${country}"=="hk"  Go To  ${HK_homeURL}
+    ...  ELSE IF  "${country}"=="th"  Go To  ${TH_homeURL}
     Sleep  2
-    Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Title Should Be  ${MY_homeTitle}
-    ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Title Should Be  ${VN_homeTitle}
-    ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Title Should Be  ${ID_homeTitle}
-    ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Title Should Be  ${SG_homeTitle}
-    ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Title Should Be  ${PH_homeTitle}
-    ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Title Should Be  ${HK_homeTitle}
-    ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Title Should Be  ${TH_homeTitle}
+    Run Keyword If  "${country}"=="my"  Run Keyword And Continue On Failure  Title Should Be  ${MY_homeTitle}
+    ...  ELSE IF  "${country}"=="vn"  Run Keyword And Continue On Failure  Title Should Be  ${VN_homeTitle}
+    ...  ELSE IF  "${country}"=="id"  Run Keyword And Continue On Failure  Title Should Be  ${ID_homeTitle}
+    ...  ELSE IF  "${country}"=="sg"  Run Keyword And Continue On Failure  Title Should Be  ${SG_homeTitle}
+    ...  ELSE IF  "${country}"=="ph"  Run Keyword And Continue On Failure  Title Should Be  ${PH_homeTitle}
+    ...  ELSE IF  "${country}"=="hk"  Run Keyword And Continue On Failure  Title Should Be  ${HK_homeTitle}
+    ...  ELSE IF  "${country}"=="th"  Run Keyword And Continue On Failure  Title Should Be  ${TH_homeTitle}
 
 Get All Available Links In Homepage
     ${AllLinksCount}  Get Matching Xpath Count  //a
@@ -61,99 +61,119 @@ Check All Links Response In Homepage  [Arguments]  ${country}
 Check Redirection URL  [Arguments]  ${country}
     Sleep  2
     :FOR  ${INDEX}  IN RANGE  0  ${filter_link2_count}
-    \  Run Keyword If  "${country}"=="MY"  Create Session  iprice  ${MY_homeURL}  disable_warnings=0
-    \  ...  ELSE IF  "${country}"=="VN"  Create Session  iprice  ${VN_homeURL}  disable_warnings=0
-    \  ...  ELSE IF  "${country}"=="ID"  Create Session  iprice  ${ID_homeURL}  disable_warnings=0
-    \  ...  ELSE IF  "${country}"=="SG"  Create Session  iprice  ${SG_homeURL}  disable_warnings=0
-    \  ...  ELSE IF  "${country}"=="PH"  Create Session  iprice  ${PH_homeURL}  disable_warnings=0
-    \  ...  ELSE IF  "${country}"=="HK"  Create Session  iprice  ${HK_homeURL}  disable_warnings=0
-    \  ...  ELSE IF  "${country}"=="TH"  Create Session  iprice  ${TH_homeURL}  disable_warnings=0
+    \  Run Keyword If  "${country}"=="my"  Create Session  iprice  ${MY_homeURL}  disable_warnings=0
+    \  ...  ELSE IF  "${country}"=="vn"  Create Session  iprice  ${VN_homeURL}  disable_warnings=0
+    \  ...  ELSE IF  "${country}"=="id"  Create Session  iprice  ${ID_homeURL}  disable_warnings=0
+    \  ...  ELSE IF  "${country}"=="sg"  Create Session  iprice  ${SG_homeURL}  disable_warnings=0
+    \  ...  ELSE IF  "${country}"=="ph"  Create Session  iprice  ${PH_homeURL}  disable_warnings=0
+    \  ...  ELSE IF  "${country}"=="hk"  Create Session  iprice  ${HK_homeURL}  disable_warnings=0
+    \  ...  ELSE IF  "${country}"=="th"  Create Session  iprice  ${TH_homeURL}  disable_warnings=0
     \  Sleep  1
     \  ${link}  Get From List  ${filter_link2}  ${INDEX}
-    \  ${link2}  Run Keyword If  "${country}"=="MY"  Replace String  ${link}  ${MY_homeURL}  ${empty}
-    \  ...  ELSE IF  "${country}"=="VN"  Replace String  ${link}  ${VN_homeURL}  ${empty}
-    \  ...  ELSE IF  "${country}"=="ID"  Replace String  ${link}  ${ID_homeURL}  ${empty}
-    \  ...  ELSE IF  "${country}"=="SG"  Replace String  ${link}  ${SG_homeURL}  ${empty}
-    \  ...  ELSE IF  "${country}"=="PH"  Replace String  ${link}  ${PH_homeURL}  ${empty}
-    \  ...  ELSE IF  "${country}"=="HK"  Replace String  ${link}  ${HK_homeURL}  ${empty}
-    \  ...  ELSE IF  "${country}"=="TH"  Replace String  ${link}  ${TH_homeURL}  ${empty}
+    \  ${link2}  Run Keyword If  "${country}"=="my"  Replace String  ${link}  ${MY_homeURL}  ${empty}
+    \  ...  ELSE IF  "${country}"=="vn"  Replace String  ${link}  ${VN_homeURL}  ${empty}
+    \  ...  ELSE IF  "${country}"=="id"  Replace String  ${link}  ${ID_homeURL}  ${empty}
+    \  ...  ELSE IF  "${country}"=="sg"  Replace String  ${link}  ${SG_homeURL}  ${empty}
+    \  ...  ELSE IF  "${country}"=="ph"  Replace String  ${link}  ${PH_homeURL}  ${empty}
+    \  ...  ELSE IF  "${country}"=="hk"  Replace String  ${link}  ${HK_homeURL}  ${empty}
+    \  ...  ELSE IF  "${country}"=="th"  Replace String  ${link}  ${TH_homeURL}  ${empty}
     \  ${link3}  Replace String  ${link2}  ${space}  ${empty}
     \  ${link4}  Replace String  ${link3}  %3Fnocache%3D1  ${empty}
     \  ${link5}  Replace String  ${link4}  ${space}  ${empty}
     \  ${resp}  RequestsLibrary.Get Request  iprice  ${link5}  allow_redirects=True
-    \  ${status}  Run Keyword And Return Status  Should Be Equal As Strings  ${resp.status_code}  200
-    \  Run Keyword If  "${status}"=="False" and "${country}"=="MY"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.my/${link5} failed and not return 200.
-    \  ...  ELSE IF  "${status}"=="False" and "${country}"=="VN"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.vn/${link5} failed and not return 200.
-    \  ...  ELSE IF  "${status}"=="False" and "${country}"=="ID"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.co.id/${link5} failed and not return 200.
-    \  ...  ELSE IF  "${status}"=="False" and "${country}"=="SG"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.sg/${link5} failed and not return 200.
-    \  ...  ELSE IF  "${status}"=="False" and "${country}"=="PH"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.ph/${link5} failed and not return 200.
-    \  ...  ELSE IF  "${status}"=="False" and "${country}"=="HK"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.hk/${link5} failed and not return 200.
-    \  ...  ELSE IF  "${status}"=="False" and "${country}"=="TH"  Run Keyword And Continue On Failure  Fail  Request to https://ipricethailand.com/${link5} failed and not return 200.
+    \  Run Keyword If  "${resp.status_code}" == "403"  Retry Check Redirection URL  ${country}  ${link5}
+    \  ...  ELSE IF  "${resp.status_code}" == "404" and "${country}" == "my"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.my/${link5} failed and not return 200.
+    \  ...  ELSE IF  "${resp.status_code}" == "404" and "${country}"=="vn"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.vn/${link5} failed and not return 200.
+    \  ...  ELSE IF  "${resp.status_code}" == "404" and "${country}"=="id"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.co.id/${link5} failed and not return 200.
+    \  ...  ELSE IF  "${resp.status_code}" == "404" and "${country}"=="sg"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.sg/${link5} failed and not return 200.
+    \  ...  ELSE IF  "${resp.status_code}" == "404" and "${country}"=="ph"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.ph/${link5} failed and not return 200.
+    \  ...  ELSE IF  "${resp.status_code}" == "404" and "${country}"=="hk"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.hk/${link5} failed and not return 200.
+    \  ...  ELSE IF  "${resp.status_code}" == "404" and "${country}"=="th"  Run Keyword And Continue On Failure  Fail  Request to https://ipricethailand.com/${link5} failed and not return 200.
     \  Delete All Sessions
 
+Retry Check Redirection URL  [Arguments]  ${country}  ${link5}
+    :FOR  ${INDEX}  IN RANGE  0  500
+    \  Delete All Sessions
+    \  Run Keyword If  "${country}"=="my"  Create Session  iprice  ${MY_homeURL}  disable_warnings=0
+    \  ...  ELSE IF  "${country}"=="vn"  Create Session  iprice  ${VN_homeURL}  disable_warnings=0
+    \  ...  ELSE IF  "${country}"=="id"  Create Session  iprice  ${ID_homeURL}  disable_warnings=0
+    \  ...  ELSE IF  "${country}"=="sg"  Create Session  iprice  ${SG_homeURL}  disable_warnings=0
+    \  ...  ELSE IF  "${country}"=="ph"  Create Session  iprice  ${PH_homeURL}  disable_warnings=0
+    \  ...  ELSE IF  "${country}"=="hk"  Create Session  iprice  ${HK_homeURL}  disable_warnings=0
+    \  ...  ELSE IF  "${country}"=="th"  Create Session  iprice  ${TH_homeURL}  disable_warnings=0
+    \  ${resp}  RequestsLibrary.Get Request  iprice  ${link5}  allow_redirects=True
+    \  Run Keyword If  "${resp.status_code}" == "404" and "${country}" == "my"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.my/${link5} failed and not return 200.
+    \  ...  ELSE IF  "${resp.status_code}" == "404" and "${country}"=="vn"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.vn/${link5} failed and not return 200.
+    \  ...  ELSE IF  "${resp.status_code}" == "404" and "${country}"=="id"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.co.id/${link5} failed and not return 200.
+    \  ...  ELSE IF  "${resp.status_code}" == "404" and "${country}"=="sg"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.sg/${link5} failed and not return 200.
+    \  ...  ELSE IF  "${resp.status_code}" == "404" and "${country}"=="ph"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.ph/${link5} failed and not return 200.
+    \  ...  ELSE IF  "${resp.status_code}" == "404" and "${country}"=="hk"  Run Keyword And Continue On Failure  Fail  Request to https://iprice.hk/${link5} failed and not return 200.
+    \  ...  ELSE IF  "${resp.status_code}" == "404" and "${country}"=="th"  Run Keyword And Continue On Failure  Fail  Request to https://ipricethailand.com/${link5} failed and not return 200.
+    \  ...  ELSE IF  "${resp.status_code}" == "200"  Exit For Loop
+
 iPrice Homepage Courtesy Validation  [Arguments]  ${country}
-    Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_courtesy_products}
-    ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_courtesy_products}
-    ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_courtesy_products}
-    ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_courtesy_products}
-    ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_courtesy_products}
-    ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_courtesy_products}
-    ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_courtesy_products}
-    Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_courtesy_products_highlight}
-    ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_courtesy_products_highlight}
-    ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_courtesy_products_highlight}
-    ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_courtesy_products_highlight}
-    ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_courtesy_products_highlight}
-    ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_courtesy_products_highlight}
-    ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_courtesy_products_highlight}
-    Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_courtesy_coupons}
-    ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_courtesy_coupons}
-    ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_courtesy_coupons}
-    ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_courtesy_coupons}
-    ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_courtesy_coupons}
-    ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_courtesy_coupons}
-    ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_courtesy_coupons}
-    Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${MY_courtesy_coupons_highlight}
-    ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${VN_courtesy_couponss_highlight}
-    ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${ID_courtesy_coupons_highlight}
-    ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${SG_courtesy_coupons_highlight}
-    ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${PH_courtesy_coupons_highlight}
-    ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${HK_courtesy_coupons_highlight}
-    ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${TH_courtesy_coupons_highlight}
-    Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_courtesy_trends}
-    ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_courtesy_trends}
-    ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_courtesy_trends}
-    ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_courtesy_trends}
-    ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_courtesy_trends}
-    ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_courtesy_trends}
-    ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_courtesy_trends}
-        Run Keyword If  "${country}"=="MY"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${MY_courtesy_trends_highlight}
-    ...  ELSE IF  "${country}"=="VN"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${VN_courtesy_trends_highlight}
-    ...  ELSE IF  "${country}"=="ID"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${ID_courtesy_trends_highlight}
-    ...  ELSE IF  "${country}"=="SG"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${SG_courtesy_trends_highlight}
-    ...  ELSE IF  "${country}"=="PH"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${PH_courtesy_trends_highlight}
-    ...  ELSE IF  "${country}"=="HK"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${HK_courtesy_trends_highlight}
-    ...  ELSE IF  "${country}"=="TH"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${TH_courtesy_trends_highlight}
+    Run Keyword If  "${country}"=="my"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_courtesy_products}
+    ...  ELSE IF  "${country}"=="vn"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_courtesy_products}
+    ...  ELSE IF  "${country}"=="id"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_courtesy_products}
+    ...  ELSE IF  "${country}"=="sg"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_courtesy_products}
+    ...  ELSE IF  "${country}"=="ph"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_courtesy_products}
+    ...  ELSE IF  "${country}"=="hk"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_courtesy_products}
+    ...  ELSE IF  "${country}"=="th"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_courtesy_products}
+    Run Keyword If  "${country}"=="my"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_courtesy_products_highlight}
+    ...  ELSE IF  "${country}"=="vn"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_courtesy_products_highlight}
+    ...  ELSE IF  "${country}"=="id"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_courtesy_products_highlight}
+    ...  ELSE IF  "${country}"=="sg"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_courtesy_products_highlight}
+    ...  ELSE IF  "${country}"=="ph"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_courtesy_products_highlight}
+    ...  ELSE IF  "${country}"=="hk"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_courtesy_products_highlight}
+    ...  ELSE IF  "${country}"=="th"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_courtesy_products_highlight}
+    Run Keyword If  "${country}"=="my"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_courtesy_coupons}
+    ...  ELSE IF  "${country}"=="vn"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_courtesy_coupons}
+    ...  ELSE IF  "${country}"=="id"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_courtesy_coupons}
+    ...  ELSE IF  "${country}"=="sg"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_courtesy_coupons}
+    ...  ELSE IF  "${country}"=="ph"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_courtesy_coupons}
+    ...  ELSE IF  "${country}"=="hk"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_courtesy_coupons}
+    ...  ELSE IF  "${country}"=="th"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_courtesy_coupons}
+    Run Keyword If  "${country}"=="my"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${MY_courtesy_coupons_highlight}
+    ...  ELSE IF  "${country}"=="vn"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${VN_courtesy_coupons_highlight}
+    ...  ELSE IF  "${country}"=="id"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${ID_courtesy_coupons_highlight}
+    ...  ELSE IF  "${country}"=="sg"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${SG_courtesy_coupons_highlight}
+    ...  ELSE IF  "${country}"=="ph"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${PH_courtesy_coupons_highlight}
+    ...  ELSE IF  "${country}"=="hk"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${HK_courtesy_coupons_highlight}
+    ...  ELSE IF  "${country}"=="th"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${TH_courtesy_coupons_highlight}
+    Run Keyword If  "${country}"=="my"  Run Keyword And Continue On Failure  Element Should Be Visible  ${MY_courtesy_trends}
+    ...  ELSE IF  "${country}"=="vn"  Run Keyword And Continue On Failure  Element Should Be Visible  ${VN_courtesy_trends}
+    ...  ELSE IF  "${country}"=="id"  Run Keyword And Continue On Failure  Element Should Be Visible  ${ID_courtesy_trends}
+    ...  ELSE IF  "${country}"=="sg"  Run Keyword And Continue On Failure  Element Should Be Visible  ${SG_courtesy_trends}
+    ...  ELSE IF  "${country}"=="ph"  Run Keyword And Continue On Failure  Element Should Be Visible  ${PH_courtesy_trends}
+    ...  ELSE IF  "${country}"=="hk"  Run Keyword And Continue On Failure  Element Should Be Visible  ${HK_courtesy_trends}
+    ...  ELSE IF  "${country}"=="th"  Run Keyword And Continue On Failure  Element Should Be Visible  ${TH_courtesy_trends}
+    Run Keyword If  "${country}"=="my"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${MY_courtesy_trends_highlight}
+    ...  ELSE IF  "${country}"=="vn"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${VN_courtesy_trends_highlight}
+    ...  ELSE IF  "${country}"=="id"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${ID_courtesy_trends_highlight}
+    ...  ELSE IF  "${country}"=="sg"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${SG_courtesy_trends_highlight}
+    ...  ELSE IF  "${country}"=="ph"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${PH_courtesy_trends_highlight}
+    ...  ELSE IF  "${country}"=="hk"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${HK_courtesy_trends_highlight}
+    ...  ELSE IF  "${country}"=="th"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${TH_courtesy_trends_highlight}
 
 iPrice Header Validation  [Arguments]  ${country}
-    Run Keyword If  "${country}"=="MY"  Element Should Be Visible  ${MY_header_logo_link}
-    ...  ELSE IF  "${country}"=="VN"  Element Should Be Visible  ${VN_header_logo_link}
-    ...  ELSE IF  "${country}"=="ID"  Element Should Be Visible  ${ID_header_logo_link}
-    ...  ELSE IF  "${country}"=="SG"  Element Should Be Visible  ${SG_header_logo_link}
-    ...  ELSE IF  "${country}"=="PH"  Element Should Be Visible  ${PH_header_logo_link}
-    ...  ELSE IF  "${country}"=="HK"  Element Should Be Visible  ${HK_header_logo_link}
-    ...  ELSE IF  "${country}"=="TH"  Element Should Be Visible  ${TH_header_logo_link}
-    Run Keyword If  "${country}"=="MY" or "${country}"=="SG" or "${country}"=="PH" or "${country}"=="HK"  Element Should Be Visible  ${EN_header_search_compare_save}
-    ...  ELSE IF  "${country}"=="VN"  Element Should Be Visible  ${VN_header_search_compare_save}
-    ...  ELSE IF  "${country}"=="ID"  Element Should Be Visible  ${ID_header_search_compare_save}
-    ...  ELSE IF  "${country}"=="TH"  Element Should Be Visible  ${TH_header_search_compare_save}
-    Run Keyword If  "${country}"=="MY"  Element Should Be Visible  ${MY_header_search_input}
-    ...  ELSE IF  "${country}"=="VN"  Element Should Be Visible  ${VN_header_search_input}
-    ...  ELSE IF  "${country}"=="ID"  Element Should Be Visible  ${ID_header_search_input}
-    ...  ELSE IF  "${country}"=="SG"  Element Should Be Visible  ${SG_header_search_input}
-    ...  ELSE IF  "${country}"=="PH"  Element Should Be Visible  ${PH_header_search_input}
-    ...  ELSE IF  "${country}"=="HK"  Element Should Be Visible  ${HK_header_search_input}
-    ...  ELSE IF  "${country}"=="TH"  Element Should Be Visible  ${TH_header_search_input}
+    Run Keyword If  "${country}"=="my"  Element Should Be Visible  ${MY_header_logo_link}
+    ...  ELSE IF  "${country}"=="vn"  Element Should Be Visible  ${VN_header_logo_link}
+    ...  ELSE IF  "${country}"=="id"  Element Should Be Visible  ${ID_header_logo_link}
+    ...  ELSE IF  "${country}"=="sg"  Element Should Be Visible  ${SG_header_logo_link}
+    ...  ELSE IF  "${country}"=="ph"  Element Should Be Visible  ${PH_header_logo_link}
+    ...  ELSE IF  "${country}"=="hk"  Element Should Be Visible  ${HK_header_logo_link}
+    ...  ELSE IF  "${country}"=="th"  Element Should Be Visible  ${TH_header_logo_link}
+    Run Keyword If  "${country}"=="my" or "${country}"=="SG" or "${country}"=="PH" or "${country}"=="HK"  Element Should Be Visible  ${EN_header_search_compare_save}
+    ...  ELSE IF  "${country}"=="vn"  Element Should Be Visible  ${VN_header_search_compare_save}
+    ...  ELSE IF  "${country}"=="id"  Element Should Be Visible  ${ID_header_search_compare_save}
+    ...  ELSE IF  "${country}"=="th"  Element Should Be Visible  ${TH_header_search_compare_save}
+    Run Keyword If  "${country}"=="my"  Element Should Be Visible  ${MY_header_search_input}
+    ...  ELSE IF  "${country}"=="vn"  Element Should Be Visible  ${VN_header_search_input}
+    ...  ELSE IF  "${country}"=="id"  Element Should Be Visible  ${ID_header_search_input}
+    ...  ELSE IF  "${country}"=="sg"  Element Should Be Visible  ${SG_header_search_input}
+    ...  ELSE IF  "${country}"=="ph"  Element Should Be Visible  ${PH_header_search_input}
+    ...  ELSE IF  "${country}"=="hk"  Element Should Be Visible  ${HK_header_search_input}
+    ...  ELSE IF  "${country}"=="th"  Element Should Be Visible  ${TH_header_search_input}
     Element Should Be Visible  ${header_search_icon}
 
 iPrice Products Mega Menu Validation  [Arguments]  ${country}
@@ -164,49 +184,343 @@ iPrice Products Mega Menu Validation  [Arguments]  ${country}
     Element Should Be Visible  ${products_mega_menu_kid_toys_icon}
     Element Should Be Visible  ${products_mega_menu_health_beauty_icon}
     Element Should Be Visible  ${products_mega_menu_automotive_icon}
-    Run Keyword If  "${country}"=="MY" or "${country}"=="SG" or "${country}"=="PH" or "${country}"=="HK"  Element Should Be Visible  ${EN_products_mega_menu_electronics}
-    ...  ELSE IF  "${country}"=="VN"  Element Should Be Visible  ${VN_products_mega_menu_electronics}
-    ...  ELSE IF  "${country}"=="ID"  Element Should Be Visible  ${ID_products_mega_menu_electronics}
-    ...  ELSE IF  "${country}"=="TH"  Element Should Be Visible  ${TH_products_mega_menu_electronics}
-    Run Keyword If  "${country}"=="MY" or "${country}"=="SG" or "${country}"=="PH" or "${country}"=="HK"  Element Should Be Visible  ${EN_products_mega_menu_fashion}
-    ...  ELSE IF  "${country}"=="VN"  Element Should Be Visible  ${VN_products_mega_menu_fashion}
-    ...  ELSE IF  "${country}"=="ID"  Element Should Be Visible  ${ID_products_mega_menu_fashion}
-    ...  ELSE IF  "${country}"=="TH"  Element Should Be Visible  ${TH_products_mega_menu_fashion}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Element Should Be Visible  ${EN_products_mega_menu_electronics}
+    ...  ELSE IF  "${country}"=="vn"  Element Should Be Visible  ${VN_products_mega_menu_electronics}
+    ...  ELSE IF  "${country}"=="id"  Element Should Be Visible  ${ID_products_mega_menu_electronics}
+    ...  ELSE IF  "${country}"=="th"  Element Should Be Visible  ${TH_products_mega_menu_electronics}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Element Should Be Visible  ${EN_products_mega_menu_fashion}
+    ...  ELSE IF  "${country}"=="vn"  Element Should Be Visible  ${VN_products_mega_menu_fashion}
+    ...  ELSE IF  "${country}"=="id"  Element Should Be Visible  ${ID_products_mega_menu_fashion}
+    ...  ELSE IF  "${country}"=="th"  Element Should Be Visible  ${TH_products_mega_menu_fashion}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Element Should Be Visible  ${EN_products_mega_menu_sports_outdoors}
+    ...  ELSE IF  "${country}"=="vn"  Element Should Be Visible  ${VN_products_mega_menu_sports_outdoors}
+    ...  ELSE IF  "${country}"=="id"  Element Should Be Visible  ${ID_products_mega_menu_sports_outdoors}
+    ...  ELSE IF  "${country}"=="th"  Element Should Be Visible  ${TH_products_mega_menu_sports_outdoors}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Element Should Be Visible  ${EN_products_mega_menu_home_living}
+    ...  ELSE IF  "${country}"=="vn"  Element Should Be Visible  ${VN_products_mega_menu_home_living}
+    ...  ELSE IF  "${country}"=="id"  Element Should Be Visible  ${ID_products_mega_menu_home_living}
+    ...  ELSE IF  "${country}"=="th"  Element Should Be Visible  ${TH_products_mega_menu_home_living}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Element Should Be Visible  ${EN_products_mega_menu_kids_toys}
+    ...  ELSE IF  "${country}"=="vn"  Element Should Be Visible  ${VN_products_mega_menu_kids_toys}
+    ...  ELSE IF  "${country}"=="id"  Element Should Be Visible  ${ID_products_mega_menu_kids_toys}
+    ...  ELSE IF  "${country}"=="th"  Element Should Be Visible  ${TH_products_mega_menu_kids_toys}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Element Should Be Visible  ${EN_products_mega_menu_health_beauty}
+    ...  ELSE IF  "${country}"=="vn"  Element Should Be Visible  ${VN_products_mega_menu_health_beauty}
+    ...  ELSE IF  "${country}"=="id"  Element Should Be Visible  ${ID_products_mega_menu_health_beauty}
+    ...  ELSE IF  "${country}"=="th"  Element Should Be Visible  ${TH_products_mega_menu_health_beauty}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Element Should Be Visible  ${EN_products_mega_menu_automotive}
+    ...  ELSE IF  "${country}"=="vn"  Element Should Be Visible  ${VN_products_mega_menu_automotive}
+    ...  ELSE IF  "${country}"=="id"  Element Should Be Visible  ${ID_products_mega_menu_automotive}
+    ...  ELSE IF  "${country}"=="th"  Element Should Be Visible  ${TH_products_mega_menu_automotive}
 
-SEO Check Internal Link  [Arguments]  ${country}
-    ${internal_links}  Create List
-    :FOR  ${INDEX}  IN RANGE  0  ${filter_link1_count}
-    \  ${link}  Get From List  ${filter_link1}  ${INDEX}
-    \  ${match}  Run Keyword If  "${country}"=="MY"  Get Regexp Matches  ${link}  iprice.my
-    \   ...  ELSE IF  "${country}"=="VN"  Get Regexp Matches  ${link}  iprice.vn
-    \  ...  ELSE IF  "${country}"=="ID"  Get Regexp Matches  ${link}  iprice.co.id
-    \  ...  ELSE IF  "${country}"=="SG"  Get Regexp Matches  ${link}  iprice.sg
-    \  ...  ELSE IF  "${country}"=="PH"  Get Regexp Matches  ${link}  iprice.ph
-    \  ...  ELSE IF  "${country}"=="HK"  Get Regexp Matches  ${link}  iprice.hk
-    \  ...  ELSE IF  "${country}"=="TH"  Get Regexp Matches  ${link}  ipricethailand.com
-    \  ${matchCount}  Get Length  ${match}
-    \  Run Keyword If  ${matchCount}>0  Append To List  ${internal_links}  ${link}
-    ${internal_links_count}  Get Length  ${internal_links}
+iPrice Products Carousel Banner Validation
+    Element Should Be Visible  ${products_banner}
 
-    ${internal_links2}  Create List
-    :FOR  ${INDEX}  IN RANGE  0  ${internal_links_count}
-    \  ${link}  Get From List  ${internal_links}  ${INDEX}
-    \  ${match}  Get Regexp Matches  ${link}  /?nocache=1#
-    \  ${matchCount}  Get Length  ${match}
-    \  Run Keyword If  ${matchCount}==0  Append To List  ${internal_links2}  ${link}
-    ${internal_links2_count}  Get Length  ${internal_links2}
+iPrice Search, Compare & Save Section Validation  [Arguments]  ${country}
+    Mouse Over  ${search_compare_save_electronic_gaming_box}
+    ${box1_text1}  Get Text  //div[@id='hp-electronics']/h2[@class='title']/strong/span[1]
+    ${box1_text2}  Get Text  //div[@id='hp-electronics']/h2[@class='title']/strong/span[2]
+    ${box1}  Catenate  ${box1_text1}  ${box1_text2}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Should Be Equal  ${box1}  Electronics & Gaming
+    ...  ELSE IF  "${country}"=="vn"  Should Be Equal  ${box1}  Điện máy & Chơi game
+    ...  ELSE IF  "${country}"=="id"  Should Be Equal  ${box1}  Elektronik & Gaming
+    ...  ELSE IF  "${country}"=="th"  Should Be Equal  ${box1}  อิเล็กทรอนิกส์ & เกมส์
+    ${box2_text1}  Get Text  //div[@id='hp-fashion']/h2[@class='title']/strong/span[1]
+    ${box2_text2}  Get Text  //div[@id='hp-fashion']/h2[@class='title']/strong/span[2]
+    ${box2}  Catenate  ${box2_text1}  ${box2_text2}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Should Be Equal  ${box2}  Fashion & Beauty
+    ...  ELSE IF  "${country}"=="vn"  Should Be Equal  ${box2}  Thời trang & Làm đẹp
+    ...  ELSE IF  "${country}"=="id"  Should Be Equal  ${box2}  Fashion & Kecantikan
+    ...  ELSE IF  "${country}"=="th"  Should Be Equal  ${box2}  แฟชั่น & ความงาม
+    ${box3_text1}  Get Text  //div[@id='hp-coupon']/h2[@class='title']/strong/span[1]
+    ${box3_text2}  Get Text  //div[@id='hp-coupon']/h2[@class='title']/strong/span[2]
+    ${box3}  Catenate  ${box3_text1}  ${box3_text2}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Should Be Equal  ${box3}  Coupons & Offers
+    ...  ELSE IF  "${country}"=="vn"  Should Be Equal  ${box3}  Coupon & Ưu đãi
+    ...  ELSE IF  "${country}"=="id"  Should Be Equal  ${box3}  Kupon & Penawaran
+    ...  ELSE IF  "${country}"=="th"  Should Be Equal  ${box3}  คูปอง & ข้อเสนอ
 
-    :FOR  ${INDEX}  IN RANGE  0  ${internal_links2_count}
-    \  ${link}  Get From List  ${internal_links2}  ${INDEX}
-    \  ${link2}  Replace String  ${link}  ?nocache=1  ${empty}
-    \  ${status}  Run Keyword And Return Status  Should Start With  ${link2}  https
-    \  Run Keyword If  "${status}"=="False"  Run Keyword And Continue On Failure  Fail  ${link2} does not start with https.
-    \  ${status2}  Run Keyword And Return Status  Should End With  ${link2}  /
-    \  Run Keyword If  "${status2}"=="False"  Run Keyword And Continue On Failure  Fail  ${link2} does not end with trailing "/".
+iPrice Search, Compare & Save Section Electronic Gaming Validation  [Arguments]  ${country}
+    Click Element  ${search_compare_save_electronic_gaming_box}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_search_compare_save_electronic_gaming_box_computing}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_search_compare_save_electronic_gaming_box_computing}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_search_compare_save_electronic_gaming_box_computing}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_search_compare_save_electronic_gaming_box_computing}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_search_compare_save_electronic_gaming_box_phone_tablet}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_search_compare_save_electronic_gaming_box_phone_tablet}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_search_compare_save_electronic_gaming_box_phone_tablet}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_search_compare_save_electronic_gaming_box_phone_tablet}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_search_compare_save_electronic_gaming_box_gaming}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_search_compare_save_electronic_gaming_box_gaming}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_search_compare_save_electronic_gaming_box_gaming}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_search_compare_save_electronic_gaming_box_gaming}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_search_compare_save_electronic_gaming_box_camera_photo}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_search_compare_save_electronic_gaming_box_camera_photo}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_search_compare_save_electronic_gaming_box_camera_photo}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_search_compare_save_electronic_gaming_box_camera_photo}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_search_compare_save_electronic_gaming_box_tv_video_dvd}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_search_compare_save_electronic_gaming_box_tv_video_dvd}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_search_compare_save_electronic_gaming_box_tv_video_dvd}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_search_compare_save_electronic_gaming_box_tv_video_dvd}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_search_compare_save_electronic_gaming_box_appliances}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_search_compare_save_electronic_gaming_box_appliances}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_search_compare_save_electronic_gaming_box_appliances}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_search_compare_save_electronic_gaming_box_appliances}
 
-SEO Check Images ALT  [Arguments]  ${imageCount}
-    ${match}  Get Matching Xpath Count  ${homepage_bottom_product_images}
-    Run Keyword If  "${match}"!="${imageCount}"  Run Keyword And Continue On Failure  Fail  Images count wrong.
-    :FOR  ${INDEX}  IN RANGE  1  ${imageCount}
-    \  ${altImages}  Get Element Attribute  xpath=(${homepage_bottom_product_images})[${INDEX}]@alt
-    \  Run Keyword If  "${altImages}"=="None"  Run Keyword And Continue On Failure  Fail  Image does not contains alt.
+iPrice Search, Compare & Save Section Fashion Beauty Validation  [Arguments]  ${country}
+    Click Element  ${search_compare_save_fashion_beauty_box}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_search_compare_save_fashion_beauty_box_clothing}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_search_compare_save_fashion_beauty_box_clothing}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_search_compare_save_fashion_beauty_box_clothing}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_search_compare_save_fashion_beauty_box_clothing}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_search_compare_save_fashion_beauty_box_shoes}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_search_compare_save_fashion_beauty_box_shoes}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_search_compare_save_fashion_beauty_box_shoes}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_search_compare_save_fashion_beauty_box_shoes}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_search_compare_save_fashion_beauty_box_bags}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_search_compare_save_fashion_beauty_box_bags}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_search_compare_save_fashion_beauty_box_bags}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_search_compare_save_fashion_beauty_box_bags}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_search_compare_save_fashion_beauty_box_health_beauty}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_search_compare_save_fashion_beauty_box_health_beauty}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_search_compare_save_fashion_beauty_box_health_beauty}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_search_compare_save_fashion_beauty_box_health_beauty}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_search_compare_save_fashion_beauty_box_jewellery}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_search_compare_save_fashion_beauty_box_jewellery}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_search_compare_save_fashion_beauty_box_jewellery}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_search_compare_save_fashion_beauty_box_jewellery}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_search_compare_save_fashion_beauty_box_watches}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_search_compare_save_fashion_beauty_box_watches}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_search_compare_save_fashion_beauty_box_watches}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_search_compare_save_fashion_beauty_box_watches}
+
+iPrice Search, Compare & Save Section Coupons Offers Validation  [Arguments]  ${country}
+    Click Element  ${search_compare_save_coupons_offers_box}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_search_compare_save_coupons_offers_box_electronics}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_search_compare_save_coupons_offers_box_electronics}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_search_compare_save_coupons_offers_box_electronics}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_search_compare_save_coupons_offers_box_electronics}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_search_compare_save_coupons_offers_box_fashion}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_search_compare_save_coupons_offers_box_fashion}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_search_compare_save_coupons_offers_box_fashion}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_search_compare_save_coupons_offers_box_fashion}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_search_compare_save_coupons_offers_box_beauty_health}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_search_compare_save_coupons_offers_box_beauty_health}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_search_compare_save_coupons_offers_box_beauty_health}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_search_compare_save_coupons_offers_box_beauty_health}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_search_compare_save_coupons_offers_box_home_living}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_search_compare_save_coupons_offers_box_home_living}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_search_compare_save_coupons_offers_box_olahraga_outdoor}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_search_compare_save_coupons_offers_box_home_living}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_search_compare_save_coupons_offers_box_kids_toys}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_search_compare_save_coupons_offers_box_kids_toys}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_search_compare_save_coupons_offers_box_kids_toys}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_search_compare_save_coupons_offers_box_kids_toys}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="hk"  Mouse Over  ${EN_search_compare_save_coupons_offers_box_travel_hotels}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_search_compare_save_coupons_offers_box_travel_hotels}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_search_compare_save_coupons_offers_box_travel_hotels}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_search_compare_save_coupons_offers_box_travel_hotels}
+    ...  ELSE IF  "${country}"=="ph"  Mouse Over  ${PH_search_compare_save_coupons_offers_box_sports_outdoors}
+
+iPrice Homepage Recommended Products Validation  [Arguments]  ${country}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_recommended_products_header}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_recommended_products_header}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_recommended_products_header}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_recommended_products_header}
+    ${count}  Get Matching Xpath Count  ${recommended_product_list}
+    Run Keyword If  "${count}"!="6"  Run Keyword And Continue On Failure  Fail  Recommended products count not 6.
+    ${loop_count}  Evaluate  ${count}+1
+    :FOR  ${INDEX}  IN RANGE  1  ${loop_count}
+    \  Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Element Should Be Visible  //div[@id='top-comparable-products']//div[@class='product-unit hover-popup offer'][${INDEX}]//div[text()=' Compare Prices ']
+    \  ...  ELSE IF  "${country}"=="vn"  Element Should Be Visible  //div[@id='top-comparable-products']//div[@class='product-unit hover-popup offer'][${INDEX}]//div[text()=' So sánh giá ']
+    \  ...  ELSE IF  "${country}"=="id"  Element Should Be Visible  //div[@id='top-comparable-products']//div[@class='product-unit hover-popup offer'][${INDEX}]//div[text()=' Bandingkan Harga ']
+    \  ...  ELSE IF  "${country}"=="th"  Element Should Be Visible  //div[@id='top-comparable-products']//div[@class='product-unit hover-popup offer'][${INDEX}]//div[text()=' เปรียบเทียบราคา ']
+
+iPrice Homepage Footer Validation  [Arguments]  ${country}
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_homepage_footer_international_header}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_homepage_footer_international_header}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_homepage_footer_international_header}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_homepage_footer_international_header}
+    Run Keyword If  "${country}"=="my"  MY International URL Validation
+    ...  ELSE IF  "${country}"=="vn"  VN International URL Validation
+    ...  ELSE IF  "${country}"=="id"  ID International URL Validation
+    ...  ELSE IF  "${country}"=="sg"  SG International URL Validation
+    ...  ELSE IF  "${country}"=="ph"  PH International URL Validation
+    ...  ELSE IF  "${country}"=="hk"  HK International URL Validation
+    ...  ELSE IF  "${country}"=="th"  TH International URL Validation
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_homepage_footer_ipricegroup_header}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_homepage_footer_ipricegroup_header}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_homepage_footer_ipricegroup_header}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_homepage_footer_ipricegroup_header}
+    Run Keyword If  "${country}"=="my"  MY iPrice Group Footer Validation
+    ...  ELSE IF  "${country}"=="vn"  VN iPrice Group Footer Validation
+    ...  ELSE IF  "${country}"=="id"  ID iPrice Group Footer Validation
+    ...  ELSE IF  "${country}"=="sg"  SG iPrice Group Footer Validation
+    ...  ELSE IF  "${country}"=="ph"  PH iPrice Group Footer Validation
+    ...  ELSE IF  "${country}"=="hk"  HK iPrice Group Footer Validation
+    ...  ELSE IF  "${country}"=="th"  TH iPrice Group Footer Validation
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Mouse Over  ${EN_footer_social_header}
+    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_footer_social_header}
+    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_footer_social_header}
+    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_footer_social_header}
+    Run Keyword If  "${country}"=="my"  Element Should Be Visible  ${MY_footer_social_facebook_link}
+    ...  ELSE IF  "${country}"=="vn"  Element Should Be Visible  ${VN_footer_social_facebook_link}
+    ...  ELSE IF  "${country}"=="id"  Element Should Be Visible  ${ID_footer_social_facebook_link}
+    ...  ELSE IF  "${country}"=="sg"  Element Should Be Visible  ${SG_footer_social_facebook_link}
+    ...  ELSE IF  "${country}"=="ph"  Element Should Be Visible  ${PH_footer_social_facebook_link}
+    ...  ELSE IF  "${country}"=="hk"  Element Should Be Visible  ${HK_footer_social_facebook_link}
+    ...  ELSE IF  "${country}"=="th"  Element Should Be Visible  ${TH_footer_social_facebook_link}
+    Run Keyword If  "${country}"=="my"  Element Should Be Visible  ${MY_footer_social_pinterest_link}
+    ...  ELSE IF  "${country}"=="vn"  Element Should Be Visible  ${VN_footer_social_pinterest_link}
+    ...  ELSE IF  "${country}"=="id"  Element Should Be Visible  ${ID_footer_social_pinterest_link}
+    ...  ELSE IF  "${country}"=="sg"  Element Should Be Visible  ${SG_footer_social_pinterest_link}
+    ...  ELSE IF  "${country}"=="ph"  Element Should Be Visible  ${PH_footer_social_pinterest_link}
+    ...  ELSE IF  "${country}"=="hk"  Element Should Be Visible  ${HK_footer_social_pinterest_link}
+    ...  ELSE IF  "${country}"=="th"  Element Should Be Visible  ${TH_footer_social_pinterest_link}
+    Run Keyword If  "${country}"=="my"  Element Should Be Visible  ${MY_footer_social_twitter_link}
+    ...  ELSE IF  "${country}"=="vn"  Element Should Be Visible  ${VN_footer_social_twitter_link}
+    ...  ELSE IF  "${country}"=="id"  Element Should Be Visible  ${ID_footer_social_twitter_link}
+    ...  ELSE IF  "${country}"=="sg"  Element Should Be Visible  ${SG_footer_social_twitter_link}
+    ...  ELSE IF  "${country}"=="ph"  Element Should Be Visible  ${PH_footer_social_twitter_link}
+    ...  ELSE IF  "${country}"=="hk"  Element Should Be Visible  ${HK_footer_social_twitter_link}
+    ...  ELSE IF  "${country}"=="th"  Element Should Be Visible  ${TH_footer_social_twitter_link}
+    Element Should Be Visible  ${all_footer_social_google+_text}
+
+MY International URL Validation
+    # Element Should Not Be Visible  ${EN_homepage_footer_international_malaysia_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_singapore_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_indonesia_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_philippines_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_hong_kong_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_thailand_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_vietnam_link}
+
+VN International URL Validation
+    Element Should Be Visible  ${VN_homepage_footer_international_malaysia_link}
+    Element Should Be Visible  ${VN_homepage_footer_international_singapore_link}
+    Element Should Be Visible  ${VN_homepage_footer_international_indonesia_link}
+    Element Should Be Visible  ${VN_homepage_footer_international_philippines_link}
+    Element Should Be Visible  ${VN_homepage_footer_international_hong_kong_link}
+    Element Should Be Visible  ${VN_homepage_footer_international_thailand_link}
+
+ID International URL Validation
+    Element Should Be Visible  ${ID_homepage_footer_international_malaysia_link}
+    Element Should Be Visible  ${ID_homepage_footer_international_singapore_link}
+    Element Should Be Visible  ${ID_homepage_footer_international_philippines_link}
+    Element Should Be Visible  ${ID_homepage_footer_international_hong_kong_link}
+    Element Should Be Visible  ${ID_homepage_footer_international_thailand_link}
+    Element Should Be Visible  ${ID_homepage_footer_international_vietnam_link}
+
+SG International URL Validation
+    Element Should Be Visible  ${EN_homepage_footer_international_malaysia_link}
+    # Element Should Not Be Visible  ${EN_homepage_footer_international_singapore_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_indonesia_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_philippines_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_hong_kong_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_thailand_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_vietnam_link}
+
+PH International URL Validation
+    Element Should Be Visible  ${EN_homepage_footer_international_malaysia_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_singapore_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_indonesia_link}
+    # Element Should Not Be Visible  ${EN_homepage_footer_international_philippines_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_hong_kong_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_thailand_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_vietnam_link}
+
+HK International URL Validation
+    Element Should Be Visible  ${EN_homepage_footer_international_malaysia_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_singapore_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_indonesia_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_philippines_link}
+    # Element Should Not Be Visible  ${EN_homepage_footer_international_hong_kong_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_thailand_link}
+    Element Should Be Visible  ${EN_homepage_footer_international_vietnam_link}
+
+TH International URL Validation
+    Element Should Be Visible  ${TH_homepage_footer_international_malaysia_link}
+    Element Should Be Visible  ${TH_homepage_footer_international_singapore_link}
+    Element Should Be Visible  ${TH_homepage_footer_international_indonesia_link}
+    Element Should Be Visible  ${TH_homepage_footer_international_philippines_link}
+    Element Should Be Visible  ${TH_homepage_footer_international_hong_kong_link}
+    Element Should Be Visible  ${TH_homepage_footer_international_vietnam_link}
+
+MY iPrice Group Footer Validation
+    Element Should Be Visible  ${MY_footer_ipricegroup_about_us_link}
+    Element Should Be Visible  ${MY_footer_ipricegroup_trends_link}
+    Element Should Be Visible  ${MY_footer_ipricegroup_contact_us_link}
+    Element Should Be Visible  ${MY_footer_ipricegroup_carreers_link}
+    Element Should Be Visible  ${MY_footer_ipricegroup_partners_link}
+    Element Should Be Visible  ${MY_footer_ipricegroup_privacy_policy_link}
+    Element Should Be Visible  ${MY_footer_ipricegroup_terms_of_use_link}
+    Element Should Be Visible  ${MY_footer_ipricegroup_iema_link}
+
+VN iPrice Group Footer Validation
+    Element Should Be Visible  ${VN_footer_ipricegroup_about_us_link}
+    Element Should Be Visible  ${VN_footer_ipricegroup_trends_link}
+    Element Should Be Visible  ${VN_footer_ipricegroup_contact_us_link}
+    Element Should Be Visible  ${VN_footer_ipricegroup_carreers_link}
+    Element Should Be Visible  ${VN_footer_ipricegroup_partners_link}
+    Element Should Be Visible  ${VN_footer_ipricegroup_privacy_policy_link}
+    Element Should Be Visible  ${VN_footer_ipricegroup_terms_of_use_link}
+    Element Should Be Visible  ${VN_footer_ipricegroup_iema_link}
+
+ID iPrice Group Footer Validation
+    Element Should Be Visible  ${ID_footer_ipricegroup_about_us_link}
+    Element Should Be Visible  ${ID_footer_ipricegroup_trends_link}
+    Element Should Be Visible  ${ID_footer_ipricegroup_contact_us_link}
+    Element Should Be Visible  ${ID_footer_ipricegroup_carreers_link}
+    Element Should Be Visible  ${ID_footer_ipricegroup_partners_link}
+    Element Should Be Visible  ${ID_footer_ipricegroup_privacy_policy_link}
+    Element Should Be Visible  ${ID_footer_ipricegroup_terms_of_use_link}
+    Element Should Be Visible  ${ID_footer_ipricegroup_iema_link}
+
+SG iPrice Group Footer Validation
+    Element Should Be Visible  ${SG_footer_ipricegroup_about_us_link}
+    Element Should Be Visible  ${SG_footer_ipricegroup_trends_link}
+    Element Should Be Visible  ${SG_footer_ipricegroup_contact_us_link}
+    Element Should Be Visible  ${SG_footer_ipricegroup_carreers_link}
+    Element Should Be Visible  ${SG_footer_ipricegroup_partners_link}
+    Element Should Be Visible  ${SG_footer_ipricegroup_privacy_policy_link}
+    Element Should Be Visible  ${SG_footer_ipricegroup_terms_of_use_link}
+    Element Should Be Visible  ${SG_footer_ipricegroup_iema_link}
+
+PH iPrice Group Footer Validation
+    Element Should Be Visible  ${PH_footer_ipricegroup_about_us_link}
+    Element Should Be Visible  ${PH_footer_ipricegroup_trends_link}
+    Element Should Be Visible  ${PH_footer_ipricegroup_contact_us_link}
+    Element Should Be Visible  ${PH_footer_ipricegroup_carreers_link}
+    Element Should Be Visible  ${PH_footer_ipricegroup_partners_link}
+    Element Should Be Visible  ${PH_footer_ipricegroup_privacy_policy_link}
+    Element Should Be Visible  ${PH_footer_ipricegroup_terms_of_use_link}
+    Element Should Be Visible  ${PH_footer_ipricegroup_iema_link}
+
+HK iPrice Group Footer Validation
+    Element Should Be Visible  ${HK_footer_ipricegroup_about_us_link}
+    Element Should Be Visible  ${HK_footer_ipricegroup_trends_link}
+    Element Should Be Visible  ${HK_footer_ipricegroup_contact_us_link}
+    Element Should Be Visible  ${HK_footer_ipricegroup_carreers_link}
+    Element Should Be Visible  ${HK_footer_ipricegroup_partners_link}
+    Element Should Be Visible  ${HK_footer_ipricegroup_privacy_policy_link}
+    Element Should Be Visible  ${HK_footer_ipricegroup_terms_of_use_link}
+    Element Should Be Visible  ${HK_footer_ipricegroup_iema_link}
+
+TH iPrice Group Footer Validation
+    Element Should Be Visible  ${TH_footer_ipricegroup_about_us_link}
+    Element Should Be Visible  ${TH_footer_ipricegroup_trends_link}
+    Element Should Be Visible  ${TH_footer_ipricegroup_contact_us_link}
+    Element Should Be Visible  ${TH_footer_ipricegroup_carreers_link}
+    Element Should Be Visible  ${TH_footer_ipricegroup_partners_link}
+    Element Should Be Visible  ${TH_footer_ipricegroup_privacy_policy_link}
+    Element Should Be Visible  ${TH_footer_ipricegroup_terms_of_use_link}
+    Element Should Be Visible  ${TH_footer_ipricegroup_iema_link}
+
+iPrice Products Page Access Coupons From Courtesy  [Arguments]  ${country}
+    Run Keyword If  "${country}"=="my"  Run Keyword And Continue On Failure  Click Element  ${MY_courtesy_coupons}
+    ...  ELSE IF  "${country}"=="vn"  Run Keyword And Continue On Failure  Click Element  ${VN_courtesy_coupons}
+    ...  ELSE IF  "${country}"=="id"  Run Keyword And Continue On Failure  Click Element  ${ID_courtesy_coupons}
+    ...  ELSE IF  "${country}"=="sg"  Run Keyword And Continue On Failure  Click Element  ${SG_courtesy_coupons}
+    ...  ELSE IF  "${country}"=="ph"  Run Keyword And Continue On Failure  Click Element  ${PH_courtesy_coupons}
+    ...  ELSE IF  "${country}"=="hk"  Run Keyword And Continue On Failure  Click Element  ${HK_courtesy_coupons}
+    ...  ELSE IF  "${country}"=="th"  Run Keyword And Continue On Failure  Click Element  ${TH_courtesy_coupons}

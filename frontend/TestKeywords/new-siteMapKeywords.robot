@@ -9,13 +9,13 @@ ${sessionName}  iprice
 *** Keywords ***
 
 Create New Request Session  [Arguments]  ${country}
-    Run Keyword If  "${country}"=="MY"  Create Session  ${sessionName}  https://iprice.my  disable_warnings=1
-    ...  ELSE IF  "${country}"=="ID"  Create Session  ${sessionName}  https://iprice.co.id  disable_warnings=1
-    ...  ELSE IF  "${country}"=="VN"  Create Session  ${sessionName}  https://iprice.vn  disable_warnings=1
-    ...  ELSE IF  "${country}"=="TH"  Create Session  ${sessionName}  https://ipricethailand.com  disable_warnings=1
-    ...  ELSE IF  "${country}"=="SG"  Create Session  ${sessionName}  https://iprice.sg  disable_warnings=1
-    ...  ELSE IF  "${country}"=="PH"  Create Session  ${sessionName}  https://iprice.ph  disable_warnings=1
-    ...  ELSE IF  "${country}"=="HK"  Create Session  ${sessionName}  https://iprice.hk  disable_warnings=1
+    Run Keyword If  "${country}"=="my"  Create Session  ${sessionName}  https://iprice.my  disable_warnings=1
+    ...  ELSE IF  "${country}"=="id"  Create Session  ${sessionName}  https://iprice.co.id  disable_warnings=1
+    ...  ELSE IF  "${country}"=="vn"  Create Session  ${sessionName}  https://iprice.vn  disable_warnings=1
+    ...  ELSE IF  "${country}"=="th"  Create Session  ${sessionName}  https://ipricethailand.com  disable_warnings=1
+    ...  ELSE IF  "${country}"=="sg"  Create Session  ${sessionName}  https://iprice.sg  disable_warnings=1
+    ...  ELSE IF  "${country}"=="ph"  Create Session  ${sessionName}  https://iprice.ph  disable_warnings=1
+    ...  ELSE IF  "${country}"=="hk"  Create Session  ${sessionName}  https://iprice.hk  disable_warnings=1
 
 Get Request Response Content
     ${resp}  Get Request  ${sessionName}  /sitemap_index.xml
@@ -40,7 +40,14 @@ Get All Main Links Request  [Arguments]  ${country}
     \  ...  ELSE IF  "${country}"=="PH"  Replace String  ${ELEMENT}  https://iprice.ph  ${empty}
     \  ...  ELSE IF  "${country}"=="HK"  Replace String  ${ELEMENT}  https://iprice.hk  ${empty}
     \  ${resp}  Get Request  ${sessionName}  ${link}
-    \   Run Keyword If  "${resp.status_code}" != "200"  Fail  Failed to access ${ELEMENT}.
+    \  Run Keyword If  "${resp.status_code}" == "400"  Retry Get All Main Links Request  ${link}
+    \  ...  ELSE IF  "${resp.status_code}" == "404"  Run Keyword And Continue On Failure  Fail  Request to ${Element} failed.
+
+Retry Get All Main Links Request  [Arguments]  ${link}
+    :FOR  ${INDEX}  IN RANGE  0  500
+    \  ${resp}  Get Request  ${sessionName}  ${link}
+    \  Run Keyword If  "${resp.status_code}" == "200"  Exit For Loop
+    \  ...  ELSE IF  "${resp.status_code}" == "404"  Run Keyword And Continue On Failure  Fail  Request to ${Element} failed.
 
 Get All Main Price Comparison Link
     @{priceComparisonList}  Create List
