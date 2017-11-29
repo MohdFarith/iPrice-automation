@@ -4,10 +4,6 @@ Documentation   A test suite with various tests for iPrice HK.
 
 #Import
 Resource  ../TestSettings/TestSettings.robot
-Resource  ../TestVariables/TestVariables-Homepage.robot
-Resource  ../TestKeywords/new-siteMapKeywords.robot
-Resource  ../TestKeywords/new-homePageKeywords.robot
-Resource  ../TestKeywords/new-couponsKeywords.robot
 
 #Setup/Tear Down
 Test Setup  TestCase Setup
@@ -35,11 +31,13 @@ Test Homepage UI HK
     iPrice Homepage Courtesy Validation  hk
     iPrice Header Validation  hk
     iPrice Products Mega Menu Validation  hk
+    iPrice Products Carousel Banner Validation  yes
     iPrice Search, Compare & Save Section Validation  hk
     iPrice Search, Compare & Save Section Electronic Gaming Validation  hk
     iPrice Search, Compare & Save Section Fashion Beauty Validation  hk
     iPrice Search, Compare & Save Section Coupons Offers Validation  hk
     iPrice Homepage Recommended Products Validation  hk
+    iPrice Footer Email Subscription Validation  hk
     iPrice Homepage Footer Validation  hk
 
 Test Coupons Page UI HK

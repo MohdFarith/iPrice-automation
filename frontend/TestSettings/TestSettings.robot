@@ -6,9 +6,16 @@ Library  Collections
 Library  HttpLibrary.HTTP
 Library  String
 Library  RequestsLibrary
-# Library  XvfbRobot
 Library  DateTime
 Library  XML
+
+#Import
+Resource  ../TestVariables/TestVariables-Homepage.robot
+Resource  ../TestVariables/TestVariables-EmailSubscription.robot
+Resource  ../TestKeywords/new-siteMapKeywords.robot
+Resource  ../TestKeywords/new-homePageKeywords.robot
+Resource  ../TestKeywords/new-couponsKeywords.robot
+Resource  ../TestKeywords/new-emailSubscriptionKeywords.robot
 
 *** Variables ***
 

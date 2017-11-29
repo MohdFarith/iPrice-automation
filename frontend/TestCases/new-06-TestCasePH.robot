@@ -4,10 +4,6 @@ Documentation   A test suite with various tests for iPrice PH.
 
 #Import
 Resource  ../TestSettings/TestSettings.robot
-Resource  ../TestVariables/TestVariables-Homepage.robot
-Resource  ../TestKeywords/new-siteMapKeywords.robot
-Resource  ../TestKeywords/new-homePageKeywords.robot
-Resource  ../TestKeywords/new-couponsKeywords.robot
 
 #Setup/Tear Down
 Test Setup  TestCase Setup
@@ -35,11 +31,13 @@ Test Homepage UI PH
     iPrice Homepage Courtesy Validation  ph
     iPrice Header Validation  ph
     iPrice Products Mega Menu Validation  ph
+    iPrice Products Carousel Banner Validation  no
     iPrice Search, Compare & Save Section Validation  ph
     iPrice Search, Compare & Save Section Electronic Gaming Validation  ph
     iPrice Search, Compare & Save Section Fashion Beauty Validation  ph
     iPrice Search, Compare & Save Section Coupons Offers Validation  ph
     iPrice Homepage Recommended Products Validation  ph
+    iPrice Footer Email Subscription Validation  ph
     iPrice Homepage Footer Validation  ph
 
 Test Coupons Page UI PH

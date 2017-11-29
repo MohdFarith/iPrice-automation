@@ -28,13 +28,10 @@ ${PH_courtesy_products}  //div[@id='courtesies-banner']//a[@href='https://iprice
 ${HK_courtesy_products}  //div[@id='courtesies-banner']//a[@href='https://iprice.hk/']//span[text()='Products']
 ${TH_courtesy_products}  //div[@id='courtesies-banner']//a[@href='https://ipricethailand.com/']//span[text()='สินค้า']
 
-${MY_courtesy_products_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://iprice.my/') and @class='flex-1 flex-none-l text-align-center active']
-${VN_courtesy_products_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://iprice.vn/') and @class='flex-1 flex-none-l text-align-center active']
-${ID_courtesy_products_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://iprice.co.id/') and @class='flex-1 flex-none-l text-align-center active']
-${SG_courtesy_products_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://iprice.sg/') and @class='flex-1 flex-none-l text-align-center active']
-${PH_courtesy_products_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://iprice.ph/') and @class='flex-1 flex-none-l text-align-center active']
-${HK_courtesy_products_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://iprice.hk/') and @class='flex-1 flex-none-l text-align-center active']
-${TH_courtesy_products_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://ipricethailand.com/') and @class='flex-1 flex-none-l text-align-center active']
+${EN_courtesy_products_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='Products']
+${VN_courtesy_products_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='Sản phẩm']
+${ID_courtesy_products_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='Produk']
+${TH_courtesy_products_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='สินค้า']
 
 ${MY_courtesy_coupons}  //div[@id='courtesies-banner']//a[@href='https://iprice.my/coupons/']//span[text()='Coupons']
 ${VN_courtesy_coupons}  //div[@id='courtesies-banner']//a[@href='https://iprice.vn/coupons/']//span[text()='Mã giảm giá']
@@ -44,13 +41,10 @@ ${PH_courtesy_coupons}  //div[@id='courtesies-banner']//a[@href='https://iprice.
 ${HK_courtesy_coupons}  //div[@id='courtesies-banner']//a[@href='https://iprice.hk/coupons/']//span[text()='Coupons']
 ${TH_courtesy_coupons}  //div[@id='courtesies-banner']//a[@href='https://ipricethailand.com/coupons/']//span[text()='คูปอง']
 
-${MY_courtesy_coupons_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://iprice.my/coupons/') and @class='flex-1 flex-none-l text-align-center active']
-${VN_courtesy_coupons_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://iprice.vn/coupons/') and @class='flex-1 flex-none-l text-align-center active']
-${ID_courtesy_coupons_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://iprice.co.id/coupons/') and @class='flex-1 flex-none-l text-align-center active']
-${SG_courtesy_coupons_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://iprice.sg/coupons/') and @class='flex-1 flex-none-l text-align-center active']
-${PH_courtesy_coupons_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://iprice.ph/coupons/') and @class='flex-1 flex-none-l text-align-center active']
-${HK_courtesy_coupons_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://iprice.hk/coupons/') and @class='flex-1 flex-none-l text-align-center active']
-${TH_courtesy_coupons_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://ipricethailand.com/coupons/') and @class='flex-1 flex-none-l text-align-center active']
+${EN_courtesy_coupons_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='Coupons']
+${VN_courtesy_coupons_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='Mã giảm giá']
+${ID_courtesy_coupons_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='Kupon']
+${TH_courtesy_coupons_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='คูปอง']
 
 ${MY_courtesy_trends}  //div[@id='courtesies-banner']//a[@href='https://iprice.my/trends/']//span[text()='Trends']
 ${VN_courtesy_trends}  //div[@id='courtesies-banner']//a[@href='https://iprice.vn/xu-huong/']//span[text()='Xu hướng']
@@ -60,13 +54,10 @@ ${PH_courtesy_trends}  //div[@id='courtesies-banner']//a[@href='https://iprice.p
 ${HK_courtesy_trends}  //div[@id='courtesies-banner']//a[@href='https://iprice.hk/trends/']//span[text()='Trends']
 ${TH_courtesy_trends}  //div[@id='courtesies-banner']//a[@href='https://ipricethailand.com/%E0%B9%80%E0%B8%97%E0%B8%A3%E0%B8%99%E0%B8%94/']//span[text()='เทรนด์']
 
-${MY_courtesy_trends_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://iprice.my/trends/') and @class='flex-1 flex-none-l text-align-center active']
-${VN_courtesy_trends_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://iprice.vn/xu-huong/') and @class='flex-1 flex-none-l text-align-center active']
-${ID_courtesy_trends_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://iprice.co.id/trend/') and @class='flex-1 flex-none-l text-align-center active']
-${SG_courtesy_trends_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://iprice.sg/trends/') and @class='flex-1 flex-none-l text-align-center active']
-${PH_courtesy_trends_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://iprice.ph/trends/') and @class='flex-1 flex-none-l text-align-center active']
-${HK_courtesy_trends_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://iprice.hk/trends/') and @class='flex-1 flex-none-l text-align-center active']
-${TH_courtesy_trends_highlight}  //div[@id='courtesies-banner']//a[contains(@href,'https://ipricethailand.com/%E0%B9%80%E0%B8%97%E0%B8%A3%E0%B8%99%E0%B8%94/') and @class='flex-1 flex-none-l text-align-center active']
+${EN_courtesy_trends_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='Trends']
+${VN_courtesy_trends_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='Xu hướng']
+${ID_courtesy_trends_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='Trend']
+${TH_courtesy_trends_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='เทรนด์']
 
 ${MY_header_logo_link}  //div[@id='banner']//a[contains(@class,'logo h2') and @href='https://iprice.my/']
 ${VN_header_logo_link}  //div[@id='banner']//a[contains(@class,'logo h2') and @href='https://iprice.vn/']
@@ -126,7 +117,7 @@ ${VN_products_mega_menu_automotive}  //div[@id='mega-menu']//strong[normalize-sp
 ${ID_products_mega_menu_automotive}  //div[@id='mega-menu']//strong[normalize-space()='Otomotif']
 ${TH_products_mega_menu_automotive}  //div[@id='mega-menu']//strong[normalize-space()='ยานยนต์']
 
-${products_banner}  //div[@id="carousel-banners"]
+${products_banner}  //div[@id="carousel-banners-amp"]
 
 ${homepage_bottom_product_images}  //img[contains(@class,'lazy product-img')]
 
@@ -187,6 +178,14 @@ ${EN_search_compare_save_electronic_gaming_box_appliances}  //div[@id='hp-parent
 ${VN_search_compare_save_electronic_gaming_box_appliances}  //div[@id='hp-parent']//span[text()='Đồ gia dụng']
 ${ID_search_compare_save_electronic_gaming_box_appliances}  //div[@id='hp-parent']//span[text()='Peralatan']
 ${TH_search_compare_save_electronic_gaming_box_appliances}  //div[@id='hp-parent']//span[text()='เครื่องใช้ไฟฟ้า']
+${EN_search_compare_save_electronic_gaming_box_see_all_categories}  //div[@id='hp-parent']//div[@id='tech']//span[text()='See all categories ❯']
+${VN_search_compare_save_electronic_gaming_box_see_all_categories}  //div[@id='hp-parent']//div[@id='tech']//span[text()='Xem tất cả danh mục ❯']
+${ID_search_compare_save_electronic_gaming_box_see_all_categories}  //div[@id='hp-parent']//div[@id='tech']//span[text()='Lihat semua kategori ❯']
+${TH_search_compare_save_electronic_gaming_box_see_all_categories}  //div[@id='hp-parent']//div[@id='tech']//span[text()='เลือกดูหมวดหมู่ทั้งหมด ❯']
+${EN_search_compare_save_electronic_gaming_box_shop_by_brands}  //div[@id='hp-parent']//div[@id='tech']//span[text()='Shop by brands ❯']
+${VN_search_compare_save_electronic_gaming_box_shop_by_brands}  //div[@id='hp-parent']//div[@id='tech']//span[text()='Chọn mua theo Thương Hiệu ❯']
+${ID_search_compare_save_electronic_gaming_box_shop_by_brands}  //div[@id='hp-parent']//div[@id='tech']//span[text()='Belanja berdasarkan Merek ❯']
+${TH_search_compare_save_electronic_gaming_box_shop_by_brands}  //div[@id='hp-parent']//div[@id='tech']//span[text()='เลือกซื้อจากแบรนด์ ❯']
 
 ${EN_search_compare_save_fashion_beauty_box_clothing}  //div[@id='hp-parent']//span[text()='Clothing']
 ${VN_search_compare_save_fashion_beauty_box_clothing}  //div[@id='hp-parent']//span[text()='Quần áo']
@@ -212,6 +211,14 @@ ${EN_search_compare_save_fashion_beauty_box_watches}  //div[@id='hp-parent']//sp
 ${VN_search_compare_save_fashion_beauty_box_watches}  //div[@id='hp-parent']//span[text()='Đồng hồ']
 ${ID_search_compare_save_fashion_beauty_box_watches}  //div[@id='hp-parent']//span[text()='Jam Tangan']
 ${TH_search_compare_save_fashion_beauty_box_watches}  //div[@id='hp-parent']//span[text()='นาฬิกาข้อมือ']
+${EN_search_compare_save_fashion_beauty_box_see_all_categories}  //div[@id='hp-parent']//div[@id='model']//span[text()='See all categories ❯']
+${VN_search_compare_save_fashion_beauty_box_see_all_categories}  //div[@id='hp-parent']//div[@id='model']//span[text()='Xem tất cả danh mục ❯']
+${ID_search_compare_save_fashion_beauty_box_see_all_categories}  //div[@id='hp-parent']//div[@id='model']//span[text()='Lihat semua kategori ❯']
+${TH_search_compare_save_fashion_beauty_box_see_all_categories}  //div[@id='hp-parent']//div[@id='model']//span[text()='เลือกดูหมวดหมู่ทั้งหมด ❯']
+${EN_search_compare_save_fashion_beauty_box_shop_by_brands}  //div[@id='hp-parent']//div[@id='model']//span[text()='Shop by brands ❯']
+${VN_search_compare_save_fashion_beauty_box_shop_by_brands}  //div[@id='hp-parent']//div[@id='model']//span[text()='Chọn mua theo Thương Hiệu ❯']
+${ID_search_compare_save_fashion_beauty_box_shop_by_brands}  //div[@id='hp-parent']//div[@id='model']//span[text()='Belanja berdasarkan Merek ❯']
+${TH_search_compare_save_fashion_beauty_box_shop_by_brands}  //div[@id='hp-parent']//div[@id='model']//span[text()='เลือกซื้อจากแบรนด ❯']
 
 ${EN_search_compare_save_coupons_offers_box_electronics}  //div[@id='hp-parent']//span[text()='Electronics']
 ${VN_search_compare_save_coupons_offers_box_electronics}  //div[@id='hp-parent']//span[text()='Điện máy']
@@ -238,6 +245,14 @@ ${VN_search_compare_save_coupons_offers_box_travel_hotels}  //div[@id='hp-parent
 ${ID_search_compare_save_coupons_offers_box_travel_hotels}  //div[@id='hp-parent']//span[text()='Wisata & Hotel']
 ${TH_search_compare_save_coupons_offers_box_travel_hotels}  //div[@id='hp-parent']//span[text()='ท่องเที่ยว & โรงแรม']
 ${PH_search_compare_save_coupons_offers_box_sports_outdoors}  //div[@id='hp-parent']//span[text()='Sports & Outdoors']
+${EN_search_compare_save_coupons_offers_box_see_all_coupons}  //div[@id='hp-parent']//div[@id='offer']//span[text()='See all coupons ❯']
+${VN_search_compare_save_coupons_offers_box_see_all_coupons}  //div[@id='hp-parent']//div[@id='offer']//span[text()='Xem tất cả coupon ❯']
+${ID_search_compare_save_coupons_offers_box_see_all_coupons}  //div[@id='hp-parent']//div[@id='offer']//span[text()='Lihat semua kupon ❯']
+${TH_search_compare_save_coupons_offers_box_see_all_coupons}  //div[@id='hp-parent']//div[@id='offer']//span[text()='เลือกซื้อจากแบรนด ❯']
+${EN_search_compare_save_coupons_offers_box_shop_by_brands}  //div[@id='hp-parent']//div[@id='offer']//span[text()='Shop by brands ❯']
+${VN_search_compare_save_coupons_offers_box_shop_by_brands}  //div[@id='hp-parent']//div[@id='offer']//span[text()='Chọn mua theo Thương Hiệu ❯']
+${ID_search_compare_save_coupons_offers_box_shop_by_brands}  //div[@id='hp-parent']//div[@id='offer']//span[text()='Belanja berdasarkan Merek ❯']
+${TH_search_compare_save_coupons_offers_box_shop_by_brands}  //div[@id='hp-parent']//div[@id='offer']//span[text()='เลือกซื้อจากแบรนด ❯']
 
 ${modal_signup_close_button}  //div[@id='PopupSignupForm_0']//div[@class='mc-closeModal']
 
@@ -380,6 +395,24 @@ ${HK_footer_social_twitter_link}  //div[@class='social']//a[contains(@href,'http
 ${TH_footer_social_twitter_link}  //div[@class='social']//a[contains(@href,'https://twitter.com/iPriceTH') and normalize-space(text()='Twitter')]
 
 ${all_footer_social_google+_text}  //div[@class='social']//a[contains(@href,'http://plus.google.com/') and normalize-space(text()='Google+')]
+
+${MY_footer_iprice_logo}  //div[@class='flex wrapper en_my']
+${VN_footer_iprice_logo}  //div[@class='flex wrapper vi']
+${ID_footer_iprice_logo}  //div[@class='flex wrapper id']
+${SG_footer_iprice_logo}  //div[@class='flex wrapper en_sg']
+${PH_footer_iprice_logo}  //div[@class='flex wrapper en_ph']
+${HK_footer_iprice_logo}  //div[@class='flex wrapper en_hk']
+${TH_footer_iprice_logo}  //div[@class='flex wrapper th']
+
+${EN_footer_disclaimer_copyright}  //section[@id='disclaimer']//small[text()='© 2017 iPrice Group Sdn Bhd (1113954 - D). All rights reserved.']
+${VN_footer_disclaimer_copyright}  //section[@id='disclaimer']//small[text()='©2017 iPrice Group Sdn. Bhd. (1113954 - D). All rights reserved.']
+${ID_footer_disclaimer_copyright}  //section[@id='disclaimer']//small[text()='Hak Cipta © 2017 iPrice Group Sdn. Bhd. (1113954 - D).']
+${TH_footer_disclaimer_copyright}  //section[@id='disclaimer']//small[text()='© 2017 iPrice Group Sdn. Bhd. (1113954 - D). สงวนลิขสิทธิ์']
+
+${EN_footer_disclaimer_notes}  //section[@id='disclaimer']//p[text()='The prices stated may have increased since the last update. Unfortunately it is not possible for us to update the prices on our website in real-time. Should a shop not offer prices in your local currency, we may calculate the displayed price on daily updated exchange rates.']
+${VN_footer_disclaimer_notes}  //section[@id='disclaimer']//p[text()='Giá cả hiển thị có thể cao hơn so với lần cập nhật gần nhất. Chúng tôi rất tiếc vì không thể cập nhật liên tục giá cả niêm yết trên trang web cửa hàng theo từng thời điểm. Trong trường hợp bạn không tìm thấy giá sản phẩm trên website của nhà cung cấp theo VND, chúng tôi sẽ tự động cập nhật dựa trên tỉ giá ngoại tệ hẳng ngày.']
+${ID_footer_disclaimer_notes}  //section[@id='disclaimer']//p[text()='Harga yang dinyatakan mungkin telah berubah sejak update terakhir. Namun, tidak memungkinkan bagi kami untuk memperbarui harga di website kami dengan segera. Jika toko tidak menawarkan harga dalam mata uang lokal Anda, kami dapat menghitung harga dan menampilkannya dengan nilai tukar harian yang diperbarui.']
+${TH_footer_disclaimer_notes}  //section[@id='disclaimer']//p[text()='ราคาที่แสดงอาจเพิ่มขึ้นหลังจากการอัพเดท ซึ่งทางเราไม่สามารถอัพเดทราคาหน้าเว็บไซต์ได้ตลอดเวลา หากร้านค้าไม่แสดงราคาสินค้าในสกุลเงินของคุณ ทางเราจะแสดงราคาตามอัตราแลกเปลี่ยนประจำวัน']
 
 ${COOD_says_url}  http://coupon.says.com/
 ${COOD_says_title}  Discount Codes, Coupons & Promos | coupon.says.com

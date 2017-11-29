@@ -4,10 +4,6 @@ Documentation   A test suite with various tests for iPrice ID.
 
 #Import
 Resource  ../TestSettings/TestSettings.robot
-Resource  ../TestVariables/TestVariables-Homepage.robot
-Resource  ../TestKeywords/new-siteMapKeywords.robot
-Resource  ../TestKeywords/new-homePageKeywords.robot
-Resource  ../TestKeywords/new-couponsKeywords.robot
 
 #Setup/Tear Down
 Test Setup  TestCase Setup
@@ -35,12 +31,13 @@ Test Homepage UI ID
     iPrice Homepage Courtesy Validation  id
     iPrice Header Validation  id
     iPrice Products Mega Menu Validation  id
-    iPrice Products Carousel Banner Validation
+    iPrice Products Carousel Banner Validation  no
     iPrice Search, Compare & Save Section Validation  id
     iPrice Search, Compare & Save Section Electronic Gaming Validation  id
     iPrice Search, Compare & Save Section Fashion Beauty Validation  id
     iPrice Search, Compare & Save Section Coupons Offers Validation  id
     iPrice Homepage Recommended Products Validation  id
+    iPrice Footer Email Subscription Validation  id
     iPrice Homepage Footer Validation  id
 
 Test Coupons Page UI ID

@@ -4,10 +4,6 @@ Documentation   A test suite with various tests for iPrice SG.
 
 #Import
 Resource  ../TestSettings/TestSettings.robot
-Resource  ../TestVariables/TestVariables-Homepage.robot
-Resource  ../TestKeywords/new-siteMapKeywords.robot
-Resource  ../TestKeywords/new-homePageKeywords.robot
-Resource  ../TestKeywords/new-couponsKeywords.robot
 
 #Setup/Tear Down
 Test Setup  TestCase Setup
@@ -35,11 +31,13 @@ Test Homepage UI SG
     iPrice Homepage Courtesy Validation  sg
     iPrice Header Validation  sg
     iPrice Products Mega Menu Validation  sg
+    iPrice Products Carousel Banner Validation  yes
     iPrice Search, Compare & Save Section Validation  sg
     iPrice Search, Compare & Save Section Electronic Gaming Validation  sg
     iPrice Search, Compare & Save Section Fashion Beauty Validation  sg
     iPrice Search, Compare & Save Section Coupons Offers Validation  sg
     iPrice Homepage Recommended Products Validation  sg
+    iPrice Footer Email Subscription Validation  sg
     iPrice Homepage Footer Validation  sg
 
 Test Coupons Page UI SG
