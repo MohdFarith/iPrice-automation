@@ -42,5 +42,8 @@ Test Homepage UI SG
 
 Test Coupons Page UI SG
     [tags]  sg  case4
-    Access Coupons Page  sg
+    Access iPrice Homepage  sg
+    iPrice Homepage Courtesy Validation  sg
+    Access Coupon Page From Courtesy  sg
     iPrice Coupon Page Courtesy Validation  sg
+    iPrice Coupons Page Header Validation  sg

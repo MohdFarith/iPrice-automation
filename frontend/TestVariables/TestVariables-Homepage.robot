@@ -28,10 +28,10 @@ ${PH_courtesy_products}  //div[@id='courtesies-banner']//a[@href='https://iprice
 ${HK_courtesy_products}  //div[@id='courtesies-banner']//a[@href='https://iprice.hk/']//span[text()='Products']
 ${TH_courtesy_products}  //div[@id='courtesies-banner']//a[@href='https://ipricethailand.com/']//span[text()='สินค้า']
 
-${EN_courtesy_products_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='Products']
-${VN_courtesy_products_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='Sản phẩm']
-${ID_courtesy_products_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='Produk']
-${TH_courtesy_products_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='สินค้า']
+${EN_courtesy_products_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l tc active']//span[text()='Products']
+${VN_courtesy_products_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l tc active']//span[text()='Sản phẩm']
+${ID_courtesy_products_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l tc active']//span[text()='Produk']
+${TH_courtesy_products_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l tc active']//span[text()='สินค้า']
 
 ${MY_courtesy_coupons}  //div[@id='courtesies-banner']//a[@href='https://iprice.my/coupons/']//span[text()='Coupons']
 ${VN_courtesy_coupons}  //div[@id='courtesies-banner']//a[@href='https://iprice.vn/coupons/']//span[text()='Mã giảm giá']
@@ -41,10 +41,10 @@ ${PH_courtesy_coupons}  //div[@id='courtesies-banner']//a[@href='https://iprice.
 ${HK_courtesy_coupons}  //div[@id='courtesies-banner']//a[@href='https://iprice.hk/coupons/']//span[text()='Coupons']
 ${TH_courtesy_coupons}  //div[@id='courtesies-banner']//a[@href='https://ipricethailand.com/coupons/']//span[text()='คูปอง']
 
-${EN_courtesy_coupons_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='Coupons']
-${VN_courtesy_coupons_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='Mã giảm giá']
-${ID_courtesy_coupons_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='Kupon']
-${TH_courtesy_coupons_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='คูปอง']
+${EN_courtesy_coupons_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l tc active']//span[text()='Coupons']
+${VN_courtesy_coupons_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l tc active']//span[text()='Mã giảm giá']
+${ID_courtesy_coupons_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l tc active']//span[text()='Kupon']
+${TH_courtesy_coupons_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l tc active']//span[text()='คูปอง']
 
 ${MY_courtesy_trends}  //div[@id='courtesies-banner']//a[@href='https://iprice.my/trends/']//span[text()='Trends']
 ${VN_courtesy_trends}  //div[@id='courtesies-banner']//a[@href='https://iprice.vn/xu-huong/']//span[text()='Xu hướng']
@@ -54,10 +54,10 @@ ${PH_courtesy_trends}  //div[@id='courtesies-banner']//a[@href='https://iprice.p
 ${HK_courtesy_trends}  //div[@id='courtesies-banner']//a[@href='https://iprice.hk/trends/']//span[text()='Trends']
 ${TH_courtesy_trends}  //div[@id='courtesies-banner']//a[@href='https://ipricethailand.com/%E0%B9%80%E0%B8%97%E0%B8%A3%E0%B8%99%E0%B8%94/']//span[text()='เทรนด์']
 
-${EN_courtesy_trends_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='Trends']
-${VN_courtesy_trends_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='Xu hướng']
-${ID_courtesy_trends_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='Trend']
-${TH_courtesy_trends_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l text-align-center active']//span[text()='เทรนด์']
+${EN_courtesy_trends_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l tc active']//span[text()='Trends']
+${VN_courtesy_trends_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l tc active']//span[text()='Xu hướng']
+${ID_courtesy_trends_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l tc active']//span[text()='Trend']
+${TH_courtesy_trends_highlight}  //div[@id='courtesies-banner']//a[@class='flex-1 flex-none-l tc active']//span[text()='เทรนด์']
 
 ${MY_header_logo_link}  //div[@id='banner']//a[contains(@class,'logo h2') and @href='https://iprice.my/']
 ${VN_header_logo_link}  //div[@id='banner']//a[contains(@class,'logo h2') and @href='https://iprice.vn/']

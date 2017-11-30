@@ -42,5 +42,8 @@ Test Homepage UI VN
 
 Test Coupons Page UI VN
     [tags]  vn  case4
-    Access Coupons Page  vn
+    Access iPrice Homepage  vn
+    iPrice Homepage Courtesy Validation  vn
+    Access Coupon Page From Courtesy  vn
     iPrice Coupon Page Courtesy Validation  vn
+    iPrice Coupons Page Header Validation  vn

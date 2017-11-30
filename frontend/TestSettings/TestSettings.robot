@@ -12,6 +12,7 @@ Library  XML
 #Import
 Resource  ../TestVariables/TestVariables-Homepage.robot
 Resource  ../TestVariables/TestVariables-EmailSubscription.robot
+Resource  ../TestVariables/TestVariables-CouponsPage.robot
 Resource  ../TestKeywords/new-siteMapKeywords.robot
 Resource  ../TestKeywords/new-homePageKeywords.robot
 Resource  ../TestKeywords/new-couponsKeywords.robot

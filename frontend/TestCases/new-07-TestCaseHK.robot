@@ -42,5 +42,8 @@ Test Homepage UI HK
 
 Test Coupons Page UI HK
     [tags]  hk  case4
-    Access Coupons Page  hk
+    Access iPrice Homepage  hk
+    iPrice Homepage Courtesy Validation  hk
+    Access Coupon Page From Courtesy  hk
     iPrice Coupon Page Courtesy Validation  hk
+    iPrice Coupons Page Header Validation  hk

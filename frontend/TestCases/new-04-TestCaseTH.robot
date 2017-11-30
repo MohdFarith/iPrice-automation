@@ -42,5 +42,8 @@ Test Homepage UI TH
 
 Test Coupons Page UI TH
     [tags]  th  case4
-    Access Coupons Page  th
+    Access iPrice Homepage  th
+    iPrice Homepage Courtesy Validation  th
+    Access Coupon Page From Courtesy  th
     iPrice Coupon Page Courtesy Validation  th
+    iPrice Coupons Page Header Validation  th

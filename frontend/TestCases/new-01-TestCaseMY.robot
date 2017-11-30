@@ -42,5 +42,8 @@ Test Homepage UI MY
 
 Test Coupons Page UI MY
     [tags]  my  case4
-    Access Coupons Page  my
+    Access iPrice Homepage  my
+    iPrice Homepage Courtesy Validation  my
+    Access Coupon Page From Courtesy  my
     iPrice Coupon Page Courtesy Validation  my
+    iPrice Coupons Page Header Validation  my

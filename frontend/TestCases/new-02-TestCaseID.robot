@@ -42,5 +42,8 @@ Test Homepage UI ID
 
 Test Coupons Page UI ID
     [tags]  id  case4
-    Access Coupons Page  id
+    Access iPrice Homepage  id
+    iPrice Homepage Courtesy Validation  id
+    Access Coupon Page From Courtesy  id
     iPrice Coupon Page Courtesy Validation  id
+    iPrice Coupons Page Header Validation  id
