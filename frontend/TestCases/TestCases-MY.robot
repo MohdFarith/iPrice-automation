@@ -47,3 +47,13 @@ Test Coupons Page UI MY
     Access Coupon Page From Courtesy  my
     iPrice Coupon Page Courtesy Validation  my
     iPrice Coupons Page Header Validation  my
+    iPrice Coupons Mega Menu Validation  0  Weekly Exclusives
+    iPrice Coupons Mega Menu Validation  1  Electronics
+    iPrice Coupons Mega Menu Validation  2  Fashion
+    iPrice Coupons Mega Menu Validation  3  Beauty & Health
+    iPrice Coupons Mega Menu Validation  4  Food & Grocery
+    iPrice Coupons Mega Menu Validation  5  Travel & Hotels
+    iPrice Coupons Mega Menu Validation  6  Home & Living
+    iPrice Coupons Mega Menu Validation  7  Sports & Outdoors
+    iPrice Coupons Mega Menu Validation  8  Kids & Toys
+    iPrice Coupons Carousel Banner Validation  yes

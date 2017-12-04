@@ -91,3 +91,10 @@ iPrice Coupons Page Header Validation  [Arguments]  ${country}
     ...  ELSE IF  "${country}"=="hk"  Element Should Be Visible  ${HK_header_search_input}
     ...  ELSE IF  "${country}"=="th"  Element Should Be Visible  ${TH_header_search_input}
     Element Should Be Visible  ${header_search_icon}
+
+iPrice Coupons Mega Menu Validation  [Arguments]  ${index}  ${categoryName}
+    Element Should Be Visible  //div[@id='mega-menu-amp']//li[@tabindex='${index}']//strong[normalize-space(text()='${categoryName}')]
+
+iPrice Coupons Carousel Banner Validation  [Arguments]  ${displayed}
+    Run Keyword If  "${displayed}"=="yes"  Run Keyword And Continue On Failure  Element Should Be Visible  ${coupons_banner}
+    ...  ELSE IF  "${displayed}"=="no"  Run Keyword And Continue On Failure  Element Should Not Be Visible  ${coupons_banner}

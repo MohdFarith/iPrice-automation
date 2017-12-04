@@ -47,3 +47,12 @@ Test Coupons Page UI HK
     Access Coupon Page From Courtesy  hk
     iPrice Coupon Page Courtesy Validation  hk
     iPrice Coupons Page Header Validation  hk
+    iPrice Coupons Mega Menu Validation  0  Weekly Exclusives
+    iPrice Coupons Mega Menu Validation  1  Electronics and Gadget
+    iPrice Coupons Mega Menu Validation  2  Fashion
+    iPrice Coupons Mega Menu Validation  3  Beauty & Health
+    iPrice Coupons Mega Menu Validation  4  Food & Grocery
+    iPrice Coupons Mega Menu Validation  5  Travel & Hotels
+    iPrice Coupons Mega Menu Validation  6  Sports & Outdoors
+    iPrice Coupons Mega Menu Validation  7  Home & Living
+    iPrice Coupons Carousel Banner Validation  yes

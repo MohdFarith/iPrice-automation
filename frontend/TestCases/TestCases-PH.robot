@@ -47,3 +47,13 @@ Test Coupons Page UI PH
     Access Coupon Page From Courtesy  ph
     iPrice Coupon Page Courtesy Validation  ph
     iPrice Coupons Page Header Validation  ph
+    iPrice Coupons Mega Menu Validation  0  Weekly Exclusives
+    iPrice Coupons Mega Menu Validation  1  Fashion
+    iPrice Coupons Mega Menu Validation  2  Beauty & Health
+    iPrice Coupons Mega Menu Validation  3  Electronics
+    iPrice Coupons Mega Menu Validation  4  Travel & Hotels
+    iPrice Coupons Mega Menu Validation  5  Food & Grocery
+    iPrice Coupons Mega Menu Validation  6  Sports & Outdoors
+    iPrice Coupons Mega Menu Validation  7  Home & Living
+    iPrice Coupons Mega Menu Validation  8  Kids & Toys
+    iPrice Coupons Carousel Banner Validation  yes

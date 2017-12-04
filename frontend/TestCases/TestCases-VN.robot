@@ -47,3 +47,12 @@ Test Coupons Page UI VN
     Access Coupon Page From Courtesy  vn
     iPrice Coupon Page Courtesy Validation  vn
     iPrice Coupons Page Header Validation  vn
+    iPrice Coupons Mega Menu Validation  0  Coupon Hot trong tuần
+    iPrice Coupons Mega Menu Validation  1  Điện máy
+    iPrice Coupons Mega Menu Validation  2  Trẻ em & Đồ chơi
+    iPrice Coupons Mega Menu Validation  3  Thời trang
+    iPrice Coupons Mega Menu Validation  4  Sức khỏe & Sắc đẹp
+    iPrice Coupons Mega Menu Validation  5  Thực phẩm & Tạp hoá
+    iPrice Coupons Mega Menu Validation  6  Thể thao & Dã ngoại
+    iPrice Coupons Mega Menu Validation  7  Du lịch & Khách sạn
+    iPrice Coupons Carousel Banner Validation  no

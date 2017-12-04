@@ -401,26 +401,15 @@ iPrice Homepage Footer Validation  [Arguments]  ${country}
     ...  ELSE IF  "${country}"=="hk"  Element Should Be Visible  ${HK_footer_social_twitter_link}
     ...  ELSE IF  "${country}"=="th"  Element Should Be Visible  ${TH_footer_social_twitter_link}
     Element Should Be Visible  ${all_footer_social_google+_text}
-    Run Keyword If  "${country}"=="my"  Mouse Over  ${MY_footer_iprice_logo}
-    ...  ELSE IF  "${country}"=="vn"  Mouse Over  ${VN_footer_iprice_logo}
-    ...  ELSE IF  "${country}"=="id"  Mouse Over  ${ID_footer_iprice_logo}
-    ...  ELSE IF  "${country}"=="sg"  Mouse Over  ${SG_footer_iprice_logo}
-    ...  ELSE IF  "${country}"=="ph"  Mouse Over  ${PH_footer_iprice_logo}
-    ...  ELSE IF  "${country}"=="hk"  Mouse Over  ${HK_footer_iprice_logo}
-    ...  ELSE IF  "${country}"=="th"  Mouse Over  ${TH_footer_iprice_logo}
-    # ${elem}  Execute Javascript  return document.getElementsByClassName("flex wrapper en_my")[0];
-    ${elem}  Run Keyword If  "${country}"=="my"  Execute Javascript  return document.getElementsByClassName("flex wrapper en_my")[0];
-    ...  ELSE IF  "${country}"=="vn"  Execute Javascript  return document.getElementsByClassName("flex wrapper vi")[0];
-    ...  ELSE IF  "${country}"=="id"  Execute Javascript  return document.getElementsByClassName("flex wrapper id")[0];
-    ...  ELSE IF  "${country}"=="sg"  Execute Javascript  return document.getElementsByClassName("flex wrapper en_sg")[0];
-    ...  ELSE IF  "${country}"=="ph"  Execute Javascript  return document.getElementsByClassName("flex wrapper en_ph")[0];
-    ...  ELSE IF  "${country}"=="hk"  Execute Javascript  return document.getElementsByClassName("flex wrapper en_hk")[0];
-    ...  ELSE IF  "${country}"=="th"  Execute Javascript  return document.getElementsByClassName("flex wrapper th")[0];
-    ${bg}  Call Method  ${elem}  value_of_css_property  background
-    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Should Contain  ${bg}  /images/logos/logo-footer_en
-    ...  ELSE IF  "${country}"=="vn"  Should Contain  ${bg}  /images/logos/logo-footer_vn
-    ...  ELSE IF  "${country}"=="id"  Should Contain  ${bg}  /images/logos/logo-footer_id
-    ...  ELSE IF  "${country}"=="th"  Should Contain  ${bg}  /images/logos/logo-footer_th
+    ${footer_logo_status}  Run Keyword If  "${country}"=="my"  Run Keyword And Return Status  Mouse Over  ${MY_footer_iprice_logo}
+    ...  ELSE IF  "${country}"=="vn"  Run Keyword And Return Status  Mouse Over  ${VN_footer_iprice_logo}
+    ...  ELSE IF  "${country}"=="id"  Run Keyword And Return Status  Mouse Over  ${ID_footer_iprice_logo}
+    ...  ELSE IF  "${country}"=="sg"  Run Keyword And Return Status  Mouse Over  ${SG_footer_iprice_logo}
+    ...  ELSE IF  "${country}"=="ph"  Run Keyword And Return Status  Mouse Over  ${PH_footer_iprice_logo}
+    ...  ELSE IF  "${country}"=="hk"  Run Keyword And Return Status  Run Keyword And Continue On Failure  Mouse Over  ${HK_footer_iprice_logo}
+    ...  ELSE IF  "${country}"=="th"  Run Keyword And Return Status  Mouse Over  ${TH_footer_iprice_logo}
+    Run Keyword If  "${footer_logo_status}"=="True"  Footer Logo Displayed  ${country}
+    ...  ELSE IF  "${footer_logo_status}"=="False"  Footer Logo Not Displayed  ${country}
     Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Element Should Be Visible  ${EN_footer_disclaimer_copyright}
     ...  ELSE IF  "${country}"=="vn"  Element Should Be Visible  ${VN_footer_disclaimer_copyright}
     ...  ELSE IF  "${country}"=="id"  Element Should Be Visible  ${ID_footer_disclaimer_copyright}
@@ -429,6 +418,29 @@ iPrice Homepage Footer Validation  [Arguments]  ${country}
     ...  ELSE IF  "${country}"=="vn"  Element Should Be Visible  ${VN_footer_disclaimer_notes}
     ...  ELSE IF  "${country}"=="id"  Element Should Be Visible  ${ID_footer_disclaimer_notes}
     ...  ELSE IF  "${country}"=="th"  Element Should Be Visible  ${TH_footer_disclaimer_notes}
+
+Footer Logo Displayed  [Arguments]  ${country}
+    ${elem}  Run Keyword If  "${country}"=="my"  Execute Javascript  return document.getElementsByClassName("flex mw center en_my")[0];
+    ...  ELSE IF  "${country}"=="vn"  Execute Javascript  return document.getElementsByClassName("flex mw center vi")[0];
+    ...  ELSE IF  "${country}"=="id"  Execute Javascript  return document.getElementsByClassName("flex mw center id")[0];
+    ...  ELSE IF  "${country}"=="sg"  Execute Javascript  return document.getElementsByClassName("flex mw center en_sg")[0];
+    ...  ELSE IF  "${country}"=="ph"  Execute Javascript  return document.getElementsByClassName("flex mw center en_ph")[0];
+    ...  ELSE IF  "${country}"=="hk"  Execute Javascript  return document.getElementsByClassName("flex mw center en_hk")[0];
+    ...  ELSE IF  "${country}"=="th"  Execute Javascript  return document.getElementsByClassName("flex mw center th")[0];
+    ${bg}  Call Method  ${elem}  value_of_css_property  background
+    Run Keyword If  "${country}"=="my" or "${country}"=="sg" or "${country}"=="ph" or "${country}"=="hk"  Should Contain  ${bg}  /images/logos/logo-footer_en
+    ...  ELSE IF  "${country}"=="vn"  Should Contain  ${bg}  /images/logos/logo-footer_vn
+    ...  ELSE IF  "${country}"=="id"  Should Contain  ${bg}  /images/logos/logo-footer_id
+    ...  ELSE IF  "${country}"=="th"  Should Contain  ${bg}  /images/logos/logo-footer_th
+
+Footer Logo Not Displayed  [Arguments]  ${country}
+    Run Keyword If  "${country}"=="my"  Run Keyword And Continue On Failure  Fail  Element ${MY_footer_iprice_logo} not Visible.
+    ...  ELSE IF  "${country}"=="vn"  Run Keyword And Continue On Failure  Fail  Element ${VN_footer_iprice_logo} not Visible.
+    ...  ELSE IF  "${country}"=="id"  Run Keyword And Continue On Failure  Fail  Element ${ID_footer_iprice_logo} not Visible.
+    ...  ELSE IF  "${country}"=="sg"  Run Keyword And Continue On Failure  Fail  Element ${SG_footer_iprice_logo} not Visible.
+    ...  ELSE IF  "${country}"=="ph"  Run Keyword And Continue On Failure  Fail  Element ${PH_footer_iprice_logo} not Visible.
+    ...  ELSE IF  "${country}"=="hk"  Run Keyword And Continue On Failure  Fail  Element ${HK_footer_iprice_logo} not Visible.
+    ...  ELSE IF  "${country}"=="th"  Run Keyword And Continue On Failure  Fail  Element ${TH_footer_iprice_logo} not Visible.
 
 MY International URL Validation
     # Element Should Not Be Visible  ${EN_homepage_footer_international_malaysia_link}

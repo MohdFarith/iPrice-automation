@@ -10,13 +10,13 @@ Library  DateTime
 Library  XML
 
 #Import
-Resource  ../TestVariables/TestVariables-Homepage.robot
-Resource  ../TestVariables/TestVariables-EmailSubscription.robot
-Resource  ../TestVariables/TestVariables-CouponsPage.robot
-Resource  ../TestKeywords/new-siteMapKeywords.robot
-Resource  ../TestKeywords/new-homePageKeywords.robot
-Resource  ../TestKeywords/new-couponsKeywords.robot
-Resource  ../TestKeywords/new-emailSubscriptionKeywords.robot
+Resource  ../TestVariables/TestVariables-homePage.robot
+Resource  ../TestVariables/TestVariables-emailSubscription.robot
+Resource  ../TestVariables/TestVariables-couponsPage.robot
+Resource  ../TestKeywords/TestKeywords-siteMap.robot
+Resource  ../TestKeywords/TestKeywords-homePage.robot
+Resource  ../TestKeywords/TestKeywords-couponsPage.robot
+Resource  ../TestKeywords/TestKeywords-emailSubscription.robot
 
 *** Variables ***
 

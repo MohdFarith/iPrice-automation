@@ -47,3 +47,13 @@ Test Coupons Page UI SG
     Access Coupon Page From Courtesy  sg
     iPrice Coupon Page Courtesy Validation  sg
     iPrice Coupons Page Header Validation  sg
+    iPrice Coupons Mega Menu Validation  0  Weekly Exclusives
+    iPrice Coupons Mega Menu Validation  1  Electronics
+    iPrice Coupons Mega Menu Validation  2  Beauty & Health
+    iPrice Coupons Mega Menu Validation  3  Food & Grocery
+    iPrice Coupons Mega Menu Validation  4  Travel & Hotels
+    iPrice Coupons Mega Menu Validation  5  Fashion
+    iPrice Coupons Mega Menu Validation  6  Home & Living
+    iPrice Coupons Mega Menu Validation  7  Sports & Outdoors
+    iPrice Coupons Mega Menu Validation  8  Kids & Toys
+    iPrice Coupons Carousel Banner Validation  yes

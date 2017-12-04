@@ -19,3 +19,8 @@ ${SG_coupons_header_logo_link}  //div[@id='banner']//a[contains(@class,'logo h2'
 ${PH_coupons_header_logo_link}  //div[@id='banner']//a[contains(@class,'logo h2') and @href='https://iprice.ph/coupons/']
 ${HK_coupons_header_logo_link}  //div[@id='banner']//a[contains(@class,'logo h2') and @href='https://iprice.hk/coupons/']
 ${TH_coupons_header_logo_link}  //div[@id='banner']//a[contains(@class,'logo h2') and @href='https://ipricethailand.com/coupons/']
+
+${coupons_banner}  //div[@id="carousel-banners-amp"]
+
+
+

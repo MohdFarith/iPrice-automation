@@ -47,3 +47,11 @@ Test Coupons Page UI ID
     Access Coupon Page From Courtesy  id
     iPrice Coupon Page Courtesy Validation  id
     iPrice Coupons Page Header Validation  id
+    iPrice Coupons Mega Menu Validation  0  Peralatan Rumah Tangga
+    iPrice Coupons Mega Menu Validation  1  Wisata & Hotel
+    iPrice Coupons Mega Menu Validation  2  Elektronik
+    iPrice Coupons Mega Menu Validation  3  Kesehatan & Kecantikan
+    iPrice Coupons Mega Menu Validation  4  Makanan & Grocery
+    iPrice Coupons Mega Menu Validation  5  Fashion
+    iPrice Coupons Mega Menu Validation  6  Olahraga & Outdoor
+    iPrice Coupons Carousel Banner Validation  yes
