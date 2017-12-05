@@ -56,3 +56,6 @@ Test Coupons Page UI VN
     iPrice Coupons Mega Menu Validation  6  Thể thao & Dã ngoại
     iPrice Coupons Mega Menu Validation  7  Du lịch & Khách sạn
     iPrice Coupons Carousel Banner Validation  no
+    iPrice Coupons Main Breadcrumb Validation  vn
+    iPrice Coupons Main Header Validation  vn
+    iPrice Coupons Top Store Validation  vn

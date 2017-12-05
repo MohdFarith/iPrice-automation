@@ -57,3 +57,6 @@ Test Coupons Page UI MY
     iPrice Coupons Mega Menu Validation  7  Sports & Outdoors
     iPrice Coupons Mega Menu Validation  8  Kids & Toys
     iPrice Coupons Carousel Banner Validation  yes
+    iPrice Coupons Main Breadcrumb Validation  my
+    iPrice Coupons Main Header Validation  my
+    iPrice Coupons Top Store Validation  my

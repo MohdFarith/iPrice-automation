@@ -55,3 +55,6 @@ Test Coupons Page UI TH
     iPrice Coupons Mega Menu Validation  5  ท่องเที่ยว & โรงแรม
     iPrice Coupons Mega Menu Validation  6  กีฬา & กิจกรรมกลางแจ้ง
     iPrice Coupons Carousel Banner Validation  no
+    iPrice Coupons Main Breadcrumb Validation  th
+    iPrice Coupons Main Header Validation  th
+    iPrice Coupons Top Store Validation  th

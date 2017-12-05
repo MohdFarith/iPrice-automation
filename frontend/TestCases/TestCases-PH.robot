@@ -57,3 +57,6 @@ Test Coupons Page UI PH
     iPrice Coupons Mega Menu Validation  7  Home & Living
     iPrice Coupons Mega Menu Validation  8  Kids & Toys
     iPrice Coupons Carousel Banner Validation  yes
+    iPrice Coupons Main Breadcrumb Validation  ph
+    iPrice Coupons Main Header Validation  ph
+    iPrice Coupons Top Store Validation  ph

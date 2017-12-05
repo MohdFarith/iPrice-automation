@@ -56,3 +56,6 @@ Test Coupons Page UI HK
     iPrice Coupons Mega Menu Validation  6  Sports & Outdoors
     iPrice Coupons Mega Menu Validation  7  Home & Living
     iPrice Coupons Carousel Banner Validation  yes
+    iPrice Coupons Main Breadcrumb Validation  hk
+    iPrice Coupons Main Header Validation  hk
+    iPrice Coupons Top Store Validation  hk

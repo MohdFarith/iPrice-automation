@@ -55,3 +55,6 @@ Test Coupons Page UI ID
     iPrice Coupons Mega Menu Validation  5  Fashion
     iPrice Coupons Mega Menu Validation  6  Olahraga & Outdoor
     iPrice Coupons Carousel Banner Validation  yes
+    iPrice Coupons Main Breadcrumb Validation  id
+    iPrice Coupons Main Header Validation  id
+    iPrice Coupons Top Store Validation  id
