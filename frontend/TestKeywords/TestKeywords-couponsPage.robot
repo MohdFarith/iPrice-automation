@@ -143,3 +143,16 @@ iPrice Coupons Top Store Validation  [Arguments]  ${country}
     ...  ELSE IF  "${country}"=="vn"  Run Keyword And Continue On Failure  Mouse Over  ${VN_coupons_top_stores_header}
     ...  ELSE IF  "${country}"=="id"  Run Keyword And Continue On Failure  Mouse Over  ${ID_coupons_top_stores_header}
     ...  ELSE IF  "${country}"=="th"  Run Keyword And Continue On Failure  Mouse Over  ${TH_coupons_top_stores_header}
+    ${topStoreCount}  Get Matching Xpath Count  //div[@class='top-stores']//div[@class='coupon-store-item']
+    Run Keyword If  ${topStoreCount}!=10  Run Keyword And Continue On Failure  Fail  Top store coupon not showing 10.
+    :FOR  ${INDEX}  IN RANGE  1  11
+    \  Run Keyword And Continue On Failure  Element Should Be Visible  //div[@class='top-stores']//div[@class='coupon-store-item'][${INDEX}]//img
+    :FOR  ${INDEX}  IN RANGE  1  11
+    \  Run Keyword And Continue On Failure  Element Should Be Visible  //div[@class='top-stores']//div[@class='coupon-store-item'][${INDEX}]//p//a[text()]
+    Run Keyword If  "${country}"=="my"  Element Should Be Visible  ${MY_coupons_top_stores_see_all_store_link_text}
+    ...  ELSE IF  "${country}"=="vn"  Element Should Be Visible  ${VN_coupons_top_stores_see_all_store_link_text}
+    ...  ELSE IF  "${country}"=="id"  Element Should Be Visible  ${ID_coupons_top_stores_see_all_store_link_text}
+    ...  ELSE IF  "${country}"=="sg"  Element Should Be Visible  ${SG_coupons_top_stores_see_all_store_link_text}
+    ...  ELSE IF  "${country}"=="ph"  Element Should Be Visible  ${PH_coupons_top_stores_see_all_store_link_text}
+    ...  ELSE IF  "${country}"=="hk"  Element Should Be Visible  ${HK_coupons_top_stores_see_all_store_link_text}
+    ...  ELSE IF  "${country}"=="th"  Element Should Be Visible  ${TH_coupons_top_stores_see_all_store_link_text}

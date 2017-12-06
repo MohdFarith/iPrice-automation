@@ -68,3 +68,11 @@ ${EN_coupons_top_stores_header}  //div[@class='top-stores']//h2[text()='Top Stor
 ${VN_coupons_top_stores_header}  //div[@class='top-stores']//h2[text()='Cửa hàng tiêu biểu']
 ${ID_coupons_top_stores_header}  //div[@class='top-stores']//h2[text()='Top toko']
 ${TH_coupons_top_stores_header}  //div[@class='top-stores']//h2[text()='ร้านค้ายอดนิยม']
+
+${MY_coupons_top_stores_see_all_store_link_text}  //div[@class='top-stores']//a[contains(@href,'https://iprice.my/coupons/stores/') and text()='See All Stores >']
+${VN_coupons_top_stores_see_all_store_link_text}  //div[@class='top-stores']//a[contains(@href,'https://iprice.vn/coupons/stores/') and text()='Hiển thị tất cả cửa hàng >']
+${ID_coupons_top_stores_see_all_store_link_text}  //div[@class='top-stores']//a[contains(@href,'https://iprice.co.id/coupons/stores/') and text()='Lihat Semua Toko >']
+${SG_coupons_top_stores_see_all_store_link_text}  //div[@class='top-stores']//a[contains(@href,'https://iprice.sg/coupons/stores/') and text()='See All Stores >']
+${PH_coupons_top_stores_see_all_store_link_text}  //div[@class='top-stores']//a[contains(@href,'https://iprice.ph/coupons/stores/') and text()='See All Stores >']
+${HK_coupons_top_stores_see_all_store_link_text}  //div[@class='top-stores']//a[contains(@href,'https://iprice.hk/coupons/stores/') and text()='See All Stores >']
+${TH_coupons_top_stores_see_all_store_link_text}  //div[@class='top-stores']//a[contains(@href,'https://ipricethailand.com/coupons/stores/') and text()='ดูร้านค้าทั้งหมด >']
